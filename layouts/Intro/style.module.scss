@@ -1,0 +1,14 @@
+
+
+.Intro {
+    display: flex;
+    justify-content: flex-end;
+    padding: var(--sp-6);
+    
+    &__body {
+        padding: var(--sp-4);
+        border: 1px solid var(--light-clr);
+        max-width: 768px;
+        background-color: rgba(255,255,255, 0.4);
+    }
+}

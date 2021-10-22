@@ -1,0 +1,10 @@
+@use '~/styles/variables' as *;
+
+
+.Layout {
+    display: flex;
+
+    main {
+        flex: 1 1 0;
+    }
+}

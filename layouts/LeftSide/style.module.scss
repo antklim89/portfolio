@@ -1,0 +1,117 @@
+@use '~/styles/variables' as *;
+
+
+.container {
+    width: var(--left-side-width, 370px);
+    position: absolute;
+    
+    @include media-md {
+        position: initial;
+    }
+}
+
+.LeftSide {
+    position: fixed;
+    width: var(--left-side-width, 370px);
+    height: 100vh;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: var(--light-clr);
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    transition: 200ms;
+
+    transform: translateX(-100%);
+    @include media-md {
+        transform: translateX(0);
+    }
+
+    &.show {
+        transform: translateX(0);
+    }
+}
+
+.Logo {
+    margin: var(--sp-5) var(--sp-1);
+    position: relative;
+    padding: var(--sp-5);
+    font-size: var(--font-size-xl);
+
+
+    &::after {
+        top: 10px;
+        left: 10px;
+        right: 0;
+        bottom: 0;
+    }
+
+    &::before {
+        top: 0;
+        left: 0;
+        right: 10px;
+        bottom: 10px;
+    }
+
+    &::after,
+    &::before {
+        position: absolute;
+        content: "";
+        border: 1px solid;
+    }
+}
+
+.NavLinks {
+    margin-bottom: auto;
+
+    ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    li {
+        list-style: none;
+        margin: var(--sp-1) 0;
+        transition: 200ms color;
+
+        &:hover {
+            color: var(--light-hover-clr);
+        }
+    }
+
+    a {
+        text-transform: uppercase;
+        font-size: var(--font-size-lg);
+    }
+}
+
+.Footer {
+    margin: var(--sp-2);
+}
+
+.ChangeLanguage {
+    select {
+        padding: 0.5rem;
+        background: var(--light-clr);
+    }
+}
+
+.ToggleButton {
+    position: absolute;
+    padding: 2rem;
+    display: block;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: var(--light-clr);
+    border: none;
+
+    transform: translateX(100%);
+
+    @include media-md {
+        display: none;
+    }
+
+    &.show {
+        transform: translateX(0);
+    }
+}
