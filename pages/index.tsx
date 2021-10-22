@@ -13,7 +13,7 @@ const Home: NextPage<{intro: IntroType}> = ({ intro }) => {
         <div>
             <Seo />
             <main>
-                <Intro text={intro.text} />
+                <Intro {...intro} />
             </main>
         </div>
     );
