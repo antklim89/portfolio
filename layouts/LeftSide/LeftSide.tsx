@@ -1,11 +1,14 @@
 import { FC, useCallback, useState } from 'react';
 
+
 import ChangeLanguage from './ChangeLanguage';
 import Footer from './Footer';
 import Logo from './Logo';
 import NavLinks from './NavLinks';
 import style from './style.module.scss';
 import ToggleButton from './ToggleButton';
+
+import cls from '~/utils';
 
 
 const LeftSide:FC = () => {
@@ -14,7 +17,7 @@ const LeftSide:FC = () => {
     const toggle = useCallback(() => setShow((prevShow) => !prevShow), []);
 
     return (
-        <aside className={`${style.container} ${show ? style.container__show : ''}`}>
+        <aside className={cls(style.container, show && style.container__show)}>
             <div className={style.LeftSide}>
                 <ToggleButton show={show} toggle={toggle} />
                 <Logo />
