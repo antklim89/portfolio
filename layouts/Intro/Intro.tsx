@@ -10,7 +10,7 @@ const Intro: FC<IntroType> = ({ text, title }) => {
     return (
         <section className={style.Intro}>
             <div className={style.Intro__window}>
-                <h1>{title}</h1>
+                <h1 className="title">{title}</h1>
                 <ReactMarkdown>
                     {text}
                 </ReactMarkdown>

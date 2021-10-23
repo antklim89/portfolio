@@ -6,12 +6,18 @@
     box-sizing: border-box;
 }
 
+:focus {
+    outline: 2px solid var(--primary-clr);
+}
+
 .link {
     cursor: pointer;
     text-decoration: none;
     color: inherit;
 }
 
-:focus {
-    outline: 2px solid var(--primary-clr);
+.title {
+    font-size: var(--font-size-lg);
+    color: var(--primary-clr);
+    text-transform: uppercase;
 }
