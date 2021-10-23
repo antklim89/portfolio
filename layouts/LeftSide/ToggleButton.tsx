@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { MdMenu, MdClose } from 'react-icons/md/';
 
 import style from './style.module.scss';
 
@@ -6,7 +7,7 @@ import style from './style.module.scss';
 const ToggleButton: FC<{toggle: () => void, show: boolean}> = ({ toggle, show }) => {
     return (
         <button className={`${style.ToggleButton} ${show ? style.ToggleButton__show : ''}`} type="button" onClick={toggle}>
-            {show ? 'x' : '='}
+            {show ? <MdClose /> : <MdMenu />}
         </button>
     );
 };
