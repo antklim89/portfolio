@@ -1,9 +1,13 @@
-
+@use '~/styles/variables' as *;
 
 .Intro {
     display: flex;
     justify-content: flex-end;
-    padding: var(--sp-6);
+    padding: var(--sp-1); 
+    
+    @include media-sm {
+        padding: var(--sp-6);
+    }
 
     h1 {
         margin-bottom: var(--sp-1);

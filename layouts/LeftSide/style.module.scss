@@ -1,35 +1,32 @@
 @use '~/styles/variables' as *;
 
 
+$left-side-bg: rgba(0, 0, 0, 0.4);
+
 .container {
-    width: var(--left-side-width, 370px);
-    position: absolute;
-    
+    width: var(--left-side-width);
+    margin-left: calc(var(--left-side-width) * -1);
+    transition: 200ms;
+
     @include media-md {
-        position: initial;
+        margin-left: 0;
+    }
+
+    &__show {
+        margin-left: 0;
     }
 }
 
 .LeftSide {
     position: fixed;
-    width: var(--left-side-width, 370px);
+    width: var(--left-side-width);
     height: 100vh;
     display: flex;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: $left-side-bg;
     color: var(--light-clr);
     min-height: 100vh;
     flex-direction: column;
     align-items: center;
-    transition: 200ms;
-
-    transform: translateX(-100%);
-    @include media-md {
-        transform: translateX(0);
-    }
-
-    &.show {
-        transform: translateX(0);
-    }
 }
 
 .Logo {
@@ -101,9 +98,10 @@
     padding: 2rem;
     display: block;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: $left-side-bg;
     color: var(--light-clr);
     border: none;
+    transition: 200ms;
 
     transform: translateX(100%);
 
@@ -111,7 +109,8 @@
         display: none;
     }
 
-    &.show {
+    &__show {
         transform: translateX(0);
+        background-color: transparent;
     }
 }

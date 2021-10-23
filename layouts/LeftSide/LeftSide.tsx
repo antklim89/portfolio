@@ -14,9 +14,9 @@ const LeftSide:FC = () => {
     const toggle = useCallback(() => setShow((prevShow) => !prevShow), []);
 
     return (
-        <aside className={style.container}>
-            <div className={`${style.LeftSide} ${show ? style.show : ''}`}>
-                <ToggleButton toggle={toggle} />
+        <aside className={`${style.container} ${show ? style.container__show : ''}`}>
+            <div className={style.LeftSide}>
+                <ToggleButton show={show} toggle={toggle} />
                 <Logo />
                 <NavLinks />
                 <ChangeLanguage />
