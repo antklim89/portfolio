@@ -2,6 +2,7 @@
 import type { InitOptions } from 'netlify-cms-core'
 import { locales } from '~/constants';
 import { intro } from './intro';
+import { projects } from './projects';
 
 
 export const cmsConfig: InitOptions = {
@@ -25,30 +26,7 @@ export const cmsConfig: InitOptions = {
         publish_mode: 'editorial_workflow',
         media_folder: 'public/uploaded/',
         collections: [
-            // {
-            //     label: 'Features',
-            //     name: 'features',
-            //     folder: 'public/content/features',
-            //     extension: 'json',
-            //     media_folder: 'images',
-            //     create: true,
-            //     slug: '{{text}}',
-            //     editor: { preview: true },
-            //     fields: [
-            //         {
-            //             label: 'Layout',
-            //             name: 'layout',
-            //             widget: 'hidden',
-            //             default: 'features',
-            //         },
-            //         {
-            //             label: 'Text',
-            //             name: 'text',
-            //             widget: 'string',
-            //             pattern: ['^.{5,50}$', 'The text must be between 5 and 50 letters long.'],
-            //         },
-            //     ],
-            // },
+            projects,
             {
                 label: 'Site',
                 name: 'site',

@@ -1,0 +1,13 @@
+{
+  "en": {
+    "layout": "projects",
+    "body": "Simpl grocery shop",
+    "title": "Grocery shop",
+    "link": "http://google.com",
+    "image": "images/01.jpg"
+  },
+  "ru": {
+    "body": "Простой продуктовый магазин",
+    "title": "Продуктовый магазин."
+  }
+}
