@@ -6,6 +6,15 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 
+        Montserrat, 
+        -apple-system,
+        Ubuntu,
+        Helvetica,
+        sans-serif;
+}
+
 :focus {
     outline: 2px solid var(--primary-clr);
 }
