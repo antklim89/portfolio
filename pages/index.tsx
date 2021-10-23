@@ -12,9 +12,7 @@ const Home: NextPage<{intro: IntroType}> = ({ intro }) => {
     return (
         <div>
             <Seo />
-            <main>
-                <Intro {...intro} />
-            </main>
+            <Intro {...intro} />
         </div>
     );
 };

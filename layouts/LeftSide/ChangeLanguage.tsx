@@ -15,8 +15,8 @@ const ChangeLanguage: FC = () => {
 
     return (
         <div className={style.ChangeLanguage}>
-            <span><Trans>Language</Trans>: </span>
-            <select value={locale} onChange={handleChangeLocale}>
+            <label htmlFor="change-language"><Trans>Language</Trans>: </label>
+            <select id="change-language" value={locale} onChange={handleChangeLocale}>
                 {locales.map((lang) => (
                     <option
                         key={lang}
