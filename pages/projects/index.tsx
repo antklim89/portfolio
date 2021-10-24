@@ -1,5 +1,6 @@
 import type { NextPage, GetStaticProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'react-i18next';
 
 import Seo from '~/components/Seo';
 import ProjectsList from '~/layouts/ProjectsList';
@@ -12,10 +13,11 @@ interface Props {
     projects: ProjectType[]
 }
 
-const Home: NextPage<Props> = ({ projects }) => {
+const ProjectsPage: NextPage<Props> = ({ projects }) => {
+    const { t } = useTranslation();
     return (
         <>
-            <Seo />
+            <Seo title={t('Projects')} />
             <div className="background">
                 <ProjectsList projects={projects} />
             </div>
@@ -23,7 +25,7 @@ const Home: NextPage<Props> = ({ projects }) => {
     );
 };
 
-export default Home;
+export default ProjectsPage;
 
 export const getStaticProps: GetStaticProps<Props> = async ({ locale = 'en' }) => {
     const localisation = await serverSideTranslations(locale, ['common', 'projects-list']);
