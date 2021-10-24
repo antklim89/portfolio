@@ -11,14 +11,13 @@ export const projects: CmsCollection = {
     media_folder: 'images',
     public_folder: '/content/projects/images',
     create: true,
-    slug: '{{title}}',
+    slug: '{{fields.slug}}',
     editor: { preview: true },
     i18n: true,
     fields: [
         {
-            name: 'layout',
-            widget: 'hidden',
-            default: 'projects',
+            name: 'slug',
+            widget: 'string',
         },
         {
             name: 'body',

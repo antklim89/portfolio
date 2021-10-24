@@ -1,19 +1,16 @@
 {
   "en": {
-    "layout": "projects",
     "body": "Simple grocery shop",
     "title": "Grocery shop",
-    "link": "http://google.com",
-    "image": "/content/projects/images/03.jpg",
-    "description": "Simple grocery shop",
+    "link": "www.google.com",
     "technologies": [
-      "react",
-      "bootstrap"
-    ]
+      "react"
+    ],
+    "image": "/content/projects/images/pwa-icon-512.png",
+    "slug": "grocery-shop"
   },
   "ru": {
-    "body": "Простой продуктовый магазин",
-    "title": "Продуктовый магазин.",
-    "description": "Простой продуктовый магазин"
+    "body": "Магазин",
+    "title": "Магазин"
   }
 }

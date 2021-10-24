@@ -6,5 +6,6 @@ export const projectPreviewSchema = z.object({
     title: z.string(),
     link: z.string(),
     image: z.string(),
+    slug: z.string(),
 });
 
