@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { Trans } from 'react-i18next';
 
 import ProjectItem from './ProjectItem';
-import styles from './styles.module.scss';
+import styles from './style.module.scss';
 
 import { ProjectType } from '~/types';
 

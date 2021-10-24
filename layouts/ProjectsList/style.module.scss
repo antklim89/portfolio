@@ -1,0 +1,57 @@
+
+
+.list {
+    padding: var(--sp-3);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--sp-6);
+}
+
+
+.ProjectItem {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--primary-clr);
+    
+    .title {
+        padding: var(--sp-1);
+        margin-bottom: var(--sp-2);
+    }
+    
+    .image {
+        * {
+            width: 100%;
+        }
+        
+        img {
+            object-fit: cover;
+            height: 700px;
+        }
+    }
+    
+    .technologies {
+        position: absolute;
+        top: 0;
+        padding: 0 var(--sp-1);
+        display: flex;
+    
+        .technology {
+            margin: 0.2rem;
+            padding: 0.5rem;
+            color: var(--light-clr);
+            background-color: var(--secondary-clr);
+            border: none;
+        }
+    }
+    
+    .actions {
+        padding: var(--sp-1);
+        display: flex;
+        
+        a {
+            color: var(--primary-clr);
+            padding: var(--sp-1);
+        }
+    }
+}
