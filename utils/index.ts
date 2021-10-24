@@ -1,1 +1,1 @@
-export { default } from './cls';
+export * from './cls';
