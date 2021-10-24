@@ -3,7 +3,7 @@ import { FC } from 'react';
 
 import style from './style.module.scss';
 
-import cls from '~/utils';
+import { cls } from '~/utils';
 
 
 const Logo: FC = () => {

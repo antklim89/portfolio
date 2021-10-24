@@ -8,7 +8,7 @@ import NavLinks from './NavLinks';
 import style from './style.module.scss';
 import ToggleButton from './ToggleButton';
 
-import cls from '~/utils';
+import { cls } from '~/utils';
 
 
 const LeftSide:FC = () => {

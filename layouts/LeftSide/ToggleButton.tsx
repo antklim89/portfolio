@@ -3,7 +3,7 @@ import { MdMenu, MdClose } from 'react-icons/md/';
 
 import style from './style.module.scss';
 
-import cls from '~/utils';
+import { cls } from '~/utils';
 
 
 const ToggleButton: FC<{toggle: () => void, show: boolean}> = ({ toggle, show }) => {
