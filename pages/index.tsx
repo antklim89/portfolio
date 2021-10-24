@@ -1,11 +1,12 @@
-import axios from 'axios';
 import type { NextPage, GetStaticProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import Seo from '~/components/Seo';
 import Intro from '~/layouts/Intro';
-import { introSerialisation } from '~/serialisation/intro';
+import { introSchema } from '~/schemas/intro';
+import { projectSchema } from '~/schemas/project';
 import { IntroType } from '~/types/intro';
+import { loadManyFiles, getLocale, loadOneFile } from '~/utils/server';
 
 
 const Home: NextPage<{intro: IntroType}> = ({ intro }) => {
@@ -20,10 +21,14 @@ const Home: NextPage<{intro: IntroType}> = ({ intro }) => {
 export default Home;
 
 export const getStaticProps: GetStaticProps = async ({ locale = 'en' }) => {
-    const { data } = await axios.get('http://localhost:3000/content/intro/index.json') as any;
-    const localisation = await serverSideTranslations(locale, ['common']);
+    const localisation = await serverSideTranslations(locale);
 
-    const intro = introSerialisation(data, locale);
+
+    const introData = await loadOneFile('intro/index.json');
+    const intro = getLocale(introData, introSchema, locale);
+
+    const projectsData = await loadManyFiles('projects');
+    const projects = projectsData.map((project) => getLocale(project, projectSchema, locale));
 
     return {
         props: {
@@ -32,3 +37,4 @@ export const getStaticProps: GetStaticProps = async ({ locale = 'en' }) => {
         },
     };
 };
+
