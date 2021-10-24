@@ -3,7 +3,8 @@
 .Intro {
     display: flex;
     justify-content: flex-end;
-    padding: var(--sp-1); 
+    padding: var(--sp-1);
+    height: 100vh;
     
     @include media-sm {
         padding: var(--sp-6);
@@ -17,6 +18,7 @@
     }
     
     &__window {
+        align-self: flex-start;
         border: 1px solid var(--light-clr);
         padding: var(--sp-4);
         max-width: 768px;
