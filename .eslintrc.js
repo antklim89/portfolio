@@ -39,6 +39,12 @@ module.exports = {
         * TypeScript
         */
         'plugin:@typescript-eslint/recommended',
+
+        /**
+        * Next Js
+        */
+        'next',
+        'next/core-web-vitals',
     ],
 
     parser: '@typescript-eslint/parser', // TYPESCRIPT
