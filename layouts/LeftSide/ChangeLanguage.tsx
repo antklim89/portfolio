@@ -6,11 +6,13 @@ import style from './style.module.scss';
 
 
 const ChangeLanguage: FC = () => {
-    const { locale, locales, replace, asPath } = useRouter();
+    const {
+        locale, locales, replace, asPath, pathname, query,
+    } = useRouter();
     if (!locale || !locales) return null;
 
     const handleChangeLocale = (e: ChangeEvent<HTMLSelectElement>) => {
-        replace(asPath, {}, { locale: e.target.value });
+        replace({ pathname, query }, asPath, { locale: e.target.value });
     };
 
     return (
