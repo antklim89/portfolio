@@ -3,7 +3,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import Seo from '~/components/Seo';
 import Intro from '~/layouts/Intro';
-import ProjectsList from '~/layouts/ProjectsList/ProjectsList';
+import ProjectsList from '~/layouts/ProjectsList';
 import { introSchema } from '~/schemas/intro';
 import { projectSchema } from '~/schemas/project';
 import type { IntroType, ProjectType } from '~/types';
