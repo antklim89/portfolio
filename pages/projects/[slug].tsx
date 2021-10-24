@@ -7,6 +7,7 @@ import { useTranslation } from 'react-i18next';
 
 
 import Seo from '~/components/Seo';
+import Project from '~/layouts/Project';
 import { projectSchema } from '~/schemas/project';
 import { ProjectType } from '~/types';
 import { getLocale, loadOneFile } from '~/utils/server';
@@ -16,14 +17,14 @@ interface Props {
     project: ProjectType
 }
 
-const ProjectPage: NextPage<Props> = () => {
+const ProjectPage: NextPage<Props> = ({ project }) => {
     const { t } = useTranslation();
 
     return (
         <>
             <Seo title={t('Projects')} />
             <div className="background">
-                X
+                <Project {...project} />
             </div>
         </>
     );

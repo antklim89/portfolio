@@ -4,10 +4,10 @@ import { Trans } from 'react-i18next';
 import ProjectItem from './ProjectItem';
 import styles from './style.module.scss';
 
-import { ProjectType } from '~/types';
+import { ProjectPreviewType } from '~/types';
 
 
-const ProjectsList: FC<{projects: ProjectType[]}> = ({ projects }) => {
+const ProjectsList: FC<{projects: ProjectPreviewType[]}> = ({ projects }) => {
     return (
         <div>
             <h1 className="title">

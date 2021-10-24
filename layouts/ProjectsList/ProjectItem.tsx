@@ -7,11 +7,11 @@ import { MdPublic } from 'react-icons/md/';
 import style from './style.module.scss';
 
 import { SITE_URL } from '~/constants';
-import { ProjectType } from '~/types';
+import { ProjectPreviewType } from '~/types';
 import { cls } from '~/utils';
 
 
-const ProjectItem: FC<ProjectType> = ({ technologies, title, image, link }) => {
+const ProjectItem: FC<ProjectPreviewType> = ({ technologies, title, image, link, slug }) => {
     return (
         <section className={style.ProjectItem}>
             <div className={style.image}>
@@ -27,7 +27,11 @@ const ProjectItem: FC<ProjectType> = ({ technologies, title, image, link }) => {
                     <span className={style.technology} key={technology}>{technology}</span>
                 ))}
             </div>
-            <h5 className={cls(style.title, 'title')}>{title}</h5>
+            <Link href={`/projects/${slug}`}>
+                <a>
+                    <h5 className={cls(style.title, 'title')}>{title}</h5>
+                </a>
+            </Link>
             <div className={style.actions}>
                 <Link href={link}>
                     <a rel="noopener noreferrer" target="_blank"><DiGithubBadge />GitHub</a>
