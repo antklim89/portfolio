@@ -5,12 +5,12 @@ import { useTranslation } from 'react-i18next';
 import Seo from '~/components/Seo';
 import ProjectsList from '~/layouts/ProjectsList';
 import { projectPreviewSchema } from '~/schemas/project';
-import type { ProjectType } from '~/types';
+import type { ProjectPreviewType } from '~/types';
 import { loadManyFiles, getLocale } from '~/utils/server';
 
 
 interface Props {
-    projects: ProjectType[]
+    projects: ProjectPreviewType[]
 }
 
 const ProjectsPage: NextPage<Props> = ({ projects }) => {

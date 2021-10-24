@@ -6,13 +6,13 @@ import Intro from '~/layouts/Intro';
 import ProjectsList from '~/layouts/ProjectsList';
 import { introSchema } from '~/schemas/intro';
 import { projectPreviewSchema } from '~/schemas/project';
-import type { IntroType, ProjectType } from '~/types';
+import type { IntroType, ProjectPreviewType } from '~/types';
 import { loadManyFiles, getLocale, loadOneFile } from '~/utils/server';
 
 
 interface Props {
     intro: IntroType
-    projects: ProjectType[]
+    projects: ProjectPreviewType[]
 }
 
 const Home: NextPage<Props> = ({ intro, projects }) => {

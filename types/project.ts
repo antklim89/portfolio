@@ -1,6 +1,8 @@
 import { z } from 'zod';
 
-import { projectPreviewSchema } from '~/schemas/project';
+import { projectPreviewSchema, projectSchema } from '~/schemas/project';
 
 
-export type ProjectType = z.infer<typeof projectPreviewSchema>
+export type ProjectPreviewType = z.infer<typeof projectPreviewSchema>
+
+export type ProjectType = z.infer<typeof projectSchema>
