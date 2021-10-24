@@ -14,7 +14,7 @@ const ProjectsList: FC<{projects: ProjectType[]}> = ({ projects }) => {
                 <Trans ns="projects-list">Projects</Trans>
             </h1>
             {projects.map((project) => (
-                <ProjectItem key={project.title} project={project} />
+                <ProjectItem key={project.title} {...project} />
             ))}
         </div>
     );
