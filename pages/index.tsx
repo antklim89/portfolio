@@ -3,25 +3,32 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import Seo from '~/components/Seo';
 import Intro from '~/layouts/Intro';
+import ProjectsList from '~/layouts/ProjectsList/ProjectsList';
 import { introSchema } from '~/schemas/intro';
 import { projectSchema } from '~/schemas/project';
-import { IntroType } from '~/types/intro';
+import type { IntroType, ProjectType } from '~/types';
 import { loadManyFiles, getLocale, loadOneFile } from '~/utils/server';
 
 
-const Home: NextPage<{intro: IntroType}> = ({ intro }) => {
+interface Props {
+    intro: IntroType
+    projects: ProjectType[]
+}
+
+const Home: NextPage<Props> = ({ intro, projects }) => {
     return (
         <div>
             <Seo />
             <Intro {...intro} />
+            <ProjectsList projects={projects} />
         </div>
     );
 };
 
 export default Home;
 
-export const getStaticProps: GetStaticProps = async ({ locale = 'en' }) => {
-    const localisation = await serverSideTranslations(locale);
+export const getStaticProps: GetStaticProps<Props> = async ({ locale = 'en' }) => {
+    const localisation = await serverSideTranslations(locale, ['common', 'projects-list']);
 
 
     const introData = await loadOneFile('intro/index.json');
@@ -33,6 +40,7 @@ export const getStaticProps: GetStaticProps = async ({ locale = 'en' }) => {
     return {
         props: {
             intro,
+            projects,
             ...localisation,
         },
     };
