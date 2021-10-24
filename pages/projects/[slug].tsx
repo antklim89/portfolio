@@ -7,17 +7,18 @@ import { useTranslation } from 'react-i18next';
 
 
 import Seo from '~/components/Seo';
-import { projectPreviewSchema } from '~/schemas/project';
-import type { ProjectPreviewType } from '~/types';
-import { loadManyFiles, getLocale } from '~/utils/server';
+import { projectSchema } from '~/schemas/project';
+import { ProjectType } from '~/types';
+import { getLocale, loadOneFile } from '~/utils/server';
 
 
 interface Props {
-    // projects: ProjectType[]
+    project: ProjectType
 }
 
 const ProjectPage: NextPage<Props> = () => {
     const { t } = useTranslation();
+
     return (
         <>
             <Seo title={t('Projects')} />
@@ -46,11 +47,18 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 
-export const getStaticProps: GetStaticProps<Props> = async ({ locale = 'en', params }) => {
+export const getStaticProps: GetStaticProps<Props> = async ({ locale = 'en', params = { slug: '' } }) => {
     const localisation = await serverSideTranslations(locale, ['common', 'projects-list']);
 
-    console.log(params);
+    const projectData = await loadOneFile(`projects/${params.slug}.json`);
+    const project = await getLocale(projectData, projectSchema, locale);
 
-    return { props: { ...localisation } };
+
+    return {
+        props: {
+            ...localisation,
+            project,
+        },
+    };
 };
 
