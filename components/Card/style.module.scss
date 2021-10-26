@@ -1,5 +1,30 @@
 
 
-.Card {
-    
+.card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #000;
+    max-width: 270px;
+}
+
+.title {
+    padding: var(--sp-1);
+    margin-bottom: var(--sp-2);
+}
+
+.technologies {
+    padding: var(--sp-1);
+    display: flex;
+
+    .technology {
+        margin: 0.2rem;
+        padding: 0.2rem;
+        border: 1px var(--primary-clr) solid;
+        color: var(--primary-clr);
+        border-radius: 0.5rem;
+    }
+}
+
+.actions {
+    padding: var(--sp-1);
 }
