@@ -5,7 +5,7 @@ import Seo from '~/components/Seo';
 import Intro from '~/layouts/Intro';
 import ProjectsList from '~/layouts/ProjectsList';
 import { introSchema } from '~/schemas/intro';
-import { projectSchema } from '~/schemas/project';
+import { projectPreviewSchema } from '~/schemas/project';
 import type { IntroType, ProjectType } from '~/types';
 import { loadManyFiles, getLocale, loadOneFile } from '~/utils/server';
 
@@ -35,7 +35,7 @@ export const getStaticProps: GetStaticProps<Props> = async ({ locale = 'en' }) =
     const intro = getLocale(introData, introSchema, locale);
 
     const projectsData = await loadManyFiles('projects');
-    const projects = projectsData.map((project) => getLocale(project, projectSchema, locale));
+    const projects = projectsData.map((project) => getLocale(project, projectPreviewSchema, locale));
 
     return {
         props: {

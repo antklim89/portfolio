@@ -16,13 +16,11 @@ export const projects: CmsCollection = {
     i18n: true,
     fields: [
         {
-            label: 'Layout',
             name: 'layout',
             widget: 'hidden',
             default: 'projects',
         },
         {
-            label: 'Body',
             name: 'body',
             widget: 'markdown',
             pattern: ['^.{5,5000}$', 'The body must be between 5 and 5000 letters long.'],
@@ -38,6 +36,11 @@ export const projects: CmsCollection = {
             name: 'link',
             widget: 'string',
             pattern: ['^.{5,500}$', 'The link must be between 5 and 500 letters long.'],
+        },
+        {
+            name: 'technologies',
+            widget: 'list',
+            min: 1,
         },
         {
             name: 'image',

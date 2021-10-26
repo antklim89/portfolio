@@ -5,14 +5,14 @@ import Card from '~/components/Card';
 import { ProjectType } from '~/types';
 
 
-const ProjectItem: FC<ProjectType> = ({ body, title, image, link }) => {
+const ProjectItem: FC<ProjectType> = ({ technologies, title, image, link }) => {
     return (
         <Card
             actions={(
                 <Link href={link}>{link}</Link>
             )}
-            body={body}
             image={image}
+            technologies={technologies}
             title={title}
         />
     );

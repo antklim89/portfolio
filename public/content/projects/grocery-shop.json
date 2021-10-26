@@ -1,13 +1,19 @@
 {
   "en": {
     "layout": "projects",
-    "body": "Simpl grocery shop",
+    "body": "Simple grocery shop",
     "title": "Grocery shop",
     "link": "http://google.com",
-    "image": "/content/projects/images/03.jpg"
+    "image": "/content/projects/images/03.jpg",
+    "description": "Simple grocery shop",
+    "technologies": [
+      "react",
+      "bootstrap"
+    ]
   },
   "ru": {
     "body": "Простой продуктовый магазин",
-    "title": "Продуктовый магазин."
+    "title": "Продуктовый магазин.",
+    "description": "Простой продуктовый магазин"
   }
 }

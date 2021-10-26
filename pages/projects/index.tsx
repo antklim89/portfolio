@@ -3,7 +3,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import Seo from '~/components/Seo';
 import ProjectsList from '~/layouts/ProjectsList';
-import { projectSchema } from '~/schemas/project';
+import { projectPreviewSchema } from '~/schemas/project';
 import type { ProjectType } from '~/types';
 import { loadManyFiles, getLocale } from '~/utils/server';
 
@@ -27,7 +27,7 @@ export const getStaticProps: GetStaticProps<Props> = async ({ locale = 'en' }) =
     const localisation = await serverSideTranslations(locale, ['common', 'projects-list']);
 
     const projectsData = await loadManyFiles('projects');
-    const projects = projectsData.map((project) => getLocale(project, projectSchema, locale));
+    const projects = projectsData.map((project) => getLocale(project, projectPreviewSchema, locale));
 
     return {
         props: {
