@@ -9,6 +9,7 @@ export const projects: CmsCollection = {
     folder: 'public/content/projects',
     extension: 'json',
     media_folder: 'images',
+    public_folder: '/content/projects/images',
     create: true,
     slug: '{{title}}',
     editor: { preview: true },
