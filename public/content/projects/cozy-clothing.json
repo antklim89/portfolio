@@ -1,0 +1,18 @@
+{
+  "en": {
+    "body": "Simple clothing shop",
+    "title": "Cozy clothing shop",
+    "link": "http://google.com",
+    "image": "/content/projects/images/01.jpg",
+    "description": "Simple clothing shop",
+    "technologies": [
+      "react",
+      "bootstrap"
+    ]
+  },
+  "ru": {
+    "body": "Простой магазин одежды",
+    "title": "Магазин одежды.",
+    "description": "Простой магазин одежды"
+  }
+}
