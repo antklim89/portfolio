@@ -20,7 +20,9 @@ const Home: NextPage<Props> = ({ intro, projects }) => {
         <>
             <Seo />
             <Intro {...intro} />
-            <ProjectsList projects={projects} />
+            <div className="background">
+                <ProjectsList projects={projects} />
+            </div>
         </>
     );
 };
