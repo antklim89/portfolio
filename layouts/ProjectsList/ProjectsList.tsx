@@ -9,13 +9,15 @@ import { ProjectType } from '~/types';
 
 const ProjectsList: FC<{projects: ProjectType[]}> = ({ projects }) => {
     return (
-        <div className={styles.list}>
+        <div>
             <h1 className="title">
                 <Trans ns="projects-list">Projects</Trans>
             </h1>
-            {projects.map((project) => (
-                <ProjectItem key={project.title} {...project} />
-            ))}
+            <div className={styles.list}>
+                {projects.map((project) => (
+                    <ProjectItem key={project.title} {...project} />
+                ))}
+            </div>
         </div>
     );
 };

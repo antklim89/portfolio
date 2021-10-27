@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { FC } from 'react';
 
 import Card from '~/components/Card';
@@ -8,10 +7,9 @@ import { ProjectType } from '~/types';
 const ProjectItem: FC<ProjectType> = ({ technologies, title, image, link }) => {
     return (
         <Card
-            actions={(
-                <Link href={link}>{link}</Link>
-            )}
+            githubLink={link}
             image={image}
+            siteLink={link}
             technologies={technologies}
             title={title}
         />

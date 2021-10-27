@@ -7,6 +7,7 @@ $left-side-bg: rgba(0, 0, 0, 0.4);
     width: var(--left-side-width);
     margin-left: calc(var(--left-side-width) * -1);
     transition: 200ms;
+    z-index: 1000;
 
     @include media-md {
         margin-left: 0;
@@ -95,7 +96,7 @@ $left-side-bg: rgba(0, 0, 0, 0.4);
 
 .ToggleButton {
     position: absolute;
-    padding: 2rem;
+    padding: var(--sp-3);
     display: block;
     right: 0;
     background-color: $left-side-bg;
