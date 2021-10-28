@@ -30,21 +30,6 @@
         }
     }
     
-    .technologies {
-        position: absolute;
-        top: 0;
-        padding: 0 var(--sp-1);
-        display: flex;
-    
-        .technology {
-            margin: 0.2rem;
-            padding: 0.5rem;
-            color: var(--light-clr);
-            background-color: var(--secondary-clr);
-            border: none;
-        }
-    }
-    
     .actions {
         padding: var(--sp-1);
         display: flex;

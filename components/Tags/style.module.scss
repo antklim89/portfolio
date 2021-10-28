@@ -1,0 +1,13 @@
+    
+.tags {
+    padding: 0 var(--sp-1);
+    display: flex;
+
+    .tag {
+        margin: 0.2rem;
+        padding: 0.5rem;
+        color: var(--light-clr);
+        background-color: var(--secondary-clr);
+        border: none;
+    }
+}
