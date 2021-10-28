@@ -2,7 +2,7 @@
   "en": {
     "body": "Simple grocery shop",
     "title": "Grocery shop",
-    "link": "www.google.com",
+    "link": "http://www.google.com",
     "technologies": [
       "react"
     ],
