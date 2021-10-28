@@ -11,6 +11,7 @@ module.exports = {
     i18n,
     webpack: (config) => {
         config.resolve.fallback = { fs: false, path: false };
+        config.cache.type = 'filesystem';
         return config;
     },
     react: { useSuspense: false },
