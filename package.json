@@ -15,7 +15,7 @@
     "axios": "^0.23.0",
     "i18next": "^21.3.2",
     "netlify-cms-app": "^2.15.51",
-    "next": "11.1.2",
+    "next": "^12.0.1",
     "next-i18next": "^8.9.0",
     "ni18n": "^1.0.2",
     "normalize.css": "^8.0.1",
@@ -24,6 +24,7 @@
     "react-i18next": "^11.12.0",
     "react-icons": "^4.3.1",
     "react-markdown": "^7.1.0",
+    "sharp": "^0.29.2",
     "zod": "^3.10.3"
   },
   "devDependencies": {
