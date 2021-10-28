@@ -6,6 +6,7 @@ import { MdPublic } from 'react-icons/md/';
 
 import style from './style.module.scss';
 
+import Tags from '~/components/Tags';
 import { SITE_URL } from '~/constants';
 import { ProjectPreviewType } from '~/types';
 import { cls } from '~/utils';
@@ -22,11 +23,7 @@ const ProjectItem: FC<ProjectPreviewType> = ({ technologies, title, image, link,
                     width={640}
                 />
             </div>
-            <div className={style.technologies}>
-                {technologies.map((technology) => (
-                    <span className={style.technology} key={technology}>{technology}</span>
-                ))}
-            </div>
+            <Tags className={style.technologies} tags={technologies} />
             <Link href={`/projects/${slug}`}>
                 <a>
                     <h5 className={cls(style.title, 'title')}>{title}</h5>
