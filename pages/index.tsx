@@ -1,6 +1,7 @@
 import type { NextPage, GetStaticProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
+import Container from '~/components/Container';
 import Seo from '~/components/Seo';
 import Intro from '~/layouts/Intro';
 import ProjectsList from '~/layouts/ProjectsList';
@@ -20,9 +21,9 @@ const Home: NextPage<Props> = ({ intro, projects }) => {
         <>
             <Seo />
             <Intro {...intro} />
-            <div className="background">
+            <Container backgroundWhite fullHeight>
                 <ProjectsList projects={projects} />
-            </div>
+            </Container>
         </>
     );
 };

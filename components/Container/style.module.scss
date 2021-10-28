@@ -1,0 +1,31 @@
+@use '~/styles/variables' as *;
+
+.Container {
+     width: 100%;
+     margin: 0 auto;
+}
+
+.xs {
+     max-width: $xs;
+}     
+.sm {
+     max-width: $sm;
+}     
+.md {
+     max-width: $md;
+}     
+.lg {
+     max-width: $lg;
+}     
+.xl {
+     max-width: $xl;
+}
+
+.backgroundWhite {
+     background: var(--light-clr);
+     padding: 1px;
+}
+
+.fullHeight {
+    min-height: 100vh;
+}
