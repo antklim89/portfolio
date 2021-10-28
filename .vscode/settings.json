@@ -14,4 +14,70 @@
       "typescriptreact",
       "javascriptreact"
     ],
+    "folderTemplates.structures": [
+      {
+        "name": "My Custom Template",
+        "omitParentDirectory": false,
+        "structure": [
+          {
+            "fileName": "<FTName>.tsx",
+            "template": "Component"
+          },
+          {
+            "fileName": "index.ts",
+            "template": "Index"
+          },
+          {
+            "fileName": "style.module.scss",
+            "template": "Style"
+          },
+          {
+            "fileName": "types.ts",
+            "template": "Type"
+          }
+        ]
+      }
+    ],
+    "folderTemplates.fileTemplates": {
+      "Index": [
+        "export { default } from './<FTName>';",
+        "",
+        "",
+      ],
+      "Component": [
+        "import { FC } from 'react';",
+
+        "import style from './style.module.scss';",
+        "import { <FTName>Props } from './types';",
+        "",
+        "",
+        "const <FTName>: FC<<FTName>Props> = () => {",
+        "    return (",
+        "        <div className={style.<FTName>}>",
+        "            <FTName>",
+        "        </div>",
+        "   );",
+        "};",
+        "",
+        "export default <FTName>;",
+        "",
+        "",
+      ],
+      "Style": [
+        "",
+        "",
+        ".<FTName> {",
+        "     display: block;",
+        "}",
+        "",
+      ],
+      "Type": [
+        "",
+        "",
+        "export interface <FTName>Props {",
+        "     foo?: string",
+        "}",
+        "",
+      ]
+    }
 }
