@@ -18,17 +18,6 @@
         padding: var(--sp-1);
         margin-bottom: var(--sp-2);
     }
-    
-    .image {
-        * {
-            width: 100%;
-        }
-        
-        img {
-            object-fit: cover;
-            height: 700px;
-        }
-    }
 
     .technologies {
         position: absolute;
