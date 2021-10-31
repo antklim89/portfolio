@@ -3,6 +3,7 @@ import type { InitOptions } from 'netlify-cms-core'
 import { locales } from '~/constants';
 import { intro } from './intro';
 import { projects } from './projects';
+import { technologies } from './technologies';
 
 
 export const cmsConfig: InitOptions = {
@@ -27,6 +28,7 @@ export const cmsConfig: InitOptions = {
         media_folder: 'public/uploaded/',
         collections: [
             projects,
+            technologies,
             {
                 label: 'Site',
                 name: 'site',

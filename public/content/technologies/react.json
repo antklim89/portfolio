@@ -1,0 +1,13 @@
+{
+  "en": {
+    "slug": "react",
+    "body": "React",
+    "title": "react",
+    "link": "http://reactjs.com",
+    "image": "/content/technologies/images/default128.png"
+  },
+  "ru": {
+    "title": "react",
+    "body": "Реакт"
+  }
+}
