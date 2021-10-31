@@ -10,10 +10,12 @@ const Background: FC = () => {
         <div className={style.Background}>
             <Image
                 alt="background"
-                {...backgroundImage}
+                blurDataURL={backgroundImage.blurDataURL}
                 className={style.img}
-                layout="responsive"
+                layout="fill"
+                objectFit="cover"
                 placeholder="blur"
+                src={backgroundImage.src}
             />
         </div>
     );
