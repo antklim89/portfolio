@@ -6,6 +6,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'react-i18next';
 
 
+import Container from '~/components/Container';
 import Seo from '~/components/Seo';
 import Project from '~/layouts/Project';
 import { projectSchema } from '~/schemas/project';
@@ -23,9 +24,9 @@ const ProjectPage: NextPage<Props> = ({ project }) => {
     return (
         <>
             <Seo title={t('Projects')} />
-            <div className="background">
+            <Container>
                 <Project {...project} />
-            </div>
+            </Container>
         </>
     );
 };
