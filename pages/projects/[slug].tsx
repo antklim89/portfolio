@@ -34,16 +34,30 @@ const ProjectPage: NextPage<Props> = ({ project }) => {
 export default ProjectPage;
 
 
-export const getStaticPaths: GetStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
     const files = await fs.readdir(path.resolve(process.cwd(), './public/content/projects'));
 
-    const paths = files
+    type PathsType = {
+        params: {
+            slug: string;
+        };
+        locale?: string;
+    };
+
+    const paths: PathsType[] = files
         .filter((file) => (/\.json$/gi).test(file))
         .map((file) => file.replace('.json', ''))
         .map((file) => ({ params: { slug: file } }));
 
+    const pathsWithLocales = paths.reduce((acc, pathObj) => {
+        locales?.forEach((locale) => {
+            acc.push({ ...pathObj, locale });
+        });
+        return acc;
+    }, [] as PathsType[]);
+
     return {
-        paths,
+        paths: pathsWithLocales,
         fallback: false,
     };
 };
