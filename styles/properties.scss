@@ -1,14 +1,17 @@
-:root {
-    --sp-1: 0.7rem;
-    --sp-2: 1rem;
-    --sp-3: 1.7rem;
-    --sp-4: 3rem;
-    --sp-5: 4rem;
-    --sp-6: 6rem;
+@use './variables.scss' as *;
 
-    --font-size: 1rem;
-    --font-size-lg: 1.2rem;
-    --font-size-xl: 2rem;
+
+:root {
+    --sp-1: calc(var(--sp-2) * 0.7);
+    --sp-2: 0.5rem;
+    --sp-3: calc(var(--sp-2) * 1.7);
+    --sp-4: calc(var(--sp-2) * 3);
+    --sp-5: calc(var(--sp-2) * 4);
+    --sp-6: calc(var(--sp-2) * 6);
+
+    --font-size: .6rem;
+    --font-size-lg: calc(var(--font-size) * 1.2);
+    --font-size-xl: calc(var(--font-size) * 2);
 
     --primary-clr: #069;
     --secondary-clr: #e74c3c;
@@ -19,3 +22,20 @@
 
     --left-side-width: 320px;
 }
+
+
+
+@include media-sm {
+    :root {
+        --sp-2: .7rem;
+        --font-size: 0.8rem;
+    }
+}
+
+@include media-md {
+    :root {
+        --sp-2: 1rem;
+        --font-size: 1rem;
+    }
+}
+
