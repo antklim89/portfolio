@@ -9,16 +9,16 @@ import { ProjectPreviewType } from '~/types';
 
 const ProjectsList: FC<{projects: ProjectPreviewType[]}> = ({ projects }) => {
     return (
-        <div>
+        <section>
             <h1 className="title">
                 <Trans ns="projects-list">Projects</Trans>
             </h1>
-            <div className={styles.list}>
+            <div className={styles.ProjectsList}>
                 {projects.map((project) => (
                     <ProjectItem key={project.title} {...project} />
                 ))}
             </div>
-        </div>
+        </section>
     );
 };
 

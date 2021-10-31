@@ -23,18 +23,20 @@ const ProjectItem: FC<ProjectPreviewType> = ({ technologies, title, image, link,
                 width={640}
             />
             <Tags className={style.technologies} tags={technologies} />
-            <Link href={`/projects/${slug}`}>
-                <a>
-                    <h5 className={cls(style.title, 'title')}>{title}</h5>
-                </a>
-            </Link>
-            <div className={style.actions}>
-                <Link href={link}>
-                    <a rel="noopener noreferrer" target="_blank"><DiGithubBadge />GitHub</a>
+            <div className={style.body}>
+                <Link href={`/projects/${slug}`}>
+                    <a>
+                        <h5 className={cls(style.title, 'title')}>{title}</h5>
+                    </a>
                 </Link>
-                <Link href={link}>
-                    <a rel="noopener noreferrer" target="_blank"><MdPublic />Site</a>
-                </Link>
+                <div className={style.actions}>
+                    <Link href={link}>
+                        <a rel="noopener noreferrer" target="_blank"><DiGithubBadge />GitHub</a>
+                    </Link>
+                    <Link href={link}>
+                        <a rel="noopener noreferrer" target="_blank"><MdPublic />Site</a>
+                    </Link>
+                </div>
             </div>
         </section>
     );
