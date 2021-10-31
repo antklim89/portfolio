@@ -7,13 +7,15 @@ import Intro from '~/layouts/Intro';
 import ProjectsList from '~/layouts/ProjectsList';
 import { introSchema } from '~/schemas/intro';
 import { projectPreviewSchema } from '~/schemas/project';
-import type { IntroType, ProjectPreviewType } from '~/types';
+import { technologySchema } from '~/schemas/technology';
+import type { IntroType, ProjectPreviewType, TechnologyType } from '~/types';
 import { loadManyFiles, getLocale, loadOneFile } from '~/utils/server';
 
 
 interface Props {
     intro: IntroType
     projects: ProjectPreviewType[]
+    technologies: TechnologyType[]
 }
 
 const Home: NextPage<Props> = ({ intro, projects }) => {
@@ -40,10 +42,15 @@ export const getStaticProps: GetStaticProps<Props> = async ({ locale = 'en' }) =
     const projectsData = await loadManyFiles('projects');
     const projects = projectsData.map((project) => getLocale(project, projectPreviewSchema, locale));
 
+
+    const technologiesData = await loadManyFiles('technologies');
+    const technologies = technologiesData.map((technology) => getLocale(technology, technologySchema, locale));
+
     return {
         props: {
             intro,
             projects,
+            technologies,
             ...localisation,
         },
     };
