@@ -21,7 +21,7 @@ const Home: NextPage<Props> = ({ intro, projects }) => {
         <>
             <Seo />
             <Intro {...intro} />
-            <Container backgroundWhite fullHeight>
+            <Container>
                 <ProjectsList projects={projects} />
             </Container>
         </>

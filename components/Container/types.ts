@@ -2,6 +2,6 @@
 
 export interface ContainerProps {
     width?: 'xs'|'sm'|'md'|'lg'|'xl'
-    backgroundWhite?: boolean
-    fullHeight?: boolean
+    whiteBg?: boolean
+    fullHeightBg?: boolean
 }
