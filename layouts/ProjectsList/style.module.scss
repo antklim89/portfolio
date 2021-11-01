@@ -12,8 +12,8 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 0 5px;
-    border-radius: 2rem;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
     overflow: hidden;
     
     .title {
@@ -38,7 +38,7 @@
 
     .body {
         padding: var(--sp-2);
-        border-radius: 2rem;
+        border-radius: var(--border-radius);
         margin-top: -30px;
         z-index: 100;
         background: var(--light-clr);
