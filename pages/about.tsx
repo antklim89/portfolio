@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 
 import Container from '~/components/Container';
 import Seo from '~/components/Seo';
+import About from '~/layouts/About';
 import { aboutSchema } from '~/schemas/about';
 import { AboutType } from '~/types/about';
 import { loadOneFile, getLocale } from '~/utils/server';
@@ -14,14 +15,14 @@ interface Props {
     about: AboutType
 }
 
-const AboutPage: FC = () => {
+const AboutPage: FC<Props> = ({ about }) => {
     const { t } = useTranslation();
 
     return (
         <>
             <Seo title={t('About')} />
             <Container>
-                AboutPage
+                <About {...about} />
             </Container>
         </>
     );
