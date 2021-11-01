@@ -24,5 +24,35 @@
 			"</Observer>",
 		],
 		"description": "Mobx Observer component"
+	},
+	"Typescript component": {
+		"scope": "javascript,typescript,javascriptreact,typescriptreact",
+		"prefix": "comp",
+		"body": [
+			"import { FC } from 'react';",
+			"",
+			"",
+			"const $TM_FILENAME_BASE: FC = () => {",
+			"    return (",
+			"        <div>",
+			"            $TM_FILENAME_BASE",
+			"        </div>",
+			"    );",
+			"};",
+			"",
+			"export default $TM_FILENAME_BASE;",
+			"",
+		],
+		"description": "Typescript component"
+	},
+	"export default": {
+		"scope": "javascript,typescript,javascriptreact,typescriptreact",
+		"prefix": "exd",
+		"body": [
+			"export { ${2:default} } from '$1';",
+			"",
+			"",
+		],
+		"description": "export default"
 	}
 }
