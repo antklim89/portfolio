@@ -20,7 +20,7 @@ const NavLinks: FC = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link href="/tehnology">
+                    <Link href="/technologies">
                         <a className="link"><Trans>technologies</Trans></a>
                     </Link>
                 </li>
