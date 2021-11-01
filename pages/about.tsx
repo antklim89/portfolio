@@ -21,7 +21,7 @@ const AboutPage: FC<Props> = ({ about }) => {
     return (
         <>
             <Seo title={t('About')} />
-            <Container>
+            <Container whiteBg={false}>
                 <About {...about} />
             </Container>
         </>
