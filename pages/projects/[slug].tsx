@@ -18,12 +18,19 @@ interface Props {
     project: ProjectType
 }
 
+type PathsType = {
+    params: {
+        slug: string;
+    };
+    locale?: string;
+};
+
 const ProjectPage: NextPage<Props> = ({ project }) => {
     const { t } = useTranslation();
 
     return (
         <>
-            <Seo title={t('Projects')} />
+            <Seo keywords={project.technologies} title={t('Projects')} />
             <Container>
                 <Project {...project} />
             </Container>
@@ -34,15 +41,8 @@ const ProjectPage: NextPage<Props> = ({ project }) => {
 export default ProjectPage;
 
 
-export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
+export const getStaticPaths: GetStaticPaths = async ({ locales = ['en'] }) => {
     const files = await fs.readdir(path.resolve(process.cwd(), './public/content/projects'));
-
-    type PathsType = {
-        params: {
-            slug: string;
-        };
-        locale?: string;
-    };
 
     const paths: PathsType[] = files
         .filter((file) => (/\.json$/gi).test(file))
@@ -50,7 +50,7 @@ export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
         .map((file) => ({ params: { slug: file } }));
 
     const pathsWithLocales = paths.reduce((acc, pathObj) => {
-        locales?.forEach((locale) => {
+        locales.forEach((locale) => {
             acc.push({ ...pathObj, locale });
         });
         return acc;

@@ -18,7 +18,7 @@ const TechnologiesPage: NextPage<Props> = ({ technologies }) => {
     const { t } = useTranslation();
     return (
         <>
-            <Seo title={t('Technologies')} />
+            <Seo keywords={technologies.map(({ title }) => title)} title={t('Technologies')} />
             <Container>
                 <Technologies technologies={technologies} />
             </Container>
