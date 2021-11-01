@@ -96,15 +96,26 @@ $left-side-bg: rgba(0, 0, 0, 0.4);
 
 .ToggleButton {
     position: absolute;
-    padding: var(--sp-3);
-    display: block;
+    display: flex;
     right: 0;
     background-color: $left-side-bg;
-    color: var(--light-clr);
-    border: none;
     transition: 200ms;
-
+    align-items: center;
     transform: translateX(100%);
+    
+    .button {
+        cursor: pointer;
+        padding: var(--sp-3);
+        background-color: transparent;
+        border: none;
+        color: var(--light-clr);
+        padding: var(--sp-3);
+    }
+
+    .logo {
+        padding: var(--sp-3);
+        margin-right: var(--sp-2);
+    }
 
     @include media-md {
         display: none;
@@ -113,5 +124,9 @@ $left-side-bg: rgba(0, 0, 0, 0.4);
     &__show {
         transform: translateX(0);
         background-color: transparent;
+
+        .logo {
+            display: none;
+        }
     }
 }
