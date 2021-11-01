@@ -46,7 +46,7 @@
       ],
       "Component": [
         "import { FC } from 'react';",
-
+        "",
         "import style from './style.module.scss';",
         "import { <FTName>Props } from './types';",
         "",
@@ -56,7 +56,7 @@
         "        <div className={style.<FTName>}>",
         "            <FTName>",
         "        </div>",
-        "   );",
+        "    );",
         "};",
         "",
         "export default <FTName>;",
