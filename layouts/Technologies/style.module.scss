@@ -1,0 +1,31 @@
+
+.Technologies {
+     .list {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          padding: var(--sp-2);
+          gap: var(--sp-3);
+
+          a {
+               text-decoration: none;
+               color: inherit;
+          }
+     }
+}
+
+.Technology {
+     display: flex;
+     flex-direction: column;
+     box-shadow: var(--box-shadow);
+     border-radius: var(--border-radius);
+     overflow: hidden;
+
+     .title {
+          padding: var(--sp-2);
+          text-align: center;
+     }
+
+     .body {
+          padding: var(--sp-2);
+     }
+}

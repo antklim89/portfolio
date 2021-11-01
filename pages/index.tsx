@@ -5,6 +5,7 @@ import Container from '~/components/Container';
 import Seo from '~/components/Seo';
 import Intro from '~/layouts/Intro';
 import ProjectsList from '~/layouts/ProjectsList';
+import Technologies from '~/layouts/Technologies';
 import { introSchema } from '~/schemas/intro';
 import { projectPreviewSchema } from '~/schemas/project';
 import { technologySchema } from '~/schemas/technology';
@@ -18,13 +19,14 @@ interface Props {
     technologies: TechnologyType[]
 }
 
-const Home: NextPage<Props> = ({ intro, projects }) => {
+const Home: NextPage<Props> = ({ intro, projects, technologies }) => {
     return (
         <>
             <Seo />
             <Intro {...intro} />
             <Container>
                 <ProjectsList projects={projects} />
+                <Technologies technologies={technologies} />
             </Container>
         </>
     );
