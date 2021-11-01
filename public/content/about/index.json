@@ -1,0 +1,11 @@
+{
+  "en": {
+    "title": "About",
+    "text": "lorem ipsum",
+    "image": "images/default128.png"
+  },
+  "ru": {
+    "title": "Обо мне",
+    "text": "Лорем ипсум"
+  }
+}

@@ -1,6 +1,7 @@
 /* eslint-disable */
 import type { InitOptions } from 'netlify-cms-core'
 import { locales } from '~/constants';
+import { about } from './about';
 import { intro } from './intro';
 import { projects } from './projects';
 import { technologies } from './technologies';
@@ -23,7 +24,7 @@ export const cmsConfig: InitOptions = {
             default_locale: locales[0]
         },
 
-        local_backend: { allowed_hosts: ['192.168.0.123', '192.168.90.18', '192.168.90.19', '127.0.0.1'] },
+        local_backend: { allowed_hosts: ['192.168.90.19', '127.0.0.1'] },
         publish_mode: 'editorial_workflow',
         media_folder: 'public/uploaded/',
         collections: [
@@ -34,7 +35,7 @@ export const cmsConfig: InitOptions = {
                 name: 'site',
                 editor: { preview: false },
                 i18n: true,
-                files: [intro],
+                files: [intro, about],
             },
         ],
     },
