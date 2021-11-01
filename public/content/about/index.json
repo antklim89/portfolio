@@ -2,7 +2,7 @@
   "en": {
     "title": "About",
     "text": "lorem ipsum",
-    "image": "images/default128.png"
+    "image": "/content/about/images/default128.png"
   },
   "ru": {
     "title": "Обо мне",

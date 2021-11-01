@@ -7,7 +7,8 @@ export const intro: CmsCollectionFile = {
     label: 'Intro',
     name: 'intro',
     file: 'public/content/intro/index.json',
-    media_folder: 'images/',
+    media_folder: 'images',
+    public_folder: '/content/intro/images',
     i18n: true,
     fields: [
         {
