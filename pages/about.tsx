@@ -3,6 +3,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import Container from '~/components/Container';
 import Seo from '~/components/Seo';
 import { aboutSchema } from '~/schemas/about';
 import { AboutType } from '~/types/about';
@@ -19,7 +20,9 @@ const AboutPage: FC = () => {
     return (
         <>
             <Seo title={t('About')} />
-            AboutPage
+            <Container>
+                AboutPage
+            </Container>
         </>
     );
 };
