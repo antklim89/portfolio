@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { FC } from 'react';
+import { Trans } from 'react-i18next';
 import { DiGithubBadge } from 'react-icons/di/';
 import { MdPublic } from 'react-icons/md/';
 
@@ -31,10 +32,16 @@ const ProjectItem: FC<ProjectPreviewType> = ({ technologies, title, image, link,
                 </Link>
                 <div className={style.actions}>
                     <Link href={link}>
-                        <a rel="noopener noreferrer" target="_blank"><DiGithubBadge />GitHub</a>
+                        <a rel="noopener noreferrer" target="_blank">
+                            <DiGithubBadge />
+                            <Trans>GitHub</Trans>
+                        </a>
                     </Link>
                     <Link href={link}>
-                        <a rel="noopener noreferrer" target="_blank"><MdPublic />Site</a>
+                        <a rel="noopener noreferrer" target="_blank">
+                            <MdPublic />
+                            <Trans>Site</Trans>
+                        </a>
                     </Link>
                 </div>
             </div>

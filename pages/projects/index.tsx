@@ -28,7 +28,7 @@ const ProjectsPage: NextPage<Props> = ({ projects }) => {
 export default ProjectsPage;
 
 export const getStaticProps: GetStaticProps<Props> = async ({ locale = 'en' }) => {
-    const localisation = await serverSideTranslations(locale, ['common', 'projects-list']);
+    const localisation = await serverSideTranslations(locale);
 
     const projectsData = await loadManyFiles('projects');
     const projects = projectsData.map((project) => getLocale(project, projectPreviewSchema, locale));

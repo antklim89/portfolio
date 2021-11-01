@@ -35,7 +35,7 @@ const Home: NextPage<Props> = ({ intro, projects, technologies }) => {
 export default Home;
 
 export const getStaticProps: GetStaticProps<Props> = async ({ locale = 'en' }) => {
-    const localisation = await serverSideTranslations(locale, ['common', 'projects-list']);
+    const localisation = await serverSideTranslations(locale);
 
 
     const introData = await loadOneFile('intro/index.json');

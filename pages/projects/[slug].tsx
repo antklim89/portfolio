@@ -64,7 +64,7 @@ export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
 
 
 export const getStaticProps: GetStaticProps<Props> = async ({ locale = 'en', params = { slug: '' } }) => {
-    const localisation = await serverSideTranslations(locale, ['common', 'projects-list']);
+    const localisation = await serverSideTranslations(locale);
 
     const projectData = await loadOneFile(`projects/${params.slug}.json`);
     const project = await getLocale(projectData, projectSchema, locale);

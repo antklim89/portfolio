@@ -2,8 +2,12 @@
     "defaultTitle": "Портфолио",
     "Language": "Язык",
     "Projects": "Проекты",
+    "About": "Обо мре",
+    "Technologies": "Технологии",
     "home": "дом",
     "projects": "проекты",
     "technologies": "технологии",
-    "about": "обо мне"
+    "about": "обо мне",
+    "GitHub": "GitHub",
+    "Site": "Сайт"
 }

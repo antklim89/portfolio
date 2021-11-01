@@ -31,7 +31,7 @@ const AboutPage: FC<Props> = ({ about }) => {
 export default AboutPage;
 
 export const getStaticProps: GetStaticProps<Props> = async ({ locale = 'en' }) => {
-    const localisation = await serverSideTranslations(locale, ['common']);
+    const localisation = await serverSideTranslations(locale);
 
 
     const aboutData = await loadOneFile('about/index.json');

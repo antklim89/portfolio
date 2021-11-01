@@ -11,7 +11,7 @@ const ProjectsList: FC<{projects: ProjectPreviewType[]}> = ({ projects }) => {
     return (
         <section>
             <h1 className="title">
-                <Trans ns="projects-list">Projects</Trans>
+                <Trans>Projects</Trans>
             </h1>
             <div className={styles.ProjectsList}>
                 {projects.map((project) => (

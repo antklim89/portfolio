@@ -29,7 +29,7 @@ const TechnologiesPage: NextPage<Props> = ({ technologies }) => {
 export default TechnologiesPage;
 
 export const getStaticProps: GetStaticProps<Props> = async ({ locale = 'en' }) => {
-    const localisation = await serverSideTranslations(locale, ['common', 'technologies']);
+    const localisation = await serverSideTranslations(locale);
 
     const technologiesData = await loadManyFiles('technologies');
     const technologies = technologiesData.map((technology) => getLocale(technology, technologySchema, locale));
