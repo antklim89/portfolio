@@ -16,13 +16,15 @@ import { cls } from '~/utils';
 const Project: FC<ProjectPreviewType> = ({ technologies, title, image, link, slug }) => {
     return (
         <section className={style.ProjectItem}>
-            <Image
-                alt={title}
-                height={700}
-                layout="responsive"
-                src={SITE_URL + image}
-                width={640}
-            />
+            <div>
+                <Image
+                    alt={title}
+                    height={700}
+                    layout="responsive"
+                    src={SITE_URL + image}
+                    width={640}
+                />
+            </div>
             <Tags className={style.technologies} tags={technologies} />
             <div className={style.body}>
                 <Link href={`/projects/${slug}`}>

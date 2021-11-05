@@ -15,13 +15,15 @@ const Technology: FC<TechnologyProps> = ({ technology }) => {
             <a rel="noopener noreferrer" target="_blank">
                 <section className={style.Technology}>
                     <h2 className={cls('title', style.title)}>{technology.title}</h2>
-                    <Image
-                        alt={technology.title}
-                        height={400}
-                        layout="responsive"
-                        src={SITE_URL + technology.image}
-                        width={640}
-                    />
+                    <div>
+                        <Image
+                            alt={technology.title}
+                            height={400}
+                            layout="responsive"
+                            src={SITE_URL + technology.image}
+                            width={640}
+                        />
+                    </div>
                     <p className={style.body}>{technology.body}</p>
                 </section>
             </a>
