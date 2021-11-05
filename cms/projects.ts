@@ -22,7 +22,6 @@ export const projects: CmsCollection = {
         {
             name: 'body',
             widget: 'markdown',
-            pattern: ['^.{5,5000}$', 'The body must be between 5 and 5000 letters long.'],
             i18n: true,
         },
         {
