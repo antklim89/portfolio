@@ -1,3 +1,4 @@
+import { GetStaticProps } from 'next';
 import { FC, useEffect } from 'react';
 
 
@@ -22,3 +23,10 @@ const CMSPage: FC = () => {
 };
 
 export default CMSPage;
+
+
+export const getStaticProps: GetStaticProps = async ({ locale = 'en' }) => {
+    const { default: messages } = await import(`~/public/locales/${locale}/common.json`);
+
+    return { props: { messages } };
+};
