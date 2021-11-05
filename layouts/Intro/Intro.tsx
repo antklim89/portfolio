@@ -1,8 +1,8 @@
 import { FC } from 'react';
-import ReactMarkdown from 'react-markdown';
 
 import style from './style.module.scss';
 
+import Markdown from '~/components/Markdown';
 import { IntroType } from '~/types/intro';
 
 
@@ -11,9 +11,9 @@ const Intro: FC<IntroType> = ({ text, title }) => {
         <section className={style.Intro}>
             <div className={style.Intro__window}>
                 <h1 className="title">{title}</h1>
-                <ReactMarkdown>
+                <Markdown>
                     {text}
-                </ReactMarkdown>
+                </Markdown>
             </div>
         </section>
     );

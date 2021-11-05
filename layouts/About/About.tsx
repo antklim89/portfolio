@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import { FC } from 'react';
-import ReactMarkdown from 'react-markdown';
 
 import style from './style.module.scss';
 
+import Markdown from '~/components/Markdown';
 import { SITE_URL } from '~/constants';
 import { AboutType } from '~/types/about';
 
@@ -22,9 +22,9 @@ const About: FC<AboutType> = ({ image, title, text }) => {
             </div>
             <div className={style.text}>
                 <h1 className="title">{title}</h1>
-                <ReactMarkdown>
+                <Markdown>
                     {text}
-                </ReactMarkdown>
+                </Markdown>
             </div>
         </section>
     );
