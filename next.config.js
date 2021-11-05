@@ -3,6 +3,7 @@ const { i18n } = require('./next-i18next.config');
 
 /** @type {import('next').NextConfig} */
 module.exports = {
+    target: 'experimental-serverless-trace',
     reactStrictMode: true,
     images: {
         minimumCacheTTL: 60 * 60 * 60 * 24,
