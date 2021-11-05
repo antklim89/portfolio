@@ -6,7 +6,7 @@
     "dev": "run-p dev:**",
     "dev:next": "next dev",
     "dev:cms-proxy": "netlify-cms-proxy-server",
-    "build": "next build && next export",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
