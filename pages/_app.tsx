@@ -7,14 +7,16 @@ import '@fontsource/montserrat/700-italic.css';
 import 'normalize.css';
 
 import Layout from '~/layouts/Layout';
-
 import '~/styles/main.scss';
 import '~/styles/properties.scss';
 
 
 const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
     return (
-        <NextIntlProvider messages={pageProps.messages} onError={(_err) => console.debug('_err: \n', _err)}>
+        <NextIntlProvider
+            messages={pageProps.messages || {}}
+            onError={(err) => (pageProps.messages ? console.error('NextIntl Error: \n', err) : null)}
+        >
             <Layout>
                 <Component {...pageProps} />
             </Layout>
