@@ -1,5 +1,6 @@
-import fs from 'fs/promises';
 import path from 'path';
+
+import fs from 'fs-extra';
 
 
 export async function loadManyFiles(filesFolder: string): Promise<unknown[]> {

@@ -1,6 +1,6 @@
-import fs from 'fs/promises';
 import path from 'path';
 
+import fs from 'fs-extra';
 import type { NextPage, GetStaticProps, GetStaticPaths } from 'next';
 import { useTranslations } from 'next-intl';
 
@@ -41,7 +41,7 @@ export default ProjectPage;
 
 
 export const getStaticPaths: GetStaticPaths = async ({ locales = ['en'] }) => {
-    const files = await fs.readdir(path.resolve(process.cwd(), './public/content/projects'));
+    const files: string[] = await fs.readdir(path.resolve(process.cwd(), './public/content/projects'));
 
     const paths: PathsType[] = files
         .filter((file) => (/\.json$/gi).test(file))
