@@ -3,7 +3,7 @@ import { FC } from 'react';
 
 import style from './style.module.scss';
 
-// import Markdown from '~/components/Markdown';
+import Markdown from '~/components/Markdown';
 import { SITE_URL } from '~/constants';
 import { AboutType } from '~/types/about';
 
@@ -22,9 +22,9 @@ const About: FC<AboutType> = ({ image, title, text }) => {
             </div>
             <div className={style.text}>
                 <h1 className="title">{title}</h1>
-                {/* <Markdown> */}
-                {text}
-                {/* </Markdown> */}
+                <Markdown>
+                    {text}
+                </Markdown>
             </div>
         </section>
     );
