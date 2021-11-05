@@ -10,9 +10,9 @@ module.exports = {
         defaultLocale: 'en',
         locales: ['en', 'ru'],
     },
-    webpack: (config) => {
-        config.resolve.fallback = { fs: false, path: false };
-        return config;
-    },
+    // webpack: (config) => {
+    //     config.resolve.fallback = { fs: false, path: false };
+    //     return config;
+    // },
     react: { useSuspense: false },
 };
