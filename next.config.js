@@ -10,8 +10,7 @@ module.exports = {
     },
     i18n,
     webpack: (config) => {
-        config.resolve.fallback = { fs: false, path: false };
-        config.cache.type = 'filesystem';
+        // config.resolve.fallback = { fs: false, path: false };
         return config;
     },
     react: { useSuspense: false },
