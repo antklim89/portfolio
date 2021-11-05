@@ -1,11 +1,20 @@
+@use '~/styles/variables' as *;
 
 
 .ProjectsList {
     padding: var(--sp-2);
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
     gap: var(--sp-3);
     margin-bottom: var(--sp-5);
+    grid-template-columns: 1fr;
+    
+    @include media-xs {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media-md {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 
