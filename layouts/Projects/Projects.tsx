@@ -1,13 +1,13 @@
 import { FC } from 'react';
 import { Trans } from 'react-i18next';
 
-import ProjectItem from './ProjectItem';
+import Project from './Project';
 import styles from './style.module.scss';
 
 import { ProjectPreviewType } from '~/types';
 
 
-const ProjectsList: FC<{projects: ProjectPreviewType[]}> = ({ projects }) => {
+const Projects: FC<{projects: ProjectPreviewType[]}> = ({ projects }) => {
     return (
         <section>
             <h1 className="title">
@@ -15,11 +15,11 @@ const ProjectsList: FC<{projects: ProjectPreviewType[]}> = ({ projects }) => {
             </h1>
             <div className={styles.ProjectsList}>
                 {projects.map((project) => (
-                    <ProjectItem key={project.title} {...project} />
+                    <Project key={project.title} {...project} />
                 ))}
             </div>
         </section>
     );
 };
 
-export default ProjectsList;
+export default Projects;

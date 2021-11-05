@@ -3,7 +3,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'react-i18next';
 
 import Seo from '~/components/Seo';
-import ProjectsList from '~/layouts/ProjectsList';
+import ProjectsList from '~/layouts/Projects';
 import { projectPreviewSchema } from '~/schemas/project';
 import type { ProjectPreviewType } from '~/types';
 import { loadManyFiles, getLocale } from '~/utils/server';

@@ -13,7 +13,7 @@ import { ProjectPreviewType } from '~/types';
 import { cls } from '~/utils';
 
 
-const ProjectItem: FC<ProjectPreviewType> = ({ technologies, title, image, link, slug }) => {
+const Project: FC<ProjectPreviewType> = ({ technologies, title, image, link, slug }) => {
     return (
         <section className={style.ProjectItem}>
             <Image
@@ -49,4 +49,4 @@ const ProjectItem: FC<ProjectPreviewType> = ({ technologies, title, image, link,
     );
 };
 
-export default ProjectItem;
+export default Project;

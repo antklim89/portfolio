@@ -4,7 +4,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Container from '~/components/Container';
 import Seo from '~/components/Seo';
 import Intro from '~/layouts/Intro';
-import ProjectsList from '~/layouts/ProjectsList';
+import ProjectsList from '~/layouts/Projects';
 import Technologies from '~/layouts/Technologies';
 import { introSchema } from '~/schemas/intro';
 import { projectPreviewSchema } from '~/schemas/project';
