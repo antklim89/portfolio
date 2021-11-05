@@ -14,7 +14,7 @@ import '~/styles/properties.scss';
 
 const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
     return (
-        <NextIntlProvider messages={pageProps.messages}>
+        <NextIntlProvider messages={pageProps.messages} onError={(_err) => console.debug('_err: \n', _err)}>
             <Layout>
                 <Component {...pageProps} />
             </Layout>
