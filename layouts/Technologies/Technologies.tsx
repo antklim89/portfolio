@@ -1,5 +1,5 @@
+import { useTranslations } from 'next-intl';
 import { FC } from 'react';
-import { Trans } from 'react-i18next';
 
 import style from './style.module.scss';
 import Technology from './Technology';
@@ -7,10 +7,11 @@ import { TechnologiesProps } from './types';
 
 
 const Technologies: FC<TechnologiesProps> = ({ technologies }) => {
+    const t = useTranslations();
     return (
         <section className={style.Technologies}>
             <h1 className="title">
-                <Trans>Technologies</Trans>
+                {t('Technologies')}
             </h1>
             <div className={style.list}>
                 {technologies.map((technology) => (

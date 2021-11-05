@@ -1,6 +1,6 @@
+import { useTranslations } from 'next-intl';
 import Head from 'next/head';
 import { FC, memo } from 'react';
-import { useTranslation } from 'react-i18next';
 
 import { SeoProps } from './types';
 
@@ -12,7 +12,7 @@ const Seo: FC<SeoProps> = ({
     keywords = [],
     title,
 }) => {
-    const { t } = useTranslation();
+    const t = useTranslations();
 
     const metaDescription = `${DEFAULT_DESCRIPTION} ${description || ''}`.trim();
     const defaultTitle = `${title ? `${title} | ` : ''}${t('defaultTitle')}`;

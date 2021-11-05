@@ -1,5 +1,4 @@
 import type { NextPage, GetStaticProps } from 'next';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import Container from '~/components/Container';
 import Seo from '~/components/Seo';
@@ -35,8 +34,7 @@ const Home: NextPage<Props> = ({ intro, projects, technologies }) => {
 export default Home;
 
 export const getStaticProps: GetStaticProps<Props> = async ({ locale = 'en' }) => {
-    const localisation = await serverSideTranslations(locale);
-
+    const { default: messages } = await import(`~/public/locales/${locale}/common.json`);
 
     const introData = await loadOneFile('intro/index.json');
     const intro = getLocale(introData, introSchema, locale);
@@ -53,7 +51,7 @@ export const getStaticProps: GetStaticProps<Props> = async ({ locale = 'en' }) =
             intro,
             projects,
             technologies,
-            ...localisation,
+            messages,
         },
     };
 };

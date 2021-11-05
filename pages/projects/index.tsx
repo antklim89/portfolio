@@ -1,6 +1,5 @@
 import type { NextPage, GetStaticProps } from 'next';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 
 import Seo from '~/components/Seo';
 import ProjectsList from '~/layouts/Projects';
@@ -14,7 +13,7 @@ interface Props {
 }
 
 const ProjectsPage: NextPage<Props> = ({ projects }) => {
-    const { t } = useTranslation();
+    const t = useTranslations();
     return (
         <>
             <Seo title={t('Projects')} />
@@ -28,7 +27,7 @@ const ProjectsPage: NextPage<Props> = ({ projects }) => {
 export default ProjectsPage;
 
 export const getStaticProps: GetStaticProps<Props> = async ({ locale = 'en' }) => {
-    const localisation = await serverSideTranslations(locale);
+    const { default: messages } = await import(`~/public/locales/${locale}/common.json`);
 
     const projectsData = await loadManyFiles('projects');
     const projects = projectsData.map((project) => getLocale(project, projectPreviewSchema, locale));
@@ -36,7 +35,7 @@ export const getStaticProps: GetStaticProps<Props> = async ({ locale = 'en' }) =
     return {
         props: {
             projects,
-            ...localisation,
+            messages,
         },
     };
 };

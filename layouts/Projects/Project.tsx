@@ -1,7 +1,7 @@
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FC } from 'react';
-import { Trans } from 'react-i18next';
 import { DiGithubBadge } from 'react-icons/di/';
 import { MdPublic } from 'react-icons/md/';
 
@@ -14,6 +14,7 @@ import { cls } from '~/utils';
 
 
 const Project: FC<ProjectPreviewType> = ({ technologies, title, image, link, slug }) => {
+    const t = useTranslations();
     return (
         <section className={style.ProjectItem}>
             <div>
@@ -36,13 +37,13 @@ const Project: FC<ProjectPreviewType> = ({ technologies, title, image, link, slu
                     <Link href={link}>
                         <a rel="noopener noreferrer" target="_blank">
                             <DiGithubBadge />
-                            <Trans>GitHub</Trans>
+                            {t('GitHub')}
                         </a>
                     </Link>
                     <Link href={link}>
                         <a rel="noopener noreferrer" target="_blank">
                             <MdPublic />
-                            <Trans>Site</Trans>
+                            {t('Site')}
                         </a>
                     </Link>
                 </div>

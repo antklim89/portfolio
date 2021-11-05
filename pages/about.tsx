@@ -1,7 +1,6 @@
 import type { GetStaticProps } from 'next';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslations } from 'next-intl';
 import { FC } from 'react';
-import { useTranslation } from 'react-i18next';
 
 import Container from '~/components/Container';
 import Seo from '~/components/Seo';
@@ -16,7 +15,7 @@ interface Props {
 }
 
 const AboutPage: FC<Props> = ({ about }) => {
-    const { t } = useTranslation();
+    const t = useTranslations();
 
     return (
         <>
@@ -31,7 +30,7 @@ const AboutPage: FC<Props> = ({ about }) => {
 export default AboutPage;
 
 export const getStaticProps: GetStaticProps<Props> = async ({ locale = 'en' }) => {
-    const localisation = await serverSideTranslations(locale);
+    const { default: messages } = await import(`~/public/locales/${locale}/common.json`);
 
 
     const aboutData = await loadOneFile('about/index.json');
@@ -40,7 +39,7 @@ export const getStaticProps: GetStaticProps<Props> = async ({ locale = 'en' }) =
     return {
         props: {
             about,
-            ...localisation,
+            messages,
         },
     };
 };

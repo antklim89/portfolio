@@ -2,8 +2,7 @@ import fs from 'fs/promises';
 import path from 'path';
 
 import type { NextPage, GetStaticProps, GetStaticPaths } from 'next';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 
 
 import Container from '~/components/Container';
@@ -26,7 +25,7 @@ type PathsType = {
 };
 
 const ProjectPage: NextPage<Props> = ({ project }) => {
-    const { t } = useTranslation();
+    const t = useTranslations();
 
     return (
         <>
@@ -64,7 +63,7 @@ export const getStaticPaths: GetStaticPaths = async ({ locales = ['en'] }) => {
 
 
 export const getStaticProps: GetStaticProps<Props> = async ({ locale = 'en', params = { slug: '' } }) => {
-    const localisation = await serverSideTranslations(locale);
+    const { default: messages } = await import(`~/public/locales/${locale}/common.json`);
 
     const projectData = await loadOneFile(`projects/${params.slug}.json`);
     const project = await getLocale(projectData, projectSchema, locale);
@@ -72,7 +71,7 @@ export const getStaticProps: GetStaticProps<Props> = async ({ locale = 'en', par
 
     return {
         props: {
-            ...localisation,
+            messages,
             project,
         },
     };

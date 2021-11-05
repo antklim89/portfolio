@@ -1,6 +1,5 @@
 import type { NextPage, GetStaticProps } from 'next';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 
 import Container from '~/components/Container';
 import Seo from '~/components/Seo';
@@ -15,7 +14,7 @@ interface Props {
 }
 
 const TechnologiesPage: NextPage<Props> = ({ technologies }) => {
-    const { t } = useTranslation();
+    const t = useTranslations();
     return (
         <>
             <Seo keywords={technologies.map(({ title }) => title)} title={t('Technologies')} />
@@ -29,7 +28,7 @@ const TechnologiesPage: NextPage<Props> = ({ technologies }) => {
 export default TechnologiesPage;
 
 export const getStaticProps: GetStaticProps<Props> = async ({ locale = 'en' }) => {
-    const localisation = await serverSideTranslations(locale);
+    const { default: messages } = await import(`~/public/locales/${locale}/common.json`);
 
     const technologiesData = await loadManyFiles('technologies');
     const technologies = technologiesData.map((technology) => getLocale(technology, technologySchema, locale));
@@ -37,7 +36,7 @@ export const getStaticProps: GetStaticProps<Props> = async ({ locale = 'en' }) =
     return {
         props: {
             technologies,
-            ...localisation,
+            messages,
         },
     };
 };

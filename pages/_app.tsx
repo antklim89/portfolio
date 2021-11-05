@@ -1,4 +1,4 @@
-import { appWithTranslation } from 'next-i18next';
+import { NextIntlProvider } from 'next-intl';
 import { AppProps } from 'next/app';
 import '@fontsource/montserrat/400.css';
 import '@fontsource/montserrat/400-italic.css';
@@ -14,11 +14,13 @@ import '~/styles/properties.scss';
 
 const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
     return (
-        <Layout>
-            <Component {...pageProps} />
-        </Layout>
+        <NextIntlProvider messages={pageProps.messages}>
+            <Layout>
+                <Component {...pageProps} />
+            </Layout>
+        </NextIntlProvider>
     );
 };
 
 
-export default appWithTranslation(MyApp);
+export default MyApp;

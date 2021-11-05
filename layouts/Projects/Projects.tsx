@@ -1,5 +1,5 @@
+import { useTranslations } from 'next-intl';
 import { FC } from 'react';
-import { Trans } from 'react-i18next';
 
 import Project from './Project';
 import styles from './style.module.scss';
@@ -8,10 +8,11 @@ import { ProjectPreviewType } from '~/types';
 
 
 const Projects: FC<{projects: ProjectPreviewType[]}> = ({ projects }) => {
+    const t = useTranslations();
     return (
         <section>
             <h1 className="title">
-                <Trans>Projects</Trans>
+                {t('Projects')}
             </h1>
             <div className={styles.ProjectsList}>
                 {projects.map((project) => (
