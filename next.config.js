@@ -3,6 +3,7 @@ const { i18n } = require('./next-i18next.config');
 
 /** @type {import('next').NextConfig} */
 module.exports = {
+    target: 'server',
     reactStrictMode: true,
     images: {
         minimumCacheTTL: 60 * 60 * 60 * 24,
@@ -10,7 +11,7 @@ module.exports = {
     },
     i18n,
     webpack: (config) => {
-        // config.resolve.fallback = { fs: false, path: false };
+        config.resolve.fallback = { fs: false, path: false };
         return config;
     },
     react: { useSuspense: false },
