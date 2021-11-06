@@ -2,7 +2,6 @@ import { FC, useCallback, useState } from 'react';
 
 
 import ChangeLanguage from './ChangeLanguage';
-import Footer from './Footer';
 import Logo from './Logo';
 import NavLinks from './NavLinks';
 import style from './style.module.scss';
@@ -23,7 +22,6 @@ const LeftSide:FC = () => {
                 <Logo />
                 <NavLinks />
                 <ChangeLanguage />
-                <Footer />
             </div>
         </aside>
     );
