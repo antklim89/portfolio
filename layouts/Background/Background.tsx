@@ -11,11 +11,9 @@ const Background: FC = () => {
             <Image
                 alt="background"
                 className={style.img}
-                height={1080}
-                layout="responsive"
+                layout="fill"
                 objectFit="cover"
                 src={backgroundImage.src}
-                width={1920}
             />
         </div>
     );
