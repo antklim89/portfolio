@@ -12,7 +12,7 @@ import { cls } from '~/utils';
 const Technology: FC<TechnologyProps> = ({ technology }) => {
     return (
         <Link href={technology.link}>
-            <a rel="noopener noreferrer" target="_blank">
+            <a aria-label={`${technology.title} technology`} rel="noopener noreferrer" target="_blank">
                 <section className={style.Technology}>
                     <h2 className={cls('title', style.title)}>{technology.title}</h2>
                     <div>

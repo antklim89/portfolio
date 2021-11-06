@@ -35,13 +35,13 @@ const Project: FC<ProjectPreviewType> = ({ technologies, title, image, link, slu
                 </Link>
                 <div className={style.actions}>
                     <Link href={link}>
-                        <a rel="noopener noreferrer" target="_blank">
+                        <a aria-label={`${t('GitHub')} ${title}`} rel="noopener noreferrer" target="_blank">
                             <DiGithubBadge />
                             {t('GitHub')}
                         </a>
                     </Link>
                     <Link href={link}>
-                        <a rel="noopener noreferrer" target="_blank">
+                        <a aria-label={`${t('Site')} ${title}`} rel="noopener noreferrer" target="_blank">
                             <MdPublic />
                             {t('Site')}
                         </a>
