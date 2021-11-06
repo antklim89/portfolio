@@ -3,13 +3,13 @@
 
 :root {
     --sp-1: calc(var(--sp-2) * 0.7);
-    --sp-2: 0.5rem;
+    --sp-2: 0.7rem;
     --sp-3: calc(var(--sp-2) * 1.7);
     --sp-4: calc(var(--sp-2) * 3);
     --sp-5: calc(var(--sp-2) * 4);
     --sp-6: calc(var(--sp-2) * 6);
 
-    --font-size: .6rem;
+    --font-size: 1rem;
     --font-size-lg: calc(var(--font-size) * 1.2);
     --font-size-xl: calc(var(--font-size) * 2);
 
@@ -30,15 +30,8 @@
 
 @include media-sm {
     :root {
-        --sp-2: .7rem;
-        --font-size: 0.8rem;
-    }
-}
-
-@include media-md {
-    :root {
         --sp-2: 1rem;
-        --font-size: 1rem;
+        // --font-size: 1rem;
     }
 }
 

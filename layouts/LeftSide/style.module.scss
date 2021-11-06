@@ -102,19 +102,22 @@ $left-side-bg: rgba(0, 0, 0, 0.4);
     transition: 200ms;
     align-items: center;
     transform: translateX(100%);
+    width: 100vw;
+    height: 64px;
     
     .button {
+        padding: 0 var(--sp-3);
+        height: 100%;
         cursor: pointer;
-        padding: var(--sp-3);
         background-color: transparent;
         border: none;
         color: var(--light-clr);
-        padding: var(--sp-3);
+        font-size: var(--font-size-xl);
     }
 
     .logo {
-        padding: var(--sp-3);
-        margin-right: var(--sp-2);
+        padding: 0 var(--sp-3);
+        margin-left: var(--sp-5);
     }
 
     @include media-md {
@@ -124,6 +127,7 @@ $left-side-bg: rgba(0, 0, 0, 0.4);
     &__show {
         transform: translateX(0);
         background-color: transparent;
+        width: auto;
 
         .logo {
             display: none;
