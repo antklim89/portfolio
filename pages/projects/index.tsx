@@ -1,6 +1,7 @@
 import type { NextPage, GetStaticProps } from 'next';
 import { useTranslations } from 'next-intl';
 
+import Container from '~/components/Container';
 import Seo from '~/components/Seo';
 import ProjectsList from '~/layouts/Projects';
 import { projectPreviewSchema } from '~/schemas/project';
@@ -17,9 +18,9 @@ const ProjectsPage: NextPage<Props> = ({ projects }) => {
     return (
         <>
             <Seo title={t('Projects')} />
-            <div className="background">
+            <Container>
                 <ProjectsList projects={projects} />
-            </div>
+            </Container>
         </>
     );
 };

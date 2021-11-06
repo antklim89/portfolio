@@ -14,7 +14,7 @@ const Projects: FC<{projects: ProjectPreviewType[]}> = ({ projects }) => {
             <h1 className="title">
                 {t('Projects')}
             </h1>
-            <div className={styles.ProjectsList}>
+            <div className={styles.Projects}>
                 {projects.map((project) => (
                     <Project key={project.title} {...project} />
                 ))}

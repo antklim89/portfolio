@@ -16,7 +16,7 @@ import { cls } from '~/utils';
 const Project: FC<ProjectPreviewType> = ({ technologies, title, image, link, slug }) => {
     const t = useTranslations();
     return (
-        <section className={style.ProjectItem}>
+        <section className={style.Project}>
             <div>
                 <Image
                     alt={title}
