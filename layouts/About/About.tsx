@@ -7,20 +7,19 @@ import Container from '~/components/Container';
 import Markdown from '~/components/Markdown';
 import { SITE_URL } from '~/constants';
 import { AboutType } from '~/types/about';
-import { cls } from '~/utils';
 
 
 const About: FC<AboutType> = ({ image, title, text }) => {
     return (
-        <section className={cls(style.About, 'parallax')}>
-            <Container>
+        <section className="parallax">
+            <Container className={style.About}>
                 <div className={style.image}>
                     <Image
                         alt="About"
-                        height={700}
+                        height={320}
                         layout="responsive"
                         src={SITE_URL + image}
-                        width={700}
+                        width={320}
                     />
                 </div>
                 <div className={style.text}>
