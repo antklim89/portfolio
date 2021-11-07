@@ -11,7 +11,7 @@ const LeftSideToggle: FC<{toggle: () => void, show: boolean}> = ({ toggle, show 
     return (
         <div className={cls(style.Toggle, show && style.Toggle__show)}>
             <button
-            // aria-label={show}
+                aria-label={show ? 'hide left side' : 'show left side'}
                 className={style.button}
                 type="button"
                 onClick={toggle}
