@@ -5,10 +5,10 @@
     display: flex;
     width: 100%;
     overflow-x: hidden;
-
+    min-height: 100vh;
 
     main {
-        margin-top: 64px;
+        margin-top: var(--top-offset);
         flex: 1 0 100%;
     }
 

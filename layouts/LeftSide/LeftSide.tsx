@@ -16,7 +16,7 @@ const LeftSide:FC = () => {
     const toggle = useCallback(() => setShow((prevShow) => !prevShow), []);
 
     return (
-        <aside className={cls(style.LeftSide, show && style.LeftSide__show)}>
+        <aside className={cls(style.LeftSide, show && style.LeftSide__show, 'parallax')}>
             <div className={style.container}>
                 <LeftSideToggle show={show} toggle={toggle} />
                 <LeftSideLogo />

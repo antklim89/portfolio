@@ -10,14 +10,10 @@ import { cls } from '~/utils';
 const Container: FC<ContainerProps> = ({
     children,
     width = 'lg',
-    whiteBg = true,
-    fullHeightBg = true,
 }) => {
     return (
-        <div className={cls(whiteBg && style.whiteBg, fullHeightBg && style.fullHeightBg)}>
-            <div className={cls(style.Container, style[width])}>
-                {children}
-            </div>
+        <div className={cls(style.Container, style[width])}>
+            {children}
         </div>
     );
 };

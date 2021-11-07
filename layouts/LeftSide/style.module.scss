@@ -97,8 +97,7 @@
     transition: 200ms;
     align-items: center;
     transform: translateX(100%);
-    width: 100vw;
-    height: 64px;
+    height: var(--top-offset);
     
     .button {
         padding: 0 var(--sp-3);

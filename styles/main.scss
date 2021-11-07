@@ -36,3 +36,10 @@ h1.title, h2.title {
     font-size: var(--font-size-xl);
     margin: var(--sp-3) var(--sp-4);
 }
+
+.parallax {
+    background-image: url(bg.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

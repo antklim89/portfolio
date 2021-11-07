@@ -8,7 +8,7 @@ import { IntroType } from '~/types/intro';
 
 const Intro: FC<IntroType> = ({ text, title }) => {
     return (
-        <section className={style.Intro}>
+        <section className={`${style.Intro} parallax`}>
             <div className={style.Intro__window}>
                 <h2 className="title">{title}</h2>
                 <Markdown>
