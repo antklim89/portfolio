@@ -2,7 +2,7 @@ import { useTranslations } from 'next-intl';
 import { FC } from 'react';
 
 import style from './style.module.scss';
-import Technology from './Technology';
+import Technology from './TechnologyItem';
 import { TechnologiesProps } from './types';
 
 

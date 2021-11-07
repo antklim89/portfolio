@@ -6,7 +6,7 @@ import style from './style.module.scss';
 import { cls } from '~/utils';
 
 
-const Logo: FC = () => {
+const LeftSideLogo: FC = () => {
     return (
         <Link href="/">
             <a className={cls('link', style.Logo)}>
@@ -16,4 +16,4 @@ const Logo: FC = () => {
     );
 };
 
-export default Logo;
+export default LeftSideLogo;

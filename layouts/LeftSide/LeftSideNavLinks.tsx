@@ -5,7 +5,7 @@ import { FC } from 'react';
 import style from './style.module.scss';
 
 
-const NavLinks: FC = () => {
+const LeftSideNavLinks: FC = () => {
     const t = useTranslations();
     return (
         <nav className={style.NavLinks}>
@@ -35,5 +35,5 @@ const NavLinks: FC = () => {
     );
 };
 
-export default NavLinks;
+export default LeftSideNavLinks;
 

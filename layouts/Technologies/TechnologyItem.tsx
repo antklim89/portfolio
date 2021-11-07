@@ -9,7 +9,7 @@ import { SITE_URL } from '~/constants';
 import { cls } from '~/utils';
 
 
-const Technology: FC<TechnologyProps> = ({ technology }) => {
+const TechnologyItem: FC<TechnologyProps> = ({ technology }) => {
     return (
         <Link href={technology.link}>
             <a aria-label={`${technology.title} technology`} rel="noopener noreferrer" target="_blank">
@@ -31,4 +31,4 @@ const Technology: FC<TechnologyProps> = ({ technology }) => {
     );
 };
 
-export default Technology;
+export default TechnologyItem;

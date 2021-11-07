@@ -15,7 +15,7 @@
         margin-left: 0;
     }
 
-    &__fixed {
+    .container {
         position: fixed;
         width: var(--left-side-width);
         height: 100vh;
@@ -82,14 +82,14 @@
     }
 }
 
-.ChangeLanguage {
+.Language {
     select {
         padding: 0.5rem;
         background: var(--light-clr);
     }
 }
 
-.ToggleButton {
+.Toggle {
     position: absolute;
     display: flex;
     right: 0;

@@ -5,7 +5,7 @@ import { ChangeEvent, FC } from 'react';
 import style from './style.module.scss';
 
 
-const ChangeLanguage: FC = () => {
+const LeftSideLanguage: FC = () => {
     const {
         locale, locales, replace, asPath, pathname, query,
     } = useRouter();
@@ -17,7 +17,7 @@ const ChangeLanguage: FC = () => {
         replace({ pathname, query }, asPath, { locale: e.target.value });
     };
     return (
-        <div className={style.ChangeLanguage}>
+        <div className={style.Language}>
             <label htmlFor="change-language">{t('Language')}: </label>
             <select id="change-language" value={locale} onChange={handleChangeLocale}>
                 {locales.map((lang) => (
@@ -33,4 +33,4 @@ const ChangeLanguage: FC = () => {
     );
 };
 
-export default ChangeLanguage;
+export default LeftSideLanguage;

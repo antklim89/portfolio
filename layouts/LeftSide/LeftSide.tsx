@@ -1,11 +1,11 @@
 import { FC, useCallback, useState } from 'react';
 
 
-import ChangeLanguage from './ChangeLanguage';
-import Logo from './Logo';
-import NavLinks from './NavLinks';
+import LeftSideLanguage from './LeftSideLanguage';
+import LeftSideLogo from './LeftSideLogo';
+import LeftSideNavLinks from './LeftSideNavLinks';
+import LeftSideToggle from './LeftSideToggle';
 import style from './style.module.scss';
-import ToggleButton from './ToggleButton';
 
 import { cls } from '~/utils';
 
@@ -17,11 +17,11 @@ const LeftSide:FC = () => {
 
     return (
         <aside className={cls(style.LeftSide, show && style.LeftSide__show)}>
-            <div className={style.LeftSide__fixed}>
-                <ToggleButton show={show} toggle={toggle} />
-                <Logo />
-                <NavLinks />
-                <ChangeLanguage />
+            <div className={style.container}>
+                <LeftSideToggle show={show} toggle={toggle} />
+                <LeftSideLogo />
+                <LeftSideNavLinks />
+                <LeftSideLanguage />
             </div>
         </aside>
     );

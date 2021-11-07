@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { FC } from 'react';
 
-import Project from './Project';
+import ProjectItem from './ProjectItem';
 import styles from './style.module.scss';
 
 import { ProjectPreviewType } from '~/types';
@@ -16,7 +16,7 @@ const Projects: FC<{projects: ProjectPreviewType[]}> = ({ projects }) => {
             </h1>
             <div className={styles.Projects}>
                 {projects.map((project) => (
-                    <Project key={project.title} {...project} />
+                    <ProjectItem key={project.title} {...project} />
                 ))}
             </div>
         </section>

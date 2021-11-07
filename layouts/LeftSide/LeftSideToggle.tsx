@@ -7,10 +7,11 @@ import style from './style.module.scss';
 import { cls } from '~/utils';
 
 
-const ToggleButton: FC<{toggle: () => void, show: boolean}> = ({ toggle, show }) => {
+const LeftSideToggle: FC<{toggle: () => void, show: boolean}> = ({ toggle, show }) => {
     return (
-        <div className={cls(style.ToggleButton, show && style.ToggleButton__show)}>
+        <div className={cls(style.Toggle, show && style.Toggle__show)}>
             <button
+            // aria-label={show}
                 className={style.button}
                 type="button"
                 onClick={toggle}
@@ -27,4 +28,4 @@ const ToggleButton: FC<{toggle: () => void, show: boolean}> = ({ toggle, show })
     );
 };
 
-export default ToggleButton;
+export default LeftSideToggle;
