@@ -10,9 +10,9 @@ const Technologies: FC<TechnologiesProps> = ({ technologies }) => {
     const t = useTranslations();
     return (
         <section className={style.Technologies}>
-            <h1 className="title">
+            <h2 className="title">
                 {t('Technologies')}
-            </h1>
+            </h2>
             <div className={style.list}>
                 {technologies.map((technology) => (
                     <Technology key={technology.slug} technology={technology} />

@@ -11,9 +11,9 @@ const Projects: FC<{projects: ProjectPreviewType[]}> = ({ projects }) => {
     const t = useTranslations();
     return (
         <section>
-            <h1 className="title">
+            <h2 className="title">
                 {t('Projects')}
-            </h1>
+            </h2>
             <div className={styles.Projects}>
                 {projects.map((project) => (
                     <ProjectItem key={project.title} {...project} />

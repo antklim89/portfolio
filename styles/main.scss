@@ -32,7 +32,7 @@ body {
     text-transform: uppercase;
 }
 
-h1.title {
+h1.title, h2.title {
     font-size: var(--font-size-xl);
     margin: var(--sp-3) var(--sp-4);
 }
