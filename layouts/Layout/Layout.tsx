@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 import style from './style.module.scss';
 
-import Background from '~/layouts/Background';
+import Background from '~/components/Background';
 import LeftSide from '~/layouts/LeftSide';
 
 
