@@ -1,7 +1,7 @@
 @use '~/styles/variables' as *;
 
 
-.container {
+.LeftSide {
     width: var(--left-side-width);
     margin-left: calc(var(--left-side-width) * -1);
     transition: 200ms;
@@ -14,19 +14,20 @@
     &__show {
         margin-left: 0;
     }
+
+    &__fixed {
+        position: fixed;
+        width: var(--left-side-width);
+        height: 100vh;
+        display: flex;
+        background-color: var(--left-side-bg);
+        color: var(--light-clr);
+        min-height: 100vh;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
-.LeftSide {
-    position: fixed;
-    width: var(--left-side-width);
-    height: 100vh;
-    display: flex;
-    background-color: var(--left-side-bg);
-    color: var(--light-clr);
-    min-height: 100vh;
-    flex-direction: column;
-    align-items: center;
-}
 
 .Logo {
     margin: var(--sp-4) var(--sp-1);
