@@ -3,11 +3,10 @@ import { FC } from 'react';
 
 import ProjectItem from './ProjectItem';
 import styles from './style.module.scss';
+import { ProjectsProps } from './types';
 
-import { ProjectPreviewType } from '~/types';
 
-
-const Projects: FC<{projects: ProjectPreviewType[]}> = ({ projects }) => {
+const Projects: FC<ProjectsProps> = ({ projects }) => {
     const t = useTranslations();
     return (
         <section>

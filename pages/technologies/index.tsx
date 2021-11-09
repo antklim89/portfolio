@@ -5,12 +5,12 @@ import Container from '~/components/Container';
 import Seo from '~/components/Seo';
 import Technologies from '~/layouts/Technologies';
 import { technologySchema } from '~/schemas';
-import type { TechnologyType } from '~/types';
-import { loadManyFiles, getLocale } from '~/utils/server';
+import type { BlurData, TechnologyType } from '~/types';
+import { loadManyFiles, getLocale, getBlurData } from '~/utils/server';
 
 
 interface Props {
-    technologies: TechnologyType[]
+    technologies: BlurData<TechnologyType>[]
 }
 
 const TechnologiesPage: NextPage<Props> = ({ technologies }) => {
@@ -32,10 +32,11 @@ export const getStaticProps: GetStaticProps<Props> = async ({ locale = 'en' }) =
 
     const technologiesData = await loadManyFiles('technologies');
     const technologies = technologiesData.map((technology) => getLocale(technology, technologySchema, locale));
+    const technologiesWithBlurData = await getBlurData(technologies, 'image');
 
     return {
         props: {
-            technologies,
+            technologies: technologiesWithBlurData,
             messages,
         },
     };

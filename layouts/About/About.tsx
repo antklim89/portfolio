@@ -6,18 +6,21 @@ import style from './style.module.scss';
 import Container from '~/components/Container';
 import Markdown from '~/components/Markdown';
 import { SITE_URL } from '~/constants';
+import { BlurData } from '~/types';
 import { AboutType } from '~/types/about';
 
 
-const About: FC<AboutType> = ({ image, title, text }) => {
+const About: FC<BlurData<AboutType>> = ({ image, title, text, blurData }) => {
     return (
         <section className="parallax">
             <Container className={style.About}>
                 <div className={style.image}>
                     <Image
                         alt="About"
+                        blurDataURL={blurData}
                         height={320}
                         layout="responsive"
+                        placeholder="blur"
                         src={SITE_URL + image}
                         width={320}
                     />

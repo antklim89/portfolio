@@ -9,12 +9,12 @@ import Container from '~/components/Container';
 import Seo from '~/components/Seo';
 import Project from '~/layouts/Project';
 import { projectSchema } from '~/schemas/project';
-import { ProjectType } from '~/types';
-import { getLocale, loadOneFile } from '~/utils/server';
+import { ProjectTypeWithBlurData } from '~/types';
+import { getBlurData, getLocale, loadOneFile } from '~/utils/server';
 
 
 interface Props {
-    project: ProjectType
+    project: ProjectTypeWithBlurData
 }
 
 type PathsType = {
@@ -67,12 +67,13 @@ export const getStaticProps: GetStaticProps<Props> = async ({ locale = 'en', par
 
     const projectData = await loadOneFile(`projects/${params.slug}.json`);
     const project = await getLocale(projectData, projectSchema, locale);
+    const projectWithBlurData = await getBlurData(project, 'image');
 
 
     return {
         props: {
             messages,
-            project,
+            project: projectWithBlurData,
         },
     };
 };

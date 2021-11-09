@@ -18,8 +18,10 @@ const TechnologyItem: FC<TechnologyProps> = ({ technology }) => {
                     <div>
                         <Image
                             alt={technology.title}
+                            blurDataURL={technology.blurData}
                             height={400}
                             layout="responsive"
+                            placeholder="blur"
                             src={SITE_URL + technology.image}
                             width={640}
                         />

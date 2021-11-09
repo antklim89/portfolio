@@ -2,16 +2,16 @@ import type { GetStaticProps } from 'next';
 import { useTranslations } from 'next-intl';
 import { FC } from 'react';
 
-import Container from '~/components/Container';
 import Seo from '~/components/Seo';
 import About from '~/layouts/About';
 import { aboutSchema } from '~/schemas/about';
+import { BlurData } from '~/types';
 import { AboutType } from '~/types/about';
-import { loadOneFile, getLocale } from '~/utils/server';
+import { loadOneFile, getLocale, getBlurData } from '~/utils/server';
 
 
 interface Props {
-    about: AboutType
+    about: BlurData<AboutType>
 }
 
 const AboutPage: FC<Props> = ({ about }) => {
@@ -30,13 +30,13 @@ export default AboutPage;
 export const getStaticProps: GetStaticProps<Props> = async ({ locale = 'en' }) => {
     const { default: messages } = await import(`~/public/locales/${locale}/common.json`);
 
-
     const aboutData = await loadOneFile('about/index.json');
     const about = getLocale(aboutData, aboutSchema, locale);
+    const aboutWithBlurData = await getBlurData(about, 'image');
 
     return {
         props: {
-            about,
+            about: aboutWithBlurData,
             messages,
         },
     };

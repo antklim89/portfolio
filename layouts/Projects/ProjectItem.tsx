@@ -9,19 +9,23 @@ import style from './style.module.scss';
 
 import Tags from '~/components/Tags';
 import { SITE_URL } from '~/constants';
-import { ProjectPreviewType } from '~/types';
+import { ProjectPreviewTypeWithBlurData } from '~/types';
 import { cls } from '~/utils';
 
 
-const ProjectItem: FC<ProjectPreviewType> = ({ technologies, title, image, link, slug }) => {
+const ProjectItem: FC<ProjectPreviewTypeWithBlurData> = ({
+    technologies, title, image, link, slug, blurData,
+}) => {
     const t = useTranslations();
     return (
         <section className={style.Project}>
             <div>
                 <Image
                     alt={title}
+                    blurDataURL={blurData}
                     height={700}
                     layout="responsive"
+                    placeholder="blur"
                     src={SITE_URL + image}
                     width={640}
                 />

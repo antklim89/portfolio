@@ -5,12 +5,12 @@ import Container from '~/components/Container';
 import Seo from '~/components/Seo';
 import ProjectsList from '~/layouts/Projects';
 import { projectPreviewSchema } from '~/schemas/project';
-import type { ProjectPreviewType } from '~/types';
-import { loadManyFiles, getLocale } from '~/utils/server';
+import type { BlurData, ProjectPreviewType } from '~/types';
+import { loadManyFiles, getLocale, getBlurData } from '~/utils/server';
 
 
 interface Props {
-    projects: ProjectPreviewType[]
+    projects: BlurData<ProjectPreviewType>[]
 }
 
 const ProjectsPage: NextPage<Props> = ({ projects }) => {
@@ -32,10 +32,11 @@ export const getStaticProps: GetStaticProps<Props> = async ({ locale = 'en' }) =
 
     const projectsData = await loadManyFiles('projects');
     const projects = projectsData.map((project) => getLocale(project, projectPreviewSchema, locale));
+    const projectsWithBlurData = await getBlurData(projects, 'image');
 
     return {
         props: {
-            projects,
+            projects: projectsWithBlurData,
             messages,
         },
     };

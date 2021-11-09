@@ -1,3 +1,4 @@
+
 import type { NextPage, GetStaticProps } from 'next';
 
 import Container from '~/components/Container';
@@ -8,14 +9,14 @@ import Technologies from '~/layouts/Technologies';
 import { introSchema } from '~/schemas/intro';
 import { projectPreviewSchema } from '~/schemas/project';
 import { technologySchema } from '~/schemas/technology';
-import type { IntroType, ProjectPreviewType, TechnologyType } from '~/types';
-import { loadManyFiles, getLocale, loadOneFile } from '~/utils/server';
+import type { BlurData, IntroType, ProjectPreviewType, TechnologyType } from '~/types';
+import { loadManyFiles, getLocale, loadOneFile, getBlurData } from '~/utils/server';
 
 
 interface Props {
     intro: IntroType
-    projects: ProjectPreviewType[]
-    technologies: TechnologyType[]
+    projects: BlurData<ProjectPreviewType>[]
+    technologies: BlurData<TechnologyType>[]
 }
 
 const Home: NextPage<Props> = ({ intro, projects, technologies }) => {
@@ -41,18 +42,21 @@ export const getStaticProps: GetStaticProps<Props> = async ({ locale = 'en' }) =
 
     const projectsData = await loadManyFiles('projects');
     const projects = projectsData.map((project) => getLocale(project, projectPreviewSchema, locale));
+    const projectsWithBlurData = await getBlurData(projects, 'image');
 
 
     const technologiesData = await loadManyFiles('technologies');
     const technologies = technologiesData.map((technology) => getLocale(technology, technologySchema, locale));
+    const technologiesWithBlurData = await getBlurData(technologies, 'image');
 
     return {
         props: {
             intro,
-            projects,
-            technologies,
+            projects: projectsWithBlurData,
+            technologies: technologiesWithBlurData,
             messages,
         },
     };
 };
+
 
