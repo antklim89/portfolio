@@ -14,13 +14,14 @@ const LeftSide:FC = () => {
     const [show, setShow] = useState(false);
 
     const toggle = useCallback(() => setShow((prevShow) => !prevShow), []);
+    const close = useCallback(() => setShow(false), []);
 
     return (
         <aside className={cls(style.LeftSide, show && style.LeftSide__show, 'parallax')}>
             <div className={style.container}>
                 <LeftSideToggle show={show} toggle={toggle} />
                 <LeftSideLogo />
-                <LeftSideNavLinks />
+                <LeftSideNavLinks toggle={close} />
                 <LeftSideLanguage />
             </div>
         </aside>

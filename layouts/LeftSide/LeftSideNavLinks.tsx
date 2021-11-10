@@ -5,31 +5,34 @@ import { FC } from 'react';
 import style from './style.module.scss';
 
 
-const LeftSideNavLinks: FC = () => {
+const LeftSideNavLinks: FC<{toggle: () => void}> = ({ toggle }) => {
     const t = useTranslations();
+
+    const links = [
+        { href: '/', body: t('home') },
+        { href: '/projects', body: t('projects') },
+        { href: '/technologies', body: t('technologies') },
+        { href: '/about', body: t('about') },
+    ];
+
     return (
         <nav className={style.NavLinks}>
             <ul>
-                <li>
-                    <Link href="/">
-                        <a className="link">{t('home')}</a>
-                    </Link>
-                </li>
-                <li>
-                    <Link href="/projects">
-                        <a className="link">{t('projects')}</a>
-                    </Link>
-                </li>
-                <li>
-                    <Link href="/technologies">
-                        <a className="link">{t('technologies')}</a>
-                    </Link>
-                </li>
-                <li>
-                    <Link href="/about">
-                        <a className="link">{t('about')}</a>
-                    </Link>
-                </li>
+                {links.map(({ href, body }) => (
+                    <li key={href}>
+                        <Link href={href}>
+                            <a
+                                className="link"
+                                role="link"
+                                tabIndex={0}
+                                onClick={toggle}
+                                onKeyDown={(e) => e.key === 'Space' && toggle()}
+                            >
+                                {body}
+                            </a>
+                        </Link>
+                    </li>
+                ))}
             </ul>
         </nav>
     );
