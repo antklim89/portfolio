@@ -9,11 +9,11 @@ import style from './style.module.scss';
 
 import Tags from '~/components/Tags';
 import { SITE_URL } from '~/constants';
-import { ProjectPreviewTypeWithBlurData } from '~/types';
+import { BlurData, ProjectPreviewType } from '~/types';
 import { cls } from '~/utils';
 
 
-const ProjectItem: FC<ProjectPreviewTypeWithBlurData> = ({
+const ProjectItem: FC<BlurData<ProjectPreviewType>> = ({
     technologies, title, image, link, slug, blurData,
 }) => {
     const t = useTranslations();

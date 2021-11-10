@@ -9,12 +9,12 @@ import Container from '~/components/Container';
 import Seo from '~/components/Seo';
 import Project from '~/layouts/Project';
 import { projectSchema } from '~/schemas/project';
-import { ProjectTypeWithBlurData } from '~/types';
+import { BlurData, ProjectType } from '~/types';
 import { getBlurData, getLocale, loadOneFile } from '~/utils/server';
 
 
 interface Props {
-    project: ProjectTypeWithBlurData
+    project: BlurData<ProjectType>
 }
 
 type PathsType = {
