@@ -36,3 +36,9 @@
     }
 }
 
+@include media-md {
+    :root {
+        --top-offset: 0px;
+    }
+}
+
