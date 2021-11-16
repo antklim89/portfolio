@@ -1,6 +1,6 @@
 import path from 'path';
 
-import sharp from 'sharp';
+import Jimp from 'jimp/es';
 
 import { BlurData } from '~/types';
 
@@ -23,16 +23,14 @@ export function getBlurData<K extends string, T extends DataWithImage<K>>(
     data: T | T[],
     imageKey: K,
 ): Promise<BlurData<T>> | Promise<BlurData<T>[]> {
-
     const transform = async (project: T): Promise<BlurData<T>> => {
-        const image = path.join(process.cwd(), 'public', project[imageKey]);
-        const imageBuffer = await sharp(image)
+        const imagePath = path.join(process.cwd(), 'public', project[imageKey]);
+        const imageJimp = await Jimp.read(imagePath);
+        const blurData = await imageJimp
             .resize(64, 64)
-            .blur(5)
-            .webp()
-            .toBuffer();
-
-        const blurData = `data:image/webp;base64, ${imageBuffer.toString('base64')}`;
+            .quality(80)
+            .blur(2)
+            .getBase64Async(Jimp.MIME_JPEG);
 
         return { ...project, blurData };
     };
