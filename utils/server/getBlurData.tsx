@@ -23,7 +23,6 @@ export function getBlurData<K extends string, T extends DataWithImage<K>>(
     data: T | T[],
     imageKey: K,
 ): Promise<BlurData<T>> | Promise<BlurData<T>[]> {
-
     const transform = async (project: T): Promise<BlurData<T>> => {
         const imagePath = path.join(process.cwd(), 'public', project[imageKey]);
         const imageJimp = await Jimp.read(imagePath);
