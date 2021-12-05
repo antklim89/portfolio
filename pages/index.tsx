@@ -1,5 +1,6 @@
 
 import type { NextPage, GetStaticProps } from 'next';
+import { useEffect } from 'react';
 
 import Container from '~/components/Container';
 import Seo from '~/components/Seo';
@@ -20,6 +21,20 @@ interface Props {
 }
 
 const Home: NextPage<Props> = ({ intro, projects, technologies }) => {
+    useEffect(() => {
+        if (!window.location.hash.startsWith('#invite_token')) return;
+        import('netlify-identity-widget')
+            .then(({ default: netlifyIdentity }) => {
+                netlifyIdentity.init({
+                    container: '#netlify-modal',
+                    locale: 'en',
+                });
+            })
+            .catch((err) => {
+                console.error(err);
+            });
+    }, []);
+
     return (
         <>
             <Seo />
@@ -28,6 +43,7 @@ const Home: NextPage<Props> = ({ intro, projects, technologies }) => {
                 <ProjectsList projects={projects} />
                 <Technologies technologies={technologies} />
             </Container>
+            <div id="netlify-modal" />
         </>
     );
 };

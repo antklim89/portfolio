@@ -1,12 +1,14 @@
 import path from 'path';
 
-import sharp from 'sharp';
+import Jimp from 'jimp/es';
 
 import { BlurData } from '~/types';
 
 
 type DataWithImage<K extends string> = Record<K, string>;
 
+
+const basePlaceholder = 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==';
 
 export function getBlurData<K extends string, T extends DataWithImage<K>>(
     data: T,
@@ -23,18 +25,17 @@ export function getBlurData<K extends string, T extends DataWithImage<K>>(
     data: T | T[],
     imageKey: K,
 ): Promise<BlurData<T>> | Promise<BlurData<T>[]> {
-
-    const transform = async (project: T): Promise<BlurData<T>> => {
-        const image = path.join(process.cwd(), 'public', project[imageKey]);
-        const imageBuffer = await sharp(image)
+    const transform = async (transformData: T): Promise<BlurData<T>> => {
+        const imagePath = path.join(process.cwd(), 'public', transformData[imageKey]);
+        if (imagePath.endsWith('.svg')) return { ...transformData, blurData: basePlaceholder };
+        const imageJimp = await Jimp.read(imagePath);
+        const blurData = await imageJimp
             .resize(64, 64)
-            .blur(5)
-            .webp()
-            .toBuffer();
+            .quality(80)
+            .blur(2)
+            .getBase64Async(Jimp.MIME_JPEG);
 
-        const blurData = `data:image/webp;base64, ${imageBuffer.toString('base64')}`;
-
-        return { ...project, blurData };
+        return { ...transformData, blurData };
     };
 
     if (Array.isArray(data)) return Promise.all(data.map(transform));

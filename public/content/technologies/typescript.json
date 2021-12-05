@@ -1,0 +1,13 @@
+{
+  "en": {
+    "slug": "typescript",
+    "body": "TypeScript is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.",
+    "title": "TypeScript",
+    "link": "https://www.typescriptlang.org/",
+    "image": "/content/technologies/images/typescript_logo.png"
+  },
+  "ru": {
+    "body": "TypeScript - это строго типизированный язык программирования, основанный на JavaScript, который предоставляет вам лучшие инструменты в любом объеме.",
+    "title": "TypeScript"
+  }
+}
