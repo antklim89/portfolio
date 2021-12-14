@@ -94,11 +94,10 @@
     display: flex;
     right: 0;
     background-color: var(--left-side-bg);
-    transition: 200ms;
+    width: 100vw;
     align-items: center;
     transform: translateX(100%);
     height: var(--top-offset);
-    // width: 100vw;
     
     .button {
         padding: 0 var(--sp-3);
@@ -111,21 +110,19 @@
     }
 
     .logo {
+        font-size: var(--font-size-xl);
         padding: 0 var(--sp-3);
         margin-left: var(--sp-5);
+        transition: 500ms;
+        transform: translateX(0);
+        
+        &.logoHide {
+            transform: translateX(-100vw);
+        }
     }
+
 
     @include media-md {
         display: none;
-    }
-
-    &__show {
-        transform: translateX(0);
-        background-color: transparent;
-        width: auto;
-
-        .logo {
-            display: none;
-        }
     }
 }

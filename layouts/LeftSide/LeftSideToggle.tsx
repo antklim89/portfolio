@@ -20,7 +20,7 @@ const LeftSideToggle: FC<{toggle: () => void, show: boolean}> = ({ toggle, show 
             </button>
 
             <Link href="/">
-                <a className={cls('link', style.logo)}>
+                <a className={cls('link', style.logo, show && style.logoHide)}>
                     PORTFOLIO
                 </a>
             </Link>
