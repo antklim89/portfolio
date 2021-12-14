@@ -2,18 +2,20 @@
 
 
 .Projects {
-    padding: var(--sp-2);
-    display: grid;
-    gap: var(--sp-3);
-    margin-bottom: var(--sp-5);
-    grid-template-columns: 1fr;
-    
-    @include media-xs {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    .list {
+        padding: var(--sp-2);
+        display: grid;
+        gap: var(--sp-3);
+        margin-bottom: var(--sp-5);
+        grid-template-columns: 1fr;
+        
+        @include media-xs {
+            grid-template-columns: repeat(2, 1fr);
+        }
 
-    @include media-md {
-        grid-template-columns: repeat(3, 1fr);
+        @include media-md {
+            grid-template-columns: repeat(3, 1fr);
+        }
     }
 }
 
@@ -28,6 +30,7 @@
     background: var(--light-clr);
     
     .title {
+        font-size: var(--font-size-lg);
         text-align: center;
     }
 

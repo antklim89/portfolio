@@ -12,10 +12,13 @@ import { cls } from '~/utils';
 const TechnologyItem: FC<TechnologyProps> = ({ technology }) => {
     return (
         <Link href={technology.link}>
-            <a aria-label={`${technology.title} technology`} rel="noopener noreferrer" target="_blank">
+            <a
+                aria-label={`${technology.title} technology`} className={style.linkWrapper} rel="noopener noreferrer"
+                target="_blank"
+            >
                 <section className={style.Technology}>
-                    <h2 className={cls('title', style.title)}>{technology.title}</h2>
-                    <div>
+                    <h3 className={cls('title', style.title)}>{technology.title}</h3>
+                    <div className={style.image}>
                         <Image
                             alt={technology.title}
                             blurDataURL={technology.blurData}

@@ -9,11 +9,11 @@ import { ProjectsProps } from './types';
 const Projects: FC<ProjectsProps> = ({ projects }) => {
     const t = useTranslations();
     return (
-        <section>
+        <section className={styles.Projects}>
             <h2 className="title">
                 {t('Projects')}
             </h2>
-            <div className={styles.Projects}>
+            <div className={styles.list}>
                 {projects.map((project) => (
                     <ProjectItem key={project.title} {...project} />
                 ))}

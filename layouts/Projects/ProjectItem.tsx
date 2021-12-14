@@ -34,7 +34,7 @@ const ProjectItem: FC<BlurData<ProjectPreviewType>> = ({
             <div className={style.body}>
                 <Link href={`/projects/${slug}`}>
                     <a>
-                        <h5 className={cls(style.title, 'title')}>{title}</h5>
+                        <h3 className={cls(style.title, 'title')}>{title}</h3>
                     </a>
                 </Link>
                 <div className={style.actions}>
