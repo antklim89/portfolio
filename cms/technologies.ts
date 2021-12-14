@@ -28,7 +28,7 @@ export const technologies: CmsCollection = {
         {
             name: 'title',
             widget: 'string',
-            pattern: ['^.{5,500}$', 'The title must be between 5 and 500 letters long.'],
+            pattern: ['^.{3,500}$', 'The title must be between 5 and 500 letters long.'],
             i18n: true,
         },
         {
