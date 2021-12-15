@@ -1,13 +1,15 @@
 {
   "en": {
-    "body": "Simple clothing shop\n\n![dsad](/content/projects/images/03.jpg \"sadasd\")\n\n**<b>dsadsd</b>**",
-    "title": "Cozy clothing shop",
+    "body": "Simple clothing shop.",
+    "title": "Cozy clothing.",
     "link": "http://google.com",
     "image": "/content/projects/images/01.jpg",
     "description": "Simple clothing shop",
     "technologies": [
       "react",
-      "bootstrap"
+      "bootstrap",
+      "gatsby",
+      "netlifycms"
     ],
     "slug": "cozy-clothing"
   },
