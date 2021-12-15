@@ -7,7 +7,10 @@
     "description": "Simple clothing shop",
     "technologies": [
       "react",
-      "bootstrap"
+      "bootstrap",
+      "nextjs",
+      "netlifycms",
+      ""
     ],
     "slug": "cozy-clothing"
   },
