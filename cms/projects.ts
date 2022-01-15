@@ -36,6 +36,11 @@ export const projects: CmsCollection = {
             pattern: ['^.{5,500}$', 'The link must be between 5 and 500 letters long.'],
         },
         {
+            name: 'github',
+            widget: 'string',
+            pattern: ['^.{5,500}$', 'The link must be between 5 and 500 letters long.'],
+        },
+        {
             name: 'technologies',
             widget: 'list',
             min: 1,
