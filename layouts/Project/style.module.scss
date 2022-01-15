@@ -4,4 +4,14 @@
     &__body {
         margin: var(--sp-3);
     }
+
+    &__head {
+        margin: var(--sp-2);
+    }
+        
+    a {
+        display: inline-block;
+        color: var(--primary-clr);
+        margin: var(--sp-2) var(--sp-1);
+    }
 }
