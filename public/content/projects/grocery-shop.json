@@ -1,0 +1,20 @@
+{
+  "en": {
+    "slug": "grocery-shop",
+    "title": "Grocery Shop",
+    "link": "https://grocery-shop-dev.netlify.app/",
+    "github": "https://github.com/antklim89/grocery_shop",
+    "image": "/content/projects/images/grocery_shop_home_page.png",
+    "technologies": [
+      "react",
+      "nextjs",
+      "bootstrap",
+      "mobx"
+    ],
+    "body": "Grocery shop."
+  },
+  "ru": {
+    "body": "Продуктовый магазин",
+    "title": "Продуктовый магазин"
+  }
+}
