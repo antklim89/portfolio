@@ -1,0 +1,13 @@
+{
+  "en": {
+    "slug": "mobx",
+    "body": "Simple, scalable state management.",
+    "title": "MobX",
+    "link": "https://mobx.js.org/README.html",
+    "image": "/content/technologies/images/mobx-svgrepo-com.svg"
+  },
+  "ru": {
+    "title": "MobX",
+    "body": "Простое, масштабируемое управление состоянием."
+  }
+}
