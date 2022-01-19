@@ -12,7 +12,7 @@
       "mobx",
       "strapi"
     ],
-    "body": "Grocery store. Developed on the Extjs framework. The design is done using the Bootstrap 5 library and the Sass preprocessor. The MobX package is used to manage the global state. The API is implemented using the Strapi framework.\n\n![home_page](/content/projects/images/grocery_shop_home_page.png \"Home page\")\n\n![catalog](/content/projects/images/grocery_shop_catalog.png \"catalog\")\n\n![cart](/content/projects/images/grocery_shop_cart.png \"cart\")"
+    "body": "Grocery store. Developed on the NextJS framework. The design is done using the Bootstrap 5 library and the Sass preprocessor. The MobX package is used to manage the global state. The API is implemented using the Strapi framework.\n\n![home_page](/content/projects/images/grocery_shop_home_page.png \"Home page\")\n\n![catalog](/content/projects/images/grocery_shop_catalog.png \"catalog\")\n\n![cart](/content/projects/images/grocery_shop_cart.png \"cart\")"
   },
   "ru": {
     "body": "Продуктовый магазин. Разработан на фрейм-ворке NextJS. Оформление выполнено с помощью библиотеки Bootstrap 5 и предпроцессора Sass. Для управления глобальным состоянием используется пакет MobX. API реализовано с помощью фрейм-ворка Strapi.﻿\n\n![домашняя_страница](/content/projects/images/grocery_shop_home_page.png \"Домашняя страница\")\n\n![каталог](/content/projects/images/grocery_shop_catalog.png \"каталог\")\n\n![корзина](/content/projects/images/grocery_shop_cart.png \"корзина\")",
