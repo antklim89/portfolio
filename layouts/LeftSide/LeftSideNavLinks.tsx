@@ -3,9 +3,10 @@ import Link from 'next/link';
 import { FC } from 'react';
 
 import style from './style.module.scss';
+import { LeftSideNavLinksProps } from './types';
 
 
-const LeftSideNavLinks: FC<{toggle: () => void}> = ({ toggle }) => {
+const LeftSideNavLinks: FC<LeftSideNavLinksProps> = ({ toggle }) => {
     const t = useTranslations();
 
     const links = [

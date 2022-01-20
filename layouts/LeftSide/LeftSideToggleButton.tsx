@@ -3,16 +3,17 @@ import { FC } from 'react';
 import { MdMenu, MdClose } from 'react-icons/md/';
 
 import style from './style.module.scss';
+import { LeftSideToggleButtonProps } from './types';
 
 import { cls } from '~/utils';
 
 
-const LeftSideToggle: FC<{toggle: () => void, show: boolean}> = ({ toggle, show }) => {
+const LeftSideToggleButton: FC<LeftSideToggleButtonProps> = ({ toggle, show }) => {
     return (
-        <div className={cls(style.Toggle, show && style.Toggle__show)}>
+        <div className={style.ToggleButton}>
             <button
                 aria-label={show ? 'hide left side' : 'show left side'}
-                className={style.button}
+                className={cls(style.button, show && style.show)}
                 type="button"
                 onClick={toggle}
             >
@@ -20,7 +21,7 @@ const LeftSideToggle: FC<{toggle: () => void, show: boolean}> = ({ toggle, show 
             </button>
 
             <Link href="/">
-                <a className={cls('link', style.logo, show && style.logoHide)}>
+                <a className={cls('link', style.logo, show && style.show)}>
                     PORTFOLIO
                 </a>
             </Link>
@@ -28,4 +29,4 @@ const LeftSideToggle: FC<{toggle: () => void, show: boolean}> = ({ toggle, show 
     );
 };
 
-export default LeftSideToggle;
+export default LeftSideToggleButton;

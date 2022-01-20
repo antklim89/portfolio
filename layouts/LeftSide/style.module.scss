@@ -11,7 +11,7 @@
         margin-left: 0;
     }
 
-    &__show {
+    &.LeftSideShow {
         margin-left: 0;
     }
 
@@ -30,7 +30,7 @@
 
 
 .Logo {
-    margin: var(--sp-4) var(--sp-1);
+    margin: var(--sp-6) var(--sp-1);
     position: relative;
     padding: var(--sp-4);
     font-size: var(--font-size-xl);
@@ -89,7 +89,7 @@
     }
 }
 
-.Toggle {
+.ToggleButton {
     position: absolute;
     display: flex;
     right: 0;
@@ -107,6 +107,11 @@
         border: none;
         color: var(--light-clr);
         font-size: var(--font-size-xl);
+        transition: transform 500ms;
+
+        &.show {
+            transform: translateX(-100%);
+        }
     }
 
     .logo {
@@ -116,8 +121,9 @@
         transition: 500ms;
         transform: translateX(0);
         
-        &.logoHide {
-            transform: translateX(-100vw);
+        &.show {
+            transform: translateX(-100vh);
+            opacity: 0;
         }
     }
 

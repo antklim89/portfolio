@@ -1,10 +1,9 @@
 import { FC, useCallback, useState } from 'react';
 
-
-import LeftSideLanguage from './LeftSideLanguage';
+import LeftSideLanguageSelect from './LeftSideLanguageSelect';
 import LeftSideLogo from './LeftSideLogo';
 import LeftSideNavLinks from './LeftSideNavLinks';
-import LeftSideToggle from './LeftSideToggle';
+import LeftSideToggleButton from './LeftSideToggleButton';
 import style from './style.module.scss';
 
 import { cls } from '~/utils';
@@ -17,12 +16,12 @@ const LeftSide:FC = () => {
     const close = useCallback(() => setShow(false), []);
 
     return (
-        <aside className={cls(style.LeftSide, show && style.LeftSide__show, 'parallax')}>
+        <aside className={cls(style.LeftSide, 'parallax', show && style.LeftSideShow)}>
             <div className={style.container}>
-                <LeftSideToggle show={show} toggle={toggle} />
+                <LeftSideToggleButton show={show} toggle={toggle} />
                 <LeftSideLogo />
                 <LeftSideNavLinks toggle={close} />
-                <LeftSideLanguage />
+                <LeftSideLanguageSelect />
             </div>
         </aside>
     );

@@ -5,9 +5,14 @@ import { ChangeEvent, FC } from 'react';
 import style from './style.module.scss';
 
 
-const LeftSideLanguage: FC = () => {
+const LeftSideLanguageSelect: FC = () => {
     const {
-        locale, locales, replace, asPath, pathname, query,
+        locale,
+        locales,
+        replace,
+        asPath,
+        pathname,
+        query,
     } = useRouter();
     const t = useTranslations();
 
@@ -16,6 +21,7 @@ const LeftSideLanguage: FC = () => {
     const handleChangeLocale = (e: ChangeEvent<HTMLSelectElement>) => {
         replace({ pathname, query }, asPath, { locale: e.target.value });
     };
+
     return (
         <div className={style.Language}>
             <label htmlFor="change-language">{t('Language')}: </label>
@@ -33,4 +39,4 @@ const LeftSideLanguage: FC = () => {
     );
 };
 
-export default LeftSideLanguage;
+export default LeftSideLanguageSelect;
