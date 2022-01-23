@@ -1,7 +1,8 @@
     
 .tags {
-    padding: 0 var(--sp-1);
     display: flex;
+    flex-wrap: wrap;
+    padding: 0 var(--sp-1);
 
     .tag {
         margin: 0.2rem;
