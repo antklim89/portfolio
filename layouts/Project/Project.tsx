@@ -54,6 +54,7 @@ const Project: FC<ProjectType> = ({
                             layout="responsive"
                             objectFit="contain"
                             objectPosition="50% 0%"
+                            quality={40}
                             src={SITE_URL + image}
                             width={200}
                         />
