@@ -1,0 +1,13 @@
+{
+  "en": {
+    "slug": "next-js",
+    "body": "The React Framework for Production.",
+    "title": "NextJS",
+    "link": "https://nextjs.org/",
+    "image": "/content/technologies/images/nextjs-svgrepo-com.svg"
+  },
+  "ru": {
+    "body": "React фреймворк  для работы.",
+    "title": "NextJS"
+  }
+}

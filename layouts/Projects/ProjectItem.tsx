@@ -14,7 +14,7 @@ import { cls } from '~/utils';
 
 
 const ProjectItem: FC<BlurData<ProjectPreviewType>> = ({
-    technologies, title, image, link, slug, blurData,
+    technologies, title, image, link, github, slug, blurData,
 }) => {
     const t = useTranslations();
     return (
@@ -34,11 +34,11 @@ const ProjectItem: FC<BlurData<ProjectPreviewType>> = ({
             <div className={style.body}>
                 <Link href={`/projects/${slug}`}>
                     <a>
-                        <h5 className={cls(style.title, 'title')}>{title}</h5>
+                        <h3 className={cls(style.title, 'title')}>{title}</h3>
                     </a>
                 </Link>
                 <div className={style.actions}>
-                    <Link href={link}>
+                    <Link href={github}>
                         <a rel="noopener noreferrer" target="_blank">
                             <DiGithubBadge />
                             {t('GitHub')}

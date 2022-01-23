@@ -6,13 +6,12 @@
           display: grid;
           padding: var(--sp-2);
           gap: var(--sp-3);
+          grid-template-columns: repeat(2, 1fr);
 
           a {
                text-decoration: none;
                color: inherit;
           }
-
-          grid-template-columns: repeat(2, 1fr);
           
           @include media-xs {
                grid-template-columns: repeat(3, 1fr);
@@ -31,13 +30,20 @@
      border-radius: var(--border-radius);
      overflow: hidden;
      background: var(--light-clr);
+     width: 100%;
 
      .title {
-          padding: var(--sp-2);
+          font-size: var(--font-size-md);
+          padding: var(--sp-1);
           text-align: center;
      }
 
      .body {
+          flex-grow: 1;
           padding: var(--sp-2);
      }
+}
+
+.linkWrapper {
+     display: flex;
 }

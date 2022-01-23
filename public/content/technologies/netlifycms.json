@@ -1,0 +1,13 @@
+{
+  "en": {
+    "slug": "netlifycms",
+    "title": "NetlifyCMS",
+    "link": "https://www.netlifycms.org/",
+    "body": "Use Netlify CMS with any static site generator for a faster and more flexible web project",
+    "image": "/content/technologies/images/netlify-cms-logo.svg"
+  },
+  "ru": {
+    "title": "NetlifyCMS",
+    "body": "Используйте Netlify CMS с любым генератором статических сайтов для более быстрого и гибкого веб-проекта"
+  }
+}

@@ -1,22 +1,8 @@
 @use '~/styles/variables' as *;
 
+
 .Container {
      width: 100%;
      margin: 0 auto;
-}
-
-.xs {
-     max-width: $xs;
-}     
-.sm {
-     max-width: $sm;
-}     
-.md {
      max-width: $md;
-}     
-.lg {
-     max-width: $lg;
-}     
-.xl {
-     max-width: $xl;
 }

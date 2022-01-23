@@ -27,14 +27,21 @@ body {
 }
 
 .title {
-    font-size: var(--font-size-lg);
     color: var(--primary-clr);
     text-transform: uppercase;
+    margin: var(--sp-2) var(--sp-3);
 }
 
-h1.title, h2.title {
+h1.title {
     font-size: var(--font-size-xl);
-    margin: var(--sp-3) var(--sp-4);
+}
+
+h2.title {
+    font-size: var(--font-size-xl);
+}
+
+h3.title {
+    font-size: var(--font-size-md);
 }
 
 .parallax {

@@ -11,7 +11,7 @@
         margin-left: 0;
     }
 
-    &__show {
+    &.LeftSideShow {
         margin-left: 0;
     }
 
@@ -30,7 +30,7 @@
 
 
 .Logo {
-    margin: var(--sp-4) var(--sp-1);
+    margin: var(--sp-6) var(--sp-1);
     position: relative;
     padding: var(--sp-4);
     font-size: var(--font-size-xl);
@@ -89,16 +89,15 @@
     }
 }
 
-.Toggle {
+.ToggleButton {
     position: absolute;
     display: flex;
     right: 0;
     background-color: var(--left-side-bg);
-    transition: 200ms;
+    width: 100vw;
     align-items: center;
     transform: translateX(100%);
     height: var(--top-offset);
-    // width: 100vw;
     
     .button {
         padding: 0 var(--sp-3);
@@ -108,24 +107,28 @@
         border: none;
         color: var(--light-clr);
         font-size: var(--font-size-xl);
+        transition: transform 500ms;
+
+        &.show {
+            transform: translateX(-100%);
+        }
     }
 
     .logo {
+        font-size: var(--font-size-xl);
         padding: 0 var(--sp-3);
         margin-left: var(--sp-5);
+        transition: 500ms;
+        transform: translateX(0);
+        
+        &.show {
+            transform: translateX(-100vh);
+            opacity: 0;
+        }
     }
+
 
     @include media-md {
         display: none;
-    }
-
-    &__show {
-        transform: translateX(0);
-        background-color: transparent;
-        width: auto;
-
-        .logo {
-            display: none;
-        }
     }
 }

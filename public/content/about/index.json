@@ -1,11 +1,11 @@
 {
   "en": {
     "title": "About",
-    "text": "lorem ipsum",
+    "text": "I am a full stack web developer from Russia. I studied web development in various online courses and developed myself.",
     "image": "/content/about/images/default128.png"
   },
   "ru": {
     "title": "Обо мне",
-    "text": "Лорем ипсум"
+    "text": "Я full stack веб-разработчик из России. Я изучал веб-разработку на различных онлайн-курсах и саморазвевался."
   }
 }

@@ -1,10 +1,10 @@
 {
   "en": {
     "title": "Introducing",
-    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure voluptatibus voluptatum minima eum a sit facere commodi vitae provident veniam.\n\nLorem ipsum dolor sit amet consectetur adipisicing elit. Iure voluptatibus voluptatum minima eum a sit facere commodi vitae provident veniam."
+    "text": "Beginner web and backend developer. I develop applications on ReactJS. I know the Gatsby and NextJS frameworks. I am also studying other frontend and backend libraries."
   },
   "ru": {
     "title": "Введение",
-    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure voluptatibus voluptatum minima eum a sit facere commodi vitae provident veniam.\n\nLorem ipsum dolor sit amet consectetur adipisicing elit. Iure voluptatibus voluptatum minima eum a sit facere commodi vitae provident veniam."
+    "text": "Начинающий веб и бэкенд разработчик. Разрабатываю приложения на ReactJS. Знаю фреймворки Gatsby и NextJS. Изучаю и другие фронтэнд и бэкэнд библиотеки."
   }
 }

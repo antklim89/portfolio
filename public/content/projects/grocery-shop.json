@@ -1,16 +1,26 @@
 {
   "en": {
-    "body": "Simple grocery shop",
-    "title": "Grocery shop",
-    "link": "http://www.google.com",
+    "slug": "grocery-shop",
+    "title": "Grocery Shop",
+    "link": "https://grocery-shop-dev.netlify.app/",
+    "github": "https://github.com/antklim89/grocery_shop",
+    "image": "/content/projects/images/grocery_shop_home_page.png",
     "technologies": [
-      "react"
+      "react",
+      "nextjs",
+      "bootstrap",
+      "mobx",
+      "strapi"
     ],
-    "image": "/content/projects/images/02.jpg",
-    "slug": "grocery-shop"
+    "body": "Grocery store. Developed on the NextJS framework. The design is done using the Bootstrap 5 library and the Sass preprocessor. The MobX package is used to manage the global state. The API is implemented using the Strapi framework.",
+    "images": [
+      "/content/projects/images/grocery_shop_home_full_page.png",
+      "/content/projects/images/grocery_shop_cart.png",
+      "/content/projects/images/grocery_shop_catalog.png"
+    ]
   },
   "ru": {
-    "body": "Магазин",
-    "title": "Магазин"
+    "body": "Продуктовый магазин. Разработан на фрейм-ворке NextJS. Оформление выполнено с помощью библиотеки Bootstrap 5 и предпроцессора Sass. Для управления глобальным состоянием используется пакет MobX. API реализовано с помощью фрейм-ворка Strapi.",
+    "title": "Продуктовый магазин"
   }
 }
