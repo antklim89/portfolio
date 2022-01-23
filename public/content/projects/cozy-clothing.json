@@ -1,10 +1,7 @@
 {
   "en": {
-    "body": "A simple clothing store. Developed using the Gatsby framework and the React library. The design is made using the Sass preprocessor. The site is completely static.\n\nThe products are distributed by gender and age . There is a shopping cart and a product search\n\nNetlifyCMS is used as a content manager.\n\n![home_page](/content/projects/images/cozy_clothing_home_page.png \"Home Page\")\n\n![Catalog](/content/projects/images/cozy_clothing_catalog.png \"Catalog\")\n\n![Cart](/content/projects/images/cozy_clothing_cart.png \"Cart\")",
-    "title": "Cozy clothing",
-    "link": "https://cozy-clothing.netlify.app/",
-    "image": "/content/projects/images/cozy_clothing_home_page.png",
-    "description": "Simple clothing shop",
+    "body": "A simple clothing store. Developed using the Gatsby framework and the React library. The design is made using the Sass preprocessor. The site is completely static.\n\nThe products are distributed by gender and age . There is a shopping cart and a product search\n\nNetlifyCMS is used as a content manager.",
+    "github": "https://github.com/antklim89/cozy_clothing",
     "technologies": [
       "react",
       "typescript",
@@ -12,10 +9,19 @@
       "netlifycms"
     ],
     "slug": "cozy-clothing",
-    "github": "https://github.com/antklim89/cozy_clothing"
+    "title": "Cozy clothing",
+    "images": [
+      "/content/projects/images/cozy_clothing_home_page_full.png",
+      "/content/projects/images/cozy_clothing_catalog_menu.png",
+      "/content/projects/images/cozy_clothing_catalog.png",
+      "/content/projects/images/cozy_clothing_cart.png"
+    ],
+    "link": "https://cozy-clothing.netlify.app/",
+    "image": "/content/projects/images/cozy_clothing_home_page.png",
+    "description": "Simple clothing shop"
   },
   "ru": {
-    "body": "Простой магазин одежды. Разработан с помощью фреймворка  Gatsby и библиотеки React. Оформление выполнено с помощью препроцессора Sass.  Сайт полностью статический. \n\nТовары распределены по полу и возрасту . Есть корзина и поиск товаров\n\nВ качестве контент-менеджера используется NetlifyCMS.\n\n![домашняя_страница](/content/projects/images/cozy_clothing_home_page.png \"Домашняя страница\")\n\n![Каталог](/content/projects/images/cozy_clothing_catalog.png \"Каталог\")\n\n![Корзина](/content/projects/images/cozy_clothing_cart.png \"Корзина\")",
+    "body": "Простой магазин одежды. Разработан с помощью фреймворка  Gatsby и библиотеки React. Оформление выполнено с помощью препроцессора Sass.  Сайт полностью статический. \n\nТовары распределены по полу и возрасту . Есть корзина и поиск товаров\n\nВ качестве контент-менеджера используется NetlifyCMS.",
     "title": "Магазин одежды",
     "description": "Простой магазин одежды"
   }
