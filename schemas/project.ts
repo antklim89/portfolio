@@ -10,6 +10,9 @@ export const projectPreviewSchema = z.object({
     slug: z.string(),
 });
 
-export const projectSchema = z.object({ body: z.string() }).merge(projectPreviewSchema);
+export const projectSchema = z.object({
+    body: z.string(),
+    images: z.array(z.string()),
+}).merge(projectPreviewSchema);
 
 
