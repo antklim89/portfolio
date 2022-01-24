@@ -1,0 +1,23 @@
+{
+  "en": {
+    "slug": "shopping_list",
+    "link": "https://shopping-list-dev.netlify.app",
+    "title": "Shopping List",
+    "github": "https://github.com/antklim89/shopping_list",
+    "technologies": [
+      "preact",
+      "mobx",
+      "framer-motion",
+      "snowpack",
+      "typescript",
+      "chai"
+    ],
+    "image": "/content/projects/images/shopping-list.png",
+    "images": [
+      "/content/projects/images/shopping-list.png",
+      "/content/projects/images/shopping-list-collection.png"
+    ],
+    "body": "Shopping list"
+  },
+  "ru": {}
+}

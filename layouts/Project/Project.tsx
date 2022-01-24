@@ -50,13 +50,12 @@ const Project: FC<ProjectType> = ({
                     <div className={style.image} key={image}>
                         <Image
                             alt={title}
-                            height={220}
+                            height={400}
                             layout="responsive"
                             objectFit="contain"
-                            objectPosition="50% 0%"
                             quality={40}
                             src={SITE_URL + image}
-                            width={200}
+                            width={620}
                         />
                     </div>
                 ))}
