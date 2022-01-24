@@ -21,7 +21,9 @@
         gap: var(--sp-3);
 
         .image {
-            border: 1px solid rgba(0, 0, 0, 0.3);
+            position: relative;
+            border: 1px solid rgba(100, 100, 100, 0.3);
+            background-color: rgba(100, 100, 100, 0.1);
         }
     }
 }
