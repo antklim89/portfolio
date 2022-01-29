@@ -25,13 +25,13 @@ const Project: FC<ProjectType> = ({
                 <Tags tags={technologies} />
                 <div>
                     <Link href={github}>
-                        <a rel="noopener noreferrer" target="_blank">
+                        <a className={style.link} rel="noopener noreferrer" target="_blank">
                             <DiGithubBadge />
                             {t('GitHub')}
                         </a>
                     </Link>
                     <Link href={link}>
-                        <a rel="noopener noreferrer" target="_blank">
+                        <a className={style.link} rel="noopener noreferrer" target="_blank">
                             <MdPublic />
                             {t('Site')}
                         </a>
