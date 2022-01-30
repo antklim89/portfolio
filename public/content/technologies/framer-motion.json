@@ -1,0 +1,13 @@
+{
+  "en": {
+    "slug": "framer-motion",
+    "title": "Framer Motion",
+    "body": "A production-ready motion library for React. Utilize the power behind Framer, the best prototyping tool for teams.",
+    "link": "https://www.framer.com/motion/",
+    "image": "/content/technologies/images/framer-svgrepo-com.svg"
+  },
+  "ru": {
+    "title": "Framer Motion",
+    "body": "Готовая к производству библиотека анимации для React."
+  }
+}
