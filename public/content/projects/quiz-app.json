@@ -1,0 +1,25 @@
+{
+  "en": {
+    "slug": "quiz-app",
+    "title": "Quiz App",
+    "link": "https://quiz-app-vite.netlify.app/",
+    "github": "https://github.com/antklim89/quiz_app_vite",
+    "technologies": [
+      "vue",
+      "vite",
+      "vuex",
+      "sass",
+      "typescript"
+    ],
+    "image": "/content/projects/images/quiz-app-home.png",
+    "images": [
+      "/content/projects/images/quiz-app-home.png",
+      "/content/projects/images/quiz-app-question.png",
+      "/content/projects/images/quiz-app-results.png"
+    ],
+    "body": "A small quiz developed on the [Vue](https://vuejs.org/) library. Written using [typescript](https://www.typescriptlang.org/) and [sass](https://sass-scss.ru/). The [Veux](https://vuex.vuejs.org/) package is used to manage the state. Questions are taken from the API [quizapi.io](https://quizapi.io)."
+  },
+  "ru": {
+    "body": "Небольшая викторина, разработанная на библеотеке Vue. Написана с помощью на typescript  и sass. Для Управления состоянием исполюзуется пакет Vuex. Вопросы берутся с API [quizapi.io](https://quizapi.io)."
+  }
+}

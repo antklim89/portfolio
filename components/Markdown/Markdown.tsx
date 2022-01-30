@@ -19,9 +19,19 @@ const Markdown: FC<MarkdownProps> = ({ components, children, ...props }) => {
         />
     ), []);
 
+    const a = useCallback(({ children: anchorChildren, node: _, ...anchorProps }) => (
+        <a
+            {...anchorProps}
+            rel="noreferrer"
+            target="_blank"
+        >
+            {anchorChildren}
+        </a>
+    ), []);
+
     return (
         <ReactMarkdown
-            components={{ ...components, img }}
+            components={{ ...components, img, a }}
             {...props}
         >
             {children}
