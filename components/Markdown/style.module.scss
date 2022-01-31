@@ -1,4 +1,11 @@
-    
-.image {
-    margin: var(--sp-3) 0 !important;
+
+
+.markdown {
+    p {
+        padding-bottom: 1rem;
+    }
+
+    img {
+        margin: var(--sp-3) 0 !important;
+    }
 }

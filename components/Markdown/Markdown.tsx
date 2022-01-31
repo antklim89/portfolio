@@ -12,7 +12,6 @@ const Markdown: FC<MarkdownProps> = ({ components, children, ...props }) => {
     const img = useCallback(({ src, alt }) => (
         <Image
             alt={alt || 'image'}
-            className={style.image}
             height={400}
             src={SITE_URL + src}
             width={400}
@@ -33,6 +32,7 @@ const Markdown: FC<MarkdownProps> = ({ components, children, ...props }) => {
         <ReactMarkdown
             components={{ ...components, img, a }}
             {...props}
+            className={style.markdown}
         >
             {children}
         </ReactMarkdown>
