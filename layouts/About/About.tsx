@@ -1,3 +1,4 @@
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { FC } from 'react';
 
@@ -10,7 +11,9 @@ import { BlurData } from '~/types';
 import { AboutType } from '~/types/about';
 
 
-const About: FC<BlurData<AboutType>> = ({ image, title, text, blurData }) => {
+const About: FC<BlurData<AboutType>> = ({ image, text, blurData }) => {
+    const t = useTranslations();
+
     return (
         <section className="parallax">
             <Container className={style.About}>
@@ -26,7 +29,7 @@ const About: FC<BlurData<AboutType>> = ({ image, title, text, blurData }) => {
                     />
                 </div>
                 <div className={style.text}>
-                    <h1 className="title">{title}</h1>
+                    <h1 className="title">{t('about')}</h1>
                     <Markdown>
                         {text}
                     </Markdown>
