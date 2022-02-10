@@ -1,10 +1,10 @@
 {
   "en": {
     "title": "Introducing",
-    "text": "Beginner web and backend developer. I develop applications on ReactJS. I know the Gatsby and NextJS frameworks. I am also studying other frontend and backend libraries."
+    "text": "Beginner web and backend developer. I know HTML, CSS, SCSS, JavaScript and TypeScript. I develop applications on ReactJS and Gatsby and NextJS frameworks. I create fully adaptive modern web applications with SEO optimization and full accessibility. I use Bootstrap 5, Material UI, Semantic-UI interface libraries, Framer-motion animation library, libraries for global state management - MobX and Redux, Express and NestJS back-end libraries, and also study everything related to web development."
   },
   "ru": {
     "title": "Введение",
-    "text": "Начинающий веб и бэкенд разработчик. Разрабатываю приложения на ReactJS. Знаю фреймворки Gatsby и NextJS. Изучаю и другие фронтэнд и бэкэнд библиотеки."
+    "text": "Начинающий веб и бэкенд разработчик. Знаю HTML, CSS, SCSS, JavaScript и TypeScript. Разрабатываю приложения на ReactJS и фреймворках Gatsby и NextJS. Создаю полностью адаптивные современные веб приложения с SEO оптимизацией и полной доступностью. Использую библиотеки интерфейса Bootstrap 5, Material UI, Semantic-UI, библиотеку анимации Framer-motion, библиотеки для управления глобальным состоянием: MobX и Redux, бэк энд библиотеки Express и NestJS, а также изучаю всё что связано веб разработкой.иблиотеки."
   }
 }
