@@ -12,11 +12,6 @@ export const about: CmsCollectionFile = {
     i18n: true,
     fields: [
         {
-            name: 'title',
-            widget: 'string',
-            i18n: true,
-        },
-        {
             name: 'text',
             widget: 'markdown',
             i18n: true,

@@ -1,11 +1,9 @@
 {
   "en": {
-    "title": "About",
-    "text": "I am a full stack web developer from Russia. I studied web development in various online courses and developed myself.",
+    "text": "I am a full-stack web developer from Russia. I study web development at various online courses and develop myself.\n\nI know Javascript and Typescript.\n\n\n\nEmail: antklim89prog@email.ru.\n\nGithub: <https://github.com/antklim89>",
     "image": "/content/about/images/default128.png"
   },
   "ru": {
-    "title": "Обо мне",
-    "text": "Я full stack веб-разработчик из России. Я изучал веб-разработку на различных онлайн-курсах и саморазвевался."
+    "text": "Я full-stack веб-разработчик из России. Изучаю веб-разработку на различных онлайн-курсах и саморазвиваюсь.\n\nЗнаяю Javascript и Typescript.\n\n\n\nПочта: antklim89prog@email.ru.\n\nGithub: <https://github.com/antklim89>"
   }
 }
