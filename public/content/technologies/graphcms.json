@@ -1,0 +1,13 @@
+{
+  "en": {
+    "slug": "graphcms",
+    "body": "GraphCMS gives you instant GraphQL Content APIs to create, enrich, unify, and deliver your content across platforms.",
+    "title": "GraphCMS",
+    "link": "https://graphcms.com/",
+    "image": "/content/technologies/images/graphcms-logo.svg"
+  },
+  "ru": {
+    "title": "GraphCMS",
+    "body": "GraphCMS предоставляет вам GraphQL API для создания, обогащения, унификации и доставки вашего контента на разных платформах."
+  }
+}
