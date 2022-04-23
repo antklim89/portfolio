@@ -1,0 +1,13 @@
+{
+  "en": {
+    "body": "Chakra UI is a simple, modular and accessible component library that gives you the building blocks you need to build your React applications.",
+    "title": "Chakra UI",
+    "slug": "chakra-ui",
+    "link": "https://chakra-ui.com/",
+    "image": "/content/technologies/images/chakraui-logo.svg"
+  },
+  "ru": {
+    "title": "Chakra UI",
+    "body": "Chakra UI - это простая, модульная и доступная библиотека компонентов, которая предоставляет вам строительные блоки, необходимые для создания ваших приложений на React JS."
+  }
+}
