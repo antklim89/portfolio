@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
+import Carousel from 'nuka-carousel';
 import { FC } from 'react';
 import { DiGithubBadge } from 'react-icons/di/';
 import { MdPublic } from 'react-icons/md/';
@@ -45,21 +46,20 @@ const Project: FC<ProjectType> = ({
                 </Markdown>
             </div>
 
-            <div className={style.images}>
+            <Carousel>
                 {images.map((image) => (
-                    <div className={style.image} key={image}>
-                        <Image
-                            alt={title}
-                            height={400}
-                            layout="responsive"
-                            objectFit="contain"
-                            quality={40}
-                            src={SITE_URL + image}
-                            width={620}
-                        />
-                    </div>
+                    <Image
+                        alt={title}
+                        height={400}
+                        key={image}
+                        layout="responsive"
+                        objectFit="contain"
+                        quality={40}
+                        src={SITE_URL + image}
+                        width={620}
+                    />
                 ))}
-            </div>
+            </Carousel>
 
         </section>
     );
