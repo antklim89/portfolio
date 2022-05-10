@@ -10,8 +10,8 @@ import style from './style.module.scss';
 
 import Markdown from '~/components/Markdown';
 import Tags from '~/components/Tags';
-import { SITE_URL } from '~/constants';
 import { ProjectType } from '~/types';
+import { getImageUrl } from '~/utils';
 
 
 const Project: FC<ProjectType> = ({
@@ -55,7 +55,7 @@ const Project: FC<ProjectType> = ({
                         layout="responsive"
                         objectFit="contain"
                         quality={40}
-                        src={SITE_URL + image}
+                        src={getImageUrl(image)}
                         width={620}
                     />
                 ))}

@@ -5,8 +5,7 @@ import { FC } from 'react';
 import style from './style.module.scss';
 import { TechnologyProps } from './types';
 
-import { SITE_URL } from '~/constants';
-import { cls } from '~/utils';
+import { cls, getImageUrl } from '~/utils';
 
 
 const TechnologyItem: FC<TechnologyProps> = ({ technology }) => {
@@ -25,7 +24,7 @@ const TechnologyItem: FC<TechnologyProps> = ({ technology }) => {
                             height={400}
                             layout="responsive"
                             placeholder="blur"
-                            src={SITE_URL + technology.image}
+                            src={getImageUrl(technology.image)}
                             width={640}
                         />
                     </div>

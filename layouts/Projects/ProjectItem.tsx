@@ -8,9 +8,8 @@ import { MdPublic } from 'react-icons/md/';
 import style from './style.module.scss';
 
 import Tags from '~/components/Tags';
-import { SITE_URL } from '~/constants';
 import { BlurData, ProjectPreviewType } from '~/types';
-import { cls } from '~/utils';
+import { cls, getImageUrl } from '~/utils';
 
 
 const ProjectItem: FC<BlurData<ProjectPreviewType>> = ({
@@ -28,7 +27,7 @@ const ProjectItem: FC<BlurData<ProjectPreviewType>> = ({
                     objectFit="contain"
                     objectPosition="0%"
                     placeholder="blur"
-                    src={SITE_URL + image}
+                    src={getImageUrl(image)}
                     width={640}
                 />
             </div>

@@ -6,9 +6,9 @@ import style from './style.module.scss';
 
 import Container from '~/components/Container';
 import Markdown from '~/components/Markdown';
-import { SITE_URL } from '~/constants';
 import { BlurData } from '~/types';
 import { AboutType } from '~/types/about';
+import { getImageUrl } from '~/utils';
 
 
 const About: FC<BlurData<AboutType>> = ({ image, text, blurData }) => {
@@ -24,7 +24,7 @@ const About: FC<BlurData<AboutType>> = ({ image, text, blurData }) => {
                         height={320}
                         layout="responsive"
                         placeholder="blur"
-                        src={SITE_URL + image}
+                        src={getImageUrl(image)}
                         width={320}
                     />
                 </div>

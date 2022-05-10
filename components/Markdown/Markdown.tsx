@@ -5,7 +5,7 @@ import ReactMarkdown from 'react-markdown';
 import style from './style.module.scss';
 import { MarkdownProps } from './types';
 
-import { SITE_URL } from '~/constants';
+import { getImageUrl } from '~/utils';
 
 
 const Markdown: FC<MarkdownProps> = ({ components, children, ...props }) => {
@@ -13,7 +13,7 @@ const Markdown: FC<MarkdownProps> = ({ components, children, ...props }) => {
         <Image
             alt={alt || 'image'}
             height={400}
-            src={SITE_URL + src}
+            src={getImageUrl(src)}
             width={400}
         />
     ), []);
