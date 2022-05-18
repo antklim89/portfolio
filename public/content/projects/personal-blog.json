@@ -5,7 +5,8 @@
     "technologies": [
       "Typescript",
       "Chakra-UI",
-      "GraphCMS"
+      "GraphCMS",
+      "FramerMotion"
     ],
     "slug": "personal-blog",
     "title": "Personal blog",
