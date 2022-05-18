@@ -1,0 +1,24 @@
+{
+  "en": {
+    "body": "A simple clothing store. [Gatsby](https://www.gatsbyjs.com/) [React](https://reactjs.org/) library. The design is made using the [Sass](https://sass-scss.ru/) \n\nThe products are distributed by gender and age . There is a shopping cart and a \n\n[NetlifyCMS](https://www.netlifycms.org/) is used as a content manager.",
+    "github": "https://github.com/antklim89/personal_blog",
+    "technologies": [
+      "Typescript",
+      "Chakra-UI",
+      "GraphCMS",
+      "FramerMotion"
+    ],
+    "slug": "personal-blog",
+    "title": "Personal blog",
+    "images": [
+      "https://picsum.photos/200/300"
+    ],
+    "link": "https://personal-blog-dev.netlify.app/",
+    "image": "https://picsum.photos/200/300",
+    "description": "Simple clothing shop"
+  },
+  "ru": {
+    "title": "Личный блог",
+    "body": "Русский"
+  }
+}
