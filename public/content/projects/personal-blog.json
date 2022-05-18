@@ -1,0 +1,23 @@
+{
+  "en": {
+    "body": "A simple clothing store. Developed using the [Gatsby](https://www.gatsbyjs.com/) framework and the [React](https://reactjs.org/) library. The design is made using the [Sass](https://sass-scss.ru/) preprocessor. The site is completely static.\n\nThe products are distributed by gender and age . There is a shopping cart and a product search\n\n[NetlifyCMS](https://www.netlifycms.org/) is used as a content manager.",
+    "github": "https://github.com/antklim89/cozy_clothing",
+    "technologies": [
+      "Typescript"
+    ],
+    "slug": "personal-blog",
+    "title": "Personal blog",
+    "images": [
+      "https://picsum.photos/200/300",
+      "/content/projects/images/cozy_clothing_catalog_menu.png",
+      "/content/projects/images/cozy_clothing_catalog.png",
+      "/content/projects/images/cozy_clothing_cart.png"
+    ],
+    "link": "https://cozy-clothing.netlify.app/",
+    "image": "https://picsum.photos/200/300",
+    "description": "Simple clothing shop"
+  },
+  "ru": {
+    "title": "Личный блог"
+  }
+}
