@@ -11,10 +11,10 @@
     "slug": "personal-blog",
     "title": "Personal blog",
     "images": [
-      "https://picsum.photos/200/300"
+      "/content/projects/images/grocery_shop_home_full_page.png"
     ],
     "link": "https://personal-blog-dev.netlify.app/",
-    "image": "https://picsum.photos/200/300",
+    "image": "/content/projects/images/grocery_shop_home_full_page.png",
     "description": "Simple clothing shop"
   },
   "ru": {

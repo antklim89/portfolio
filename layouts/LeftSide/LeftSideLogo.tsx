@@ -12,7 +12,7 @@ const LeftSideLogo: FC = () => {
     return (
         <Link href="/">
             <a className={cls('link', style.Logo)}>
-                <Image {...logo} />
+                <Image {...logo} alt="logo" />
             </a>
         </Link>
     );
