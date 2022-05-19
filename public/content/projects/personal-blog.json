@@ -1,6 +1,6 @@
 {
   "en": {
-    "body": "A simple clothing store. [Gatsby](https://www.gatsbyjs.com/) [React](https://reactjs.org/) library. The design is made using the [Sass](https://sass-scss.ru/) \n\nThe products are distributed by gender and age . There is a shopping cart and a \n\n[NetlifyCMS](https://www.netlifycms.org/) is used as a content manager.",
+    "body": "A simple clothing [Gatsby](https://www.gatsbyjs.com/) [React](https://reactjs.org/) library. The design is made using the [Sass](https://sass-scss.ru/) \n\nThe products are distributed by gender and age . There is a shopping cart and \n\n[NetlifyCMS](https://www.netlifycms.org/) is used as a content manager.",
     "github": "https://github.com/antklim89/personal_blog",
     "technologies": [
       "typescript",
