@@ -1,8 +1,8 @@
 import { FC } from 'react';
 
-import style from './style.module.scss';
-
 import { cls } from '~/utils';
+
+import style from './style.module.scss';
 
 
 interface TagsProps {

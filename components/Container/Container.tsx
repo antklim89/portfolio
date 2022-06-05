@@ -1,9 +1,9 @@
 import { FC } from 'react';
 
+import { cls } from '~/utils';
+
 import style from './style.module.scss';
 import { ContainerProps } from './types';
-
-import { cls } from '~/utils';
 
 
 const Container: FC<ContainerProps> = ({

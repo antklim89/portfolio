@@ -1,12 +1,13 @@
-import { FC } from 'react';
+import { FC, ReactNode } from 'react';
 
-import style from './style.module.scss';
 
 import LeftSide from '~/layouts/LeftSide';
 import { cls } from '~/utils';
 
+import style from './style.module.scss';
 
-const Layout: FC = ({ children }) => {
+
+const Layout: FC<{children: ReactNode}> = ({ children }) => {
     return (
         <div className={style.Layout}>
             <LeftSide />

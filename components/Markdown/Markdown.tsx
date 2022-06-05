@@ -2,10 +2,10 @@ import Image from 'next/image';
 import { FC, ImgHTMLAttributes, useCallback, AnchorHTMLAttributes } from 'react';
 import ReactMarkdown from 'react-markdown';
 
+import { getImageUrl } from '~/utils';
+
 import style from './style.module.scss';
 import { MarkdownProps } from './types';
-
-import { getImageUrl } from '~/utils';
 
 
 const Markdown: FC<MarkdownProps> = ({ components, children, ...props }) => {

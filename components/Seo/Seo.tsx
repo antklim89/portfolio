@@ -2,9 +2,9 @@ import { useTranslations } from 'next-intl';
 import Head from 'next/head';
 import { FC, memo } from 'react';
 
-import { SeoProps } from './types';
-
 import { CREATOR, DEFAULT_DESCRIPTION } from '~/constants';
+
+import { SeoProps } from './types';
 
 
 const Seo: FC<SeoProps> = ({
