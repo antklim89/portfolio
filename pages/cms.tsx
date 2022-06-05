@@ -1,13 +1,14 @@
 import { FC, useEffect } from 'react';
 
-import { cmsConfig } from '~/cms';
-import CMS from 'netlify-cms-app';
-
 
 const CMSPage: FC = () => {
     useEffect(() => {
-        document.body.innerHTML = '';
-        CMS.init(cmsConfig);
+        (async () => {
+            const { cmsConfig } = await import('~/cms');
+            const { default: CMS } = await import('netlify-cms-app');
+            document.body.innerHTML = '';
+            CMS.init(cmsConfig);
+        })();
 
         return () => {
             window.location.reload();
