@@ -1,9 +1,10 @@
 import { FC } from 'react';
 
-import style from './style.module.scss';
 
 import Markdown from '~/components/Markdown';
 import { IntroType } from '~/types/intro';
+
+import style from './style.module.scss';
 
 
 const Intro: FC<IntroType> = ({ text, title }) => {
@@ -15,6 +16,7 @@ const Intro: FC<IntroType> = ({ text, title }) => {
                     {text}
                 </Markdown>
             </div>
+            <a className={style.down} href="#projects" type="button">&darr;</a>
         </section>
     );
 };

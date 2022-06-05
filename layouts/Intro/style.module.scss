@@ -1,6 +1,7 @@
 @use '~/styles/variables' as *;
 
 .Intro {
+    position: relative;
     display: flex;
     justify-content: flex-end;
     padding: var(--sp-1);
@@ -24,5 +25,19 @@
         padding: var(--sp-4);
         max-width: 768px;
         background-color: var(--container-bg);
+    }
+
+    .down {
+        position: absolute;
+        bottom: 5%;
+        right: 50%;
+        background-color: var(--container-bg);
+        color: var(--primary-clr);
+        padding: var(--sp-1);
+        border: none;
+        font-size: 2rem;
+        border-radius: 10%;
+        cursor: pointer;
+        text-decoration: none;
     }
 }

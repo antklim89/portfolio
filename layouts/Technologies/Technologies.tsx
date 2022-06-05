@@ -9,7 +9,7 @@ import { TechnologiesProps } from './types';
 const Technologies: FC<TechnologiesProps> = ({ technologies }) => {
     const t = useTranslations();
     return (
-        <section className={style.Technologies}>
+        <section className={style.Technologies} id="technologies">
             <h2 className="title">
                 {t('Technologies')}
             </h2>
