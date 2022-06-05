@@ -1,17 +1,14 @@
-import { GetStaticProps } from 'next';
 import { FC, useEffect } from 'react';
+
+import { cmsConfig } from '~/cms';
+import CMS from 'netlify-cms-app';
 
 
 const CMSPage: FC = () => {
     useEffect(() => {
-        const app = document.getElementById('__next');
-        if (app) app.style.display = 'none';
-        (async() => {
-            const { default: CMS } = await import('netlify-cms-app');
-            const { cmsConfig } = await import('~/cms');
+        document.body.innerHTML = '';
+        CMS.init(cmsConfig);
 
-            CMS.init(cmsConfig);
-        })();
         return () => {
             window.location.reload();
         };
@@ -24,9 +21,3 @@ const CMSPage: FC = () => {
 
 export default CMSPage;
 
-
-export const getStaticProps: GetStaticProps = async ({ locale = 'en' }) => {
-    const { default: messages } = await import(`~/public/locales/${locale}/common.json`);
-
-    return { props: { messages } };
-};
