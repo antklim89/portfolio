@@ -1,38 +1,41 @@
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
+import Carousel from 'nuka-carousel';
 import { FC } from 'react';
 import { DiGithubBadge } from 'react-icons/di/';
 import { MdPublic } from 'react-icons/md/';
 
-import style from './style.module.scss';
-
+import Markdown from '~/components/Markdown';
 import Tags from '~/components/Tags';
 import { BlurData, ProjectPreviewType } from '~/types';
 import { cls, getImageUrl } from '~/utils';
 
+import style from './style.module.scss';
+
 
 const ProjectItem: FC<BlurData<ProjectPreviewType>> = ({
-    technologies, title, image, link, github, slug, blurData,
+    technologies, title, images, link, github, slug, blurData, body,
 }) => {
     const t = useTranslations();
     return (
-        <section className={style.Project}>
-            <div>
-                <Image
-                    alt={title}
-                    blurDataURL={blurData}
-                    height={700}
-                    layout="responsive"
-                    objectFit="contain"
-                    objectPosition="0%"
-                    placeholder="blur"
-                    src={getImageUrl(image)}
-                    width={640}
-                />
-            </div>
-            <Tags className={style.technologies} tags={technologies} />
-            <div className={style.body}>
+        <section className={style.ProjectItem}>
+            <Carousel>
+                {images.map((image) => (
+                    <Image
+                        alt={title}
+                        blurDataURL={blurData}
+                        height={400}
+                        key={image}
+                        layout="responsive"
+                        objectFit="cover"
+                        placeholder="blur"
+                        src={getImageUrl(image)}
+                        width={640}
+                    />
+                ))}
+            </Carousel>
+            <div className={style.content}>
                 <Link href={`/projects/${slug}`}>
                     <a>
                         <h3 className={cls(style.title, 'title')}>{title}</h3>
@@ -52,6 +55,12 @@ const ProjectItem: FC<BlurData<ProjectPreviewType>> = ({
                         </a>
                     </Link>
                 </div>
+            </div>
+            <Tags className={style.technologies} tags={technologies} />
+            <div className={style.body}>
+                <Markdown>
+                    {body}
+                </Markdown>
             </div>
         </section>
     );

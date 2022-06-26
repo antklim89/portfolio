@@ -9,25 +9,19 @@
         margin-bottom: var(--sp-5);
         grid-template-columns: 1fr;
         
-        @include media-xs {
+        @include media-sm {
             grid-template-columns: repeat(2, 1fr);
-        }
-
-        @include media-md {
-            grid-template-columns: repeat(3, 1fr);
         }
     }
 }
 
 
-.Project {
-    position: relative;
+.ProjectItem {
     display: flex;
     flex-direction: column;
     box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
     overflow: hidden;
-    background: var(--light-clr);
     
     .title {
         font-size: var(--font-size-lg);
@@ -35,9 +29,8 @@
     }
 
     .technologies {
-        position: absolute;
-        top: 5%;
-        left: 5%;
+        padding: var(--sp-1) var(--sp-2);
+        background: var(--light-clr);
     }
     
     .actions {
@@ -50,11 +43,18 @@
         }
     }
 
-    .body {
+    .content {
         padding: var(--sp-2);
-        border-radius: var(--border-radius);
+        border-top-left-radius: var(--border-radius);
+        border-top-right-radius: var(--border-radius);
         margin-top: -30px;
         z-index: 100;
         background: var(--light-clr);
+    }
+
+    .body {
+        padding: var(--sp-2);
+        background: var(--light-clr);
+        height: 100%;
     }
 }
