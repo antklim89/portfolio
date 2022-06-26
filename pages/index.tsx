@@ -8,19 +8,21 @@ import Intro from '~/layouts/Intro';
 import ProjectsList from '~/layouts/Projects';
 import Technologies from '~/layouts/Technologies';
 import { introSchema } from '~/schemas/intro';
-import { projectPreviewSchema } from '~/schemas/project';
+import { projectSchema } from '~/schemas/project';
 import { technologySchema } from '~/schemas/technology';
 import type { BlurData, IntroType, ProjectPreviewType, TechnologyType } from '~/types';
-import { loadManyFiles, getLocale, loadOneFile, getBlurData } from '~/utils/server';
+import { loadManyFiles, getLocale, loadOneFile } from '~/utils/server';
+import { getIntro } from '~/utils/server/getIntro';
+import { getProjects } from '~/utils/server/getProjects';
 
 
 interface Props {
     intro: IntroType
-    projects: BlurData<ProjectPreviewType>[]
-    technologies: BlurData<TechnologyType>[]
+    projects: ProjectPreviewType[]
+    // technologies: BlurData<TechnologyType>[]
 }
 
-const Home: NextPage<Props> = ({ intro, projects, technologies }) => {
+const Home: NextPage<Props> = ({ intro, projects /* , technologies*/ }) => {
     useEffect(() => {
         if (!window.location.hash.startsWith('#invite_token')) return;
         import('netlify-identity-widget')
@@ -41,7 +43,7 @@ const Home: NextPage<Props> = ({ intro, projects, technologies }) => {
             <Intro {...intro} />
             <Container>
                 <ProjectsList projects={projects} />
-                <Technologies technologies={technologies} />
+                {/* <Technologies technologies={technologies} /> */}
             </Container>
             <div id="netlify-modal" />
         </>
@@ -53,23 +55,19 @@ export default Home;
 export const getStaticProps: GetStaticProps<Props> = async ({ locale = 'en' }) => {
     const { default: messages } = await import(`~/public/locales/${locale}/common.json`);
 
-    const introData = await loadOneFile('intro/index.json');
-    const intro = getLocale(introData, introSchema, locale);
-
-    const projectsData = await loadManyFiles('projects');
-    const projects = projectsData.map((project) => getLocale(project, projectPreviewSchema, locale));
-    const projectsWithBlurData = await getBlurData(projects, 'image');
+    const intro = await getIntro(locale);
+    const projects = await getProjects(locale);
 
 
-    const technologiesData = await loadManyFiles('technologies');
-    const technologies = technologiesData.map((technology) => getLocale(technology, technologySchema, locale));
-    const technologiesWithBlurData = await getBlurData(technologies, 'image');
+    // const technologiesData = await loadManyFiles('technologies');
+    // const technologies = technologiesData.map((technology) => getLocale(technology, technologySchema, locale));
+    // const technologiesWithBlurData = await getBlurData(technologies, 'image');
 
     return {
         props: {
             intro,
-            projects: projectsWithBlurData,
-            technologies: technologiesWithBlurData,
+            projects,
+            // technologies: technologiesWithBlurData,
             messages,
         },
     };

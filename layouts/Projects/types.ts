@@ -1,6 +1,6 @@
-import { BlurData, ProjectPreviewType } from '~/types';
+import { ProjectPreviewType } from '~/types';
 
 
 export interface ProjectsProps {
-    projects: BlurData<ProjectPreviewType>[]
+    projects: ProjectPreviewType[]
 }

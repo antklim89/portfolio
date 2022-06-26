@@ -8,14 +8,14 @@ import { MdPublic } from 'react-icons/md/';
 
 import Markdown from '~/components/Markdown';
 import Tags from '~/components/Tags';
-import { BlurData, ProjectPreviewType } from '~/types';
+import { ProjectPreviewType } from '~/types';
 import { cls, getImageUrl } from '~/utils';
 
 import style from './style.module.scss';
 
 
-const ProjectItem: FC<BlurData<ProjectPreviewType>> = ({
-    technologies, title, images, link, github, slug, blurData, body,
+const ProjectItem: FC<ProjectPreviewType> = ({
+    technologies, title, images, link, github, slug, body,
 }) => {
     const t = useTranslations();
     return (
@@ -24,12 +24,10 @@ const ProjectItem: FC<BlurData<ProjectPreviewType>> = ({
                 {images.map((image) => (
                     <Image
                         alt={title}
-                        blurDataURL={blurData}
                         height={400}
                         key={image}
                         layout="responsive"
                         objectFit="cover"
-                        placeholder="blur"
                         src={getImageUrl(image)}
                         width={640}
                     />

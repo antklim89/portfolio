@@ -165,8 +165,8 @@ module.exports = {
         'camelcase': [1, { properties: 'never' }],
         'object-curly-newline': [1, { minProperties: 6, multiline: true }],
         'array-element-newline': [1, 'consistent'],
-        'no-console': [process.env.NODE_ENV === 'production' ? 1 : 0, { allow: ['warn', 'error'] }],
-        'no-debugger': [process.env.NODE_ENV === 'production' ? 1 : 0],
+        'no-console': [2, { allow: ['warn', 'error'] }],
+        'no-debugger': 2,
     },
     settings: {
 
