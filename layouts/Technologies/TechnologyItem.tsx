@@ -2,10 +2,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FC } from 'react';
 
+import { cls, getImageUrl } from '~/utils';
+
 import style from './style.module.scss';
 import { TechnologyProps } from './types';
-
-import { cls, getImageUrl } from '~/utils';
 
 
 const TechnologyItem: FC<TechnologyProps> = ({ technology }) => {
@@ -20,10 +20,8 @@ const TechnologyItem: FC<TechnologyProps> = ({ technology }) => {
                     <div className={style.image}>
                         <Image
                             alt={technology.title}
-                            blurDataURL={technology.blurData}
                             height={400}
                             layout="responsive"
-                            placeholder="blur"
                             src={getImageUrl(technology.image)}
                             width={640}
                         />

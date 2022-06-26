@@ -1,10 +1,10 @@
-import { BlurData, TechnologyType } from '~/types';
+import { TechnologyType } from '~/types';
 
 
 export interface TechnologiesProps {
-     technologies: BlurData<TechnologyType>[]
+     technologies: TechnologyType[]
 }
 
 export interface TechnologyProps {
-     technology: BlurData<TechnologyType>
+     technology: TechnologyType
 }
