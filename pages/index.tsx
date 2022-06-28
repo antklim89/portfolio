@@ -3,22 +3,22 @@ import { useEffect } from 'react';
 
 import Container from '~/components/Container';
 import Seo from '~/components/Seo';
-import Intro from '~/layouts/Intro';
+import About from '~/layouts/About';
 import ProjectsList from '~/layouts/Projects';
 import Technologies from '~/layouts/Technologies';
-import type { IntroType, ProjectPreviewType, TechnologyType } from '~/types';
-import { getIntro } from '~/utils/server/getIntro';
+import type { AboutType, ProjectType, TechnologyType } from '~/types';
+import { getAbout } from '~/utils/server';
 import { getProjects } from '~/utils/server/getProjects';
 import { getTechnologies } from '~/utils/server/getTechnologies';
 
 
 interface Props {
-    intro: IntroType
-    projects: ProjectPreviewType[]
+    about: AboutType
+    projects: ProjectType[]
     technologies: TechnologyType[]
 }
 
-const Home: NextPage<Props> = ({ intro, projects, technologies }) => {
+const Home: NextPage<Props> = ({ about, projects, technologies }) => {
     useEffect(() => {
         if (!window.location.hash.startsWith('#invite_token')) return;
         import('netlify-identity-widget')
@@ -36,7 +36,7 @@ const Home: NextPage<Props> = ({ intro, projects, technologies }) => {
     return (
         <>
             <Seo />
-            <Intro {...intro} />
+            <About {...about} />
             <Container>
                 <ProjectsList projects={projects} />
                 <Technologies technologies={technologies} />
@@ -51,14 +51,14 @@ export default Home;
 export const getStaticProps: GetStaticProps<Props> = async ({ locale = 'en' }) => {
     const { default: messages } = await import(`~/public/locales/${locale}/common.json`);
 
-    const intro = await getIntro(locale);
+    const about = await getAbout(locale);
     const projects = await getProjects(locale);
     const technologies = await getTechnologies(locale);
 
 
     return {
         props: {
-            intro,
+            about,
             projects,
             technologies,
             messages,

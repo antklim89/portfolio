@@ -26,4 +26,18 @@
           background-color: var(--container-bg);
           margin: var(--sp-2) var(--sp-5);
      }
+
+     .down {
+          position: absolute;
+          bottom: 5%;
+          right: 50%;
+          background-color: var(--container-bg);
+          color: var(--primary-clr);
+          padding: var(--sp-1);
+          border: none;
+          font-size: 2rem;
+          border-radius: 10%;
+          cursor: pointer;
+          text-decoration: none;
+      }
 }
