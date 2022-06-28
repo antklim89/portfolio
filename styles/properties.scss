@@ -26,19 +26,12 @@
     --border-radius: 2rem;
     --box-shadow: 0 0 5px;
 
-    --top-offset: 64px;
     --left-side-width: 320px;
 }
 
 @include media-sm {
     :root {
         --sp-2: 1rem;
-    }
-}
-
-@include media-md {
-    :root {
-        --top-offset: 0px;
     }
 }
 

@@ -15,10 +15,6 @@
         flex: 0 0 auto;
     }
 
-    .topOffset {
-        padding-top: var(--top-offset);
-    }
-
     @include media-md {
         main {
             flex: 1 1 auto;

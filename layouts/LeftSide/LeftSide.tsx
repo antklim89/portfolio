@@ -1,12 +1,12 @@
 import { FC, useCallback, useState } from 'react';
 
+import { cls } from '~/utils';
+
 import LeftSideLanguageSelect from './LeftSideLanguageSelect';
 import LeftSideLogo from './LeftSideLogo';
 import LeftSideNavLinks from './LeftSideNavLinks';
 import LeftSideToggleButton from './LeftSideToggleButton';
 import style from './style.module.scss';
-
-import { cls } from '~/utils';
 
 
 const LeftSide:FC = () => {

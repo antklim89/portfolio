@@ -2,10 +2,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FC } from 'react';
 
+import { cls } from '~/utils';
+
 import logo from './portfolio-logo.svg';
 import style from './style.module.scss';
-
-import { cls } from '~/utils';
 
 
 const LeftSideLogo: FC = () => {

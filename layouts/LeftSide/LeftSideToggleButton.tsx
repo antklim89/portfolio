@@ -1,11 +1,10 @@
-import Link from 'next/link';
 import { FC } from 'react';
 import { MdMenu, MdClose } from 'react-icons/md/';
 
+import { cls } from '~/utils';
+
 import style from './style.module.scss';
 import { LeftSideToggleButtonProps } from './types';
-
-import { cls } from '~/utils';
 
 
 const LeftSideToggleButton: FC<LeftSideToggleButtonProps> = ({ toggle, show }) => {
@@ -19,12 +18,6 @@ const LeftSideToggleButton: FC<LeftSideToggleButtonProps> = ({ toggle, show }) =
             >
                 {show ? <MdClose /> : <MdMenu />}
             </button>
-
-            <Link href="/">
-                <a className={cls('link', style.logo, show && style.show)}>
-                    PORTFOLIO
-                </a>
-            </Link>
         </div>
     );
 };
