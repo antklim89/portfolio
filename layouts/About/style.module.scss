@@ -5,6 +5,7 @@
      display: flex;
      flex-direction: column;
      min-height: 100vh;
+     position: relative;
 
      .image {
           border: 1px solid var(--light-clr);
@@ -28,16 +29,20 @@
      }
 
      .down {
-          position: absolute;
-          bottom: 5%;
-          right: 50%;
-          background-color: var(--container-bg);
-          color: var(--primary-clr);
-          padding: var(--sp-1);
-          border: none;
-          font-size: 2rem;
-          border-radius: 10%;
-          cursor: pointer;
-          text-decoration: none;
-      }
+          display: flex;
+          justify-content: center;
+          margin-top: auto;
+          margin-bottom: 1rem;
+
+          a {
+               font-size: 2rem;
+               background-color: var(--container-bg);
+               color: var(--primary-clr);
+               padding: var(--sp-1);
+               border: none;
+               border-radius: 10%;
+               cursor: pointer;
+               text-decoration: none;
+          }
+     }
 }

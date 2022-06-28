@@ -31,7 +31,9 @@ const About: FC<AboutType> = ({ image, text }) => {
                         {text}
                     </Markdown>
                 </div>
-                <a className={style.down} href="#projects" type="button">&darr;</a>
+                <div className={style.down}>
+                    <a href="#projects" type="button">&darr;</a>
+                </div>
             </Container>
         </section>
     );
