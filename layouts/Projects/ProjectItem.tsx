@@ -8,14 +8,14 @@ import { MdPublic } from 'react-icons/md/';
 
 import Markdown from '~/components/Markdown';
 import Tags from '~/components/Tags';
-import { ProjectPreviewType } from '~/types';
+import { ProjectType } from '~/types';
 import { cls, getImageUrl } from '~/utils';
 
 import style from './style.module.scss';
 
 
-const ProjectItem: FC<ProjectPreviewType> = ({
-    technologies, title, images, link, github, slug, body,
+const ProjectItem: FC<ProjectType> = ({
+    technologies, title, images, link, github, body,
 }) => {
     const t = useTranslations();
     return (
@@ -34,11 +34,7 @@ const ProjectItem: FC<ProjectPreviewType> = ({
                 ))}
             </Carousel>
             <div className={style.content}>
-                <Link href={`/projects/${slug}`}>
-                    <a>
-                        <h3 className={cls(style.title, 'title')}>{title}</h3>
-                    </a>
-                </Link>
+                <h3 className={cls(style.title, 'title')}>{title}</h3>
                 <div className={style.actions}>
                     <Link href={github}>
                         <a rel="noopener noreferrer" target="_blank">
