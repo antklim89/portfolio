@@ -2,7 +2,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FC } from 'react';
 
-import { cls, getImageUrl } from '~/utils';
+import Title from '~/components/Title';
+import { getImageUrl } from '~/utils';
 
 import style from './style.module.scss';
 import { TechnologyProps } from './types';
@@ -12,11 +13,15 @@ const TechnologyItem: FC<TechnologyProps> = ({ technology }) => {
     return (
         <Link href={technology.link}>
             <a
-                aria-label={`${technology.title} technology`} className={style.linkWrapper} rel="noopener noreferrer"
+                aria-label={`${technology.title} technology`}
+                className={style.linkWrapper}
+                rel="noopener noreferrer"
                 target="_blank"
             >
                 <section className={style.Technology}>
-                    <h3 className={cls('title', style.title)}>{technology.title}</h3>
+                    <Title align="center" as="h3" size="md">
+                        {technology.title}
+                    </Title>
                     <div className={style.image}>
                         <Image
                             alt={technology.title}

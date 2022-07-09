@@ -8,8 +8,9 @@ import { MdPublic } from 'react-icons/md/';
 
 import Markdown from '~/components/Markdown';
 import Tags from '~/components/Tags';
+import Title from '~/components/Title';
 import { ProjectType } from '~/types';
-import { cls, getImageUrl } from '~/utils';
+import { getImageUrl } from '~/utils';
 
 import style from './style.module.scss';
 
@@ -34,7 +35,9 @@ const ProjectItem: FC<ProjectType> = ({
                 ))}
             </Carousel>
             <div className={style.content}>
-                <h3 className={cls(style.title, 'title')}>{title}</h3>
+                <Title align="center" as="h3">
+                    {title}
+                </Title>
                 <div className={style.actions}>
                     <Link href={github}>
                         <a rel="noopener noreferrer" target="_blank">

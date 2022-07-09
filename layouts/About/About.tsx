@@ -4,6 +4,7 @@ import { FC } from 'react';
 
 import Container from '~/components/Container';
 import Markdown from '~/components/Markdown';
+import Title from '~/components/Title';
 import { AboutType } from '~/types/about';
 import { getImageUrl } from '~/utils';
 
@@ -26,7 +27,9 @@ const About: FC<AboutType> = ({ image, text }) => {
                     />
                 </div>
                 <div className={style.text}>
-                    <h1 className="title">{t('about')}</h1>
+                    <Title as="h1" size="xl">
+                        {t('about')}
+                    </Title>
                     <Markdown>
                         {text}
                     </Markdown>

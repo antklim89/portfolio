@@ -1,0 +1,25 @@
+
+
+.Title {
+     color: var(--primary-clr);
+     text-transform: uppercase;
+     padding: var(--sp-2) var(--sp-1);
+     margin: 0;
+      
+     &.md {
+          font-size: var(--font-size-md);
+     }
+     &.xl {
+          font-size: var(--font-size-xl);
+     }
+     &.lg {
+          font-size: var(--font-size-lg);
+     }
+
+     &.center {
+          text-align: center;
+     }
+     &.left {
+          text-align: left;
+     }
+}

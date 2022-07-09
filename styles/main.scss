@@ -30,13 +30,6 @@ body {
     color: inherit;
 }
 
-.title {
-    color: var(--primary-clr);
-    text-transform: uppercase;
-    padding: var(--sp-3) var(--sp-1) var(--sp-4) var(--sp-4);
-    font-size: var(--font-size-xl);
-}
-
 .parallax {
     background-image: url(bg.jpg);
     background-attachment: fixed;
