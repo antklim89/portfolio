@@ -6,6 +6,7 @@ import Seo from '~/components/Seo';
 import About from '~/layouts/About';
 import { AboutType } from '~/types';
 import { getAbout } from '~/utils/server';
+import { getTranslations } from '~/utils/server/getTranslations';
 
 
 interface Props {
@@ -26,14 +27,14 @@ const AboutPage: FC<Props> = ({ about }) => {
 export default AboutPage;
 
 export const getStaticProps: GetStaticProps<Props> = async ({ locale = 'en' }) => {
-    const { default: messages } = await import(`~/public/locales/${locale}/common.json`);
+    const translations = await getTranslations(locale);
 
     const about = await getAbout(locale);
 
     return {
         props: {
             about,
-            messages,
+            translations,
         },
     };
 };

@@ -10,6 +10,7 @@ import type { AboutType, ProjectType, TechnologyType } from '~/types';
 import { getAbout } from '~/utils/server';
 import { getProjects } from '~/utils/server/getProjects';
 import { getTechnologies } from '~/utils/server/getTechnologies';
+import { getTranslations } from '~/utils/server/getTranslations';
 
 
 interface Props {
@@ -49,7 +50,7 @@ const Home: NextPage<Props> = ({ about, projects, technologies }) => {
 export default Home;
 
 export const getStaticProps: GetStaticProps<Props> = async ({ locale = 'en' }) => {
-    const { default: messages } = await import(`~/public/locales/${locale}/common.json`);
+    const translations = await getTranslations(locale);
 
     const about = await getAbout(locale);
     const projects = await getProjects(locale);
@@ -61,7 +62,7 @@ export const getStaticProps: GetStaticProps<Props> = async ({ locale = 'en' }) =
             about,
             projects,
             technologies,
-            messages,
+            translations,
         },
     };
 };

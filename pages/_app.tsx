@@ -14,8 +14,8 @@ import '~/styles/properties.scss';
 const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
     return (
         <NextIntlProvider
-            messages={pageProps.messages || {}}
-            onError={(err) => (pageProps.messages ? console.error('NextIntl Error: \n', err) : null)}
+            messages={pageProps.translations || {}}
+            onError={(err) => (pageProps.translations ? console.error('NextIntl Error: \n', err) : null)}
         >
             <Layout>
                 <Component {...pageProps} />
