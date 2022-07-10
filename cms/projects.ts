@@ -1,6 +1,4 @@
-/* eslint-disable */
-import type { CmsCollection } from 'netlify-cms-core'
-
+import type { CmsCollection } from 'netlify-cms-core';
 
 
 export const projects: CmsCollection = {
@@ -63,7 +61,7 @@ export const projects: CmsCollection = {
             field: {
                 name: 'image',
                 widget: 'image',
-            }
-        }
+            },
+        },
     ],
-}
+};

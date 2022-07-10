@@ -1,6 +1,4 @@
-/* eslint-disable */
-import type { CmsCollectionFile } from 'netlify-cms-core'
-
+import type { CmsCollectionFile } from 'netlify-cms-core';
 
 
 export const about: CmsCollectionFile = {
@@ -12,13 +10,21 @@ export const about: CmsCollectionFile = {
     i18n: true,
     fields: [
         {
+            name: 'title',
+            widget: 'string',
+            i18n: true,
+            required: true,
+        },
+        {
             name: 'text',
             widget: 'markdown',
             i18n: true,
+            required: true,
         },
         {
             name: 'image',
             widget: 'image',
-        }
+            required: true,
+        },
     ],
-}
+};

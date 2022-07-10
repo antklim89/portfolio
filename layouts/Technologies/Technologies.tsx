@@ -13,7 +13,7 @@ const Technologies: FC<TechnologiesProps> = ({ technologies }) => {
     return (
         <section className={style.Technologies} id="technologies">
             <Title size="xl">
-                {t('Technologies')}
+                {t('technologies')}
             </Title>
             <div className={style.list}>
                 {technologies.map((technology) => (

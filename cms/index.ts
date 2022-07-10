@@ -1,8 +1,8 @@
-/* eslint-disable */
-import type { InitOptions } from 'netlify-cms-core'
+import type { InitOptions } from 'netlify-cms-core';
+
 import { locales } from '~/constants';
+
 import { about } from './about';
-import { intro } from './intro';
 import { projects } from './projects';
 import { technologies } from './technologies';
 
@@ -21,7 +21,7 @@ export const cmsConfig: InitOptions = {
         i18n: {
             structure: 'single_file',
             locales,
-            default_locale: locales[0]
+            default_locale: locales[0],
         },
 
         local_backend: { allowed_hosts: ['192.168.90.19', '127.0.0.1'] },
@@ -35,7 +35,7 @@ export const cmsConfig: InitOptions = {
                 name: 'site',
                 editor: { preview: false },
                 i18n: true,
-                files: [intro, about],
+                files: [about],
             },
         ],
     },

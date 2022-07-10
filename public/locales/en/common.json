@@ -1,13 +1,9 @@
 {
     "defaultTitle": "Portfolio",
     "Language": "Language",
-    "Projects": "Projects",
-    "About": "About me",
-    "Technologies": "Technologies",
     "home": "home",
     "projects": "projects",
     "technologies": "technologies",
-    "about": "about me",
     "GitHub": "GitHub",
     "Site": "Site"
 }

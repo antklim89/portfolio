@@ -13,7 +13,7 @@ const Projects: FC<ProjectsProps> = ({ projects }) => {
     return (
         <section className={styles.Projects} id="projects">
             <Title size="xl">
-                {t('Projects')}
+                {t('projects')}
             </Title>
             <div className={styles.list}>
                 {projects.map((project) => (

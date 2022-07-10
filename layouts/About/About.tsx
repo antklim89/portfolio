@@ -1,4 +1,3 @@
-import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { FC } from 'react';
 
@@ -11,9 +10,7 @@ import { getImageUrl } from '~/utils';
 import style from './style.module.scss';
 
 
-const About: FC<AboutType> = ({ image, text }) => {
-    const t = useTranslations();
-
+const About: FC<AboutType> = ({ image, text, title }) => {
     return (
         <section className="parallax">
             <Container className={style.About}>
@@ -28,7 +25,7 @@ const About: FC<AboutType> = ({ image, text }) => {
                 </div>
                 <div className={style.text}>
                     <Title as="h1" size="xl">
-                        {t('about')}
+                        {title}
                     </Title>
                     <Markdown>
                         {text}
