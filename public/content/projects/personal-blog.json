@@ -1,6 +1,6 @@
 {
   "en": {
-    "body": "A simple clothing [Gatsby](https://www.gatsbyjs.com/) [React](https://reactjs.org/) library. The design is made using the [Sass](https://sass-scss.ru/) \n\nThe products are distributed by gender and age . There is a shopping cart and \n\n[NetlifyCMS](https://www.netlifycms.org/) is used as a content manager.",
+    "body": "The simple personal blog.\n\nThe GraphCMS content management system is used to create and store posts.\n\nThe visual style is created using the Chakra-UI library and the Frame Motion animation library.",
     "github": "https://github.com/antklim89/personal_blog",
     "technologies": [
       "typescript",
@@ -11,14 +11,16 @@
     "slug": "personal-blog",
     "title": "Personal blog",
     "images": [
-      "/content/projects/images/cozy_clothing_cart.png"
+      "/content/projects/images/personal_blog_home_full_page.png",
+      "/content/projects/images/personal_blog_post_page.png",
+      "/content/projects/images/personal_blog_contacts_page.png"
     ],
     "link": "https://personal-blog-dev.netlify.app/",
-    "image": "/content/projects/images/cozy_clothing_cart.png",
+    "image": "/content/projects/images/personal_blog_home_page.png",
     "description": "Simple clothing shop"
   },
   "ru": {
-    "title": "Личный блог",
-    "body": "Русский"
+    "title": "Персональный блог",
+    "body": "Обычные персональный блог.\n\nДля создания и хранения постов используется система управления контентом GraphCMS.\n\nВизуальный стиль создан с помощью библиотеки Chakra-UI и библиотеки анимации Framer Motion."
   }
 }
