@@ -1,6 +1,6 @@
-import { ProjectPreviewType } from '~/types';
+import { ProjectType } from '~/types';
 
 
 export interface ProjectsProps {
-    projects: ProjectPreviewType[]
+    projects: ProjectType[]
 }

@@ -25,12 +25,13 @@ const ProjectItem: FC<ProjectType> = ({
                 {images.map((image) => (
                     <Image
                         alt={title}
-                        height={400}
+                        height={200}
                         key={image}
                         layout="responsive"
                         objectFit="cover"
+                        quality={50}
                         src={getImageUrl(image)}
-                        width={640}
+                        width={400}
                     />
                 ))}
             </Carousel>

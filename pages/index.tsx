@@ -7,10 +7,7 @@ import About from '~/layouts/About';
 import ProjectsList from '~/layouts/Projects';
 import Technologies from '~/layouts/Technologies';
 import type { AboutType, ProjectType, TechnologyType } from '~/types';
-import { getAbout } from '~/utils/server';
-import { getProjects } from '~/utils/server/getProjects';
-import { getTechnologies } from '~/utils/server/getTechnologies';
-import { getTranslations } from '~/utils/server/getTranslations';
+import { getAbout, getProjects, getTechnologies, getTranslations } from '~/utils/server';
 
 
 interface Props {

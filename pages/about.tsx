@@ -5,8 +5,7 @@ import { FC } from 'react';
 import Seo from '~/components/Seo';
 import About from '~/layouts/About';
 import { AboutType } from '~/types';
-import { getAbout } from '~/utils/server';
-import { getTranslations } from '~/utils/server/getTranslations';
+import { getAbout, getTranslations } from '~/utils/server';
 
 
 interface Props {
