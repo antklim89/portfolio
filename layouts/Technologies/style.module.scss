@@ -32,6 +32,10 @@
      background: var(--light-clr);
      width: 100%;
 
+     .image {
+          padding: var(--sp-1);
+     }
+
      .body {
           flex-grow: 1;
           padding: var(--sp-2);
