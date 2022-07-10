@@ -23,16 +23,16 @@ const ProjectItem: FC<ProjectType> = ({
         <section className={style.ProjectItem}>
             <Carousel>
                 {images.map((image) => (
-                    <Image
-                        alt={title}
-                        height={200}
-                        key={image}
-                        layout="responsive"
-                        objectFit="cover"
-                        quality={50}
-                        src={getImageUrl(image)}
-                        width={400}
-                    />
+                    <div className={style.images} key={image}>
+                        <Image
+                            alt={title}
+                            height={300}
+                            layout="intrinsic"
+                            objectFit="cover"
+                            src={getImageUrl(image)}
+                            width={400}
+                        />
+                    </div>
                 ))}
             </Carousel>
             <div className={style.content}>

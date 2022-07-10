@@ -56,4 +56,10 @@
         background: var(--light-clr);
         height: 100%;
     }
+
+    .images {
+        * {
+            width: 100% !important;
+        }
+    }
 }
