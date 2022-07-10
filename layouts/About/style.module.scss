@@ -8,24 +8,21 @@
      position: relative;
 
      .image {
-          border: 1px solid var(--light-clr);
-          padding: var(--sp-3);
-          background-color: var(--container-bg);
-          margin: var(--sp-2) var(--sp-5);
-          
+          width: 100%;
+          max-width: 240px;
+          max-height: 240px;
+          align-self: flex-end;
           @include media-xs {
                max-width: 320px;
                max-height: 320px;
-               align-self: flex-end;
-               width: 100%;
           }
      }
 
-     .text {
+     .text, .image {
           border: 1px solid var(--light-clr);
-          padding: var(--sp-3);
+          padding: var(--sp-2);
           background-color: var(--container-bg);
-          margin: var(--sp-2) var(--sp-5);
+          margin: var(--sp-2);
      }
 
      .down {
