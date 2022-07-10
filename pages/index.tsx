@@ -7,6 +7,7 @@ import About from '~/layouts/About';
 import ProjectsList from '~/layouts/Projects';
 import Technologies from '~/layouts/Technologies';
 import type { AboutType, ProjectType, TechnologyType } from '~/types';
+import { initNetlifyIdentityWidget } from '~/utils';
 import { getAbout, getProjects, getTechnologies, getTranslations } from '~/utils/server';
 
 
@@ -15,21 +16,8 @@ interface Props {
     projects: ProjectType[]
     technologies: TechnologyType[]
 }
-
 const Home: NextPage<Props> = ({ about, projects, technologies }) => {
-    useEffect(() => {
-        if (!window.location.hash.startsWith('#invite_token')) return;
-        import('netlify-identity-widget')
-            .then(({ default: netlifyIdentity }) => {
-                netlifyIdentity.init({
-                    container: '#netlify-modal',
-                    locale: 'en',
-                });
-            })
-            .catch((err) => {
-                console.error(err);
-            });
-    }, []);
+    useEffect(() => initNetlifyIdentityWidget('netlify-identity-widget'), []);
 
     return (
         <>
@@ -39,7 +27,7 @@ const Home: NextPage<Props> = ({ about, projects, technologies }) => {
                 <ProjectsList projects={projects} />
                 <Technologies technologies={technologies} />
             </Container>
-            <div id="netlify-modal" />
+            <div id="netlify-identity-widget" />
         </>
     );
 };
