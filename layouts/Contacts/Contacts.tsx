@@ -6,19 +6,20 @@ import style from './style.module.scss';
 
 
 const Contacts: FC = () => {
-    // function encode(data: any) {
-    //     return Object.keys(data)
-    //         .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
-    //         .join('&');
-    // }
+    function encode(data: any) {
+        return Object.keys(data)
+            .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+            .join('&');
+    }
 
     const handleSubmit: FormEventHandler<HTMLFormElement> = (e) => {
         e.preventDefault();
         const body = new FormData(e.currentTarget);
-        // const body = encode({ 'form-name': event.target.getAttribute('name') });
+        // const body = encode({ 'form-name': e.currentTarget.getAttribute('name') });
+        // console.log('===== \n body', Array.from(e.currentTarget));
         fetch('/', {
             method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            // headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             body,
         })
             .catch((error) => console.error(error));
