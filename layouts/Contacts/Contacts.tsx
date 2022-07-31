@@ -29,7 +29,7 @@ const Contacts: FC = () => {
                 <h1>Contact Me</h1>
 
                 {status === 'success' && (
-                    <p className={cls(style.status, style.success)}>Messege successfully sent.</p>
+                    <p className={cls(style.status, style.success)}>The message has been sent successfully</p>
                 )}
                 {status === 'error' && (
                     <p className={cls(style.status, style.error)}>Unexpected error. Try again later.</p>
