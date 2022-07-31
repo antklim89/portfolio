@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, FormEventHandler } from 'react';
 
 import { cls } from '~/utils';
 
@@ -6,15 +6,16 @@ import style from './style.module.scss';
 
 
 const Contacts: FC = () => {
-    function encode(data: any) {
-        return Object.keys(data)
-            .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
-            .join('&');
-    }
+    // function encode(data: any) {
+    //     return Object.keys(data)
+    //         .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+    //         .join('&');
+    // }
 
-    const handleSubmit = (event: any) => {
-        event.preventDefault();
-        const body = encode({ 'form-name': event.target.getAttribute('name') });
+    const handleSubmit: FormEventHandler<HTMLFormElement> = (e) => {
+        e.preventDefault();
+        const body = new FormData(e.currentTarget);
+        // const body = encode({ 'form-name': event.target.getAttribute('name') });
         fetch('/', {
             method: 'POST',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -29,7 +30,6 @@ const Contacts: FC = () => {
             <div className={style.container}>
                 <h1>Contact Me</h1>
                 <form
-                    action="/contacts?success"
                     className={style.form}
                     data-netlify="true"
                     method="get"
