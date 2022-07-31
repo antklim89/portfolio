@@ -14,7 +14,6 @@ module.exports = {
         defaultLocale: 'en',
         locales: ['en', 'ru'],
     },
-    react: { useSuspense: false },
     generateBuildId: async () => {
         return 'my-build-id';
     },

@@ -1,15 +1,4 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path');
-
-/**
-eslint
-* Imports
-eslint-import-resolver-alias eslint-plugin-import
-* React
-eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks
-* Typescript
-@typescript-eslint/eslint-plugin @typescript-eslint/parser
- */
 
 
 module.exports = {
@@ -24,7 +13,6 @@ module.exports = {
         * React
         */
         'plugin:react/all',
-        'plugin:react-hooks/recommended',
         'plugin:jsx-a11y/strict',
 
         /**

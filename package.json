@@ -1,7 +1,7 @@
 {
-  "name": "portfolio-next",
+  "name": "portfolio",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "run-p dev:**",
     "dev:next": "next dev",
@@ -12,41 +12,51 @@
   },
   "dependencies": {
     "@fontsource/montserrat": "^4.5.11",
-    "@netlify/plugin-nextjs": "^4.7.1",
-    "@types/sharp": "^0.30.2",
+    "@netlify/plugin-nextjs": "^4.13.1",
     "axios": "^0.27.2",
     "fs-extra": "^10.1.0",
-    "jimp": "^0.16.1",
     "netlify-cms-app": "^2.15.72",
     "netlify-identity-widget": "^1.9.2",
-    "next": "^12.1.6",
+    "next": "^12.2.3",
     "next-intl": "^2.7.4",
     "normalize.css": "^8.0.1",
-    "nuka-carousel": "^5.1.0",
-    "react": "18.1.0",
-    "react-dom": "18.1.0",
+    "nuka-carousel": "^5.2.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
     "react-icons": "^4.4.0",
     "react-markdown": "^8.0.3",
-    "sharp": "^0.30.6",
-    "typescript": "4.7.3",
-    "zod": "^3.17.3"
+    "typescript": "4.7.4",
+    "zod": "^3.17.10"
   },
   "devDependencies": {
     "@types/fs-extra": "^9.0.13",
     "@types/netlify-identity-widget": "^1.9.3",
-    "@types/react": "18.0.11",
-    "@typescript-eslint/eslint-plugin": "^5.27.0",
-    "@typescript-eslint/parser": "^5.27.0",
-    "eslint": "8.17.0",
-    "eslint-config-next": "12.1.6",
+    "@types/react": "18.0.15",
+    "@typescript-eslint/eslint-plugin": "^5.31.0",
+    "@typescript-eslint/parser": "^5.31.0",
+    "eslint": "8.20.0",
+    "eslint-config-next": "12.2.3",
     "eslint-import-resolver-alias": "^1.1.2",
     "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-react": "^7.30.0",
-    "eslint-plugin-react-hooks": "^4.5.0",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-react": "^7.30.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "netlify-cms-proxy-server": "^1.3.24",
     "npm-run-all": "^4.1.5",
-    "prettier": "2.6.2",
-    "sass": "^1.52.2"
+    "sass": "^1.54.0"
+  },
+  "license": "0BSD",
+  "keywords": [
+    "nextjs",
+    "typescript",
+    "sass",
+    "zod"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/antklim89/portfolio"
+  },
+  "bugs": {
+    "url": "https://github.com/antklim89/portfolio/issues"
   }
 }
