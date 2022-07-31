@@ -1,4 +1,4 @@
-import { FC, FormEventHandler } from 'react';
+import { FC, FormEventHandler, useState } from 'react';
 
 import { cls } from '~/utils';
 
@@ -6,23 +6,20 @@ import style from './style.module.scss';
 
 
 const Contacts: FC = () => {
-    function encode(data: any) {
-        return Object.keys(data)
-            .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
-            .join('&');
-    }
+    const [loading, setLoading] = useState(false);
+    const [status, setStatus] = useState<'success' | 'error' | null>(null);
 
-    const handleSubmit: FormEventHandler<HTMLFormElement> = (e) => {
+    const handleSubmit: FormEventHandler<HTMLFormElement> = async (e) => {
         e.preventDefault();
+        setLoading(true);
+
         const body = new FormData(e.currentTarget);
-        // const body = encode({ 'form-name': e.currentTarget.getAttribute('name') });
-        // console.log('===== \n body', Array.from(e.currentTarget));
-        fetch('/', {
-            method: 'POST',
-            // headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body,
-        })
-            .catch((error) => console.error(error));
+        const response = await fetch('/', { method: 'POST', body });
+
+        if (response.ok) setStatus('success');
+        else setStatus('error');
+
+        setLoading(false);
     };
 
 
@@ -30,6 +27,14 @@ const Contacts: FC = () => {
         <div className={cls(style.Contacts, 'parallax')}>
             <div className={style.container}>
                 <h1>Contact Me</h1>
+
+                {status === 'success' && (
+                    <p className={cls(style.status, style.success)}>Messege successfully sent.</p>
+                )}
+                {status === 'error' && (
+                    <p className={cls(style.status, style.error)}>Unexpected error. Try again later.</p>
+                )}
+
                 <form
                     className={style.form}
                     data-netlify="true"
@@ -39,20 +44,46 @@ const Contacts: FC = () => {
                     onSubmit={handleSubmit}
                 >
                     <input name="form-name" type="hidden" value="contact" />
+
                     <label className={style.input}>
                         Name: <br />
-                        <input name="name" type="text" />
+                        <input
+                            required
+                            disabled={loading}
+                            maxLength={100}
+                            minLength={3}
+                            name="name"
+                            type="text"
+                        />
                     </label>
+
                     <label className={style.input}>
                         Subject: <br />
-                        <input name="subject" type="text" />
+                        <input
+                            required
+                            disabled={loading}
+                            maxLength={100}
+                            minLength={3}
+                            name="subject"
+                            type="text"
+                        />
                     </label>
+
                     <label className={style.input}>
                         Message: <br />
-                        <textarea name="text" rows={6} />
+                        <textarea
+                            required
+                            disabled={loading}
+                            maxLength={1000}
+                            minLength={3}
+                            name="text"
+                            rows={6}
+                        />
                     </label>
-                    <button type="submit">Submit</button>
+
+                    <button disabled={loading} type="submit">Submit</button>
                 </form>
+
             </div>
         </div>
     );

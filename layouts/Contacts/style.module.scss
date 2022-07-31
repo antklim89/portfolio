@@ -35,5 +35,25 @@
           cursor: pointer;
           background: var(--primary-clr);
           color: var(--light-clr);
+          transition: 200ms;
+
+          &:hover {
+               background: var(--primary-dark-clr)
+          }
+     }
+
+     .status {
+          font-size: var(--font-size-lg);
+          padding-bottom: var(--sp-2);
+          font-weight: 600;
+          text-align: center;
+
+          &.success {
+               color: forestgreen;
+          }
+
+          &.error {
+               color: crimson;
+          }
      }
 }

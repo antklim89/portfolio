@@ -13,11 +13,11 @@
     --font-size-lg: calc(var(--font-size) * 1.4);
     --font-size-xl: calc(var(--font-size) * 2);
 
-    --container-bg: rgba(255,255,255, 0.8);
+    --container-bg: rgba(255, 255, 255, 0.8);
     --left-side-bg: rgba(0, 0, 0, 0.5);
 
-    --primary-clr: rgb(0, 73, 109);
-    --secondary-clr: #e74c3c;
+    --primary-clr: hsl(200, 100%, 21%);
+    --primary-dark-clr: hsl(200, 100%, 15%);
     --light-clr: #f7f7f7;
     --light-hover-clr: #c0c0c0;
     --dark-clr: #474748;
@@ -35,4 +35,3 @@
         --font-size: 1rem;
     }
 }
-
