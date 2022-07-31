@@ -13,6 +13,7 @@ const LeftSideNavLinks: FC<LeftSideNavLinksProps> = ({ toggle }) => {
         { href: '/', body: t('home') },
         { href: '/#projects', body: t('projects') },
         { href: '/#technologies', body: t('technologies') },
+        { href: '/contacts', body: t('contacts') },
     ];
 
     return (

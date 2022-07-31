@@ -1,0 +1,39 @@
+.Contacts {
+     position: relative;
+     min-height: 100vh;
+
+     .container {
+          position: absolute;
+          background-color: var(--container-bg);
+          border: 1px solid var(--light-clr);
+          padding: var(--sp-2);
+          max-width: 720px;
+          width: 100%;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+     }
+
+     .form {
+          display: flex;
+          flex-direction: column;
+     }
+
+     input,
+     textarea {
+          width: 100%;
+          margin-bottom: var(--sp-2);
+          resize: none;
+          padding: var(--sp-1);
+          border: 1px solid var(--dark-clr);
+          border-radius: 0.2rem;
+     }
+
+     button {
+          padding: var(--sp-1);
+          border: none;
+          cursor: pointer;
+          background: var(--primary-clr);
+          color: var(--light-clr);
+     }
+}
