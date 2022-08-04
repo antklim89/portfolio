@@ -26,7 +26,7 @@ const ProjectItem: FC<ProjectType> = ({
                     <div className={style.images} key={image}>
                         <Image
                             alt={title}
-                            height={300}
+                            height={200}
                             layout="intrinsic"
                             objectFit="cover"
                             src={getImageUrl(image)}
