@@ -12,7 +12,7 @@ const Technologies: FC<TechnologiesProps> = ({ technologies }) => {
     const t = useTranslations();
     return (
         <section className={style.Technologies} id="technologies">
-            <Title size="xl">
+            <Title underscore size="xl">
                 {t('technologies')}
             </Title>
             <div className={style.list}>

@@ -1,17 +1,17 @@
-
-
 .Title {
      color: var(--primary-clr);
      text-transform: uppercase;
      padding: var(--sp-2) var(--sp-1);
      margin: 0;
-      
+
      &.md {
           font-size: var(--font-size-md);
      }
+
      &.xl {
           font-size: var(--font-size-xl);
      }
+
      &.lg {
           font-size: var(--font-size-lg);
      }
@@ -19,7 +19,18 @@
      &.center {
           text-align: center;
      }
+
      &.left {
           text-align: left;
+     }
+
+     &.underscore::after {
+          content: "";
+          display: block;
+          width: 80px;
+          margin-left: 10px;
+          margin-top: 5px;
+          height: 4px;
+          background: var(--primary-clr);
      }
 }

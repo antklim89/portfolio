@@ -12,7 +12,7 @@ const Projects: FC<ProjectsProps> = ({ projects }) => {
     const t = useTranslations();
     return (
         <section className={styles.Projects} id="projects">
-            <Title size="xl">
+            <Title underscore size="xl">
                 {t('projects')}
             </Title>
             <div className={styles.list}>
