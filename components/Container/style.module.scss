@@ -5,4 +5,16 @@
      width: 100%;
      margin: 0 auto;
      max-width: $lg;
+
+     &.xl {
+          max-width: $xl;
+     }
+
+     &.lg {
+          max-width: $lg;
+     }
+
+     &.md {
+          max-width: $md;
+     }
 }

@@ -13,7 +13,7 @@ import style from './style.module.scss';
 const About: FC<AboutType> = ({ image, text, title }) => {
     return (
         <section className="parallax">
-            <Container className={style.About}>
+            <Container className={style.About} width="md" >
                 <div className={style.image}>
                     <Image
                         alt="About"
