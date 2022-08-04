@@ -12,13 +12,17 @@
                text-decoration: none;
                color: inherit;
           }
-          
+
           @include media-xs {
                grid-template-columns: repeat(2, 1fr);
           }
 
           @include media-sm {
                grid-template-columns: repeat(3, 1fr);
+          }
+
+          @include media-lg {
+               grid-template-columns: repeat(4, 1fr);
           }
      }
 }
