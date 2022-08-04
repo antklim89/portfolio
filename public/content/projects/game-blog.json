@@ -18,10 +18,10 @@
       "/content/projects/images/game-blog-contacts.png",
       "/content/projects/images/game-blog-about.png"
     ],
-    "body": "The simple game blog.\n\nThe GraphCMS content management system is used to create and store posts.\n\nDeveloped on the [NextJS](https://nextjs.org/) framework. The visual style is created using the [Chakra-UI](https://chakra-ui.com/) library."
+    "body": "The simple game blog.\n\nDeveloped on the [NextJS](https://nextjs.org/) framework. The [Netlifycms](https://www.netlifycms.org/) is used to create and store posts. The site is completely static.\n\nThe visual style is created using the [Chakra-UI](https://chakra-ui.com/) library."
   },
   "ru": {
     "title": "Игровой Блог",
-    "body": "Простой игровой блог.\n\nBспользуется cистема управления контентом Graph CMS для создания и хранения сообщений.\n\nРазработан на [NextJS](https://nextjs.org/). Визуальный стиль создается с использованием библиотеки [Chakra-UI](https://chakra-ui.com/)."
+    "body": "Простой игровой блог.\n\nРазработан на [NextJS](https://nextjs.org/). Используется cистема управления контентом [Netlifycms](https://www.netlifycms.org/) для создания и хранения сообщений. Сайт полностью статический.\n\nВизуальный стиль создается с использованием библиотеки [Chakra-UI](https://chakra-ui.com/)."
   }
 }
