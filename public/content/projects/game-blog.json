@@ -1,0 +1,27 @@
+{
+  "en": {
+    "slug": "game-blog",
+    "title": "Game Blog",
+    "link": "https://game-blog-dev.netlify.app/",
+    "github": "https://github.com/antklim89/game_blog",
+    "technologies": [
+      "react",
+      "typescript",
+      "material-ui",
+      "netlifycms"
+    ],
+    "image": "/content/projects/images/game-blog-home.png",
+    "images": [
+      "/content/projects/images/game-blog-home.png",
+      "/content/projects/images/game-blog-reviews.png",
+      "/content/projects/images/game-blog-news.png",
+      "/content/projects/images/game-blog-contacts.png",
+      "/content/projects/images/game-blog-about.png"
+    ],
+    "body": "The simple game blog.\n\nThe GraphCMS content management system is used to create and store posts.\n\nDeveloped on the [NextJS](https://nextjs.org/) framework. The visual style is created using the [Chakra-UI](https://chakra-ui.com/) library."
+  },
+  "ru": {
+    "title": "Игровой Блог",
+    "body": "Простой игровой блог.\n\nBспользуется cистема управления контентом Graph CMS для создания и хранения сообщений.\n\nРазработан на [NextJS](https://nextjs.org/). Визуальный стиль создается с использованием библиотеки [Chakra-UI](https://chakra-ui.com/)."
+  }
+}

@@ -49,11 +49,6 @@ export const projects: CmsCollection = {
             required: true,
         },
         {
-            name: 'image',
-            widget: 'image',
-            required: true,
-        },
-        {
             name: 'images',
             widget: 'list',
             min: 1,
