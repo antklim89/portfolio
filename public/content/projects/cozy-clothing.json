@@ -1,6 +1,6 @@
 {
   "en": {
-    "body": "A simple clothing store. Developed using the [Gatsby](https://www.gatsbyjs.com/) framework and the [React](https://reactjs.org/) library. The design is made using the [Sass](https://sass-scss.ru/) preprocessor. The site is completely static.\n\nThe products are distributed by gender and age . There is a shopping cart and a product search\n\n[NetlifyCMS](https://www.netlifycms.org/) is used as a content manager.",
+    "body": "A simple clothing store. Developed using the **[Gatsby](https://www.gatsbyjs.com/)** framework and the [React](https://reactjs.org/) library. The design is made using the [Sass](https://sass-scss.ru/) preprocessor. The site is completely static. [NetlifyCMS](https://www.netlifycms.org/) is used as a content manager.\n\nThe products are distributed by gender and age . There is a shopping cart and a product search",
     "github": "https://github.com/antklim89/cozy_clothing",
     "technologies": [
       "react",
@@ -21,7 +21,7 @@
     "description": "Simple clothing shop"
   },
   "ru": {
-    "body": "Простой магазин одежды. Разработан с помощью фреймворка  [Gatsby](https://www.gatsbyjs.com/) и библиотеки [React](https://reactjs.org/). Оформление выполнено с помощью препроцессора [Sass](https://sass-scss.ru/).  Сайт полностью статический. \n\nТовары распределены по полу и возрасту . Есть корзина и поиск товаров\n\nВ качестве контент-менеджера используется [NetlifyCMS](https://www.netlifycms.org/).",
+    "body": "Простой магазин одежды. Разработан с помощью фреймворка  **[Gatsby](https://www.gatsbyjs.com/)** и библиотеки [React](https://reactjs.org/). Оформление выполнено с помощью препроцессора [Sass](https://sass-scss.ru/).  Сайт полностью статический. В качестве контент-менеджера используется [NetlifyCMS](https://www.netlifycms.org/).\n\nТовары распределены по полу и возрасту . Есть корзина и поиск товаров",
     "title": "Магазин одежды",
     "description": "Простой магазин одежды"
   }

@@ -17,9 +17,10 @@
       "/content/projects/images/quiz-app-question.png",
       "/content/projects/images/quiz-app-results.png"
     ],
-    "body": "A small quiz developed on the [Vue](https://vuejs.org/) library. Written using [typescript](https://www.typescriptlang.org/) and [sass](https://sass-scss.ru/). The [Veux](https://vuex.vuejs.org/) package is used to manage the state. Questions are taken from the API [quizapi.io](https://quizapi.io)."
+    "body": "A small quiz developed on the **[Vue](https://vuejs.org/)** library. Written using [Typescript](https://www.typescriptlang.org/) and [Sass](https://sass-scss.ru/). The [Veux](https://vuex.vuejs.org/) package is used to manage the state. Questions are taken from the API [quizapi.io](https://quizapi.io)."
   },
   "ru": {
-    "body": "Небольшая викторина, разработанная на библеотеке Vue. Написана с помощью на typescript  и sass. Для Управления состоянием исполюзуется пакет Vuex. Вопросы берутся с API [quizapi.io](https://quizapi.io)."
+    "body": "Небольшая викторина, разработанная на библеотеке **[Vue](https://vuejs.org/)**. Написана с помощью на [Typescript](https://www.typescriptlang.org/)  и [Sass](https://sass-scss.ru/). Для Управления состоянием исполюзуется пакет Vuex. Вопросы берутся с API [quizapi.io](https://quizapi.io).",
+    "title": "Викторина"
   }
 }

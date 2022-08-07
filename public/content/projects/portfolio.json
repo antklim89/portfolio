@@ -1,0 +1,26 @@
+{
+  "en": {
+    "slug": "portfolio",
+    "title": "Portfolio",
+    "link": "https://fullstack-developer-portfolio.netlify.app/",
+    "github": "https://github.com/antklim89/portfolio",
+    "technologies": [
+      "react",
+      "nextjs",
+      "typescript",
+      "netlifycms",
+      "zod",
+      "sass"
+    ],
+    "images": [
+      "/content/projects/images/portfolio_home.png",
+      "/content/projects/images/portfolio_projects.png",
+      "/content/projects/images/portfolio_technologies.png"
+    ],
+    "body": "Portfolio website, developed on **[NextJS](https://nextjs.org/)**. There is a switch between English and Russian languages. The content is created using [Netlifycms](https://www.netlifycms.org/). [Sass](https://sass-scss.ru/) is used for styling."
+  },
+  "ru": {
+    "title": "Портфолио",
+    "body": "Сайт портфолио, разработан на **[NextJS](https://nextjs.org/)**. Вы можете переключаться между английским и русским языками. Контент создаётся с помощью [Netlifycms](https://www.netlifycms.org/). Для стилизации используется [Sass](https://sass-scss.ru/)."
+  }
+}

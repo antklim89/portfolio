@@ -1,13 +1,13 @@
 {
   "en": {
     "slug": "graphcms",
-    "body": "GraphCMS gives you instant GraphQL Content APIs to create, enrich, unify, and deliver your content across platforms.",
-    "title": "GraphCMS",
+    "body": "Unify, structure, enrich and distribute content from anywhere to anywhere.",
+    "title": "Hygraph(graphcms)",
     "link": "https://graphcms.com/",
-    "image": "/content/technologies/images/graphcms-logo.svg"
+    "image": "/content/technologies/images/hygraph-logo.svg"
   },
   "ru": {
-    "title": "GraphCMS",
-    "body": "GraphCMS предоставляет вам GraphQL API для создания, обогащения, унификации и доставки вашего контента на разных платформах."
+    "title": "Hygraph(graphcms)",
+    "body": "Объединяйте, структурируйте, обогащайте и распространяйте контент из любого места в любое место."
   }
 }
