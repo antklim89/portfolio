@@ -2,8 +2,8 @@
   "en": {
     "slug": "grocery-shop",
     "title": "Grocery Shop",
-    "link": "https://grocery-shop-dev.netlify.app/",
-    "github": "https://github.com/antklim89/grocery_shop",
+    "link": "https://groceryshopmonorepo-production.up.railway.app/",
+    "github": "https://github.com/antklim89/grocery_shop_monorepo",
     "image": "/content/projects/images/grocery_shop_home_page.png",
     "technologies": [
       "react",
