@@ -19,10 +19,10 @@
       "/content/projects/images/game-blog-contacts.png",
       "/content/projects/images/game-blog-about.png"
     ],
-    "body": "A simple gaming blog developed on **[NextJS](https://nextjs.org/)**.\n\nThe [Netlifycms](https://www.netlifycms.org/) is used to create and store posts. The site is completely static.\n\nThe visual style is created using the [Chakra-UI](https://chakra-ui.com/) library."
+    "body": "A simple gaming blog powered by **[NextJS](https://nextjs.org/)**.\n\nThe content management system [Netlifycms](https://www.netlifycms.org/) is used to create and store messages. The site is completely static.\n\nThe visual style is created using the [Chakra-UI](https://chakra-ui.com/) library."
   },
   "ru": {
     "title": "Игровой Блог",
-    "body": "Простой игровой блог, разработанный на **[NextJS](https://nextjs.org/)**.\n\nИспользуется cистема управления контентом [Netlifycms](https://www.netlifycms.org/) для создания и хранения сообщений. Сайт полностью статический.\n\nВизуальный стиль создается с использованием библиотеки [Chakra-UI](https://chakra-ui.com/)."
+    "body": "Простой игровой блог, разработанный на **[NextJS](https://nextjs.org/)**.\n\nИспользуется система управления контентом [Netlifycms](https://www.netlifycms.org/) для создания и хранения сообщений. Сайт полностью статический.\n\nВизуальный стиль создается с использованием библиотеки [Chakra-UI](https://chakra-ui.com/)."
   }
 }

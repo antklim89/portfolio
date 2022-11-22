@@ -1,0 +1,27 @@
+{
+  "en": {
+    "slug": "in-good-hands",
+    "title": "In Good Hands",
+    "technologies": [
+      "react",
+      "typescript",
+      "nextjs",
+      "chakra-ui",
+      "fastify",
+      "prisma"
+    ],
+    "link": "https://in-good-hand-dev.netlify.app/",
+    "github": "https://github.com/antklim89/in_good_hands",
+    "images": [
+      "/content/projects/images/home.png",
+      "/content/projects/images/ad.png",
+      "/content/projects/images/create-ad.png",
+      "/content/projects/images/credentials.png"
+    ],
+    "body": "Pet shelter website powered by **[NextJS](https://nextjs.org/)**.\n\nThe visual style is created using the **[Chakra-UI](https://chakra-ui.com/)** library.\n\nIt uses a self-created server using the **[Fastify](https://www.fastify.io/)** and **[Prisma](https://www.prisma.io/)** frameworks."
+  },
+  "ru": {
+    "title": "В Добрые Руки",
+    "body": "С﻿айт с объявлениями о приюте домашних животных, разработанный на **[NextJS](https://nextjs.org/)**.\n\nВизуальный стиль создается с использованием библиотеки **[Chakra-UI](https://chakra-ui.com/)**.\n\nИ﻿спользуется самостоятельно созданный с помощью фреймворков **[Fastify](https://www.fastify.io/)** и **[Prisma](https://www.prisma.io/)** сервер."
+  }
+}

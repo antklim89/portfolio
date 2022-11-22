@@ -17,10 +17,10 @@
       "/content/projects/images/portfolio_projects.png",
       "/content/projects/images/portfolio_technologies.png"
     ],
-    "body": "Portfolio website, developed on **[NextJS](https://nextjs.org/)**. There is a switch between English and Russian languages. The content is created using [Netlifycms](https://www.netlifycms.org/). [Sass](https://sass-scss.ru/) is used for styling."
+    "body": "Portfolio website developed with **[NextJS](https://nextjs.org/)**. You can switch between English and Russian.\n\nThe content management system [Netlifycms](https://www.netlifycms.org/) is used to create and store messages.\n\n[Sass](https://sass-scss.ru/) is used for styling."
   },
   "ru": {
     "title": "Портфолио",
-    "body": "Сайт портфолио, разработан на **[NextJS](https://nextjs.org/)**. Вы можете переключаться между английским и русским языками. Контент создаётся с помощью [Netlifycms](https://www.netlifycms.org/). Для стилизации используется [Sass](https://sass-scss.ru/)."
+    "body": "Сайт портфолио разработанный на **[NextJS](https://nextjs.org/)**. Можно переключаться между английским и русским языками.\n\nДля создания и хранения сообщений используется система управления контентом [Netlifycms](https://www.netlifycms.org/).\n\nДля стилизации используется [Sass](https://sass-scss.ru/)."
   }
 }
