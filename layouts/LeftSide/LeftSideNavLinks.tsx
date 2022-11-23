@@ -21,16 +21,15 @@ const LeftSideNavLinks: FC<LeftSideNavLinksProps> = ({ toggle }) => {
             <ul>
                 {links.map(({ href, body }) => (
                     <li key={href}>
-                        <Link href={href}>
-                            <a
-                                className="link"
-                                role="link"
-                                tabIndex={0}
-                                onClick={toggle}
-                                onKeyDown={(e) => e.key === 'Space' && toggle()}
-                            >
-                                {body}
-                            </a>
+                        <Link
+                            className="link"
+                            href={href}
+                            role="link"
+                            tabIndex={0}
+                            onClick={toggle}
+                            onKeyDown={(e) => e.key === 'Space' && toggle()}
+                        >
+                            {body}
                         </Link>
                     </li>
                 ))}

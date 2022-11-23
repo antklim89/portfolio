@@ -18,7 +18,6 @@ const About: FC<AboutType> = ({ image, text, title }) => {
                     <Image
                         alt="About"
                         height={320}
-                        layout="responsive"
                         src={getImageUrl(image)}
                         width={320}
                     />
