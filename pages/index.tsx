@@ -16,6 +16,7 @@ interface Props {
     projects: ProjectType[]
     technologies: TechnologyType[]
 }
+
 const Home: NextPage<Props> = ({ about, projects, technologies }) => {
     useEffect(() => initNetlifyIdentityWidget('netlify-identity-widget'), []);
 
@@ -35,12 +36,17 @@ const Home: NextPage<Props> = ({ about, projects, technologies }) => {
 export default Home;
 
 export const getStaticProps: GetStaticProps<Props> = async ({ locale = 'en' }) => {
-    const translations = await getTranslations(locale);
-
-    const about = await getAbout(locale);
-    const projects = await getProjects(locale);
-    const technologies = await getTechnologies(locale);
-
+    const [
+        translations,
+        about,
+        projects,
+        technologies,
+    ] = await Promise.all([
+        getTranslations(locale),
+        getAbout(locale),
+        getProjects(locale),
+        getTechnologies(locale),
+    ]);
 
     return {
         props: {
