@@ -5,8 +5,7 @@ import Contacts from '~/layouts/Contacts';
 import { getTranslations } from '~/utils/server';
 
 
-const Home: NextPage = () => {
-
+const ContactsPage: NextPage = () => {
     return (
         <>
             <Seo title="Contacts" />
@@ -15,7 +14,7 @@ const Home: NextPage = () => {
     );
 };
 
-export default Home;
+export default ContactsPage;
 
 export const getStaticProps: GetStaticProps = async ({ locale = 'en' }) => {
     const translations = await getTranslations(locale);

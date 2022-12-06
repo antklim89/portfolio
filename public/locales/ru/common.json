@@ -6,5 +6,11 @@
     "contacts": "контакты",
     "technologies": "технологии",
     "GitHub": "GitHub",
-    "Site": "Сайт"
+    "Site": "Сайт",
+    "Submit": "Отправить",
+    "Name": "Имя",
+    "Subject": "Тема",
+    "Message": "Сообщение",
+    "contactError": "Непредвиденная ошибка. Попробуйте ещё раз позже.",
+    "contactSuccess": "Сообщение успешно отправленно."
 }

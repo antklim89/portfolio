@@ -6,5 +6,11 @@
     "contacts": "contacts",
     "technologies": "technologies",
     "GitHub": "GitHub",
-    "Site": "Site"
+    "Site": "Site",
+    "Submit": "Submit",
+    "Name": "Name",
+    "Subject": "Subject",
+    "Message": "Message",
+    "contactError": "Unexpected error. Try again later.",
+    "contactSuccess": "The message has been sent successfully"
 }

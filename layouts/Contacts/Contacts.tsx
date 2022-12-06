@@ -1,3 +1,4 @@
+import { useTranslations } from 'next-intl';
 import { FC, FormEventHandler, useState } from 'react';
 
 import { cls } from '~/utils';
@@ -6,6 +7,7 @@ import style from './style.module.scss';
 
 
 const Contacts: FC = () => {
+    const t = useTranslations();
     const [loading, setLoading] = useState(false);
     const [status, setStatus] = useState<'success' | 'error' | null>(null);
 
@@ -29,10 +31,10 @@ const Contacts: FC = () => {
                 <h1>Contact Me</h1>
 
                 {status === 'success' && (
-                    <p className={cls(style.status, style.success)}>The message has been sent successfully</p>
+                    <p className={cls(style.status, style.success)}>{t('contactError')}</p>
                 )}
                 {status === 'error' && (
-                    <p className={cls(style.status, style.error)}>Unexpected error. Try again later.</p>
+                    <p className={cls(style.status, style.error)}>{t('contactSuccess')}</p>
                 )}
 
                 <form
@@ -46,7 +48,7 @@ const Contacts: FC = () => {
                     <input name="form-name" type="hidden" value="contact" />
 
                     <label className={style.input}>
-                        Name: <br />
+                        {t('Name')}: <br />
                         <input
                             required
                             disabled={loading}
@@ -58,7 +60,7 @@ const Contacts: FC = () => {
                     </label>
 
                     <label className={style.input}>
-                        Subject: <br />
+                        {t('Subject')}: <br />
                         <input
                             required
                             disabled={loading}
@@ -70,7 +72,7 @@ const Contacts: FC = () => {
                     </label>
 
                     <label className={style.input}>
-                        Message: <br />
+                        {t('Message')}: <br />
                         <textarea
                             required
                             disabled={loading}
@@ -81,7 +83,7 @@ const Contacts: FC = () => {
                         />
                     </label>
 
-                    <button disabled={loading} type="submit">Submit</button>
+                    <button disabled={loading} type="submit">{t('Submit')}</button>
                 </form>
 
             </div>
