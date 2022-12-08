@@ -27,9 +27,8 @@ const ProjectItem: FC<ProjectType> = ({
                         <Image
                             alt={title}
                             height={200}
-                            layout="intrinsic"
-                            objectFit="cover"
                             src={getImageUrl(image)}
+                            style={{ objectFit: 'cover' }}
                             width={400}
                         />
                     </div>
@@ -40,17 +39,13 @@ const ProjectItem: FC<ProjectType> = ({
                     {title}
                 </Title>
                 <div className={style.actions}>
-                    <Link href={github}>
-                        <a rel="noopener noreferrer" target="_blank">
-                            <DiGithubBadge />
-                            {t('GitHub')}
-                        </a>
+                    <Link href={github} rel="noopener noreferrer" target="_blank">
+                        <DiGithubBadge />
+                        {t('GitHub')}
                     </Link>
-                    <Link href={link}>
-                        <a rel="noopener noreferrer" target="_blank">
-                            <MdPublic />
-                            {t('Site')}
-                        </a>
+                    <Link href={link} rel="noopener noreferrer" target="_blank">
+                        <MdPublic />
+                        {t('Site')}
                     </Link>
                 </div>
             </div>

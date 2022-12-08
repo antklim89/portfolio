@@ -11,29 +11,28 @@ import { TechnologyProps } from './types';
 
 const TechnologyItem: FC<TechnologyProps> = ({ technology }) => {
     return (
-        <Link href={technology.link}>
-            <a
-                aria-label={`${technology.title} technology`}
-                className={style.linkWrapper}
-                rel="noopener noreferrer"
-                target="_blank"
-            >
-                <section className={style.Technology}>
-                    <Title align="center" as="h3" size="md">
-                        {technology.title}
-                    </Title>
-                    <div className={style.image}>
-                        <Image
-                            alt={technology.title}
-                            height={400}
-                            layout="responsive"
-                            src={getImageUrl(technology.image)}
-                            width={640}
-                        />
-                    </div>
-                    <p className={style.body}>{technology.body}</p>
-                </section>
-            </a>
+        <Link
+            aria-label={`${technology.title} technology`}
+            className={style.linkWrapper}
+            href={technology.link}
+            rel="noopener noreferrer"
+            target="_blank"
+        >
+            <section className={style.Technology}>
+                <Title align="center" as="h3" size="md">
+                    {technology.title}
+                </Title>
+                <div className={style.image}>
+                    <Image
+                        alt={technology.title}
+                        height={400}
+                        src={getImageUrl(technology.image)}
+                        style={{ objectFit: 'contain' }}
+                        width={640}
+                    />
+                </div>
+                <p className={style.body}>{technology.body}</p>
+            </section>
         </Link>
     );
 };

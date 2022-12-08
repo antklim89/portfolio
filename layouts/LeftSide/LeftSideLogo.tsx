@@ -10,10 +10,8 @@ import style from './style.module.scss';
 
 const LeftSideLogo: FC = () => {
     return (
-        <Link href="/">
-            <a className={cls('link', style.Logo)}>
-                <Image {...logo} alt="logo" />
-            </a>
+        <Link className={cls('link', style.Logo)} href="/">
+            <Image {...logo} alt="logo" />
         </Link>
     );
 };
