@@ -17,6 +17,7 @@ const About: FC<AboutType> = ({ image, text, title }) => {
                 <div className={style.image}>
                     <Image
                         alt="About"
+                        className="img-responsible"
                         height={320}
                         src={getImageUrl(image)}
                         width={320}

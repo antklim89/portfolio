@@ -26,9 +26,9 @@ const ProjectItem: FC<ProjectType> = ({
                     <div className={style.images} key={image}>
                         <Image
                             alt={title}
+                            className="img-cover"
                             height={200}
                             src={getImageUrl(image)}
-                            style={{ objectFit: 'cover' }}
                             width={400}
                         />
                     </div>
