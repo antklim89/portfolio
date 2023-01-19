@@ -1,5 +1,5 @@
-import { useTranslations } from 'next-intl';
 import Head from 'next/head';
+import { useTranslations } from 'next-intl';
 import { FC, memo } from 'react';
 
 import { CREATOR, DEFAULT_DESCRIPTION } from '~/constants';
@@ -9,7 +9,7 @@ import { SeoProps } from './types';
 
 const Seo: FC<SeoProps> = ({
     description,
-    keywords = [],
+    keywords,
     title,
 }) => {
     const t = useTranslations();
@@ -22,7 +22,7 @@ const Seo: FC<SeoProps> = ({
             <title>{defaultTitle}</title>
             <link href="/favicon.ico" rel="icon" />
             <meta content={metaDescription} name="description" />
-            <meta content={['grocery', 'shop', ...keywords].join(', ')} name="keywords" />
+            <meta content={['grocery', 'shop', ...(keywords || [])].join(', ')} name="keywords" />
             <meta content={metaDescription} name="description" />
             <meta content={title} property="og:title" />
             <meta content={metaDescription} property="og:description" />
