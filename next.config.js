@@ -17,4 +17,5 @@ module.exports = {
     generateBuildId: async () => {
         return 'my-build-id';
     },
+    experimental: { appDir: true },
 };
