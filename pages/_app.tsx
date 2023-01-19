@@ -1,5 +1,5 @@
-import { NextIntlProvider } from 'next-intl';
 import { AppProps } from 'next/app';
+import { NextIntlProvider } from 'next-intl';
 import '@fontsource/montserrat/400.css';
 import '@fontsource/montserrat/400-italic.css';
 import '@fontsource/montserrat/700.css';
