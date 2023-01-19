@@ -25,9 +25,9 @@ const TechnologyItem: FC<TechnologyProps> = ({ technology }) => {
                 <div className={style.image}>
                     <Image
                         alt={technology.title}
+                        className="img-contain"
                         height={400}
                         src={getImageUrl(technology.image)}
-                        style={{ objectFit: 'contain' }}
                         width={640}
                     />
                 </div>

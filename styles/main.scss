@@ -11,8 +11,8 @@ html {
 }
 
 body {
-    font-family: 
-        Montserrat, 
+    font-family:
+        Montserrat,
         -apple-system,
         Ubuntu,
         Helvetica,
@@ -35,4 +35,17 @@ body {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.img-responsible {
+    width: 100%;
+    height: 100%;
+}
+
+.img-cover {
+    object-fit: cover;
+}
+
+.img-contain {
+    object-fit: contain;
 }
