@@ -7,8 +7,8 @@ import About from '~/layouts/About';
 import ProjectsList from '~/layouts/Projects';
 import Technologies from '~/layouts/Technologies';
 import type { AboutType, ProjectType, TechnologyType } from '~/types';
-import { initNetlifyIdentityWidget } from '~/utils';
-import { getAbout, getProjects, getTechnologies, getTranslations } from '~/utils/server';
+import { getTranslation, initNetlifyIdentityWidget } from '~/utils';
+import { getAbout, getProjects, getTechnologies } from '~/utils/server';
 
 
 interface Props {
@@ -37,12 +37,12 @@ export default Home;
 
 export const getStaticProps: GetStaticProps<Props> = async ({ locale = 'en' }) => {
     const [
-        translations,
+        translation,
         about,
         projects,
         technologies,
     ] = await Promise.all([
-        getTranslations(locale),
+        getTranslation(locale),
         getAbout(locale),
         getProjects(locale),
         getTechnologies(locale),
@@ -53,9 +53,7 @@ export const getStaticProps: GetStaticProps<Props> = async ({ locale = 'en' }) =
             about,
             projects,
             technologies,
-            translations,
+            translation,
         },
     };
 };
-
-

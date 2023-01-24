@@ -10,10 +10,10 @@ module.exports = {
             new URL(process.env.URL).host,
         ],
     },
-    i18n: {
-        defaultLocale: 'en',
-        locales: ['en', 'ru'],
-    },
+    // i18n: {
+    //     defaultLocale: 'en',
+    //     locales: ['en', 'ru'],
+    // },
     generateBuildId: async () => {
         return 'my-build-id';
     },

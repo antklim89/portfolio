@@ -2,7 +2,7 @@ import type { GetStaticProps, NextPage } from 'next';
 
 import Seo from '~/components/Seo';
 import Contacts from '~/layouts/Contacts';
-import { getTranslations } from '~/utils/server';
+import { getTranslation } from '~/utils';
 
 
 const ContactsPage: NextPage = () => {
@@ -17,7 +17,7 @@ const ContactsPage: NextPage = () => {
 export default ContactsPage;
 
 export const getStaticProps: GetStaticProps = async ({ locale = 'en' }) => {
-    const translations = await getTranslations(locale);
+    const translation = await getTranslation(locale);
 
-    return { props: { translations } };
+    return { props: { translation } };
 };

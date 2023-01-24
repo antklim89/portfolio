@@ -1,9 +1,9 @@
 import { ReactNode } from 'react';
 
-import { Locale } from '~/types';
+import { Translation } from '~/types';
 
 
 export interface LocaleProviderProps {
     children: ReactNode
-    locale?: Locale
+    translation: Translation
 }

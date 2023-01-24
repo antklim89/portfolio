@@ -1,7 +1,6 @@
+import { Locale } from '~/constants';
 
-export const Locale = {
-    ru: 'ru',
-    en: 'en',
-} as const;
 
 export type Locale = keyof typeof Locale
+
+export type Translation = typeof import('~/locales/en.json')

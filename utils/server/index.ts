@@ -4,4 +4,4 @@ export * from './loadOneFile';
 export * from './getAbout';
 export * from './getProjects';
 export * from './getTechnologies';
-export * from './getTranslations';
+export * from './getServerLocale';

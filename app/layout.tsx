@@ -1,16 +1,18 @@
-import LocaleProvider from '~/components/LocaleProvider';
+
+import { getServerLocale } from '../utils/server/getServerLocale';
 
 
-const RootLayout = ({ children, ...props }: { children: React.ReactNode}) => {
+const RootLayout = ({ children }: { children: React.ReactNode}) => {
+    const locale = getServerLocale();
 
     return (
-        <html lang="en">
+        <html lang={locale}>
             <head />
-            <LocaleProvider>
-                <body>{children}</body>
-            </LocaleProvider>
+            <body>{children}</body>
         </html>
     );
 };
 
 export default RootLayout;
+
+
