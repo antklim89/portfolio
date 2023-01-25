@@ -1,16 +1,19 @@
-import { createContext, FC } from 'react';
+import { createContext, FC, useMemo } from 'react';
 
-import { Translation } from '~/types';
+import { Locale, Translation } from '~/types';
 
-import { LocaleProviderProps } from './types';
+import { TranslationProviderProps } from './type';
 
 
-export const TranslationContext = createContext<Translation>({} as Translation);
+export const TranslationContext = createContext({} as { translation: Translation, locale: Locale });
 
-const TranslationProvider: FC<LocaleProviderProps> = ({ children, translation }) => {
 
+const TranslationProvider: FC<TranslationProviderProps> = ({ translation, locale, children }) => {
+    const value = useMemo(() => ({ translation, locale }), [translation, locale]);
     return (
-        <TranslationContext.Provider value={translation}>{children}</TranslationContext.Provider>
+        <TranslationContext.Provider value={value}>
+            {children}
+        </TranslationContext.Provider>
     );
 };
 

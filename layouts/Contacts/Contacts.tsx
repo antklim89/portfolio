@@ -22,7 +22,7 @@ const Contacts: FC = () => {
         setLoading(false);
     };
 
-    const t = useTranslation();
+    const { t } = useTranslation();
 
     if (!t) return null;
     return (
@@ -31,10 +31,10 @@ const Contacts: FC = () => {
                 <h1>Contact Me</h1>
 
                 {status === 'success' && (
-                    <p className={cls(style.status, style.success)}>contactError</p>
+                    <p className={cls(style.status, style.success)}>{t.contactSuccess}</p>
                 )}
                 {status === 'error' && (
-                    <p className={cls(style.status, style.error)}>contactSuccess</p>
+                    <p className={cls(style.status, style.error)}>{t.contactError}</p>
                 )}
 
                 <form

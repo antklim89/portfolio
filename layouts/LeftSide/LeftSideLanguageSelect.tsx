@@ -1,38 +1,20 @@
-import { useTranslations } from 'next-intl';
-import { useRouter } from 'next/router';
-import { ChangeEvent, FC } from 'react';
+import { FC } from 'react';
+
+import { locales } from '~/constants';
+import { checkLocale, useTranslation } from '~/utils';
 
 import style from './style.module.scss';
 
 
 const LeftSideLanguageSelect: FC = () => {
-    const {
-        locale,
-        locales,
-        replace,
-        asPath,
-        pathname,
-        query,
-    } = useRouter();
-    const t = useTranslations();
-
-    if (!locale || !locales) return null;
-
-    const handleChangeLocale = (e: ChangeEvent<HTMLSelectElement>) => {
-        replace({ pathname, query }, asPath, { locale: e.target.value });
-    };
+    const { t, changeLocale, locale } = useTranslation();
 
     return (
         <div className={style.Language}>
-            <label htmlFor="change-language">{t('Language')}: </label>
-            <select id="change-language" value={locale} onChange={handleChangeLocale}>
+            <label htmlFor="change-language">{t.Language}: </label>
+            <select id="change-language" value={locale} onChange={(e) => changeLocale(checkLocale(e.target.value))}>
                 {locales.map((lang) => (
-                    <option
-                        key={lang}
-                        value={lang}
-                    >
-                        {lang}
-                    </option>
+                    <option key={lang} value={lang}>{lang}</option>
                 ))}
             </select>
         </div>

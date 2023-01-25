@@ -1,17 +1,19 @@
-import { headers, cookies } from 'next/headers';
+import { cookies, headers } from 'next/headers';
 
-import { locales } from '~/constants';
+import { defaultLocale } from '~/constants';
 import { Locale } from '~/types';
+
+import { isLocale } from '../checkLocale';
 
 
 export function getServerLocale(): Locale {
-    const cookieLocale = cookies().get('loclae')?.value;
-    if (cookieLocale) return cookieLocale as Locale;
+    const coociesLocale = cookies().get('locale')?.value;
+    if (isLocale(coociesLocale)) return coociesLocale;
 
     const headerLocale = headers()
         .get('accept-language')
         ?.replace(/.*,(.*);.*/i, '$1');
-    if (headerLocale) return headerLocale as Locale;
+    if (isLocale(headerLocale)) return headerLocale;
 
-    return locales[0];
+    return defaultLocale;
 }

@@ -1,20 +1,29 @@
-import { useEffect, useState } from 'react';
+import { useRouter, usePathname } from 'next/navigation';
+import { useCallback, useContext } from 'react';
 
-import { Translation } from '~/types';
+import { TranslationContext } from '~/components/TranslationProvider';
+import { Locale } from '~/types';
 
-import { getClientLocale } from './getClientLocale';
-import { getTranslation } from './getTranslation';
+import { isLocale } from './checkLocale';
+import { setCookie } from './cookie';
 
+
+const localeRegex = /^\/(\w\w)(.*)/i;
 
 export function useTranslation() {
-    const locale = getClientLocale();
-    const [translation, setTranslation] = useState<null | Translation>(null);
+    const { translation, locale } = useContext(TranslationContext);
+    const { replace } = useRouter();
+    const pathname = usePathname() || '';
 
-    useEffect(() => {
-        getTranslation(locale).then((responseTranslation) => {
-            setTranslation(responseTranslation);
-        });
+    const changeLocale = useCallback((newLocale: Locale) => {
+        const oldLocale = pathname.replace(localeRegex, '$1');
+
+        if (isLocale(oldLocale) && isLocale(newLocale)) {
+            const newPath = pathname.replace(localeRegex, `/${newLocale}$2`);
+            setCookie('locale', newLocale);
+            replace(newPath);
+        }
     }, []);
 
-    return translation;
+    return { t: translation, changeLocale, locale };
 }

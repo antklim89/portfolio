@@ -1,18 +1,17 @@
-import { useTranslations } from 'next-intl';
-import { FC } from 'react';
+import { useTranslation } from '~/utils';
 
 import style from './style.module.scss';
 import { LeftSideNavLinksProps } from './types';
 
 
-const LeftSideNavLinks: FC<LeftSideNavLinksProps> = ({ toggle }) => {
-    const t = useTranslations();
+const LeftSideNavLinks = ({ toggle }: LeftSideNavLinksProps) => {
+    const { t } = useTranslation();
 
     const links = [
-        { href: '/#', body: t('home') },
-        { href: '/#projects', body: t('projects') },
-        { href: '/#technologies', body: t('technologies') },
-        { href: '/contacts', body: t('contacts') },
+        { href: '/#', body: t.home },
+        { href: '/#projects', body: t.projects },
+        { href: '/#technologies', body: t.technologies },
+        { href: '/contacts', body: t.contacts },
     ];
 
     return (

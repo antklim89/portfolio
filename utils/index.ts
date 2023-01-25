@@ -3,5 +3,4 @@ export * from './getImageUrl';
 export * from './initNetlifyIdentityWidget';
 export * from './getTranslation';
 export * from './useTranslation';
-export * from './getClientLocale';
-export * from './cookie';
+export * from './checkLocale';

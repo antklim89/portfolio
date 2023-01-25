@@ -1,6 +1,6 @@
 import type { InitOptions } from 'netlify-cms-core';
 
-import { locales } from '~/constants';
+import { defaultLocale, locales } from '~/constants';
 
 import { about } from './about';
 import { projects } from './projects';
@@ -21,7 +21,7 @@ export const cmsConfig: InitOptions = {
         i18n: {
             structure: 'single_file',
             locales,
-            default_locale: locales[0],
+            default_locale: defaultLocale,
         },
 
         local_backend: { allowed_hosts: ['192.168.90.19', '127.0.0.1'] },

@@ -5,7 +5,9 @@ export const DEFAULT_TITLE = 'Portfolio';
 
 
 export const Locale = {
-    ru: 'ru',
     en: 'en',
+    ru: 'ru',
 } as const;
+
+export const defaultLocale = Locale.en;
 export const locales = Object.values(Locale);

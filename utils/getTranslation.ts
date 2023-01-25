@@ -1,11 +1,8 @@
-import { locales } from '~/constants';
 import { Locale, Translation } from '~/types';
 
 
-export async function getTranslation(locale: string): Promise<Translation> {
-    if (!locales.includes(locale as Locale)) throw new Error(`Unsupported locale"${locale}"`);
+export async function getTranslation(locale: Locale): Promise<Translation> {
+    const translation = await import(`~/locales/${locale}.json`);
 
-    const response = await import(`~/locales/${locale}.json`);
-
-    return { ...response };
+    return { ...translation };
 }
