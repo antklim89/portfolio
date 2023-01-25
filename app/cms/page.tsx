@@ -1,3 +1,4 @@
+'use client';
 import { FC, useEffect } from 'react';
 
 
@@ -12,9 +13,7 @@ const CMSPage: FC = () => {
         })();
     }, []);
 
-    return (
-        <div />
-    );
+    return null;
 };
 
 export default CMSPage;
