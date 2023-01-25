@@ -1,24 +1,26 @@
-import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
-import Carousel from 'nuka-carousel';
 import { FC } from 'react';
 import { DiGithubBadge } from 'react-icons/di/';
 import { MdPublic } from 'react-icons/md/';
 
+import Carousel from '~/components/ClientComponents/nuka-carusel';
 import Markdown from '~/components/Markdown';
 import Tags from '~/components/Tags';
 import Title from '~/components/Title';
 import { ProjectType } from '~/types';
-import { getImageUrl } from '~/utils';
+import { getImageUrl, getTranslation } from '~/utils';
+import { getServerLocale } from '~/utils/server';
 
 import style from './style.module.scss';
 
 
-const ProjectItem: FC<ProjectType> = ({
+const ProjectItem = async ({
     technologies, title, images, link, github, body,
-}) => {
-    const t = useTranslations();
+}: ProjectType) => {
+    const locale = getServerLocale();
+    const t = await getTranslation(locale);
+
     return (
         <section className={style.ProjectItem}>
             <Carousel>
@@ -41,11 +43,11 @@ const ProjectItem: FC<ProjectType> = ({
                 <div className={style.actions}>
                     <Link href={github} rel="noopener noreferrer" target="_blank">
                         <DiGithubBadge />
-                        {t('GitHub')}
+                        {t.GitHub}
                     </Link>
                     <Link href={link} rel="noopener noreferrer" target="_blank">
                         <MdPublic />
-                        {t('Site')}
+                        {t.Site}
                     </Link>
                 </div>
             </div>
@@ -59,4 +61,4 @@ const ProjectItem: FC<ProjectType> = ({
     );
 };
 
-export default ProjectItem;
+export default ProjectItem as unknown as FC<ProjectType>;

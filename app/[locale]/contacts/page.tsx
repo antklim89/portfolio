@@ -2,12 +2,7 @@ import Contacts from '~/layouts/Contacts';
 
 
 const ContactsPage = async () => {
-
-    return (
-        <>
-            <Contacts />
-        </>
-    );
+    return <Contacts />;
 };
 
 export default ContactsPage;

@@ -1,19 +1,22 @@
-import { useTranslations } from 'next-intl';
 import { FC } from 'react';
 
 import Title from '~/components/Title';
+import { getTranslation } from '~/utils';
+import { getServerLocale, getTechnologies } from '~/utils/server';
 
 import style from './style.module.scss';
 import Technology from './TechnologyItem';
-import { TechnologiesProps } from './types';
 
 
-const Technologies: FC<TechnologiesProps> = ({ technologies }) => {
-    const t = useTranslations();
+const Technologies = async () => {
+    const locale = getServerLocale();
+    const t = await getTranslation(locale);
+    const technologies = await getTechnologies(locale);
+
     return (
         <section className={style.Technologies} id="technologies">
             <Title underscore size="xl">
-                {t('technologies')}
+                {t.technologies}
             </Title>
             <div className={style.list}>
                 {technologies.map((technology) => (
@@ -24,5 +27,5 @@ const Technologies: FC<TechnologiesProps> = ({ technologies }) => {
     );
 };
 
-export default Technologies;
+export default Technologies as unknown as FC;
 
