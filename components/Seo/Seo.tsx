@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { useTranslations } from 'next-intl';
+// import { useTranslations } from 'next-intl';
 import { FC, memo } from 'react';
 
 import { CREATOR, DEFAULT_DESCRIPTION } from '~/constants';
@@ -12,14 +12,14 @@ const Seo: FC<SeoProps> = ({
     keywords,
     title,
 }) => {
-    const t = useTranslations();
+    // const t = useTranslations();
 
     const metaDescription = `${DEFAULT_DESCRIPTION} ${description || ''}`.trim();
-    const defaultTitle = `${title ? `${title} | ` : ''}${t('defaultTitle')}`;
+    // const defaultTitle = `${title ? `${title} | ` : ''}${t('defaultTitle')}`;
 
     return (
         <Head>
-            <title>{defaultTitle}</title>
+            {/* <title>{defaultTitle}</title> */}
             <link href="/favicon.ico" rel="icon" />
             <meta content={metaDescription} name="description" />
             <meta content={['grocery', 'shop', ...(keywords || [])].join(', ')} name="keywords" />
