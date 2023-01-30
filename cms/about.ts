@@ -22,6 +22,18 @@ export const about: CmsCollectionFile = {
             required: true,
         },
         {
+            name: 'creator',
+            widget: 'string',
+            i18n: true,
+            required: true,
+        },
+        {
+            name: 'keywords',
+            widget: 'list',
+            i18n: true,
+            required: true,
+        },
+        {
             name: 'image',
             widget: 'image',
             required: true,
