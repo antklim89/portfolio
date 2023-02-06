@@ -5,23 +5,23 @@ import { LeftSideNavLinksProps } from './types';
 
 
 const LeftSideNavLinks = ({ toggle }: LeftSideNavLinksProps) => {
-    const { t } = useTranslation();
+    const { t, locale } = useTranslation();
 
     const links = [
-        { href: '/#', body: t.home },
-        { href: '/#projects', body: t.projects },
-        { href: '/#technologies', body: t.technologies },
-        { href: '/contacts', body: t.contacts },
+        { hash: '#', body: t.home },
+        { hash: '#projects', body: t.projects },
+        { hash: '#technologies', body: t.technologies },
+        { hash: '#contacts', body: t.contacts },
     ];
 
     return (
         <nav className={style.NavLinks}>
             <ul>
-                {links.map(({ href, body }) => (
-                    <li key={href}>
+                {links.map(({ hash, body }) => (
+                    <li key={hash}>
                         <a
                             className="link"
-                            href={href}
+                            href={`/${locale}${hash}`}
                             tabIndex={0}
                             onClick={toggle}
                             onKeyDown={(e) => e.key === 'Space' && toggle()}
