@@ -14,7 +14,6 @@ const HomePage = async () => {
                 <Technologies />
                 <Contacts />
             </Container>
-            <div id="netlify-identity-widget" />
         </>
     );
 };
