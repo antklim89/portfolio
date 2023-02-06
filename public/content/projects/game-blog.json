@@ -11,13 +11,12 @@
       "netlifycms",
       "next"
     ],
-    "image": "/content/projects/images/game-blog-home.png",
     "images": [
-      "/content/projects/images/game-blog-home.png",
-      "/content/projects/images/game-blog-reviews.png",
-      "/content/projects/images/game-blog-news.png",
-      "/content/projects/images/game-blog-contacts.png",
-      "/content/projects/images/game-blog-about.png"
+      "/content/projects/images/game-blog-home.webp",
+      "/content/projects/images/game-blog-reviews.webp",
+      "/content/projects/images/game-blog-news.webp",
+      "/content/projects/images/game-blog-contacts.webp",
+      "/content/projects/images/game-blog-about.webp"
     ],
     "body": "A simple gaming blog powered by **[NextJS](https://nextjs.org/)**.\n\nThe content management system [Netlifycms](https://www.netlifycms.org/) is used to create and store messages. The site is completely static.\n\nThe visual style is created using the [Chakra-UI](https://chakra-ui.com/) library."
   },

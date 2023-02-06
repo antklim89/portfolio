@@ -13,13 +13,12 @@
     "slug": "personal-blog",
     "title": "Personal blog",
     "images": [
-      "/content/projects/images/personal_blog_home.png",
-      "/content/projects/images/personal_blog_posts.png",
-      "/content/projects/images/personal_blog_post.png",
-      "/content/projects/images/personal_blog_contacts.png"
+      "/content/projects/images/personal_blog_home.webp",
+      "/content/projects/images/personal_blog_posts.webp",
+      "/content/projects/images/personal_blog_post.webp",
+      "/content/projects/images/personal_blog_contacts.webp"
     ],
     "link": "https://personal-blog-dev.netlify.app/",
-    "image": "/content/projects/images/personal_blog_home_page.png",
     "description": "Simple clothing shop"
   },
   "ru": {

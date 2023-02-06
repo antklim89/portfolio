@@ -13,10 +13,10 @@
     "link": "https://in-good-hand-dev.netlify.app/",
     "github": "https://github.com/antklim89/in_good_hands",
     "images": [
-      "/content/projects/images/home.png",
-      "/content/projects/images/ad.png",
-      "/content/projects/images/create-ad.png",
-      "/content/projects/images/credentials.png"
+      "/content/projects/images/home.webp",
+      "/content/projects/images/ad.webp",
+      "/content/projects/images/create-ad.webp",
+      "/content/projects/images/credentials.webp"
     ],
     "body": "Pet shelter website powered by **[NextJS](https://nextjs.org/)**.\n\nThe visual style is created using the **[Chakra-UI](https://chakra-ui.com/)** library.\n\nIt uses a self-created server using the **[Fastify](https://www.fastify.io/)** and **[Prisma](https://www.prisma.io/)** frameworks."
   },

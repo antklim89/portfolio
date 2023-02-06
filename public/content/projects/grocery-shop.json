@@ -4,7 +4,6 @@
     "title": "Grocery Shop",
     "link": "https://groceryshopmonorepo-production.up.railway.app/",
     "github": "https://github.com/antklim89/grocery_shop_monorepo",
-    "image": "/content/projects/images/grocery_shop_home_page.png",
     "technologies": [
       "react",
       "nextjs",
@@ -14,9 +13,9 @@
     ],
     "body": "Grocery store. Developed on the **[NextJS](https://nextjs.org/)** framework.\n\nDesign was done using the \\[Bootstrap 5] library (https://getbootstrap.com/) and the \\[Sass] preprocessor (https://sass-scss.ru/).\n\nAPI implemented using CMS [Strapi](https://strapi.io/).",
     "images": [
-      "/content/projects/images/grocery_shop_home_full_page.png",
-      "/content/projects/images/grocery_shop_cart.png",
-      "/content/projects/images/grocery_shop_catalog.png"
+      "/content/projects/images/grocery_shop_home_full_page.webp",
+      "/content/projects/images/grocery_shop_cart.webp",
+      "/content/projects/images/grocery_shop_catalog.webp"
     ]
   },
   "ru": {

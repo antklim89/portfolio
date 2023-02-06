@@ -13,9 +13,9 @@
       "sass"
     ],
     "images": [
-      "/content/projects/images/portfolio_home.png",
-      "/content/projects/images/portfolio_projects.png",
-      "/content/projects/images/portfolio_technologies.png"
+      "/content/projects/images/portfolio_home.webp",
+      "/content/projects/images/portfolio_projects.webp",
+      "/content/projects/images/portfolio_technologies.webp"
     ],
     "body": "Portfolio website developed with **[NextJS](https://nextjs.org/)**. You can switch between English and Russian.\n\nThe content management system [Netlifycms](https://www.netlifycms.org/) is used to create and store messages.\n\n[Sass](https://sass-scss.ru/) is used for styling."
   },

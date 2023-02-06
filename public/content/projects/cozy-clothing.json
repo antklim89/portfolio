@@ -11,13 +11,12 @@
     "slug": "cozy-clothing",
     "title": "Cozy clothing",
     "images": [
-      "/content/projects/images/cozy_clothing_home_page_full.png",
-      "/content/projects/images/cozy_clothing_catalog_menu.png",
-      "/content/projects/images/cozy_clothing_catalog.png",
-      "/content/projects/images/cozy_clothing_cart.png"
+      "/content/projects/images/cozy_clothing_home_page_full.webp",
+      "/content/projects/images/cozy_clothing_catalog_menu.webp",
+      "/content/projects/images/cozy_clothing_catalog.webp",
+      "/content/projects/images/cozy_clothing_cart.webp"
     ],
     "link": "https://cozy-clothing.netlify.app/",
-    "image": "/content/projects/images/cozy_clothing_home_page_full.png",
     "description": "Simple clothing shop"
   },
   "ru": {
