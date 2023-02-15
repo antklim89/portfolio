@@ -37,11 +37,14 @@
         z-index: 101;
     }
 
-    .actions {
+    .links {
         display: flex;
         justify-content: center;
+        font-size: var(--font-size-md);
 
         a {
+            display: flex;
+            align-items: center;
             color: var(--primary-clr);
             padding: var(--sp-1);
         }

@@ -37,16 +37,16 @@ const ProjectItem = async ({
                 ))}
             </Carousel>
             <div className={style.content}>
-                <Title align="center" as="h3">
+                <Title align="center" as="h3" size="lg">
                     {title}
                 </Title>
-                <div className={style.actions}>
+                <div className={style.links}>
                     <Link href={github} rel="noopener noreferrer" target="_blank">
-                        <DiGithubBadge />
+                        <DiGithubBadge size="3rem" />
                         {t.GitHub}
                     </Link>
                     <Link href={link} rel="noopener noreferrer" target="_blank">
-                        <MdPublic />
+                        <MdPublic size="3rem" />
                         {t.Site}
                     </Link>
                 </div>
