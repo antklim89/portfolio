@@ -23,7 +23,10 @@ const ProjectItem = async ({
 
     return (
         <section className={style.ProjectItem}>
-            <Carousel>
+            <Carousel
+                defaultControlsConfig={{ nextButtonText: '>', prevButtonText: '<' }}
+                renderBottomCenterControls={null}
+            >
                 {images.map((image) => (
                     <div className={style.images} key={image}>
                         <Image
