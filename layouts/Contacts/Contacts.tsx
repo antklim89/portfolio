@@ -28,65 +28,67 @@ const Contacts: FC = () => {
     if (!t) return null;
     return (
         <section className={style.Contacts} id="contacts">
-            <Title underscore size="xl">
-                {t.contacts}
-            </Title>
+            <div>
+                <Title underscore size="xl">
+                    {t.contacts}
+                </Title>
 
-            {status === 'success' && (
-                <p className={cls(style.status, style.success)}>{t.contactSuccess}</p>
-            )}
-            {status === 'error' && (
-                <p className={cls(style.status, style.error)}>{t.contactError}</p>
-            )}
+                {status === 'success' && (
+                    <p className={cls(style.status, style.success)}>{t.contactSuccess}</p>
+                )}
+                {status === 'error' && (
+                    <p className={cls(style.status, style.error)}>{t.contactError}</p>
+                )}
 
-            <form
-                className={style.form}
-                data-netlify="true"
-                method="get"
-                name="contact"
-                netlify-honeypot="bot-field"
-                onSubmit={handleSubmit}
-            >
-                <input name="form-name" type="hidden" value="contact" />
+                <form
+                    className={style.form}
+                    data-netlify="true"
+                    method="get"
+                    name="contact"
+                    netlify-honeypot="bot-field"
+                    onSubmit={handleSubmit}
+                >
+                    <input name="form-name" type="hidden" value="contact" />
 
-                <label className={style.input}>
-                    {t.Name}<br />
-                    <input
-                        required
-                        disabled={loading}
-                        maxLength={100}
-                        minLength={3}
-                        name="name"
-                        type="text"
-                    />
-                </label>
+                    <label className={style.input}>
+                        {t.Name}<br />
+                        <input
+                            required
+                            disabled={loading}
+                            maxLength={100}
+                            minLength={3}
+                            name="name"
+                            type="text"
+                        />
+                    </label>
 
-                <label className={style.input}>
-                    {t.Subject}: <br />
-                    <input
-                        required
-                        disabled={loading}
-                        maxLength={100}
-                        minLength={3}
-                        name="subject"
-                        type="text"
-                    />
-                </label>
+                    <label className={style.input}>
+                        {t.Subject}: <br />
+                        <input
+                            required
+                            disabled={loading}
+                            maxLength={100}
+                            minLength={3}
+                            name="subject"
+                            type="text"
+                        />
+                    </label>
 
-                <label className={style.input}>
-                    {t.Message}: <br />
-                    <textarea
-                        required
-                        disabled={loading}
-                        maxLength={1000}
-                        minLength={3}
-                        name="text"
-                        rows={6}
-                    />
-                </label>
+                    <label className={style.input}>
+                        {t.Message}: <br />
+                        <textarea
+                            required
+                            disabled={loading}
+                            maxLength={1000}
+                            minLength={3}
+                            name="text"
+                            rows={6}
+                        />
+                    </label>
 
-                <button disabled={loading} type="submit">{t.Submit}</button>
-            </form>
+                    <button disabled={loading} type="submit">{t.Submit}</button>
+                </form>
+            </div>
         </section>
     );
 };
