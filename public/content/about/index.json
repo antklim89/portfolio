@@ -1,8 +1,8 @@
 {
   "en": {
-    "text": "I am a web developer from Russia. I study web development at various online courses and develop myself.\n\nBeginner web and backend developer. I know HTML, CSS, SCSS, JavaScript and TypeScript. I am developing a React application using the NextJS and Gatsby frameworks. I create fully adaptive modern web applications with SEO optimization and full accessibility. I use Bootstrap 5, Material UI, Semantic-UI, Chakra-UI interface libraries, Framer-motion animation library, libraries for global state management - MobX and Redux, Express and NestJS back-end libraries, and also study everything related to web development.\n\nEmail: ﻿[antklim89prog@mail.ru](mailto:antklim89prog@mail.ru)\n\nGithub: <https://github.com/antklim89>",
+    "text": "I study web development at various online courses and develop myself.\n\nBeginner web and backend developer. I know HTML, CSS, SCSS, JavaScript and TypeScript. I am developing a React application using the NextJS and Gatsby frameworks. I create fully adaptive modern web applications with SEO optimization and full accessibility. I use Bootstrap 5, Material UI, Semantic-UI, Chakra-UI interface libraries, Framer-motion animation library, libraries for global state management - MobX and Redux, Express, Fastify and NestJS back-end libraries, and also study everything related to web development.\n\nEmail: ﻿[antklim89prog@mail.ru](mailto:antklim89prog@mail.ru)\n\nGithub: <https://github.com/antklim89>",
     "image": "/content/about/images/default128.png",
-    "title": "Hi, my name is Anton",
+    "title": "Hi, my name is Anton.\n\nI am a web developer. ",
     "keywords": [
       "portfolio",
       "web dev",
@@ -21,7 +21,7 @@
     "creator": "Anton Klimenkov"
   },
   "ru": {
-    "text": "Я веб-разработчик из России. Изучаю веб-разработку на различных онлайн-курсах и саморазвиваюсь.\n\nНачинающий веб и бэкенд разработчик. Знаю HTML, CSS, SCSS, JavaScript и TypeScript. Я разрабатываю ReactJS приложения с помощью фреймворков NextJS и Gatsby. Создаю полностью адаптивные современные веб приложения с SEO оптимизацией и полной доступностью. Использую библиотеки интерфейса Bootstrap 5, Material UI, Semantic-UI, Chakra-UI, библиотеку анимации Framer-motion, библиотеки для управления глобальным состоянием: MobX и Redux, бэк энд библиотеки Express и NestJS, а также изучаю всё что связано веб разработкой.\n\nПочта: ﻿[antklim89prog@mail.ru](mailto:antklim89prog@mail.ru)\n\nGithub: <https://github.com/antklim89>",
+    "text": "Я веб-разработчик. Изучаю веб-разработку на различных онлайн-курсах и самообучаюсь.\n\nНачинающий веб и бэкенд разработчик. Знаю HTML, CSS, SCSS, JavaScript и TypeScript. Я разрабатываю ReactJS приложения с помощью фреймворков NextJS и Gatsby. Создаю полностью адаптивные современные веб приложения с SEO оптимизацией и полной доступностью. Использую библиотеки интерфейса Bootstrap 5, Material UI, Semantic-UI, Chakra-UI, библиотеку анимации Framer-motion, библиотеки для управления глобальным состоянием: MobX и Redux, бэк энд библиотеки Express, Fastify и NestJS, а также изучаю всё что связано веб разработкой.\n\nПочта: ﻿[antklim89prog@mail.ru](mailto:antklim89prog@mail.ru)\n\nGithub: <https://github.com/antklim89>",
     "title": "Привет, меня зовут Антон",
     "keywords": [
       "web dev",
