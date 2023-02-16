@@ -9,7 +9,7 @@ const HomePage = async () => {
     return (
         <>
             <About />
-            <Container>
+            <Container className="background">
                 <Projects />
                 <Technologies />
                 <Contacts />
