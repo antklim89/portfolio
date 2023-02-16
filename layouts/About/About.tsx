@@ -4,14 +4,15 @@ import { FC } from 'react';
 import Container from '~/components/Container';
 import Markdown from '~/components/Markdown';
 import Title from '~/components/Title';
+import { Locale } from '~/types';
 import { getImageUrl } from '~/utils';
-import { getAbout, getServerLocale } from '~/utils/server';
+import { getAbout } from '~/utils/server';
 
 import style from './style.module.scss';
 
 
-const About = async () => {
-    const { image, text, title } = await getAbout(getServerLocale());
+const About = async ({ locale }: {locale: Locale}) => {
+    const { image, text, title } = await getAbout(locale);
 
     return (
         <section className="parallax">
@@ -41,4 +42,4 @@ const About = async () => {
     );
 };
 
-export default About as unknown as FC;
+export default About as unknown as FC<{locale: Locale}>;

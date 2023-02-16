@@ -1,15 +1,15 @@
 import { FC } from 'react';
 
 import Title from '~/components/Title';
+import { Locale } from '~/types';
 import { getTranslation } from '~/utils';
-import { getServerLocale, getTechnologies } from '~/utils/server';
+import { getTechnologies } from '~/utils/server';
 
 import style from './style.module.scss';
 import Technology from './TechnologyItem';
 
 
-const Technologies = async () => {
-    const locale = getServerLocale();
+const Technologies = async ({ locale }: {locale: Locale}) => {
     const t = await getTranslation(locale);
     const technologies = await getTechnologies(locale);
 
@@ -27,5 +27,5 @@ const Technologies = async () => {
     );
 };
 
-export default Technologies as unknown as FC;
+export default Technologies as unknown as FC<{locale: Locale}>;
 

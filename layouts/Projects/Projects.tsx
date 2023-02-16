@@ -1,15 +1,20 @@
 import { FC } from 'react';
 
 import Title from '~/components/Title';
+import { locales } from '~/constants';
+import { Locale } from '~/types';
 import { getTranslation } from '~/utils';
-import { getProjects, getServerLocale } from '~/utils/server';
+import { getProjects } from '~/utils/server';
 
 import ProjectItem from './ProjectItem';
 import styles from './style.module.scss';
 
 
-const Projects = async () => {
-    const locale = getServerLocale();
+export async function generateStaticParams() {
+    return locales.map((locale) => ({ locale }));
+}
+
+const Projects = async ({ locale }: {locale: Locale}) => {
     const t = await getTranslation(locale);
     const projects = await getProjects(locale);
 
@@ -27,4 +32,4 @@ const Projects = async () => {
     );
 };
 
-export default Projects as unknown as FC;
+export default Projects as unknown as FC<{locale: Locale}>;
