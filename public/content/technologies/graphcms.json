@@ -1,13 +1,13 @@
 {
   "en": {
-    "slug": "graphcms",
-    "body": "Unify, structure, enrich and distribute content from anywhere to anywhere.",
-    "title": "Hygraph(graphcms)",
-    "link": "https://graphcms.com/",
-    "image": "/content/technologies/images/hygraph-logo.svg"
+    "slug": "prismic",
+    "body": "Prismic is the headless website builder that lets developers and marketers ship and iterate faster, and build sites that just keep getting better.",
+    "title": "Prismic",
+    "link": "https://prismic.io/",
+    "image": "/content/technologies/images/prismic.svg"
   },
   "ru": {
-    "title": "Hygraph(graphcms)",
-    "body": "Объединяйте, структурируйте, обогащайте и распространяйте контент из любого места в любое место."
+    "title": "Prismic",
+    "body": "Prismic - это конструктор веб-сайтов, который позволяет разработчикам и маркетологам быстрее создавать сайты, которые становятся все лучше и лучше."
   }
 }
