@@ -1,28 +1,28 @@
 {
   "en": {
-    "body": "The usual personal blog developed by **[GatsbyJS](https://www.gatsbyjs.com/)**.\n\nThe [Hygraph](https://hygraph.com/) (GraphCMS) content management system is used to create and store posts.\n\nThe visual style is created using the [Chakra-UI](https://chakra-ui.com/) library and the [Frame Motion](https://www.framer.com/motion/) animation library.",
+    "body": "The usual personal blog developed by **[GatsbyJS](https://www.gatsbyjs.com/)**.\n\nThe [Prismic.io](https://prismic.io/)[](https://hygraph.com/)content management system is used to create and store posts.\n\nThe visual style is created using the [Chakra-UI](https://chakra-ui.com/) library and the [Frame Motion](https://www.framer.com/motion/) animation library.",
     "github": "https://github.com/antklim89/personal_blog",
     "technologies": [
       "gatsbyjs",
       "react",
       "typescript",
       "chakra-ui",
-      "graphcms",
+      "prismic.io",
       "framer-motion"
     ],
     "slug": "personal-blog",
     "title": "Personal blog",
     "images": [
-      "/content/projects/images/personal_blog_home.webp",
-      "/content/projects/images/personal_blog_posts.webp",
-      "/content/projects/images/personal_blog_post.webp",
-      "/content/projects/images/personal_blog_contacts.webp"
+      "/content/projects/images/personal_blog_home_page.webp",
+      "/content/projects/images/personal_blog_post_page.webp",
+      "/content/projects/images/personal_blog_post_page_dark_mode.webp",
+      "/content/projects/images/personal_blog_contacts_page.webp"
     ],
     "link": "https://personal-blog-dev.netlify.app/",
     "description": "Simple clothing shop"
   },
   "ru": {
     "title": "Персональный блог",
-    "body": "Обычные персональный блог разработанный на **[GatsbyJS](https://www.gatsbyjs.com/)**.\n\nДля создания и хранения постов используется система управления контентом [Hygraph](https://hygraph.com/) (GraphCMS).\n\nВизуальный стиль создан с помощью библиотеки [Chakra-UI](https://chakra-ui.com/) и библиотеки анимации [Frame Motion](https://www.framer.com/motion/)."
+    "body": "Обычные персональный блог разработанный на **[GatsbyJS](https://www.gatsbyjs.com/)**.\n\nДля создания и хранения постов используется система управления контентом [Prismic.io](https://prismic.io/).\n\nВизуальный стиль создан с помощью библиотеки [Chakra-UI](https://chakra-ui.com/) и библиотеки анимации [Frame Motion](https://www.framer.com/motion/)."
   }
 }
