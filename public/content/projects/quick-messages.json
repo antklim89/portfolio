@@ -11,10 +11,10 @@
     ],
     "slug": "quick-messages",
     "title": "Quick Messages",
-    "body": "The visual style is created using the Chakra-UI library."
+    "body": "The visual style is created using the Chakra-UI library.y"
   },
   "ru": {
     "title": "Быстрые Сообщения",
-    "body": "Визуальный стиль создан с использованием библиотеки Chakra-UI."
+    "body": "Визуальный стиль создан с использованием библиотеки Chakra-UI"
   }
 }
