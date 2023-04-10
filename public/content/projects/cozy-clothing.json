@@ -1,6 +1,6 @@
 {
   "en": {
-    "body": "Simple clothing store. Products are categorized by gender and age. There is a shopping cart and product search\n\nDeveloped with **[Gatsby](https://www.gatsbyjs.com/)** and **[React](https://reactjs.org/)**.\n\nThe design was done using the \\[Sass] preprocessor (https://sass-scss.ru/). The site is fully static. The content manager is [NetlifyCMS](https://www.netlifycms.org/).",
+    "body": "Simple clothing store. Products are categorized by gender and age. There is a shopping cart and product search\n\nDeveloped with **[Gatsby](https://www.gatsbyjs.com/)** and **[React](https://reactjs.org/)**.\n\nThe design was done using the [Sass](https://sass-scss.ru) preprocessor. The site is fully static. The content manager is [NetlifyCMS](https://www.netlifycms.org/).",
     "github": "https://github.com/antklim89/cozy_clothing",
     "technologies": [
       "react",

@@ -11,7 +11,7 @@
       "mobx",
       "strapi"
     ],
-    "body": "Grocery store. Developed on the **[NextJS](https://nextjs.org/)** framework.\n\nDesign was done using the \\[Bootstrap 5] library (https://getbootstrap.com/) and the \\[Sass] preprocessor (https://sass-scss.ru/).\n\nAPI implemented using CMS [Strapi](https://strapi.io/).",
+    "body": "Grocery store. Developed on the **[NextJS](https://nextjs.org/)** framework.\n\nDesign was done using the [Bootstrap 5](https://getbootstrap.com/) library and the [Sass](https://sass-scss.ru/) preprocessor.\n\nAPI implemented using CMS [Strapi](https://strapi.io/).",
     "images": [
       "/content/projects/images/grocery_shop_home_full_page.webp",
       "/content/projects/images/grocery_shop_cart.webp",
