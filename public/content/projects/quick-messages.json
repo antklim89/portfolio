@@ -1,0 +1,20 @@
+{
+  "en": {
+    "link": "https://quick-messages.netlify.app/",
+    "github": "https://github.com/antklim89/quick-messages",
+    "technologies": [
+      "react",
+      "typescript",
+      "vite",
+      "chakra-ui",
+      "supabase"
+    ],
+    "slug": "quick-messages",
+    "title": "Quick Messages",
+    "body": "The visual style is created using the Chakra-UI library."
+  },
+  "ru": {
+    "title": "Быстрые Сообщения",
+    "body": "Визуальный стиль создан с использованием библиотеки Chakra-UI."
+  }
+}
