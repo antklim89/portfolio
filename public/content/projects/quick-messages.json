@@ -11,7 +11,13 @@
     ],
     "slug": "quick-messages",
     "title": "Quick Messages",
-    "body": "Веб приложение для обмена сообщениями. Можно создавать сообщения на разные темы, отвечать на эти сообщения.\nПриложение построено с использованием сервиса [Supabase](https://supabase.com/). \nВизуальный стиль создан с использованием библиотеки [Chakra-UI](https://chakra-ui.com/)."
+    "body": "Веб приложение для обмена сообщениями. Можно создавать сообщения на разные темы, отвечать на эти сообщения.\nПриложение построено с использованием сервиса [Supabase](https://supabase.com/). \nВизуальный стиль создан с использованием библиотеки [Chakra-UI](https://chakra-ui.com/).",
+    "images": [
+      "/content/projects/images/quick_messages_home_page.png",
+      "/content/projects/images/quick_messages_add_message.png",
+      "/content/projects/images/quick_messages_user_page.png",
+      "/content/projects/images/quick_messages_info_page.png"
+    ]
   },
   "ru": {
     "title": "Быстрые Сообщения",
