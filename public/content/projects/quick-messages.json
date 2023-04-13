@@ -11,10 +11,10 @@
     ],
     "slug": "quick-messages",
     "title": "Quick Messages",
-    "body": "The visual style is created using the Chakra-UI library.y"
+    "body": "Веб приложение для обмена сообщениями. Можно создавать сообщения на разные темы, отвечать на эти сообщения.\nПриложение построено с использованием сервиса Supabase. \nВизуальный стиль создан с использованием библиотеки Chakra-UI."
   },
   "ru": {
     "title": "Быстрые Сообщения",
-    "body": "Визуальный стиль создан с использованием библиотеки Chakra-UI"
+    "body": "A web application for messaging. You can create messages on different subjects, respond to these messages.\nThe application is built using the Supabase service. \nThe visual style is created using the Chakra-UI library."
   }
 }
