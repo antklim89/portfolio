@@ -1,0 +1,26 @@
+{
+  "en": {
+    "link": "https://quick-messages.netlify.app/",
+    "github": "https://github.com/antklim89/quick-messages",
+    "technologies": [
+      "react",
+      "typescript",
+      "vite",
+      "chakra-ui",
+      "supabase"
+    ],
+    "slug": "quick-messages",
+    "title": "Quick Messages",
+    "body": "Веб приложение для обмена сообщениями. Можно создавать сообщения на разные темы, отвечать на эти сообщения.\nПриложение построено с использованием сервиса [Supabase](https://supabase.com/). \nВизуальный стиль создан с использованием библиотеки [Chakra-UI](https://chakra-ui.com/).",
+    "images": [
+      "/content/projects/images/quick_messages_home_page.png",
+      "/content/projects/images/quick_messages_add_message.png",
+      "/content/projects/images/quick_messages_user_page.png",
+      "/content/projects/images/quick_messages_info_page.png"
+    ]
+  },
+  "ru": {
+    "title": "Быстрые Сообщения",
+    "body": "A web application for messaging. You can create messages on different subjects, respond to these messages.\nThe application is built using the [Supabase](https://supabase.com/) service. \nThe visual style is created using the [Chakra-UI](https://chakra-ui.com/) library."
+  }
+}
