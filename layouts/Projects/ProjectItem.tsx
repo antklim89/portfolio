@@ -45,11 +45,11 @@ const ProjectItem = async ({
                 </Title>
                 <div className={style.links}>
                     <Link href={github} rel="noopener noreferrer" target="_blank">
-                        <DiGithubBadge size="3rem" />
+                        <DiGithubBadge size="32px" />
                         {t.GitHub}
                     </Link>
                     <Link href={link} rel="noopener noreferrer" target="_blank">
-                        <MdPublic size="3rem" />
+                        <MdPublic size="32px" />
                         {t.Site}
                     </Link>
                 </div>
