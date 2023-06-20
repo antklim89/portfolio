@@ -14,6 +14,7 @@ const RootLayout = async ({ children, params }: { children: React.ReactNode, par
 
     return (
         <TranslationProvider locale={locale} translation={translation}>
+            <title>{translation.defaultTitle}</title>
             <Layout>
                 {children}
             </Layout>
