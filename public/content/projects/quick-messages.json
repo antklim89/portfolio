@@ -16,9 +16,9 @@
       "/content/projects/images/quick-messages_add_message.webp",
       "/content/projects/images/quick-messages_profile.webp"
     ],
-    "body": "A website for communication is an ideal place for those who want to communicate on any topic, without limiting themselves to the framework. It provides a user-friendly interface, quick access to data and the ability to create topics and chats to communicate with other users.\n\nReact and TypeScript are used to create a beautiful and functional interface. The Chakra-UI library is used to create stylish components that allow you to easily customize the appearance of the site. And Supabase is used as the server."
+    "body": "A website for communication is an ideal place for those who want to talk on any subject. It provides a user-friendly interface, quick access to information and the ability to create subjects and chats to communicate with other users.\n\nReact and TypeScript are used to create a beautiful and functional interface. The Chakra-UI library is used to create stylish components that allow you to easily customize the appearance of the site. And Supabase is used as the server."
   },
   "ru": {
-    "body": "Сайт для общения — это идеальное место для тех, кто хочет общаться на любые темы, не ограничивая себя рамками. Он предоставляет удобный интерфейс, быстрый доступ к данным и возможность создания тем и чатов для общения с другими пользователями.\n\nДля создания красивого и функционального интерфейса используется React и TypeScript. Используется библиотека Chakra-UI для создания стильных компонентов, которые позволяют легко настраивать внешний вид сайта. А в качестве сервера используется Supabase."
+    "body": "Сайт для общения — это идеальное место для тех, кто хочет общаться на любые темы. Он предоставляет удобный интерфейс, быстрый доступ к данным и возможность создания тем и чатов для общения с другими пользователями.\n\nДля создания красивого и функционального интерфейса используется React и TypeScript. Используется библиотека Chakra-UI для создания стильных компонентов, которые позволяют легко настраивать внешний вид сайта. А в качестве сервера используется Supabase."
   }
 }
