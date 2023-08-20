@@ -31,7 +31,6 @@ const ProjectItem = async ({
                     <div className={style.images} key={image}>
                         <Image
                             alt={title}
-                            className="img-cover"
                             height={200}
                             src={getImageUrl(image)}
                             width={400}
