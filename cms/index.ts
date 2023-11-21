@@ -1,4 +1,4 @@
-import type { InitOptions } from 'netlify-cms-core';
+import type { InitOptions } from 'decap-cms-core';
 
 import { defaultLocale, locales } from '~/constants';
 

@@ -6,7 +6,7 @@ const CMSPage: FC = () => {
     useEffect(() => {
         document.body.innerHTML = '';
         (async() => {
-            const { default: CMS } = await import('netlify-cms-app');
+            const { default: CMS } = await import('decap-cms-app');
             const { cmsConfig } = await import('~/cms');
 
             CMS.init(cmsConfig);
