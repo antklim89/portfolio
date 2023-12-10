@@ -1,5 +1,6 @@
 import { redirect } from 'next/navigation';
 
+import Container from '~/components/Container';
 import TranslationProvider from '~/components/TranslationProvider';
 import { defaultLocale } from '~/constants';
 import AboutTitle from '~/layouts/AboutTitle';
@@ -15,14 +16,14 @@ const RootLayout = async ({ children, params }: { children: React.ReactNode, par
     return (
         <TranslationProvider locale={locale} translation={translation}>
             <title>{translation.defaultTitle}</title>
-            <div className='main'>
+            <Container className='main'>
                 <aside>
                     <AboutTitle locale={locale} />
                 </aside>
                 <main>
                     {children}
                 </main>
-            </div>
+            </Container>
         </TranslationProvider>
     );
 };
