@@ -27,7 +27,7 @@ const ProjectItem = async ({
                     width={150}
                 />
             </div>
-            <div >
+            <div className={style.content}>
                 <h4 className={style.title}>
                     {title}
                 </h4>
