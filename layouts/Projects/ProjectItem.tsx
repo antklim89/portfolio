@@ -3,44 +3,34 @@ import Link from 'next/link';
 import { DiGithubBadge } from 'react-icons/di/';
 import { MdPublic } from 'react-icons/md/';
 
-import Carousel from '~/components/ClientComponents/nuka-carusel';
 import Markdown from '~/components/Markdown';
-import Tags from '~/components/Tags';
-import Title from '~/components/Title';
 import { ProjectType } from '~/types';
-import { getImageUrl, getTranslation } from '~/utils';
+import { getTranslation } from '~/utils';
 import { getServerLocale } from '~/utils/server';
 
 import style from './style.module.scss';
 
 
 const ProjectItem = async ({
-    technologies, title, images, link, github, body,
+    technologies, title, image, link, github, body,
 }: ProjectType) => {
     const locale = getServerLocale();
     const t = await getTranslation(locale);
 
     return (
         <section className={style.ProjectItem}>
-            <Carousel
-                defaultControlsConfig={{ nextButtonText: '>', prevButtonText: '<' }}
-                renderBottomCenterControls={null}
-            >
-                {images.map((image) => (
-                    <div className={style.images} key={image}>
-                        <Image
-                            alt={title}
-                            height={200}
-                            src={getImageUrl(image)}
-                            width={400}
-                        />
-                    </div>
-                ))}
-            </Carousel>
-            <div className={style.content}>
-                <Title align="center" as="h3" size="lg">
+            <div className={style.image}>
+                <Image
+                    alt={title}
+                    height={75}
+                    src={image}
+                    width={150}
+                />
+            </div>
+            <div >
+                <h4 className={style.title}>
                     {title}
-                </Title>
+                </h4>
                 <div className={style.links}>
                     <Link href={github} rel="noopener noreferrer" target="_blank">
                         <DiGithubBadge size="32px" />
@@ -51,12 +41,16 @@ const ProjectItem = async ({
                         {t.Site}
                     </Link>
                 </div>
-            </div>
-            <Tags className={style.technologies} tags={technologies} />
-            <div className={style.body}>
-                <Markdown>
-                    {body}
-                </Markdown>
+                <div className={style.body}>
+                    <Markdown>
+                        {body}
+                    </Markdown>
+                </div>
+                <div className={style.tags}>
+                    {technologies.map((technology) => (
+                        <span className={style.technology} key={technology}>{technology}</span>
+                    ))}
+                </div>
             </div>
         </section>
     );
