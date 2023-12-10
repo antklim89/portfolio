@@ -28,6 +28,7 @@ body {
     display: flex;
     min-height: 100vh;
     min-height: 100dvh;
+    gap: var(--sp-2);
 
     > main, aside {
         flex: 1 0 0;
