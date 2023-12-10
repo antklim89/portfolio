@@ -16,7 +16,7 @@ const LeftSide:FC = () => {
     const close = useCallback(() => setShow(false), []);
 
     return (
-        <aside className={cls(style.LeftSide, 'parallax', show && style.LeftSideShow)}>
+        <aside className={cls(style.LeftSide, show && style.LeftSideShow)}>
             <div className={style.container}>
                 <LeftSideToggleButton show={show} toggle={toggle} />
                 <LeftSideLogo />

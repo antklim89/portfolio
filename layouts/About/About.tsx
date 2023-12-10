@@ -15,7 +15,7 @@ const About = async ({ locale }: {locale: Locale}) => {
     const { image, text, title } = await getAbout(locale);
 
     return (
-        <section className="parallax">
+        <section>
             <Container className={style.About} width="md" >
                 <div className={style.image}>
                     <Image
