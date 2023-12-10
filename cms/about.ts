@@ -11,18 +11,18 @@ export const about: CmsCollectionFile = {
     fields: [
         {
             name: 'title',
-            widget: 'string',
-            i18n: true,
-            required: true,
-        },
-        {
-            name: 'text',
             widget: 'markdown',
             i18n: true,
             required: true,
         },
         {
-            name: 'creator',
+            name: 'description',
+            widget: 'markdown',
+            i18n: true,
+            required: true,
+        },
+        {
+            name: 'name',
             widget: 'string',
             i18n: true,
             required: true,
@@ -34,7 +34,7 @@ export const about: CmsCollectionFile = {
             required: true,
         },
         {
-            name: 'image',
+            name: 'photo',
             widget: 'image',
             required: true,
         },
