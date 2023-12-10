@@ -1,6 +1,3 @@
-const path = require('path');
-
-
 module.exports = {
     env: {
         browser: true,
@@ -8,38 +5,23 @@ module.exports = {
     },
     extends: [
         'eslint:all',
-
-        /**
-        * React
-        */
+        'next',
+        'next/core-web-vitals',
         'plugin:react/all',
+        'plugin:react-hooks/recommended',
         'plugin:jsx-a11y/strict',
-
-        /**
-        * Imports
-        */
         'plugin:import/recommended',
         'plugin:import/errors',
         'plugin:import/warnings',
         'plugin:import/typescript',
-
-        /**
-        * TypeScript
-        */
         'plugin:@typescript-eslint/recommended',
-
-        /**
-        * Next Js
-        */
-        'next',
-        'next/core-web-vitals',
     ],
 
+    // parser: "vue-eslint-parser", // VUE
     parser: '@typescript-eslint/parser', // TYPESCRIPT
 
     parserOptions: {
         ecmaFeatures: { jsx: true },
-        ecmaVersion: 12,
         sourceType: 'module',
     },
     plugins: [
@@ -51,6 +33,7 @@ module.exports = {
         /**
         * Imports
         */
+        'import/no-unresolved': 0,
         'import/prefer-default-export': 0,
         'import/extensions': 0,
         'import/newline-after-import': ['error', { count: 2 }],
@@ -66,6 +49,8 @@ module.exports = {
         /**
         * React
         */
+        'react/prefer-read-only-props': 0,
+        'react/jsx-no-constructed-context-values': 0,
         'react/jsx-no-useless-fragment': 0,
         'react/forbid-component-props': 0,
         'react/jsx-no-literals': 0,
@@ -78,8 +63,6 @@ module.exports = {
         'react/no-this-in-sfc': 0,
         'react/jsx-one-expression-per-line': 0,
         'react-hooks/exhaustive-deps': 0,
-        'jsx-a11y/label-has-for': 0,
-        'jsx-a11y/anchor-is-valid': 0,
         'react/jsx-closing-bracket-location': 2,
         'react/jsx-no-bind': [0, { ignoreDOMComponents: true }],
         'react/function-component-definition': [2, { 'namedComponents': 'arrow-function' }],
@@ -91,6 +74,7 @@ module.exports = {
         'react/jsx-filename-extension': [1, { extensions: ['.tsx', '.jsx'] }],
         'react/jsx-no-duplicate-props': [2, { ignoreCase: false }],
         'jsx-a11y/label-has-associated-control': 2,
+        'jsx-a11y/anchor-is-valid': 0,
 
         /**
         * TypeScript
@@ -103,8 +87,10 @@ module.exports = {
         /**
         * JavaScript
         */
-        'jsx-a11y/no-onchange': 0,
-        'no-underscore-dangle': [2, { 'allow': ['_q'] }],
+        'no-warning-comments': 0,
+        'no-undefined': 0,
+        'newline-per-chained-call': [1, { ignoreChainWithDepth: 3 }],
+        'new-cap': 0,
         'capitalized-comments': 0,
         'multiline-comment-style': 0,
         'no-inline-comments': 0,
@@ -132,6 +118,8 @@ module.exports = {
         'no-negated-condition': 0,
         'func-style': 0,
         'arrow-body-style': 0,
+        'max-params': [1, 4],
+        'no-underscore-dangle': [2, { 'allow': ['_q'] }],
         'multiline-ternary': [2, 'always-multiline'],
         'no-implicit-coercion': 2,
         'operator-linebreak': [2, 'before'],
@@ -139,6 +127,7 @@ module.exports = {
         'max-lines-per-function': [2, 200],
         'max-statements': ['error', 20, { ignoreTopLevelFunctions: true }],
         'function-call-argument-newline': [2, 'consistent'],
+        'no-console': [1, { allow: ['warn', 'error'] }],
         'object-curly-spacing': [2, 'always'],
         'no-use-before-define': [1, { functions: false, classes: true }],
         'semi': 2,
@@ -151,25 +140,14 @@ module.exports = {
         'max-len': [1, { code: 120, ignoreComments: true, ignoreStrings: true }],
         'no-restricted-syntax': [2, 'WithStatement'],
         'camelcase': [1, { properties: 'never' }],
-        'object-curly-newline': [1, { minProperties: 6, multiline: true }],
+        'object-curly-newline': [1, { minProperties: 6, multiline: false, consistent: true }],
         'array-element-newline': [1, 'consistent'],
-        'no-console': [2, { allow: ['warn', 'error'] }],
-        'no-debugger': 2,
     },
     settings: {
-
-        /** REACT */
-        'react': {
+        react: {
             pragma: 'React',
             fragment: 'Fragment',
             version: 'detect',
-        },
-
-        'import/resolver': {
-            alias: {
-                map: [['~', path.join(__dirname, './')]],
-                extensions: ['.ts', '.tsx', '.js', '.jsx', '.json', '.vue'],
-            },
         },
     },
 
@@ -179,5 +157,11 @@ module.exports = {
         JSX: true,
     },
 
-    ignorePatterns: ['**/node_modules/**/*', '**/.next/**/*', '**/build/**/*', '**/.tmp/**/*', '**/.cache/**/*'],
+    ignorePatterns: [
+        '**/node_modules/**/*',
+        '**/.next/**/*',
+        '**/build/**/*',
+        '**/.tmp/**/*',
+        '**/.cache/**/*',
+    ],
 };
