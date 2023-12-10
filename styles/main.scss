@@ -53,3 +53,10 @@ body {
 .img-contain {
     object-fit: contain;
 }
+
+.title {
+    font-size: var(--font-size-xl);
+    text-transform: uppercase;
+    margin-bottom: var(--sp-2);
+    margin-top: var(--sp-3);
+}
