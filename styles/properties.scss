@@ -1,7 +1,7 @@
 
 
 :root {
-    --sp-1: calc(var(--sp-2) * 0.7);
+    --sp-1: calc(var(--sp-2) * 0.6);
     --sp-2: 0.7rem;
     --sp-3: calc(var(--sp-2) * 1.7);
     --sp-4: calc(var(--sp-2) * 3);
@@ -14,6 +14,7 @@
     --technologies-cols: 1fr;
 
     --font-size: 0.8rem;
+    --font-size-sm: calc(var(--font-size) * 0.7);
     --font-size-md: calc(var(--font-size) * 1.4);
     --font-size-lg: calc(var(--font-size) * 1.8);
     --font-size-xl: calc(var(--font-size) * 2.4);
