@@ -18,18 +18,16 @@
     --font-size-lg: calc(var(--font-size) * 1.8);
     --font-size-xl: calc(var(--font-size) * 2.4);
 
-    --container-bg: rgba(230, 230, 230, 0.8);
-    --left-side-bg: rgba(0, 0, 0, 0.5);
-
-    --primary-clr: hsl(200, 100%, 21%);
-    --primary-dark-clr: hsl(200, 100%, 15%);
-    --secondary-clr: hsl(6, 78%, 57%);
+    --primary-clr: #00476b;
+    --primary-dark-clr: #00334d;
+    --secondary-clr: #e84e3d;
+    --bg-clr: #0f172a;
+    --text-clr: #e2e8f0;
 
     --light-clr: #f7f7f7;
     --light-hover-clr: #c0c0c0;
     --dark-clr: #474748;
     --dark-hover-clr: #c0c0c0;
-    --bg-color: #ececec;
 
     --border-radius: 2rem;
     --box-shadow: 0 0 5px 0px;
