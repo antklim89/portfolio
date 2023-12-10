@@ -1,29 +1,24 @@
 module.exports = {
-    env: {
-        browser: true,
-        es2020: true,
-    },
     extends: [
         'eslint:all',
+
         'next',
         'next/core-web-vitals',
+
         'plugin:react/all',
         'plugin:react-hooks/recommended',
         'plugin:jsx-a11y/strict',
+
         'plugin:import/recommended',
         'plugin:import/errors',
         'plugin:import/warnings',
         'plugin:import/typescript',
+
         'plugin:@typescript-eslint/recommended',
     ],
 
-    // parser: "vue-eslint-parser", // VUE
-    parser: '@typescript-eslint/parser', // TYPESCRIPT
+    parser: '@typescript-eslint/parser',
 
-    parserOptions: {
-        ecmaFeatures: { jsx: true },
-        sourceType: 'module',
-    },
     plugins: [
         '@typescript-eslint',
         'jsx-a11y',
@@ -87,7 +82,6 @@ module.exports = {
         /**
         * JavaScript
         */
-        'no-warning-comments': 0,
         'no-undefined': 0,
         'newline-per-chained-call': [1, { ignoreChainWithDepth: 3 }],
         'new-cap': 0,
@@ -142,19 +136,6 @@ module.exports = {
         'camelcase': [1, { properties: 'never' }],
         'object-curly-newline': [1, { minProperties: 6, multiline: false, consistent: true }],
         'array-element-newline': [1, 'consistent'],
-    },
-    settings: {
-        react: {
-            pragma: 'React',
-            fragment: 'Fragment',
-            version: 'detect',
-        },
-    },
-
-    globals: {
-        module: true,
-        process: true,
-        JSX: true,
     },
 
     ignorePatterns: [
