@@ -1,4 +1,5 @@
 import { locales } from '~/constants';
+import AboutDescription from '~/layouts/AboutDescription';
 import Contacts from '~/layouts/Contacts';
 import Projects from '~/layouts/Projects';
 import Technologies from '~/layouts/Technologies';
@@ -13,6 +14,7 @@ const HomePage = async ({ params }: {params: {locale: Locale}}) => {
     const { locale } = params;
     return (
         <>
+            <AboutDescription locale={locale} />
             <Projects locale={locale} />
             <Technologies locale={locale} />
             <Contacts />
