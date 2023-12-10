@@ -51,13 +51,13 @@
 
 @media screen and (min-width: 1024px) {
     :root {
+        --container-width: 1024px;
         --technologies-cols: repeat(3, 1fr);
     }
 }
 
 @media screen and (min-width: 1440px) {
     :root {
-        --container-width: 1440px;
         --projects-cols: repeat(3, 1fr);
         --technologies-cols: repeat(4, 1fr);
     }
