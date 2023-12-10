@@ -1,4 +1,3 @@
-import { FC } from 'react';
 
 import Title from '~/components/Title';
 import { locales } from '~/constants';
@@ -32,4 +31,4 @@ const Projects = async ({ locale }: {locale: Locale}) => {
     );
 };
 
-export default Projects as unknown as FC<{locale: Locale}>;
+export default Projects;

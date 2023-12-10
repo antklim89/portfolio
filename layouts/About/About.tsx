@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import { FC } from 'react';
 
 import Container from '~/components/Container';
 import Markdown from '~/components/Markdown';
@@ -41,4 +40,4 @@ const About = async ({ locale }: {locale: Locale}) => {
     );
 };
 
-export default About as unknown as FC<{locale: Locale}>;
+export default About;

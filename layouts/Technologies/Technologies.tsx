@@ -1,4 +1,3 @@
-import { FC } from 'react';
 
 import Title from '~/components/Title';
 import { Locale } from '~/types';
@@ -27,5 +26,5 @@ const Technologies = async ({ locale }: {locale: Locale}) => {
     );
 };
 
-export default Technologies as unknown as FC<{locale: Locale}>;
+export default Technologies;
 

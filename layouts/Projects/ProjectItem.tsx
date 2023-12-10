@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { FC } from 'react';
 import { DiGithubBadge } from 'react-icons/di/';
 import { MdPublic } from 'react-icons/md/';
 
@@ -63,4 +62,4 @@ const ProjectItem = async ({
     );
 };
 
-export default ProjectItem as unknown as FC<ProjectType>;
+export default ProjectItem;
