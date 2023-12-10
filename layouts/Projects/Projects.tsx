@@ -1,5 +1,3 @@
-
-import Title from '~/components/Title';
 import { locales } from '~/constants';
 import { Locale } from '~/types';
 import { getTranslation } from '~/utils';
@@ -18,10 +16,10 @@ const Projects = async ({ locale }: {locale: Locale}) => {
     const projects = await getProjects(locale);
 
     return (
-        <section className={styles.Projects} id="projects">
-            <Title underscore size="xl">
+        <section className={styles.Projects}>
+            <h2 className='title'>
                 {t.projects}
-            </Title>
+            </h2>
             <div className={styles.list}>
                 {projects.map((project) => (
                     <ProjectItem key={project.title} {...project} />
