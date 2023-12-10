@@ -1,4 +1,3 @@
-import Container from '~/components/Container';
 import { locales } from '~/constants';
 import About from '~/layouts/About';
 import Contacts from '~/layouts/Contacts';
@@ -16,11 +15,9 @@ const HomePage = async ({ params }: {params: {locale: Locale}}) => {
     return (
         <>
             <About locale={locale} />
-            <Container className="background">
-                <Projects locale={locale} />
-                <Technologies locale={locale} />
-                <Contacts />
-            </Container>
+            <Projects locale={locale} />
+            <Technologies locale={locale} />
+            <Contacts />
         </>
     );
 };
