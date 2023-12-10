@@ -1,4 +1,3 @@
-@use './variables.scss' as *;
 
 
 :root {
@@ -8,6 +7,11 @@
     --sp-4: calc(var(--sp-2) * 3);
     --sp-5: calc(var(--sp-2) * 4);
     --sp-6: calc(var(--sp-2) * 6);
+
+    --container-width: 100%;
+
+    --projects-cols: 1fr;
+    --technologies-cols: 1fr;
 
     --font-size: 0.8rem;
     --font-size-md: calc(var(--font-size) * 1.4);
@@ -33,9 +37,30 @@
     --left-side-width: 320px;
 }
 
-@include media-sm {
+@media screen and (min-width: 480px) {
+    :root {
+        --technologies-cols: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 768px) {
     :root {
         --sp-2: 1rem;
         --font-size: 1rem;
+        --projects-cols: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    :root {
+        --technologies-cols: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    :root {
+        --container-width: 1440px;
+        --projects-cols: repeat(3, 1fr);
+        --technologies-cols: repeat(4, 1fr);
     }
 }
