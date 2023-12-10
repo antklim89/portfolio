@@ -10,14 +10,8 @@
       "prismic.io",
       "framer-motion"
     ],
-    "slug": "personal-blog",
     "title": "Personal blog",
-    "images": [
-      "/content/projects/images/personal_blog_home_page.webp",
-      "/content/projects/images/personal_blog_post_page.webp",
-      "/content/projects/images/personal_blog_post_page_dark_mode.webp",
-      "/content/projects/images/personal_blog_contacts_page.webp"
-    ],
+    "image": "/content/projects/images/personal_blog_home_page.webp",
     "link": "https://personal-blog-dev.netlify.app/",
     "description": "Simple clothing shop"
   },

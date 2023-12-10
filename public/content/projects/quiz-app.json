@@ -1,6 +1,5 @@
 {
   "en": {
-    "slug": "quiz-app",
     "title": "Quiz App",
     "link": "https://quiz-app-vite.netlify.app/",
     "github": "https://github.com/antklim89/quiz_app_vite",
@@ -11,11 +10,7 @@
       "sass",
       "typescript"
     ],
-    "images": [
-      "/content/projects/images/quiz-app-home.webp",
-      "/content/projects/images/quiz-app-question.webp",
-      "/content/projects/images/quiz-app-results.webp"
-    ],
+    "image": "/content/projects/images/quiz-app-home.webp",
     "body": "A small quiz developed with **[Vue](https://vuejs.org/)**.\n\nWritten using [Typescript](https://www.typescriptlang.org/) and [Sass](https://sass-scss.ru/).\n\nQuestions are taken from the API [quizapi.io](https://quizapi.io)."
   },
   "ru": {

@@ -9,14 +9,10 @@ export const projects: CmsCollection = {
     media_folder: 'images',
     public_folder: '/content/projects/images',
     create: true,
-    slug: '{{fields.slug}}',
-    editor: { preview: true },
+    slug: '{{fields.title}}',
+    editor: { preview: false },
     i18n: true,
     fields: [
-        {
-            name: 'slug',
-            widget: 'string',
-        },
         {
             name: 'body',
             widget: 'markdown',
@@ -45,18 +41,13 @@ export const projects: CmsCollection = {
         {
             name: 'technologies',
             widget: 'list',
-            min: 1,
             required: true,
+            min: 1,
         },
         {
-            name: 'images',
-            widget: 'list',
-            min: 1,
+            name: 'image',
+            widget: 'image',
             required: true,
-            field: {
-                name: 'image',
-                widget: 'image',
-            },
         },
     ],
 };

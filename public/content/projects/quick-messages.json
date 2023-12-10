@@ -1,6 +1,5 @@
 {
   "en": {
-    "slug": "quick-messages",
     "title": "Quick messages",
     "link": "https://quick-messages.netlify.app/",
     "github": "https://github.com/antklim89/quick-messages",
@@ -11,11 +10,7 @@
       "chakra-ui",
       "supabase"
     ],
-    "images": [
-      "/content/projects/images/quick-messages_home.webp",
-      "/content/projects/images/quick-messages_add_message.webp",
-      "/content/projects/images/quick-messages_profile.webp"
-    ],
+    "image": "/content/projects/images/quick-messages_home.webp",
     "body": "A website for communication is an ideal place for those who want to talk on any subject. It provides a user-friendly interface, quick access to information and the ability to create subjects and chats to communicate with other users.\n\nReact and TypeScript are used to create a beautiful and functional interface. The Chakra-UI library is used to create stylish components that allow you to easily customize the appearance of the site. And Supabase is used as the server."
   },
   "ru": {

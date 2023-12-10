@@ -1,6 +1,5 @@
 {
   "en": {
-    "slug": "shopping_list",
     "link": "https://shopping-list-dev.netlify.app",
     "title": "Shopping List",
     "github": "https://github.com/antklim89/shopping_list",
@@ -12,10 +11,7 @@
       "typescript",
       "chai"
     ],
-    "images": [
-      "/content/projects/images/shopping-list.webp",
-      "/content/projects/images/shopping-list-collection.webp"
-    ],
+    "image": "/content/projects/images/shopping-list.webp",
     "body": "The site is developed on the **[Preact](https://preactjs.com/)** library (a lightweight version of [React](https://reactjs.org/)). The [MobX](https://mobx.js.org) library is used to manage the state. Animations are executed using the [Framer-motion](https://www.framer.com/motion/) package. Everything is written using [Typescript](https://www.typescriptlang.org/) and tested by the [Chai](https://www.chaijs.com/) library.\n\nInteractive list of products. You can add products, their quantity and measure, delete or mark purchased. The lists are combined into collections. It is possible to save lists to a file, download from a file, or transfer lists by link."
   },
   "ru": {

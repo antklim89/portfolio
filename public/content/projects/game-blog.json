@@ -1,6 +1,5 @@
 {
   "en": {
-    "slug": "game-blog",
     "title": "Game Blog",
     "link": "https://game-blog-dev.netlify.app/",
     "github": "https://github.com/antklim89/game_blog",
@@ -11,13 +10,7 @@
       "netlifycms",
       "next"
     ],
-    "images": [
-      "/content/projects/images/game-blog-home.webp",
-      "/content/projects/images/game-blog-reviews.webp",
-      "/content/projects/images/game-blog-news.webp",
-      "/content/projects/images/game-blog-contacts.webp",
-      "/content/projects/images/game-blog-about.webp"
-    ],
+    "image": "/content/projects/images/game-blog-home.webp",
     "body": "A simple gaming blog powered by **[NextJS](https://nextjs.org/)**.\n\nThe content management system [Netlifycms](https://www.netlifycms.org/) is used to create and store messages. The site is completely static.\n\nThe visual style is created using the [Chakra-UI](https://chakra-ui.com/) library."
   },
   "ru": {

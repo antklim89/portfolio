@@ -1,6 +1,5 @@
 {
   "en": {
-    "slug": "grocery-shop",
     "title": "Grocery Shop",
     "link": "https://groceryshopmonorepo-production.up.railway.app/",
     "github": "https://github.com/antklim89/grocery_shop_monorepo",
@@ -12,11 +11,7 @@
       "strapi"
     ],
     "body": "Grocery store. Developed on the **[NextJS](https://nextjs.org/)** framework.\n\nDesign was done using the [Bootstrap 5](https://getbootstrap.com/) library and the [Sass](https://sass-scss.ru/) preprocessor.\n\nAPI implemented using CMS [Strapi](https://strapi.io/).",
-    "images": [
-      "/content/projects/images/grocery_shop_home_full_page.webp",
-      "/content/projects/images/grocery_shop_cart.webp",
-      "/content/projects/images/grocery_shop_catalog.webp"
-    ]
+    "image": "/content/projects/images/grocery_shop_home_full_page.webp"
   },
   "ru": {
     "body": "Продуктовый магазин. Разработан на фрейм-ворке **[NextJS](https://nextjs.org/)**.\n\nОформление выполнено с помощью библиотеки [Bootstrap 5](https://getbootstrap.com/) и предпроцессора [Sass](https://sass-scss.ru/).\n\nAPI реализовано с помощью CMS [Strapi](https://strapi.io/).",

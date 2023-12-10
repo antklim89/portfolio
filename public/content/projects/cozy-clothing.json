@@ -8,14 +8,8 @@
       "gatsby",
       "netlifycms"
     ],
-    "slug": "cozy-clothing",
     "title": "Cozy clothing",
-    "images": [
-      "/content/projects/images/cozy_clothing_home_page_full.webp",
-      "/content/projects/images/cozy_clothing_catalog_menu.webp",
-      "/content/projects/images/cozy_clothing_catalog.webp",
-      "/content/projects/images/cozy_clothing_cart.webp"
-    ],
+    "image": "/content/projects/images/cozy_clothing_home_page_full.webp",
     "link": "https://cozy-clothing.netlify.app/",
     "description": "Simple clothing shop"
   },
