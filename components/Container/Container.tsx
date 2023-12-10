@@ -9,10 +9,9 @@ import { ContainerProps } from './types';
 const Container: FC<ContainerProps> = ({
     children,
     className,
-    width = 'xl',
 }) => {
     return (
-        <div className={cls(className, style.Container, style[width])}>
+        <div className={cls(className, style.Container)}>
             {children}
         </div>
     );
