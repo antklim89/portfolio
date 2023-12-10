@@ -20,6 +20,16 @@ body {
     font-size: var(--font-size);
 }
 
+.main {
+    display: flex;
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    > main, aside {
+        flex: 1 0 0;
+    }
+}
+
 :focus {
     outline: 2px solid var(--primary-clr);
 }
