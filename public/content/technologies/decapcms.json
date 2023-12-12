@@ -1,0 +1,13 @@
+{
+  "en": {
+    "slug": "decapcms",
+    "title": "Decap CMS",
+    "link": "https://www.netlifycms.org/",
+    "body": "Use Decap CMS with any static site generator for a faster and more flexible web project.",
+    "image": "/content/technologies/images/decap-logo.svg"
+  },
+  "ru": {
+    "title": "Decap CMS",
+    "body": "Используйте Decap CMS с любым генератором статических сайтов для более быстрого и гибкого веб-проекта."
+  }
+}
