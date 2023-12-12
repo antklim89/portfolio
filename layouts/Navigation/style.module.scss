@@ -1,0 +1,21 @@
+
+.Navigation {
+     ul {
+          display: flex;
+          flex-direction: column;
+          gap: var(--sp-2);
+     }
+
+     li {
+          list-style: none;
+
+     }
+
+     a {
+          text-transform: uppercase;
+     }
+
+     a:hover {
+          color: var(--text-clr);
+     }
+}
