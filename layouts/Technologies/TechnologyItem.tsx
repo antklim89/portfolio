@@ -2,7 +2,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FC } from 'react';
 
-import Title from '~/components/Title';
 import { getImageUrl } from '~/utils';
 
 import style from './style.module.scss';
@@ -19,18 +18,20 @@ const TechnologyItem: FC<TechnologyProps> = ({ technology }) => {
             target="_blank"
         >
             <section className={style.Technology}>
-                <Title align="center" as="h3" size="md">
-                    {technology.title}
-                </Title>
                 <div className={style.image}>
                     <Image
                         alt={technology.title}
-                        height={400}
+                        height={75}
                         src={getImageUrl(technology.image)}
-                        width={640}
+                        width={150}
                     />
                 </div>
-                <p className={style.body}>{technology.body}</p>
+                <div className={style.content}>
+                    <h4 className={style.title}>
+                        {technology.title}
+                    </h4>
+                    <p>{technology.body}</p>
+                </div>
             </section>
         </Link>
     );

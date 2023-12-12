@@ -1,5 +1,3 @@
-
-import Title from '~/components/Title';
 import { Locale } from '~/types';
 import { getTranslation } from '~/utils';
 import { getTechnologies } from '~/utils/server';
@@ -13,10 +11,10 @@ const Technologies = async ({ locale }: {locale: Locale}) => {
     const technologies = await getTechnologies(locale);
 
     return (
-        <section className={style.Technologies} id="technologies">
-            <Title underscore size="xl">
+        <section className={style.Technologies}>
+            <h2 className='title'>
                 {t.technologies}
-            </Title>
+            </h2>
             <div className={style.list}>
                 {technologies.map((technology) => (
                     <Technology key={technology.slug} technology={technology} />
