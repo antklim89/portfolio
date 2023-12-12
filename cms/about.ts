@@ -38,5 +38,22 @@ export const about: CmsCollectionFile = {
             widget: 'image',
             required: true,
         },
+        {
+            name: 'socials',
+            widget: 'list',
+            required: true,
+            fields: [
+                {
+                    name: 'image',
+                    widget: 'image',
+                    required: true,
+                },
+                {
+                    name: 'link',
+                    widget: 'string',
+                    required: true,
+                },
+            ],
+        },
     ],
 };
