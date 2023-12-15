@@ -12,10 +12,18 @@
      }
 
      a {
+          display: flex;
+          margin: 0 var(--sp-2);
+          transition: all 250ms;
           text-transform: uppercase;
      }
 
-     a:hover {
+     a:hover, a.active {
           color: var(--text-clr);
+          transform: translateX(10px);
+     }
+
+     .arrows {
+          margin: 0 var(--sp-1);
      }
 }
