@@ -4,6 +4,7 @@ import Container from '~/components/Container';
 import TranslationProvider from '~/components/TranslationProvider';
 import { defaultLocale } from '~/constants';
 import AboutTitle from '~/layouts/AboutTitle';
+import Footer from '~/layouts/Footer';
 import Navigation from '~/layouts/Navigation';
 import { isLocale, getTranslation } from '~/utils';
 
@@ -19,8 +20,11 @@ const RootLayout = async ({ children, params }: { children: React.ReactNode, par
             <title>{translation.defaultTitle}</title>
             <Container className='main'>
                 <aside>
-                    <AboutTitle locale={locale} />
-                    <Navigation locale={locale} />
+                    <div>
+                        <AboutTitle locale={locale} />
+                        <Navigation />
+                        <Footer />
+                    </div>
                 </aside>
                 <main>
                     {children}

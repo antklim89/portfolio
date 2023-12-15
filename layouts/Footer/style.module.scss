@@ -1,0 +1,17 @@
+
+.Footer {
+     .localeButtons {
+          display: flex;
+          justify-content: center;
+          margin: var(--sp-2) 0;
+          gap: var(--sp-2);
+
+          button {
+               padding: var(--sp-1);
+               background: none;
+               border: 1px solid var(--primary-clr);
+               color: var(--text-clr);
+               cursor: pointer;
+          }
+     }
+}
