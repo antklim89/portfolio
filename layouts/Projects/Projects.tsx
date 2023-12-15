@@ -17,7 +17,7 @@ const Projects = async ({ locale }: {locale: Locale}) => {
 
     return (
         <section className={styles.Projects}>
-            <h2 className='title'>
+            <h2 className='title' id="projects">
                 {t.projects}
             </h2>
             <div className={styles.list}>
