@@ -1,11 +1,11 @@
 import { Locale } from '~/types';
-import { getTranslation } from '~/utils';
+import { getTranslation } from '~/utils/server';
 
 import style from './style.module.scss';
 
 
-const Navigation = async ({ locale }: {locale: Locale}) => {
-    const t = await getTranslation(locale);
+const Navigation = async ({ locale: currentLocale }: { locale: Locale }) => {
+    const t = await getTranslation(currentLocale);
 
     const links = [
         { hash: '#', body: t.home },
@@ -15,17 +15,19 @@ const Navigation = async ({ locale }: {locale: Locale}) => {
     ];
 
     return (
-        <nav className={style.Navigation}>
-            <ul>
-                {links.map(({ hash, body }) => (
-                    <li key={hash}>
-                        <a href={`/${locale}${hash}`}>
-                            {body}
-                        </a>
-                    </li>
-                ))}
-            </ul>
-        </nav>
+        <div className={style.Navigation}>
+            <nav>
+                <ul>
+                    {links.map(({ hash, body }) => (
+                        <li key={hash}>
+                            <a href={`/${currentLocale}${hash}`}>
+                                {body} <span className={style.arrows}>&gt;&gt;</span>
+                            </a>
+                        </li>
+                    ))}
+                </ul>
+            </nav>
+        </div>
     );
 };
 
