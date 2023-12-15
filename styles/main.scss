@@ -25,13 +25,25 @@ body {
 }
 
 .main {
+    position: relative;
     display: flex;
-    min-height: 100vh;
-    min-height: 100dvh;
     gap: var(--sp-2);
 
-    > main, aside {
-        flex: 1 0 0;
+    > main, > aside {
+        width: 50%;
+        flex: 1 0 50%;
+        padding: var(--sp-6) 0;
+    }
+
+    > aside {
+        > div {
+            position: fixed;
+            display: flex;
+            gap: var(--sp-2);
+            justify-content: space-between;
+            flex-direction: column;
+            height: calc(100vh - var(--sp-6) * 2);
+        }
     }
 }
 
