@@ -1,7 +1,6 @@
 import { locales } from '~/constants';
 import { Locale } from '~/types';
-import { getTranslation } from '~/utils';
-import { getProjects } from '~/utils/server';
+import { getProjects, getTranslation } from '~/utils/server';
 
 import ProjectItem from './ProjectItem';
 import styles from './style.module.scss';

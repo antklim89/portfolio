@@ -5,8 +5,7 @@ import { MdPublic } from 'react-icons/md/';
 
 import Markdown from '~/components/Markdown';
 import { ProjectType } from '~/types';
-import { getTranslation } from '~/utils';
-import { getServerLocale } from '~/utils/server';
+import { getServerLocale, getTranslation } from '~/utils/server';
 
 import style from './style.module.scss';
 

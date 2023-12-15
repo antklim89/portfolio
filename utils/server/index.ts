@@ -5,3 +5,4 @@ export * from './getAbout';
 export * from './getProjects';
 export * from './getTechnologies';
 export * from './getServerLocale';
+export * from './getTranslation';

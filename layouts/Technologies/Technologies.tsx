@@ -1,6 +1,5 @@
 import { Locale } from '~/types';
-import { getTranslation } from '~/utils';
-import { getTechnologies } from '~/utils/server';
+import { getTechnologies, getTranslation } from '~/utils/server';
 
 import style from './style.module.scss';
 import Technology from './TechnologyItem';

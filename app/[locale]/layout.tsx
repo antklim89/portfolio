@@ -6,7 +6,8 @@ import { defaultLocale } from '~/constants';
 import AboutTitle from '~/layouts/AboutTitle';
 import Footer from '~/layouts/Footer';
 import Navigation from '~/layouts/Navigation';
-import { isLocale, getTranslation } from '~/utils';
+import { isLocale } from '~/utils';
+import { getTranslation } from '~/utils/server';
 
 
 const RootLayout = async ({ children, params }: { children: React.ReactNode, params: { locale: string } }) => {
@@ -22,7 +23,7 @@ const RootLayout = async ({ children, params }: { children: React.ReactNode, par
                 <aside>
                     <div>
                         <AboutTitle locale={locale} />
-                        <Navigation />
+                        <Navigation locale={locale} />
                         <Footer />
                     </div>
                 </aside>
