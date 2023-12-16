@@ -6,6 +6,7 @@
     "dev": "run-p dev:**",
     "dev:next": "next dev --turbo",
     "dev:cms-proxy": "decap-server",
+    "dev:typecheck": "tsc --noEmit -w --preserveWatchOutput",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -18,7 +19,6 @@
     "fs-extra": "^11.2.0",
     "netlify-identity-widget": "^1.9.2",
     "next": "^14.0.4",
-    "nuka-carousel": "^7.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.12.0",
