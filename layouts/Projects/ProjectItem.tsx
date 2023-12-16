@@ -5,6 +5,7 @@ import { MdPublic } from 'react-icons/md/';
 
 import Markdown from '~/components/Markdown';
 import { ProjectType } from '~/types';
+import { cls } from '~/utils';
 import { getServerLocale, getTranslation } from '~/utils/server';
 
 import style from './style.module.scss';
@@ -18,7 +19,7 @@ const ProjectItem = async ({
 
     return (
         <section className={style.ProjectItem}>
-            <div className={style.image}>
+            <div className={cls(style.image, 'hide-sm')}>
                 <Image
                     alt={title}
                     height={75}
@@ -30,6 +31,14 @@ const ProjectItem = async ({
                 <h4 className={style.title}>
                     {title}
                 </h4>
+                <div className={cls(style.image, 'show-sm')}>
+                    <Image
+                        alt={title}
+                        height={75}
+                        src={image}
+                        width={150}
+                    />
+                </div>
                 <div className={style.links}>
                     <Link href={github} rel="noopener noreferrer" target="_blank">
                         <DiGithubBadge size="32px" />
