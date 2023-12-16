@@ -24,6 +24,7 @@ module.exports = {
         'jsx-a11y',
     ],
     rules: {
+        'react/no-unknown-property': [2, { ignore: ['netlify-honeypot'] }],
 
         /**
         * Imports
