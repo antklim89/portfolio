@@ -39,10 +39,16 @@
 .hide-lg { display: none; }
 .show-lg { display: block; }
 
+.hide-sm { display: none; }
+.show-sm { display: block; }
+
 @media screen and (min-width: 480px) {
     :root {
         --technologies-cols: repeat(2, 1fr);
     }
+
+    .hide-sm { display: block; }
+    .show-sm { display: none; }
 }
 
 @media screen and (min-width: 768px) {
