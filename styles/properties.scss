@@ -36,6 +36,9 @@
     --left-side-width: 320px;
 }
 
+.hide-lg { display: none; }
+.show-lg { display: block; }
+
 @media screen and (min-width: 480px) {
     :root {
         --technologies-cols: repeat(2, 1fr);
@@ -55,6 +58,9 @@
         --container-width: 1024px;
         --technologies-cols: repeat(3, 1fr);
     }
+
+    .hide-lg { display: block; }
+    .show-lg { display: none; }
 }
 
 @media screen and (min-width: 1440px) {
