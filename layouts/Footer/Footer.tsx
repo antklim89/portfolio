@@ -6,14 +6,20 @@ import style from './style.module.scss';
 
 
 const Footer = () => {
-    const { changeLocale } = useTranslation();
+    const { locale: currentLocale, changeLocale } = useTranslation();
 
     return (
         <section className={style.Footer}>
-
             <div className={style.localeButtons}>
                 {locales.map((locale) => (
-                    <button key={locale} type='button' onClick={() => changeLocale(locale)}>{locale}</button>
+                    <button 
+                        className={currentLocale === locale ? style.active : undefined} 
+                        key={locale}
+                        type='button'
+                        onClick={() => changeLocale(locale)}
+                    >
+                        {locale}
+                    </button>
                 ))}
             </div>
         </section>
