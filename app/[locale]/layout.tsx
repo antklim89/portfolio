@@ -20,7 +20,7 @@ const RootLayout = async ({ children, params }: { children: React.ReactNode, par
         <TranslationProvider locale={locale} translation={translation}>
             <title>{translation.defaultTitle}</title>
             <Container className='main'>
-                <aside>
+                <aside className='hide-lg'>
                     <div>
                         <AboutTitle locale={locale} />
                         <Navigation locale={locale} />
