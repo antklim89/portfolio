@@ -4,7 +4,7 @@
     "body": "Supabase is an open source Firebase alternative. Start your project with a Postgres database, Authentication, instant APIs, Edge Functions, Real-time subscriptions, Storage, and Vector embeddings.",
     "title": "Supabase",
     "link": "https://supabase.com/",
-    "image": "/content/technologies/images/supabase-logo.png"
+    "image": "/content/technologies/images/supabase-logo.svg"
   },
   "ru": {
     "title": "Supabase",
