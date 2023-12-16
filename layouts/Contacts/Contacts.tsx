@@ -1,6 +1,5 @@
 import { FC, FormEventHandler, useState } from 'react';
 
-import Title from '~/components/Title';
 import { cls, useTranslation } from '~/utils';
 
 import style from './style.module.scss';
@@ -25,13 +24,12 @@ const Contacts: FC = () => {
 
     const { t } = useTranslation();
 
-    if (!t) return null;
     return (
         <section className={style.Contacts} id="contacts">
             <div>
-                <Title underscore size="xl">
+                <h3 className='title'>
                     {t.contacts}
-                </Title>
+                </h3>
 
                 {status === 'success' && (
                     <p className={cls(style.status, style.success)}>{t.contactSuccess}</p>
@@ -43,6 +41,7 @@ const Contacts: FC = () => {
                 <form
                     className={style.form}
                     data-netlify="true"
+                    data-netlify-recaptcha="true"
                     method="get"
                     name="contact"
                     netlify-honeypot="bot-field"
@@ -51,7 +50,7 @@ const Contacts: FC = () => {
                     <input name="form-name" type="hidden" value="contact" />
 
                     <label className={style.input}>
-                        {t.Name}<br />
+                        {t.Name}: <br />
                         <input
                             required
                             disabled={loading}
