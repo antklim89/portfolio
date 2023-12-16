@@ -35,13 +35,20 @@ body {
         padding: var(--sp-6) 0;
     }
 
+    > main {
+        display: flex;
+        flex-direction: column;
+        gap: var(--sp-2);
+
+    }
+
     > aside {
         > div {
             position: fixed;
             display: flex;
+            flex-direction: column;
             gap: var(--sp-2);
             justify-content: space-between;
-            flex-direction: column;
             height: calc(100vh - var(--sp-6) * 2);
         }
     }
