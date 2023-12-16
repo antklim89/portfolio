@@ -1,11 +1,11 @@
-import { FC, FormEventHandler, useState } from 'react';
+import { ComponentProps, FC, FormEventHandler, useState } from 'react';
 
 import { cls, useTranslation } from '~/utils';
 
 import style from './style.module.scss';
 
 
-const Contacts: FC = () => {
+const Contacts: FC = ({ className, ...props }: ComponentProps<'section'>) => {
     const [loading, setLoading] = useState(false);
     const [status, setStatus] = useState<'success' | 'error' | null>(null);
 
@@ -25,7 +25,7 @@ const Contacts: FC = () => {
     const { t } = useTranslation();
 
     return (
-        <section className={style.Contacts} id="contacts">
+        <section className={cls(style.Contacts, className)} id="contacts" {...props}>
             <div>
                 <h3 className='title'>
                     {t.contacts}

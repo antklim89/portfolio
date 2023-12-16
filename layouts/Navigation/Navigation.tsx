@@ -1,10 +1,13 @@
+import { ComponentProps } from 'react';
+
 import { Locale } from '~/types';
+import { cls } from '~/utils';
 import { getTranslation } from '~/utils/server';
 
 import style from './style.module.scss';
 
 
-const Navigation = async ({ locale: currentLocale }: { locale: Locale }) => {
+const Navigation = async ({ locale: currentLocale, className, ...props  }: { locale: Locale } & ComponentProps<'section'>) => {
     const t = await getTranslation(currentLocale);
 
     const links = [
@@ -15,7 +18,7 @@ const Navigation = async ({ locale: currentLocale }: { locale: Locale }) => {
     ];
 
     return (
-        <div className={style.Navigation}>
+        <section className={cls(style.Navigation, className)} {...props}>
             <nav>
                 <ul>
                     {links.map(({ hash, body }) => (
@@ -27,7 +30,7 @@ const Navigation = async ({ locale: currentLocale }: { locale: Locale }) => {
                     ))}
                 </ul>
             </nav>
-        </div>
+        </section>
     );
 };
 

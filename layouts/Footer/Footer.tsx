@@ -1,15 +1,17 @@
 'use client';
+import { ComponentProps } from 'react';
+
 import { locales } from '~/constants';
-import { useTranslation } from '~/utils';
+import { cls, useTranslation } from '~/utils';
 
 import style from './style.module.scss';
 
 
-const Footer = () => {
+const Footer = ({ className, ...props }: ComponentProps<'section'>) => {
     const { locale: currentLocale, changeLocale } = useTranslation();
 
     return (
-        <section className={style.Footer}>
+        <section className={cls(style.Footer, className)} {...props}>
             <div className={style.localeButtons}>
                 {locales.map((locale) => (
                     <button 
