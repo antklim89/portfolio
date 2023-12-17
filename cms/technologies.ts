@@ -9,14 +9,10 @@ export const technologies: CmsCollection = {
     media_folder: 'images',
     public_folder: '/content/technologies/images',
     create: true,
-    slug: '{{fields.slug}}',
+    slug: '{{fields.title}}',
     editor: { preview: true },
     i18n: true,
     fields: [
-        {
-            name: 'slug',
-            widget: 'string',
-        },
         {
             name: 'body',
             widget: 'text',

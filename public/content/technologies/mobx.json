@@ -1,6 +1,5 @@
 {
   "en": {
-    "slug": "mobx",
     "body": "Simple, scalable state management.",
     "title": "MobX",
     "link": "https://mobx.js.org/README.html",

@@ -19,7 +19,7 @@ const Technologies = async ({ locale, className, ...props  }: { locale: Locale }
             </h2>
             <div className={style.list}>
                 {technologies.map((technology) => (
-                    <Technology key={technology.slug} technology={technology} />
+                    <Technology key={technology.title} technology={technology} />
                 ))}
             </div>
         </section>

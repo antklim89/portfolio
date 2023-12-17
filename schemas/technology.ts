@@ -6,5 +6,4 @@ export const technologySchema = z.object({
     link: z.string(),
     body: z.string(),
     image: z.string(),
-    slug: z.string(),
 });
