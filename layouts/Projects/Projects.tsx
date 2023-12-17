@@ -24,7 +24,7 @@ const Projects = async ({ locale, className, ...props  }: { locale: Locale } & C
             </h2>
             <div className={style.list}>
                 {projects.map((project) => (
-                    <ProjectItem key={project.title} {...project} />
+                    <ProjectItem key={project.title} locale={locale} project={project} />
                 ))}
             </div>
         </section>

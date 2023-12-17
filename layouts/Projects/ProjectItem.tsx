@@ -4,17 +4,18 @@ import { DiGithubBadge } from 'react-icons/di/';
 import { MdPublic } from 'react-icons/md/';
 
 import Markdown from '~/components/Markdown';
-import { ProjectType } from '~/types';
+import { Locale, ProjectType } from '~/types';
 import { cls } from '~/utils';
-import { getServerLocale, getTranslation } from '~/utils/server';
+import { getTranslation } from '~/utils/server';
 
 import style from './style.module.scss';
 
 
-const ProjectItem = async ({
-    technologies, title, image, link, github, body,
-}: ProjectType) => {
-    const locale = getServerLocale();
+const ProjectItem = async ({ locale, project }: { project: ProjectType, locale: Locale }) => {
+    const {
+        technologies, title, image, link, github, body,    
+    } = project;
+    
     const t = await getTranslation(locale);
 
     return (
