@@ -18,18 +18,26 @@ const Navigation = async ({ locale: currentLocale, className, ...props  }: { loc
     ];
 
     return (
-        <section className={cls(style.Navigation, className)} {...props}>
-            <nav>
+        <section className={cls(style.Navigation, className)} {...props} >
+            <div className='hide-lg'>
                 <ul>
-                    {links.map(({ hash, body }) => (
-                        <li key={hash}>
-                            <a href={`/${currentLocale}${hash}`}>
-                                {body} <span className={style.arrows}>&gt;&gt;</span>
-                            </a>
-                        </li>
+                    {links.map(link => (
+                        <li key={link.body}><a href={link.hash}>{link.body}</a></li>
+
                     ))}
                 </ul>
-            </nav>
+            </div>
+            <div className={cls('show-lg', style.dropdown)}>
+                <div className='dropdown'>
+                    <div className={cls(style.toggle)} role="button" tabIndex={0}>=</div>
+                    <ul className="dropdown-content">
+                        {links.map(link => (
+                            <li key={link.body}><a href={link.hash}>{link.body}</a></li>
+
+                        ))}
+                    </ul>
+                </div>
+            </div>
         </section>
     );
 };

@@ -26,4 +26,21 @@
      .arrows {
           margin: 0 var(--sp-1);
      }
+
+     .dropdown {
+          position: fixed;
+          top: 0;
+          left: 0;
+
+          ul {
+               padding: var(--sp-2);
+               background-color: var(--bg-clr);
+               box-shadow: 2px 2px 5px 0px black;
+          }
+     }
+
+     .toggle {
+          padding: var(--sp-2);
+          border: 1px solid var(--primary-clr);
+     }
 }
