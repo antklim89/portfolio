@@ -11,7 +11,7 @@
       "zod",
       "sass"
     ],
-    "image": "/content/projects/images/portfolio_home.webp",
+    "image": "/content/projects/images/portfolio_home.png",
     "body": "Portfolio website developed with **[NextJS](https://nextjs.org/)**. You can switch between English and Russian.\n\nThe content management system [Netlifycms](https://www.netlifycms.org/) is used to create and store messages.\n\n[Sass](https://sass-scss.ru/) is used for styling."
   },
   "ru": {
