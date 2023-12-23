@@ -1,4 +1,5 @@
 import { ComponentProps } from 'react';
+import { MdMenu } from 'react-icons/md';
 
 import { Locale } from '~/types';
 import { cls } from '~/utils';
@@ -23,13 +24,12 @@ const Navigation = async ({ locale: currentLocale, className, ...props  }: { loc
                 <ul>
                     {links.map(link => (
                         <li key={link.body}><a href={link.hash}>{link.body}</a></li>
-
                     ))}
                 </ul>
             </div>
             <div className={cls('show-lg', style.dropdown)}>
                 <div className='dropdown'>
-                    <div className={cls(style.toggle)} role="button" tabIndex={0}>=</div>
+                    <div className={cls(style.toggle)} role="button" tabIndex={0}><MdMenu /></div>
                     <ul className="dropdown-content">
                         {links.map(link => (
                             <li key={link.body}><a href={link.hash}>{link.body}</a></li>
