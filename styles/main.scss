@@ -83,3 +83,10 @@ a {
     margin-bottom: var(--sp-2);
     margin-top: var(--sp-3);
 }
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    max-width: var(--container-width);
+    padding: 0 var(--sp-4);
+}
