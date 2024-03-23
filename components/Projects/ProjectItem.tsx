@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { DiGithubBadge } from 'react-icons/di/';
-import { MdPublic } from 'react-icons/md/';
+import { FaGithub, FaEarthEurope } from 'react-icons/fa6';
 
 import Markdown from '~/components/Markdown';
 import { Locale, ProjectType } from '~/types';
@@ -42,11 +41,11 @@ const ProjectItem = async ({ locale, project }: { project: ProjectType, locale: 
                 </div>
                 <div className={style.links}>
                     <Link href={github} rel="noopener noreferrer" target="_blank">
-                        <DiGithubBadge size="32px" />
+                        <FaGithub size="32px" />
                         {t.GitHub}
                     </Link>
                     <Link href={link} rel="noopener noreferrer" target="_blank">
-                        <MdPublic size="32px" />
+                        <FaEarthEurope size="32px" />
                         {t.Site}
                     </Link>
                 </div>
