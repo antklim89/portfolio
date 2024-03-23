@@ -1,10 +1,10 @@
 import { redirect } from 'next/navigation';
 
+import AboutTitle from '~/components/AboutTitle';
+import Footer from '~/components/Footer';
+import Navigation from '~/components/Navigation';
 import TranslationProvider from '~/components/TranslationProvider';
 import { defaultLocale } from '~/constants';
-import AboutTitle from '~/layouts/AboutTitle';
-import Footer from '~/layouts/Footer';
-import Navigation from '~/layouts/Navigation';
 import { isLocale } from '~/utils';
 import { getTranslation } from '~/utils/server';
 

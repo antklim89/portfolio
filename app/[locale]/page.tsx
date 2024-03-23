@@ -1,11 +1,11 @@
+import AboutDescription from '~/components/AboutDescription';
+import AboutTitle from '~/components/AboutTitle';
+import Contacts from '~/components/Contacts';
+import Footer from '~/components/Footer';
+import Navigation from '~/components/Navigation';
+import Projects from '~/components/Projects';
+import Technologies from '~/components/Technologies';
 import { locales } from '~/constants';
-import AboutDescription from '~/layouts/AboutDescription';
-import AboutTitle from '~/layouts/AboutTitle';
-import Contacts from '~/layouts/Contacts';
-import Footer from '~/layouts/Footer';
-import Navigation from '~/layouts/Navigation';
-import Projects from '~/layouts/Projects';
-import Technologies from '~/layouts/Technologies';
 import { Locale } from '~/types';
 
 
