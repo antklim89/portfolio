@@ -12,10 +12,10 @@
     "link": "https://in-good-hand-dev.netlify.app/",
     "github": "https://github.com/antklim89/in_good_hands",
     "image": "/content/projects/images/in_good_hands_home.webp",
-    "body": "Pet shelter website powered by **[NextJS](https://nextjs.org/)**.\n\nThe visual style is created using the **[Chakra-UI](https://chakra-ui.com/)** library.\n\nIt uses a self-created server using the **[Fastify](https://www.fastify.io/)** and **[Prisma](https://www.prisma.io/)** frameworks."
+    "body": "A website with ads for the sale of pets powered by **[NextJS](https://nextjs.org/)**.\n\nThe visual style is created using the **[Chakra-UI](https://chakra-ui.com/)** library.\n\nIt uses a custom server based on the **[Fastify](https://www.fastify.io/)** and **[Prisma](https://www.prisma.io/)** ORM frameworks."
   },
   "ru": {
     "title": "В Добрые Руки",
-    "body": "С﻿айт с объявлениями о приюте домашних животных, разработанный на **[NextJS](https://nextjs.org/)**.\n\nВизуальный стиль создается с использованием библиотеки **[Chakra-UI](https://chakra-ui.com/)**.\n\nИ﻿спользуется самостоятельно созданный с помощью фреймворков **[Fastify](https://www.fastify.io/)** и **[Prisma](https://www.prisma.io/)** сервер."
+    "body": "Веб-сайт с объявлениями о продаже домашних животных на фреймворке **[NextJS](https://nextjs.org/)**.\n\nВизуальный стиль создается с использованием библиотеки **[Chakra-UI](https://chakra-ui.com/)**.\n\nИ﻿спользуется собственный сервер основанный на фреймворке  **[Fastify](https://www.fastify.io/)** и **[Prisma](https://www.prisma.io/)**  ORM."
   }
 }
