@@ -1,3 +1,5 @@
+'use client';
+
 import { ComponentProps, FC, FormEventHandler, useState } from 'react';
 
 import { cls, useTranslation } from '~/utils';
