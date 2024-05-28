@@ -5,26 +5,26 @@ import { ComponentProps, FC, FormEventHandler, useState } from 'react';
 import { cls, useTranslation } from '~/utils';
 
 import style from './style.module.scss';
+import { submitContactsForm } from './Contacts.action';
 
 
 const Contacts: FC = ({ className, ...props }: ComponentProps<'section'>) => {
     const [loading, setLoading] = useState(false);
     const [status, setStatus] = useState<'success' | 'error' | null>(null);
 
-    const handleSubmit: FormEventHandler<HTMLFormElement> = async (e) => {
-        e.preventDefault();
+    const { t } = useTranslation();
+
+    const handleSubmit = async (body: FormData) => {
         setLoading(true);
 
-        const body = new FormData(e.currentTarget);
-        const response = await fetch('/', { method: 'POST', body });
+        const response = await submitContactsForm(body);
+        console.log('== \n response', response)
 
-        if (response.ok) setStatus('success');
-        else setStatus('error');
+        if (response.error) setStatus('error');
+        else setStatus('success');
 
         setLoading(false);
     };
-
-    const { t } = useTranslation();
 
     return (
         <section className={cls(style.Contacts, className)} id="contacts" {...props}>
@@ -42,12 +42,8 @@ const Contacts: FC = ({ className, ...props }: ComponentProps<'section'>) => {
 
                 <form
                     className={style.form}
-                    data-netlify="true"
-                    data-netlify-recaptcha="true"
-                    method="get"
                     name="contact"
-                    netlify-honeypot="bot-field"
-                    onSubmit={handleSubmit}
+                    action={handleSubmit}
                 >
                     <input name="form-name" type="hidden" value="contact" />
 

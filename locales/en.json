@@ -12,5 +12,7 @@
     "Subject": "Subject",
     "Message": "Message",
     "contactError": "Unexpected error. Try again later.",
-    "contactSuccess": "The message has been sent successfully"
+    "contactSuccess": "The message has been sent successfully",
+    "A message from": "A message from",
+    "on the subject of": "on the subject of"
 }
