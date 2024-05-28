@@ -1,7 +1,7 @@
 'use client';
 
 import { ComponentProps, FC, FormEventHandler, useState } from 'react';
-
+import { useFormState } from 'react-dom'
 import { cls, useTranslation } from '~/utils';
 
 import style from './style.module.scss';
@@ -14,11 +14,12 @@ const Contacts: FC = ({ className, ...props }: ComponentProps<'section'>) => {
 
     const { t } = useTranslation();
 
-    const handleSubmit = async (body: FormData) => {
+    const handleSubmit: FormEventHandler<HTMLFormElement> = async (e) => {
+        e.preventDefault();
         setLoading(true);
 
+        const body = new FormData(e.currentTarget)
         const response = await submitContactsForm(body);
-        console.log('== \n response', response)
 
         if (response.error) setStatus('error');
         else setStatus('success');
@@ -43,7 +44,7 @@ const Contacts: FC = ({ className, ...props }: ComponentProps<'section'>) => {
                 <form
                     className={style.form}
                     name="contact"
-                    action={handleSubmit}
+                    onSubmit={handleSubmit}
                 >
                     <input name="form-name" type="hidden" value="contact" />
 
