@@ -1,11 +1,13 @@
 import type { InitOptions } from 'decap-cms-core';
 
-import { SITE_URL, defaultLocale, locales } from '~/constants';
+import { defaultLocale, locales } from '~/constants';
 
 import { about } from './about';
 import { projects } from './projects';
 import { technologies } from './technologies';
 
+
+const SITE_URL = process.env.URL || (() => { throw new Error(`URL env variable is required`) })()
 
 export const cmsConfig: InitOptions = {
     config: {
