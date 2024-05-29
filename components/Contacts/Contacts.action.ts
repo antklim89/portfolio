@@ -1,13 +1,11 @@
 'use server';
 
 import { Resend } from 'resend';
+import { RESEND_KEY, MAIL_LOCALE, RESEND_TO } from '~/constants';
 import { checkLocale } from '~/utils';
 import { getTranslation } from '~/utils/server';
 
 
-const RESEND_KEY = process.env.RESEND_KEY || (() => { throw new Error(`RESEND_KEY env variable is required`) })()
-const RESEND_TO = process.env.RESEND_TO || (() => { throw new Error(`RESEND_TO env variable is required`) })()
-const MAIL_LOCALE = process.env.MAIL_LOCALE
 
 const resend = new Resend(RESEND_KEY);
 

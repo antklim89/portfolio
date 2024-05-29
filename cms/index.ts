@@ -1,6 +1,6 @@
 import type { InitOptions } from 'decap-cms-core';
 
-import { defaultLocale, locales } from '~/constants';
+import { SITE_URL, defaultLocale, locales } from '~/constants';
 
 import { about } from './about';
 import { projects } from './projects';
@@ -11,7 +11,7 @@ export const cmsConfig: InitOptions = {
     config: {
         load_config_file: false,
 
-        site_url: 'https://fullstack-developer-portfolio.netlify.app',
+        site_url: SITE_URL,
 
         backend: {
             name: 'git-gateway',
@@ -24,7 +24,7 @@ export const cmsConfig: InitOptions = {
             default_locale: defaultLocale,
         },
 
-        local_backend: { allowed_hosts: ['192.168.90.19', '127.0.0.1'] },
+        local_backend: { allowed_hosts: [new URL(SITE_URL).hostname] },
         publish_mode: 'editorial_workflow',
         media_folder: 'public/uploaded/',
         collections: [
