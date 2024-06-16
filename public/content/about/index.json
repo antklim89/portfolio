@@ -1,8 +1,8 @@
 {
   "en": {
-    "description": "I study web development at various online courses and develop myself.\n\nBeginner web and backend developer. I know HTML, CSS, SCSS, JavaScript, and TypeScript. I am developing a React application using the NextJS and Gatsby frameworks. I create fully adaptive modern web applications with SEO optimization and full accessibility. I use Bootstrap 5, Material UI, Semantic-UI, Chakra-UI interface libraries, Framer-motion animation library, libraries for global state management - MobX and Redux, Express, Fastify and NestJS back-end libraries, and also study everything related to web development.",
+    "description": "I create interactive and visually appealing projects in HTML, CSS, JavaScript, React, Node with full accessibility and SEO optimization.",
     "photo": "/content/about/images/photo.jpg",
-    "title": "# Anton Klimenkov\n\n### Full-stack web developer",
+    "title": "## Anton Klimenkov\n\n### Web developer\n\n# Web innovation with a passion to details",
     "keywords": [
       "portfolio",
       "web dev",
@@ -21,8 +21,8 @@
     "name": "Anton Klimenkov"
   },
   "ru": {
-    "description": "Я веб-разработчик. Изучаю веб-разработку на различных онлайн-курсах и самообучаюсь.\n\nНачинающий веб и бэк-енд разработчик. Знаю HTML, CSS, SCSS, JavaScript и TypeScript. Я разрабатываю ReactJS приложения с помощью фреймворков NextJS и Gatsby. Создаю полностью адаптивные современные веб приложения с SEO оптимизацией и полной доступностью. Использую библиотеки интерфейса Bootstrap 5, Material UI, Semantic-UI, Chakra-UI, библиотеку анимации Framer-motion, библиотеки для управления глобальным состоянием: MobX и Redux, бэк-энд библиотеки Express, Fastify и NestJS, а также изучаю всё что связано веб разработкой.[](https://github.com/antklim89)",
-    "title": "# Антон Клименков\n\n### Веб-разработчик",
+    "description": "Создаю интерактивные и визуально привлекательные проекты на HTML, CSS, JavaScript, React, Node с полной доступностью и СЕО оптимизацией.",
+    "title": "## Антон Клименков\n\n### Веб-разработчик.\n\n# Веб инновации с любовью к деталям",
     "keywords": [
       "web dev",
       "frontend",
