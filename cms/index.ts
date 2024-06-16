@@ -7,8 +7,8 @@ import { projects } from './projects';
 import { technologies } from './technologies';
 
 
-const SITE_URL = process.env.URL || (() => { throw new Error(`URL env variable is required`) })()
-const GITHUB_REPO = process.env.GITHUB_REPO || (() => { throw new Error(`GITHUB_REPO env variable is required`) })()
+const SITE_URL = process.env.URL || (() => { throw new Error('URL env variable is required'); })();
+const GITHUB_REPO = process.env.GITHUB_REPO || (() => { throw new Error('GITHUB_REPO env variable is required'); })();
 
 export const cmsConfig: InitOptions = {
     config: {

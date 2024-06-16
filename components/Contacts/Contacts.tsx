@@ -1,10 +1,11 @@
 'use client';
 
 import { ComponentProps, FC, FormEventHandler, useState } from 'react';
+
 import { cls, useTranslation } from '~/utils';
 
-import style from './style.module.scss';
 import { submitContactsForm } from './Contacts.action';
+import style from './style.module.scss';
 
 
 const Contacts: FC = ({ className, ...props }: ComponentProps<'section'>) => {
@@ -17,7 +18,7 @@ const Contacts: FC = ({ className, ...props }: ComponentProps<'section'>) => {
         e.preventDefault();
         setLoading(true);
 
-        const body = new FormData(e.currentTarget)
+        const body = new FormData(e.currentTarget);
         const response = await submitContactsForm(body);
 
         if (response.error) setStatus('error');
