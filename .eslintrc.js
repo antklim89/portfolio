@@ -6,7 +6,6 @@ module.exports = {
         'next/core-web-vitals',
 
         'plugin:react/all',
-        'plugin:react-hooks/recommended',
         'plugin:jsx-a11y/strict',
 
         'plugin:import/recommended',
