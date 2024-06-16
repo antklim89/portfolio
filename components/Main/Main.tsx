@@ -20,13 +20,13 @@ const Main = ({ locale }: { locale: Locale }) => {
                     <Footer />
                 </div>
             </aside>
-            <main className='show-lg'>
+            <main className='hide-lg'>
                 <AboutDescription locale={locale} />
                 <Projects id="projects" locale={locale} />
                 <Technologies id="technologies" locale={locale} />
                 <Contacts />
             </main>
-            <main className='hide-lg'>
+            <main className='show-lg'>
                 <AboutTitle locale={locale} />
                 <Navigation locale={locale} />
                 <AboutDescription locale={locale} />
