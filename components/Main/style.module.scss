@@ -1,0 +1,38 @@
+
+.Main {
+     --aside-width: 320px;
+     
+     position: relative;
+     display: flex;
+     gap: var(--sp-2);
+     width: 100%;
+     margin: 0 auto;
+     max-width: var(--container-width);
+     padding: 0 var(--sp-4);
+ 
+     > main, > aside {
+          padding: var(--sp-6) 0;
+     }
+ 
+     > main {
+         display: flex;
+         flex-direction: column;
+         gap: var(--sp-2);
+ 
+     }
+ 
+     > aside {
+          flex: 1 0 var(--aside-width);
+
+         > div {
+               width: var(--aside-width);
+               position: fixed;
+               display: flex;
+               flex-direction: column;
+               gap: var(--sp-2);
+               justify-content: space-between;
+               height: calc(100vh - var(--sp-6) * 2);
+         }
+     }
+
+}
