@@ -1,6 +1,6 @@
 'use client';
 
-import { ComponentProps, FC, FormEventHandler, useState } from 'react';
+import { ComponentProps, FormEventHandler, useState } from 'react';
 
 import { cls, useTranslation } from '~/utils';
 
@@ -8,7 +8,7 @@ import { submitContactsForm } from './Contacts.action';
 import style from './style.module.scss';
 
 
-const Contacts: FC = ({ className, ...props }: ComponentProps<'section'>) => {
+const Contacts = ({ className, ...props }: ComponentProps<'section'>) => {
     const [loading, setLoading] = useState(false);
     const [status, setStatus] = useState<'success' | 'error' | null>(null);
 
@@ -28,7 +28,7 @@ const Contacts: FC = ({ className, ...props }: ComponentProps<'section'>) => {
     };
 
     return (
-        <section className={cls(style.Contacts, className)} id="contacts" {...props}>
+        <section className={cls(style.Contacts, className)} {...props}>
             <div>
                 <h3 className='title'>
                     {t.contacts}

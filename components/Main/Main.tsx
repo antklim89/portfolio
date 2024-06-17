@@ -26,7 +26,7 @@ const Main = ({ locale }: { locale: Locale }) => {
                 <AboutDescription locale={locale} />
                 <Projects id="projects" locale={locale} />
                 <Technologies id="technologies" locale={locale} />
-                <Contacts />
+                <Contacts id="contacts" />
                 <Footer className='show-lg' />
             </main>
         </div>
