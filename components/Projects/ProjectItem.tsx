@@ -19,19 +19,8 @@ const ProjectItem = async ({ locale, project }: { project: ProjectType, locale: 
 
     return (
         <section className={style.ProjectItem}>
-            <div className={cls(style.image, 'hide-sm')}>
-                <Image
-                    alt={title}
-                    height={75}
-                    src={image}
-                    width={150}
-                />
-            </div>
-            <div className={style.content}>
-                <h4 className={style.title}>
-                    {title}
-                </h4>
-                <div className={cls(style.image, 'show-sm')}>
+            <div className={style.left}>
+                <div className={cls(style.image)}>
                     <Image
                         alt={title}
                         height={75}
@@ -49,6 +38,11 @@ const ProjectItem = async ({ locale, project }: { project: ProjectType, locale: 
                         {t.Site}
                     </Link>
                 </div>
+            </div>
+            <div className={style.right}>
+                <h4 className={style.title}>
+                    {title}
+                </h4>
                 <div className={style.body}>
                     <Markdown>
                         {body}
