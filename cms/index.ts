@@ -28,7 +28,8 @@ export const cmsConfig: InitOptions = {
             default_locale: defaultLocale,
         },
 
-        local_backend: { allowed_hosts: [new URL(SITE_URL).hostname] },
+        local_backend: process.env.NODE_ENV === 'production' ? undefined : { allowed_hosts: [new URL(SITE_URL).hostname] },
+
         publish_mode: 'editorial_workflow',
         media_folder: 'public/uploaded/',
         collections: [
