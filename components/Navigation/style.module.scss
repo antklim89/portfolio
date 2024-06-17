@@ -18,7 +18,7 @@
           text-transform: uppercase;
      }
 
-     a:hover, a.active {
+     a:hover, a.active, .observedLink {
           color: var(--text-clr);
           transform: translateX(10px);
      }

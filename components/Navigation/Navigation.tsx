@@ -1,39 +1,71 @@
-import { ComponentProps } from 'react';
+'use client';
+
+import { type ComponentProps, useEffect, useState } from 'react';
 import { FaHome } from 'react-icons/fa';
 
-import { Locale } from '~/types';
-import { cls } from '~/utils';
-import { getTranslation } from '~/utils/server';
+import { cls, useTranslation } from '~/utils';
 
 import style from './style.module.scss';
 
 
-const Navigation = async ({ locale: currentLocale, className, ...props  }: { locale: Locale } & ComponentProps<'section'>) => {
-    const t = await getTranslation(currentLocale);
+const Navigation = ({ className, ...props  }: ComponentProps<'section'>) => {
+    const { t } = useTranslation();
 
-    const links = [
-        { hash: '#', body: t.home, icon: <FaHome /> },
-        { hash: '#projects', body: t.projects },
-        { hash: '#technologies', body: t.technologies },
-        { hash: '#contacts', body: t.contacts },
-    ] as const;
+    const [links, setLinks] = useState({
+        home: { id: 'home', body: t.home, icon: <FaHome />, observed: false },
+        projects: { id: 'projects', body: t.projects, observed: false },
+        technologies: { id: 'technologies', body: t.technologies , observed: false },
+        contacts: { id: 'contacts', body: t.contacts, observed: false },
+    });
+    const linksArray = Object.values(links);
+
+
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            for (const entry of entries) {
+                setLinks(p => ({
+                    ...p,
+                    [entry.target.id]: { ...p[entry.target.id as keyof typeof links], observed: entry.isIntersecting },
+                }));
+            }
+        });
+
+        linksArray.forEach(({ id }) => {
+            const el = document.getElementById(id);
+            if (el) observer.observe(el);
+        });
+
+        return () => {
+            observer.disconnect();
+        };
+    }, []);
 
     return (
         <section className={cls(style.Navigation, className)} {...props} >
             <div className='hide-lg'>
                 <ul>
-                    {links.map(link => (
+                    {linksArray.map(link => (
                         <li key={link.body}>
-                            <a href={link.hash}>{link.body}</a>
+                            <a 
+                                className={link.observed ? style.observedLink : ''} 
+                                href={`#${link.id}`}
+                            >
+                                {link.body}
+                            </a>
                         </li>
                     ))}
                 </ul>
             </div>
             <div className={cls('show-lg', style.topLinks)}>
                 <ul className="">
-                    {links.map(link => (
+                    {linksArray.map(link => (
                         <li key={link.body}>
-                            <a href={link.hash}>{'icon' in link ? link.icon : link.body}</a>
+                            <a 
+                                className={link.observed ? style.observedLink : ''} 
+                                href={`#${link.id}`}
+                            >
+                                {'icon' in link ? link.icon : link.body}
+                            </a>
                         </li>
                     ))}
                 </ul>

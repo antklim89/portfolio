@@ -16,13 +16,14 @@ const Main = ({ locale }: { locale: Locale }) => {
             <aside className='hide-lg'>
                 <div>
                     <AboutTitle locale={locale} />
-                    <Navigation locale={locale} />
+                    <Navigation />
                     <Footer />
                 </div>
             </aside>
             <main>
+                <div id="home" />
                 <AboutTitle className='show-lg' locale={locale} />
-                <Navigation className='show-lg' locale={locale} />
+                <Navigation className='show-lg' />
                 <AboutDescription locale={locale} />
                 <Projects id="projects" locale={locale} />
                 <Technologies id="technologies" locale={locale} />
