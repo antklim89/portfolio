@@ -14,13 +14,17 @@
      a {
           display: flex;
           margin: 0 var(--sp-2);
-          transition: all 250ms;
           text-transform: uppercase;
+          
+          > div {
+               transition: all 250ms;
+               border-bottom: 1px solid;
+               transform: translateY(-50%);
+          }
      }
 
-     a:hover, a.active, .observedLink {
+     a:hover, a.active {
           color: var(--text-clr);
-          transform: translateX(10px);
      }
 
      .arrows {

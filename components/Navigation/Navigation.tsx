@@ -25,7 +25,10 @@ const Navigation = ({ className, ...props  }: ComponentProps<'section'>) => {
             for (const entry of entries) {
                 setLinks(p => ({
                     ...p,
-                    [entry.target.id]: { ...p[entry.target.id as keyof typeof links], observed: entry.isIntersecting },
+                    [entry.target.id]: {
+                        ...p[entry.target.id as keyof typeof links],
+                        observed: entry.isIntersecting,
+                    },
                 }));
             }
         });
@@ -46,11 +49,9 @@ const Navigation = ({ className, ...props  }: ComponentProps<'section'>) => {
                 <ul>
                     {linksArray.map(link => (
                         <li key={link.body}>
-                            <a 
-                                className={link.observed ? style.observedLink : ''} 
-                                href={`#${link.id}`}
-                            >
-                                {link.body}
+                            <a href={`#${link.id}`}>
+                                <div style={{ paddingRight: link.observed ? 25 : '' }} />
+                                <span>{link.body}</span>
                             </a>
                         </li>
                     ))}
@@ -60,11 +61,9 @@ const Navigation = ({ className, ...props  }: ComponentProps<'section'>) => {
                 <ul className="">
                     {linksArray.map(link => (
                         <li key={link.body}>
-                            <a 
-                                className={link.observed ? style.observedLink : ''} 
-                                href={`#${link.id}`}
-                            >
-                                {'icon' in link ? link.icon : link.body}
+                            <a href={`#${link.id}`}>
+                                <div style={{ paddingRight: link.observed ? 5 : '' }} />
+                                <span>{'icon' in link ? link.icon : link.body}</span>
                             </a>
                         </li>
                     ))}
