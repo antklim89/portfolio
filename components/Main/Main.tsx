@@ -13,6 +13,7 @@ import style from './style.module.scss';
 const Main = ({ locale }: { locale: Locale }) => {
     return (
         <div className={style.Main}>
+            <div id="home" />
             <aside className='hide-lg'>
                 <div>
                     <AboutTitle locale={locale} />
@@ -21,7 +22,6 @@ const Main = ({ locale }: { locale: Locale }) => {
                 </div>
             </aside>
             <main>
-                <div id="home" />
                 <AboutTitle className='show-lg' locale={locale} />
                 <Navigation className='show-lg' />
                 <AboutDescription locale={locale} />
