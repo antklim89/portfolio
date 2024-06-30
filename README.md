@@ -9,7 +9,6 @@ My skills include:
 - Creating your own server based on Express, Fastify or NestJS
 - Working with TypeScript to improve performance and code readability
 - Using libraries such as Chakra UI, Material-UI and Tailwind for code styling and optimization
-- Using modern Zustand and MobX state managers
 
 
 **Contact information**  
@@ -28,7 +27,6 @@ Email address: antklim89prog@mail.ru
 - Создание собственного сервера на основе Express, Fastify или NestJS
 - Работа с TypeScript для повышения производительности и читаемости кода
 - Использование библиотек, таких как Chakra UI, Material-UI и Tailwind для стилизации и оптимизации кода
-- Использование современных менеджеров состояния Zustand и MobX
 
 
 **Контактная информация**  
