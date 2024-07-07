@@ -4,9 +4,9 @@ import { getLocale } from './getLocale';
 import { loadOneFile } from './loadOneFile';
 
 export const getAbout = async (locale: string): Promise<AboutType> => {
-    const data = await loadOneFile('about', 'index');
-    const dataLocaled = getLocale(data, locale);
-    const result = await aboutSchema.parseAsync(dataLocaled);
+    const about = await loadOneFile('about', 'index');
+    const aboutLocale = getLocale(about, locale);
+    const result = await aboutSchema.parseAsync(aboutLocale);
 
     return result;
 };
