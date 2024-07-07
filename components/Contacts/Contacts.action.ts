@@ -1,18 +1,14 @@
 'use server';
-
 import { Resend } from 'resend';
-
+import { z } from 'zod';
 import { checkLocale } from '~/utils';
 import { getTranslation } from '~/utils/server';
 
-
-const RESEND_KEY = process.env.RESEND_KEY || (() => { throw new Error('RESEND_KEY env variable is required'); })();
-const RESEND_TO = process.env.RESEND_TO || (() => { throw new Error('RESEND_TO env variable is required'); })();
-const { MAIL_LOCALE } = process.env;
-
+const RESEND_KEY = z.string({ message: 'RESEND_KEY env variable is required' }).parse(process.env.RESEND_KEY);
+const RESEND_TO = z.string({ message: 'RESEND_TO env variable is required' }).parse(process.env.RESEND_TO);
+const MAIL_LOCALE = z.string().optional().parse(process.env.MAIL_LOCALE);
 
 const resend = new Resend(RESEND_KEY);
-
 
 export async function submitContactsForm(formData: FormData) {
     const locale = checkLocale(MAIL_LOCALE);
@@ -29,4 +25,4 @@ export async function submitContactsForm(formData: FormData) {
     });
 
     return result;
-};
+}

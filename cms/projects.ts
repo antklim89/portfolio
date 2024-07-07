@@ -1,6 +1,5 @@
 import type { CmsCollection } from 'decap-cms-core';
 
-
 export const projects: CmsCollection = {
     label: 'Projects',
     name: 'projects',

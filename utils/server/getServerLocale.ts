@@ -1,12 +1,9 @@
 import { cookies, headers } from 'next/headers';
-
 import { defaultLocale } from '~/constants';
-import { Locale } from '~/types';
-
+import type { LocaleType } from '~/types';
 import { isLocale } from '../checkLocale';
 
-
-export function getServerLocale(): Locale {
+export function getServerLocale(): LocaleType {
     const coociesLocale = cookies().get('locale')?.value;
     if (isLocale(coociesLocale)) return coociesLocale;
 

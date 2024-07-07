@@ -1,14 +1,13 @@
 'use client';
-import { FC, useEffect } from 'react';
-
+import { type FC, useEffect } from 'react';
 
 const CMSPage: FC = () => {
     useEffect(() => {
-        (async() => {
-            const { default: CMS } = await import('decap-cms-app');
+        (async () => {
+            const { default: cms } = await import('decap-cms-app');
             const { cmsConfig } = await import('~/cms');
 
-            CMS.init(cmsConfig);
+            cms.init(cmsConfig);
         })();
     }, []);
 

@@ -1,4 +1,4 @@
-export * from './project';
-export * from './technology';
-export * from './about';
-export * from './locale';
+export type { ProjectType } from './project';
+export type { TechnologyType } from './technology';
+export type { AboutType } from './about';
+export type { LocaleType, Translation } from './locale';

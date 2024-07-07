@@ -4,11 +4,10 @@ import '@fontsource/montserrat/700.css';
 import '@fontsource/montserrat/700-italic.css';
 import '~/styles/main.scss';
 import '~/styles/properties.scss';
-import { Metadata } from 'next';
-
+import type { Metadata } from 'next';
+import type { ReactNode } from 'react';
 import NetlifyIdentityWidget from '~/components/NetlifyIdentityWidget';
 import { getAbout, getServerLocale, getTranslation } from '~/utils/server';
-
 
 export async function generateMetadata(): Promise<Metadata> {
     const locale = getServerLocale();
@@ -38,8 +37,7 @@ export async function generateMetadata(): Promise<Metadata> {
     };
 }
 
-
-const RootLayout = async ({ children }: { children: React.ReactNode}) => {
+const RootLayout = ({ children }: { children: ReactNode }) => {
     return (
         <html lang="en">
             <head />
@@ -52,5 +50,3 @@ const RootLayout = async ({ children }: { children: React.ReactNode}) => {
 };
 
 export default RootLayout;
-
-

@@ -1,12 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { FC } from 'react';
-
+import type { FC } from 'react';
 import { getImageUrl } from '~/utils';
-
 import style from './style.module.scss';
-import { TechnologyProps } from './types';
-
+import type { TechnologyProps } from './types';
 
 const TechnologyItem: FC<TechnologyProps> = ({ technology }) => {
     return (
@@ -19,17 +16,10 @@ const TechnologyItem: FC<TechnologyProps> = ({ technology }) => {
         >
             <section className={style.Technology}>
                 <div className={style.image}>
-                    <Image
-                        alt={technology.title}
-                        height={75}
-                        src={getImageUrl(technology.image)}
-                        width={150}
-                    />
+                    <Image alt={technology.title} height={75} src={getImageUrl(technology.image)} width={150} />
                 </div>
                 <div className={style.content}>
-                    <h4 className={style.title}>
-                        {technology.title}
-                    </h4>
+                    <h4 className={style.title}>{technology.title}</h4>
                     <p>{technology.body}</p>
                 </div>
             </section>

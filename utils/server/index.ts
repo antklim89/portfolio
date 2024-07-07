@@ -1,8 +1,8 @@
-export * from './getLocale';
-export * from './loadManyFiles';
-export * from './loadOneFile';
-export * from './getAbout';
-export * from './getProjects';
-export * from './getTechnologies';
-export * from './getServerLocale';
-export * from './getTranslation';
+export { getLocale } from './getLocale';
+export { loadManyFiles } from './loadManyFiles';
+export { loadOneFile } from './loadOneFile';
+export { getAbout } from './getAbout';
+export { getProjects } from './getProjects';
+export { getTechnologies } from './getTechnologies';
+export { getServerLocale } from './getServerLocale';
+export { getTranslation } from './getTranslation';

@@ -1,9 +1,7 @@
 import { projectSchema } from '~/schemas';
-import { ProjectType } from '~/types';
-
+import type { ProjectType } from '~/types';
 import { getLocale } from './getLocale';
 import { loadManyFiles } from './loadManyFiles';
-
 
 export const getProjects = async (locale: string): Promise<ProjectType[]> => {
     const projectsData = await loadManyFiles('projects');

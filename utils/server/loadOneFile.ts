@@ -1,7 +1,6 @@
-import path from 'path';
+import path from 'node:path';
 
 import fs from 'fs-extra';
-
 
 export async function loadOneFile(fileDir: string, fileName: string): Promise<unknown> {
     const filesFolderPath = path.resolve(process.cwd(), 'public/content', fileDir, `${fileName}.json`);

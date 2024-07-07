@@ -1,4 +1,4 @@
-export * from './intro';
-export * from './project';
-export * from './technology';
-export * from './about';
+export { introSchema } from './intro';
+export { projectSchema } from './project';
+export { technologySchema } from './technology';
+export { aboutSchema } from './about';

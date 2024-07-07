@@ -1,4 +1,4 @@
-export * from './cls';
-export * from './getImageUrl';
-export * from './useTranslation';
-export * from './checkLocale';
+export { cls } from './cls';
+export { getImageUrl } from './getImageUrl';
+export { useTranslation } from './useTranslation';
+export { checkLocale, isLocale } from './checkLocale';

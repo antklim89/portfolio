@@ -1,8 +1,7 @@
-
-
 export function getCookie(name: string, cookies?: string): string | null {
     if (cookies) return cookies.match(new RegExp(`(^| )${name}=([^;]+)`, 'i'))?.pop() || null;
-    if (typeof window !== 'undefined') return document.cookie.match(new RegExp(`(^| )${name}=([^;]+)`, 'i'))?.pop() || null;
+    if (typeof window !== 'undefined')
+        return document.cookie.match(new RegExp(`(^| )${name}=([^;]+)`, 'i'))?.pop() || null;
     return null;
 }
 
@@ -11,10 +10,9 @@ export function hasCookie(name: string): boolean {
     return false;
 }
 
-
 export function setCookie(name: string, value: string, days = 12): void {
     const date = new Date();
-    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
     const expires = date.toUTCString();
     if (typeof window !== 'undefined') {
         document.cookie = `${name}=${value};path=/;expires=${expires}`;

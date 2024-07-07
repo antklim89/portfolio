@@ -1,5 +1,4 @@
-import { FC, useEffect } from 'react';
-
+import { type FC, useEffect } from 'react';
 
 const NetlifyIdentityWidget: FC = () => {
     useEffect(() => {
@@ -16,10 +15,7 @@ const NetlifyIdentityWidget: FC = () => {
             });
     }, []);
 
-    return (
-        <div id="netlify-identity-widget" />
-    );
+    return <div id="netlify-identity-widget" />;
 };
 
 export default NetlifyIdentityWidget;
-

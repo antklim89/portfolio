@@ -1,6 +1,5 @@
 import type { CmsCollection } from 'decap-cms-core';
 
-
 export const technologies: CmsCollection = {
     label: 'Technologies',
     name: 'technologies',

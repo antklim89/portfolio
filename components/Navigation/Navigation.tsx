@@ -1,29 +1,24 @@
 'use client';
-
 import { type ComponentProps, useEffect, useState } from 'react';
 import { FaHome } from 'react-icons/fa';
-
 import { cls, useTranslation } from '~/utils';
-
 import style from './style.module.scss';
 
-
-const Navigation = ({ className, ...props  }: ComponentProps<'section'>) => {
+const Navigation = ({ className, ...props }: ComponentProps<'section'>) => {
     const { t } = useTranslation();
 
     const [links, setLinks] = useState({
         home: { id: 'home', body: t.home, icon: <FaHome />, observed: false },
         projects: { id: 'projects', body: t.projects, observed: false },
-        technologies: { id: 'technologies', body: t.technologies , observed: false },
+        technologies: { id: 'technologies', body: t.technologies, observed: false },
         contacts: { id: 'contacts', body: t.contacts, observed: false },
     });
     const linksArray = Object.values(links);
 
-
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             for (const entry of entries) {
-                setLinks(p => ({
+                setLinks((p) => ({
                     ...p,
                     [entry.target.id]: {
                         ...p[entry.target.id as keyof typeof links],
@@ -33,25 +28,25 @@ const Navigation = ({ className, ...props  }: ComponentProps<'section'>) => {
             }
         });
 
-        linksArray.forEach(({ id }) => {
+        for (const { id } of linksArray) {
             const el = document.getElementById(id);
             if (el) observer.observe(el);
-        });
+        }
 
         return () => {
             observer.disconnect();
         };
-    }, []);
+    }, [linksArray]);
 
     return (
-        <section className={cls(style.Navigation, className)} {...props} >
-            <div className='hide-lg'>
+        <section className={cls(style.Navigation, className)} {...props}>
+            <div className="hide-lg">
                 <ul>
-                    {linksArray.map(link => (
+                    {linksArray.map((link) => (
                         <li key={link.body}>
                             <a href={`#${link.id}`}>
                                 <div style={{ paddingRight: link.observed ? 25 : '' }} />
-                                <span>{link.body}</span>
+                                <span>{link.body}</span>{' '}
                             </a>
                         </li>
                     ))}
@@ -59,7 +54,7 @@ const Navigation = ({ className, ...props  }: ComponentProps<'section'>) => {
             </div>
             <div className={cls('show-lg', style.topLinks)}>
                 <ul className="">
-                    {linksArray.map(link => (
+                    {linksArray.map((link) => (
                         <li key={link.body}>
                             <a href={`#${link.id}`}>
                                 <div style={{ paddingRight: link.observed ? 5 : '' }} />
