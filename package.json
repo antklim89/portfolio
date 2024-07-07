@@ -9,7 +9,7 @@
     "dev:typecheck": "tsc --noEmit -w --preserveWatchOutput",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "biome check --write ./app ./components ./utils ./types",
     "docker:dev": "docker compose -f docker-compose.dev.yml up",
     "docker:prod": "docker compose up",
     "docker:build": "docker compose build",
@@ -33,28 +33,16 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.8.3",
     "@types/fs-extra": "^11.0.4",
     "@types/netlify-identity-widget": "^1.9.6",
     "@types/react": "18.3.3",
-    "@typescript-eslint/eslint-plugin": "^7.10.0",
-    "@typescript-eslint/parser": "^7.10.0",
     "decap-server": "^3.0.4",
-    "eslint": "^8.57.0",
-    "eslint-config-next": "^14.2.3",
-    "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-jsx-a11y": "^6.8.0",
-    "eslint-plugin-react": "^7.34.1",
-    "eslint-plugin-react-hooks": "^4.6.2",
     "npm-run-all": "^4.1.5",
     "sass": "^1.77.2"
   },
   "license": "0BSD",
-  "keywords": [
-    "nextjs",
-    "typescript",
-    "sass",
-    "zod"
-  ],
+  "keywords": ["nextjs", "typescript", "sass", "zod"],
   "repository": {
     "type": "git",
     "url": "https://github.com/antklim89/portfolio"

@@ -1,4 +1,3 @@
-
 /** @type {import('next').NextConfig} */
 module.exports = {
     reactStrictMode: true,
@@ -10,7 +9,7 @@ module.exports = {
         URL: process.env.URL,
         GITHUB_REPO: process.env.GITHUB_REPO,
     },
-    generateBuildId: async () => {
+    generateBuildId: () => {
         return 'my-build-id';
     },
     output: 'standalone',
