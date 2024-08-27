@@ -1,14 +1,24 @@
-import type { InitOptions } from 'decap-cms-core';
-
+import type { CmsBackend, InitOptions } from 'decap-cms-core';
 import { defaultLocale, locales } from '~/constants';
-
 import { about } from './about';
 import { projects } from './projects';
 import { technologies } from './technologies';
 
 
 const SITE_URL = process.env.URL || (() => { throw new Error('URL env variable is required'); })();
-const GITHUB_REPO = process.env.GITHUB_REPO || (() => { throw new Error('GITHUB_REPO env variable is required'); })();
+
+const backend: CmsBackend =
+  process.env.NETLIFY === 'true'
+    ? {
+        name: 'git-gateway',
+        branch: 'main',
+      }
+    : {
+        name: 'github',
+        repo: process.env.REPOSITORY_URL || (() => { throw new Error('REPOSITORY_URL env variable is required'); })(),
+        branch: 'main',
+      };
+
 
 export const cmsConfig: InitOptions = {
     config: {
@@ -16,11 +26,7 @@ export const cmsConfig: InitOptions = {
 
         site_url: SITE_URL,
 
-        backend: {
-            name: 'github',
-            repo: GITHUB_REPO,
-            branch: 'main',
-        },
+        backend,
 
         i18n: {
             structure: 'single_file',
@@ -28,7 +34,7 @@ export const cmsConfig: InitOptions = {
             default_locale: defaultLocale,
         },
 
-        local_backend: process.env.NODE_ENV === 'production' ? undefined : { allowed_hosts: [new URL(SITE_URL).hostname] },
+        local_backend: true,
 
         publish_mode: 'editorial_workflow',
         media_folder: 'public/uploaded/',
