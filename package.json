@@ -18,6 +18,7 @@
   "dependencies": {
     "@fontsource/montserrat": "^5.0.18",
     "@netlify/plugin-nextjs": "^5.3.1",
+    "decap-cms": "^3.3.2",
     "decap-cms-app": "^3.1.10",
     "decap-cms-core": "^3.3.6",
     "fs-extra": "^11.2.0",
@@ -42,7 +43,12 @@
     "sass": "^1.77.2"
   },
   "license": "0BSD",
-  "keywords": ["nextjs", "typescript", "sass", "zod"],
+  "keywords": [
+    "nextjs",
+    "typescript",
+    "sass",
+    "zod"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/antklim89/portfolio"
