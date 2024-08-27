@@ -13,4 +13,4 @@ URL=http://localhost:3000
 RESEND_KEY=secret
 RESEND_TO=example@example.com
 MAIL_LOCALE=en
-GITHUB_REPO=user/reponame
+REPOSITORY_URL=user/reponame
