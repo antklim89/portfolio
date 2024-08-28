@@ -1,41 +1,12 @@
-import '@fontsource/montserrat/400.css';
 import '@fontsource/montserrat/400-italic.css';
-import '@fontsource/montserrat/700.css';
+import '@fontsource/montserrat/400.css';
 import '@fontsource/montserrat/700-italic.css';
-import '~/styles/main.scss';
-import '~/styles/properties.scss';
-import type { Metadata } from 'next';
+import '@fontsource/montserrat/700.css';
 import type { ReactNode } from 'react';
 import NetlifyIdentityWidget from '~/components/NetlifyIdentityWidget';
-import { getAbout, getServerLocale, getTranslation } from '~/utils/server';
+import '~/styles/main.scss';
+import '~/styles/properties.scss';
 
-export async function generateMetadata(): Promise<Metadata> {
-    const locale = getServerLocale();
-    const { defaultTitle } = await getTranslation(locale);
-    const { name, description, keywords } = await getAbout(locale);
-
-    return {
-        manifest: '/manifest.json',
-        title: defaultTitle,
-        description,
-        keywords,
-        authors: [{ name }],
-        creator: name,
-        twitter: {
-            card: 'summary',
-            description,
-            title: defaultTitle,
-        },
-        openGraph: {
-            type: 'website',
-            description,
-            locale,
-            title: defaultTitle,
-            url: '/',
-            siteName: defaultTitle,
-        },
-    };
-}
 
 const RootLayout = ({ children }: { children: ReactNode }) => {
     return (
