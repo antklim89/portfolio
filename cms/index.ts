@@ -5,7 +5,8 @@ import { projects } from './projects';
 import { technologies } from './technologies';
 
 
-const SITE_URL = process.env.URL || (() => { throw new Error('URL env variable is required'); })();
+const SITE_URL = process.env.URL;
+const REPOSITORY_URL =  process.env.REPOSITORY_URL;
 
 const backend: CmsBackend =
   process.env.NETLIFY === 'true'
@@ -15,7 +16,7 @@ const backend: CmsBackend =
       }
     : {
         name: 'github',
-        repo: process.env.REPOSITORY_URL || (() => { throw new Error('REPOSITORY_URL env variable is required'); })(),
+        repo: REPOSITORY_URL,
         branch: 'main',
       };
 
