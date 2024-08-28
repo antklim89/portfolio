@@ -7,7 +7,7 @@ module.exports = {
     },
     env: {
         URL: process.env.URL,
-        GITHUB_REPO: process.env.GITHUB_REPO,
+        REPOSITORY_URL: process.env.REPOSITORY_URL,
     },
     generateBuildId: () => {
         return 'my-build-id';
