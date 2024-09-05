@@ -3,7 +3,6 @@ import Link from 'next/link';
 import type { FC } from 'react';
 import style from './style.module.scss';
 import type { TechnologyProps } from './types';
-import { getImageUrl } from '@/utils';
 
 
 const TechnologyItem: FC<TechnologyProps> = ({ technology }) => {
@@ -21,7 +20,7 @@ const TechnologyItem: FC<TechnologyProps> = ({ technology }) => {
           <Image
             alt={technology.title}
             height={75}
-            src={getImageUrl(technology.image)}
+            src={technology.image}
             width={150}
           />
         </div>
