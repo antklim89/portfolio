@@ -16,7 +16,7 @@ async function Technologies({ locale, className, ...props }: { locale: LocaleTyp
       className={cls(style.Technologies, className)}
       {...props}
     >
-      <h2 className="title">{t.technologies}</h2>
+      <h2 className="title-lg">{t.technologies}</h2>
       <div className={style.list}>
         {technologies.map(technology => (
           <Technology

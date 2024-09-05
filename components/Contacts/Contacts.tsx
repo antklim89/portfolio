@@ -28,7 +28,7 @@ function Contacts({ className, ...props }: ComponentProps<'section'>) {
   return (
     <section className={cls(style.Contacts, className)} {...props}>
       <div>
-        <h3 className="title">{t.contacts}</h3>
+        <h3 className="title-lg">{t.contacts}</h3>
 
         {status === 'success' && <p className={cls(style.status, style.success)}>{t.contactSuccess}</p>}
         {status === 'error' && <p className={cls(style.status, style.error)}>{t.contactError}</p>}

@@ -43,7 +43,7 @@ async function ProjectItem({ locale, project }: { project: ProjectType; locale: 
         </div>
       </div>
       <div className={style.right}>
-        <h4 className={style.title}>{title}</h4>
+        <h3 className="title-md">{title}</h3>
         <div className={style.body}>
           <Markdown>{body}</Markdown>
         </div>

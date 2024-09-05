@@ -5,6 +5,7 @@ import { locales } from '@/lib/constants';
 import type { LocaleType } from '@/lib/types';
 import { getProjects } from '@/lib/server/dataLoaders';
 import { cls } from '@/lib/utils';
+import { getTranslation } from '@/lib/server/utils';
 
 
 export async function generateStaticParams() {
@@ -12,10 +13,12 @@ export async function generateStaticParams() {
 }
 
 async function Projects({ locale, className, ...props }: { locale: LocaleType } & ComponentProps<'section'>) {
+  const t = await getTranslation(locale);
   const projects = await getProjects(locale);
 
   return (
     <section className={cls(style.Projects, className)} {...props}>
+      <h2 className="title-lg">{t.projects}</h2>
       <div className={style.list}>
         {projects.map(project => (
           <ProjectItem key={project.title} locale={locale} project={project} />

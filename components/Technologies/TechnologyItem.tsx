@@ -16,7 +16,7 @@ const TechnologyItem: FC<TechnologyProps> = ({ technology }) => {
     >
 
       <section className={style.Technology}>
-        <div about="" className={style.image}>
+        <div className={style.image}>
           <Image
             alt={technology.title}
             height={75}
@@ -25,7 +25,7 @@ const TechnologyItem: FC<TechnologyProps> = ({ technology }) => {
           />
         </div>
         <div className={style.content}>
-          <h4 className={style.title}>{technology.title}</h4>
+          <h3 className="title-md">{technology.title}</h3>
           <p>{technology.body}</p>
         </div>
       </section>

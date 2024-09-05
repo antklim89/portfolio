@@ -42,9 +42,21 @@ a {
   object-fit: contain;
 }
 
-.title {
-  font-size: var(--font-size-xl);
-  text-transform: uppercase;
+.title-md {
+  font-size: var(--font-size-md);
+  line-height: 0.8;
   margin-bottom: var(--sp-2);
-  margin-top: var(--sp-3);
+}
+
+.title-lg {
+  font-size: var(--font-size-lg);
+  line-height: 0.8;
+  margin-bottom: var(--sp-3);
+  text-transform: uppercase;
+}
+
+.title-lg {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--sp-3);
+  text-transform: uppercase;
 }
