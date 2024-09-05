@@ -3,7 +3,7 @@ import { type AnchorHTMLAttributes, type FC, type ImgHTMLAttributes, useCallback
 import ReactMarkdown from 'react-markdown';
 import style from './style.module.scss';
 import type { MarkdownProps } from './types';
-import { getImageUrl } from '~/utils';
+import { getImageUrl } from '@/utils';
 
 
 const Markdown: FC<MarkdownProps> = ({ components, children, ...props }) => {

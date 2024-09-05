@@ -1,7 +1,7 @@
 import { getLocale } from './getLocale';
 import { loadManyFiles } from './loadManyFiles';
-import { projectSchema } from '~/schemas';
-import type { ProjectType } from '~/types';
+import { projectSchema } from '@/schemas';
+import type { ProjectType } from '@/types';
 
 
 export async function getProjects(locale: string): Promise<ProjectType[]> {

@@ -1,10 +1,10 @@
 import type { ComponentProps } from 'react';
 import ProjectItem from './ProjectItem';
 import style from './style.module.scss';
-import { locales } from '~/constants';
-import type { LocaleType } from '~/types';
-import { cls } from '~/utils';
-import { getProjects } from '~/utils/server';
+import { locales } from '@/constants';
+import type { LocaleType } from '@/types';
+import { cls } from '@/utils';
+import { getProjects } from '@/utils/server';
 
 
 export async function generateStaticParams() {

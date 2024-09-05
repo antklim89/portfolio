@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { cmsConfig } from '~/cms';
+import { cmsConfig } from '@/cms';
 
 
 export async function GET() {

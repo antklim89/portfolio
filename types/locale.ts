@@ -1,5 +1,5 @@
-import type { Locale } from '~/constants';
-import type EnLocale from '~/locales/en.json';
+import type { Locale } from '@/constants';
+import type EnLocale from '@/locales/en.json';
 
 
 export type LocaleType = keyof typeof Locale;

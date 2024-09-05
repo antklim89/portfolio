@@ -2,7 +2,7 @@
 import { type ComponentProps, type FormEventHandler, useState } from 'react';
 import { submitContactsForm } from './Contacts.action';
 import style from './style.module.scss';
-import { cls, useTranslation } from '~/utils';
+import { cls, useTranslation } from '@/utils';
 
 
 function Contacts({ className, ...props }: ComponentProps<'section'>) {

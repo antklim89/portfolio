@@ -1,12 +1,12 @@
 import style from './style.module.scss';
-import AboutDescription from '~/components/AboutDescription';
-import AboutTitle from '~/components/AboutTitle';
-import Contacts from '~/components/Contacts';
-import Footer from '~/components/Footer';
-import Navigation from '~/components/Navigation';
-import Projects from '~/components/Projects';
-import Technologies from '~/components/Technologies';
-import type { LocaleType } from '~/types';
+import AboutDescription from '@/components/AboutDescription';
+import AboutTitle from '@/components/AboutTitle';
+import Contacts from '@/components/Contacts';
+import Footer from '@/components/Footer';
+import Navigation from '@/components/Navigation';
+import Projects from '@/components/Projects';
+import Technologies from '@/components/Technologies';
+import type { LocaleType } from '@/types';
 
 
 function Main({ locale }: { locale: LocaleType }) {

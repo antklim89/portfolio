@@ -1,7 +1,7 @@
 import { type FC, createContext, useMemo } from 'react';
 
 import type { TranslationProviderProps } from './type';
-import type { LocaleType, Translation } from '~/types';
+import type { LocaleType, Translation } from '@/types';
 
 
 export const TranslationContext = createContext({} as { translation: Translation; locale: LocaleType });

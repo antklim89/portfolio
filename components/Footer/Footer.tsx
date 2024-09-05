@@ -1,8 +1,8 @@
 'use client';
 import type { ComponentProps } from 'react';
 import style from './style.module.scss';
-import { locales } from '~/constants';
-import { cls, useTranslation } from '~/utils';
+import { locales } from '@/constants';
+import { cls, useTranslation } from '@/utils';
 
 
 function Footer({ className, ...props }: ComponentProps<'section'>) {

@@ -1,6 +1,6 @@
-import Main from '~/components/Main';
-import { locales } from '~/constants';
-import type { LocaleType } from '~/types';
+import Main from '@/components/Main';
+import { locales } from '@/constants';
+import type { LocaleType } from '@/types';
 
 
 export async function generateStaticParams() {

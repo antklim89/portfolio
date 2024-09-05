@@ -1,9 +1,9 @@
 import type { ComponentProps } from 'react';
 import style from './style.module.scss';
-import Markdown from '~/components/Markdown';
-import type { LocaleType } from '~/types';
-import { cls } from '~/utils';
-import { getAbout } from '~/utils/server';
+import Markdown from '@/components/Markdown';
+import type { LocaleType } from '@/types';
+import { cls } from '@/utils';
+import { getAbout } from '@/utils/server';
 
 
 async function AboutDescription({

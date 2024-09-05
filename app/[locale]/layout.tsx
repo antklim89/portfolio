@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 import { redirect } from 'next/navigation';
 import type { ReactNode } from 'react';
-import TranslationProvider from '~/components/TranslationProvider';
-import { defaultLocale } from '~/constants';
-import { isLocale } from '~/utils';
-import { getAbout, getTranslation } from '~/utils/server';
+import TranslationProvider from '@/components/TranslationProvider';
+import { defaultLocale } from '@/constants';
+import { isLocale } from '@/utils';
+import { getAbout, getTranslation } from '@/utils/server';
 
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {

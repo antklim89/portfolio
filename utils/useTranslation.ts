@@ -3,8 +3,8 @@ import { useParams, usePathname, useRouter } from 'next/navigation';
 import { useCallback, useContext } from 'react';
 import { isLocale } from './checkLocale';
 import { setCookie } from './cookie';
-import { TranslationContext } from '~/components/TranslationProvider';
-import type { LocaleType } from '~/types';
+import { TranslationContext } from '@/components/TranslationProvider';
+import type { LocaleType } from '@/types';
 
 
 const localeRegex = /^\/(\w\w)(.*)/;

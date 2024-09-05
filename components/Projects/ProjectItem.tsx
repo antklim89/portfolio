@@ -2,10 +2,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FaEarthEurope, FaGithub } from 'react-icons/fa6';
 import style from './style.module.scss';
-import Markdown from '~/components/Markdown';
-import type { LocaleType, ProjectType } from '~/types';
-import { cls } from '~/utils';
-import { getTranslation } from '~/utils/server';
+import Markdown from '@/components/Markdown';
+import type { LocaleType, ProjectType } from '@/types';
+import { cls } from '@/utils';
+import { getTranslation } from '@/utils/server';
 
 
 async function ProjectItem({ locale, project }: { project: ProjectType; locale: LocaleType }) {

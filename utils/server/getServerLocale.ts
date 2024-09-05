@@ -1,8 +1,8 @@
 import acceptLanguage from 'accept-language';
 import { cookies, headers } from 'next/headers';
-import { defaultLocale } from '~/constants';
-import type { LocaleType } from '~/types';
-import { isLocale } from '~/utils';
+import { defaultLocale } from '@/constants';
+import type { LocaleType } from '@/types';
+import { isLocale } from '@/utils';
 
 
 export function getServerLocale(): LocaleType {

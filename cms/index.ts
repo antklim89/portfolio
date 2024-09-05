@@ -3,7 +3,7 @@ import type { CmsBackend, InitOptions } from 'decap-cms-core';
 import { about } from './about';
 import { projects } from './projects';
 import { technologies } from './technologies';
-import { defaultLocale, locales } from '~/constants';
+import { defaultLocale, locales } from '@/constants';
 
 
 const SITE_URL = process.env.URL;

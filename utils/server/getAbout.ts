@@ -1,7 +1,7 @@
 import { getLocale } from './getLocale';
 import { loadOneFile } from './loadOneFile';
-import { aboutSchema } from '~/schemas';
-import type { AboutType } from '~/types';
+import { aboutSchema } from '@/schemas';
+import type { AboutType } from '@/types';
 
 
 export async function getAbout(locale: string): Promise<AboutType> {

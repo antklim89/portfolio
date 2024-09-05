@@ -1,7 +1,7 @@
 import { getLocale } from './getLocale';
 import { loadManyFiles } from './loadManyFiles';
-import { technologySchema } from '~/schemas';
-import type { TechnologyType } from '~/types';
+import { technologySchema } from '@/schemas';
+import type { TechnologyType } from '@/types';
 
 
 export async function getTechnologies(locale: string): Promise<TechnologyType[]> {

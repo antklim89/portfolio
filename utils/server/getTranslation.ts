@@ -1,7 +1,7 @@
 import process from 'node:process';
 import path from 'node:path';
 import fs from 'fs-extra';
-import type { LocaleType, Translation } from '~/types';
+import type { LocaleType, Translation } from '@/types';
 
 
 export async function getTranslation(locale: LocaleType): Promise<Translation> {

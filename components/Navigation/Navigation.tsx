@@ -2,7 +2,7 @@
 import { type ComponentProps, useEffect, useState } from 'react';
 import { FaHome } from 'react-icons/fa';
 import style from './style.module.scss';
-import { cls, useTranslation } from '~/utils';
+import { cls, useTranslation } from '@/utils';
 
 
 function Navigation({ className, ...props }: ComponentProps<'section'>) {

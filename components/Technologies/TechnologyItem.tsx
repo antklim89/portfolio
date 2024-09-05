@@ -3,7 +3,7 @@ import Link from 'next/link';
 import type { FC } from 'react';
 import style from './style.module.scss';
 import type { TechnologyProps } from './types';
-import { getImageUrl } from '~/utils';
+import { getImageUrl } from '@/utils';
 
 
 const TechnologyItem: FC<TechnologyProps> = ({ technology }) => {
