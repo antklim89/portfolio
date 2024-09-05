@@ -23,7 +23,7 @@
     "dev:typecheck": "tsc --noEmit -w --preserveWatchOutput",
     "build": "next build",
     "start": "next start",
-    "lint": "biome check --write ./app ./components ./utils ./types",
+    "lint": "eslint . --fix",
     "docker:dev": "docker compose -f docker-compose.dev.yml up",
     "docker:prod": "docker compose up",
     "docker:build": "docker compose build",
@@ -32,6 +32,7 @@
   "dependencies": {
     "@fontsource/montserrat": "^5.0.19",
     "@netlify/plugin-nextjs": "^5.7.0",
+    "accept-language": "^3.0.20",
     "decap-cms": "^3.3.3",
     "decap-cms-app": "^3.3.3",
     "decap-cms-core": "^3.4.2",
