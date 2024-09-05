@@ -1,12 +1,13 @@
-import { aboutSchema } from '~/schemas';
-import type { AboutType } from '~/types';
 import { getLocale } from './getLocale';
 import { loadOneFile } from './loadOneFile';
+import { aboutSchema } from '~/schemas';
+import type { AboutType } from '~/types';
 
-export const getAbout = async (locale: string): Promise<AboutType> => {
-    const about = await loadOneFile('about', 'index');
-    const aboutLocale = getLocale(about, locale);
-    const result = await aboutSchema.parseAsync(aboutLocale);
 
-    return result;
-};
+export async function getAbout(locale: string): Promise<AboutType> {
+  const about = await loadOneFile('about', 'index');
+  const aboutLocale = getLocale(about, locale);
+  const result = await aboutSchema.parseAsync(aboutLocale);
+
+  return result;
+}

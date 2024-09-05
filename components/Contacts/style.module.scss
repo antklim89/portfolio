@@ -1,67 +1,67 @@
-     .Contacts {
-          display: flex;
-          flex-direction: column;
-          padding: var(--sp-2);
-          height: 100dvh;
-          height: 100vh;
-          align-items: center;
-          justify-content: center;
+.Contacts {
+  display: flex;
+  flex-direction: column;
+  padding: var(--sp-2);
+  height: 100dvh;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
 
-          &>* {
-               width: 100%;
-          }
+  & > * {
+    width: 100%;
+  }
 
-          .form {
-               display: flex;
-               flex-direction: column;
-          }
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
 
-          input,
-          textarea {
-               width: 100%;
-               margin-bottom: var(--sp-2);
-               resize: none;
-               padding: var(--sp-1);
-               border: 1px solid var(--dark-clr);
-               border-radius: 0.2rem;
+  input,
+  textarea {
+    width: 100%;
+    margin-bottom: var(--sp-2);
+    resize: none;
+    padding: var(--sp-1);
+    border: 1px solid var(--dark-clr);
+    border-radius: 0.2rem;
 
-               &:disabled {
-                    background: grey;
-                    cursor: not-allowed;
-               }
-          }
+    &:disabled {
+      background: grey;
+      cursor: not-allowed;
+    }
+  }
 
-          button {
-               padding: var(--sp-1);
-               border: none;
-               cursor: pointer;
-               background: var(--primary-clr);
-               color: var(--light-clr);
-               transition: 200ms;
+  button {
+    padding: var(--sp-1);
+    border: none;
+    cursor: pointer;
+    background: var(--primary-clr);
+    color: var(--light-clr);
+    transition: 200ms;
 
-               &:hover {
-                    background: var(--primary-dark-clr)
-               }
+    &:hover {
+      background: var(--primary-dark-clr);
+    }
 
-               &:disabled {
-                    background: grey;
-                    color: var(--light-clr);
-                    cursor: not-allowed;
-               }
-          }
+    &:disabled {
+      background: grey;
+      color: var(--light-clr);
+      cursor: not-allowed;
+    }
+  }
 
-          .status {
-               font-size: var(--font-size-lg);
-               padding-bottom: var(--sp-2);
-               font-weight: 600;
-               text-align: center;
+  .status {
+    font-size: var(--font-size-lg);
+    padding-bottom: var(--sp-2);
+    font-weight: 600;
+    text-align: center;
 
-               &.success {
-                    color: forestgreen;
-               }
+    &.success {
+      color: forestgreen;
+    }
 
-               &.error {
-                    color: crimson;
-               }
-          }
-     }
+    &.error {
+      color: crimson;
+    }
+  }
+}

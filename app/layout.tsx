@@ -8,16 +8,16 @@ import '~/styles/main.scss';
 import '~/styles/properties.scss';
 
 
-const RootLayout = ({ children }: { children: ReactNode }) => {
-    return (
-        <html lang="en">
-            <head />
-            <body>
-                {children}
-                <NetlifyIdentityWidget />
-            </body>
-        </html>
-    );
-};
+function RootLayout({ children }: { children: ReactNode }) {
+  return (
+    <html lang="en">
+      <head />
+      <body>
+        {children}
+        <NetlifyIdentityWidget />
+      </body>
+    </html>
+  );
+}
 
 export default RootLayout;

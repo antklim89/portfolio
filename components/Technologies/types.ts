@@ -1,9 +1,10 @@
 import type { TechnologyType } from '~/types';
 
+
 export interface TechnologiesProps {
-    technologies: TechnologyType[];
+  technologies: TechnologyType[];
 }
 
 export interface TechnologyProps {
-    technology: TechnologyType;
+  technology: TechnologyType;
 }

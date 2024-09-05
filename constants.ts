@@ -1,6 +1,6 @@
 export const Locale = {
-    en: 'en',
-    ru: 'ru',
+  en: 'en',
+  ru: 'ru',
 } as const;
 
 export const defaultLocale = Locale.en;

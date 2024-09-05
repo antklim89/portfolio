@@ -1,4 +1,4 @@
-version: "3.8"
+version: '3.8'
 
 services:
   client:
@@ -10,7 +10,7 @@ services:
     restart: unless-stopped
     container_name: portfolio
     ports:
-      - "${PORT:-3000}:3000"
+      - '${PORT:-3000}:3000'
     environment:
       URL: ${URL}
       RESEND_KEY: ${RESEND_KEY}

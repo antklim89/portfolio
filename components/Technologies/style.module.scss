@@ -1,44 +1,42 @@
-
-
 .Technologies {
-     .list {
-          display: flex;
-          flex-direction: column;
-          gap: var(--sp-2);
-     }
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-2);
+  }
 }
 
 .Technology {
-     display: flex;
-     align-items: center;
-     gap: var(--sp-2);
-     width: 100%;
-     padding: var(--sp-2);
-     border: 1px solid transparent;
- 
-     &:hover {
-         background: rgba(255, 255, 255, 0.08);
-         border-radius: 16px;
-         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-         border: 1px solid rgba(255, 255, 255, 0.24);
-     }
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  width: 100%;
+  padding: var(--sp-2);
+  border: 1px solid transparent;
 
-     .image {
-          flex: 1 0 0;
-     }
+  &:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.24);
+  }
 
-     .content {
-          flex: 3 0 0;
-          color: var(--text-clr);
-     }
+  .image {
+    flex: 1 0 0;
+  }
 
-     .title {
-          font-size: var(--font-size-md);
-          line-height: 0.6;
-          margin-bottom: var(--sp-2);
-      }
+  .content {
+    flex: 3 0 0;
+    color: var(--text-clr);
+  }
+
+  .title {
+    font-size: var(--font-size-md);
+    line-height: 0.6;
+    margin-bottom: var(--sp-2);
+  }
 }
 
 .linkWrapper {
-     display: flex;
+  display: flex;
 }
