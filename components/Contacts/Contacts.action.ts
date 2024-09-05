@@ -2,7 +2,7 @@
 import process from 'node:process';
 import { Resend } from 'resend';
 import { z } from 'zod';
-import { checkLocale } from '@/utils';
+import { getCorrectLocale } from '@/utils';
 import { getTranslation } from '@/utils/server';
 
 
@@ -13,7 +13,7 @@ const MAIL_LOCALE = z.string().optional().parse(process.env.MAIL_LOCALE);
 const resend = new Resend(RESEND_KEY);
 
 export async function submitContactsForm(formData: FormData) {
-  const locale = checkLocale(MAIL_LOCALE);
+  const locale = getCorrectLocale(MAIL_LOCALE);
   const subject = formData.get('subject')?.toString() ?? '';
   const text = formData.get('text')?.toString() ?? '';
   const name = formData.get('name')?.toString() ?? '';

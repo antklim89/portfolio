@@ -1,7 +1,7 @@
 'use client';
 import { useParams, usePathname, useRouter } from 'next/navigation';
 import { useCallback, useContext } from 'react';
-import { isLocale } from './checkLocale';
+import { isCorrectLocale } from './checkLocale';
 import { setCookie } from './cookie';
 import { TranslationContext } from '@/components/TranslationProvider';
 import type { LocaleType } from '@/types';
@@ -17,7 +17,7 @@ export function useTranslation() {
 
   const changeLocale = useCallback(
     (newLocale: LocaleType) => {
-      if (isLocale(oldLocale) && isLocale(newLocale)) {
+      if (isCorrectLocale(oldLocale) && isCorrectLocale(newLocale)) {
         const newPath = pathname.replace(localeRegex, `/${newLocale}$2`);
         setCookie('locale', newLocale);
         router.replace(newPath);
