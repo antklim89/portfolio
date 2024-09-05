@@ -2,8 +2,9 @@ import type { ComponentProps } from 'react';
 import Technology from './TechnologyItem';
 import style from './style.module.scss';
 import type { LocaleType } from '@/types';
-import { cls } from '@/utils';
-import { getTechnologies, getTranslation } from '@/utils/server';
+import { getTechnologies } from '@/lib/server/dataLoaders';
+import { getTranslation } from '@/lib/server/utils';
+import { cls } from '@/lib/utils';
 
 
 async function Technologies({ locale, className, ...props }: { locale: LocaleType } & ComponentProps<'section'>) {

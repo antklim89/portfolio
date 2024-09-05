@@ -2,8 +2,8 @@ import type { ComponentProps } from 'react';
 import style from './style.module.scss';
 import Markdown from '@/components/Markdown';
 import type { LocaleType } from '@/types';
-import { cls } from '@/utils';
-import { getAbout } from '@/utils/server';
+import { getAbout } from '@/lib/server/dataLoaders';
+import { cls } from '@/lib/utils';
 
 
 async function AboutDescription({

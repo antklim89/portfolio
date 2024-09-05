@@ -3,8 +3,8 @@ import ProjectItem from './ProjectItem';
 import style from './style.module.scss';
 import { locales } from '@/constants';
 import type { LocaleType } from '@/types';
-import { cls } from '@/utils';
-import { getProjects } from '@/utils/server';
+import { getProjects } from '@/lib/server/dataLoaders';
+import { cls } from '@/lib/utils';
 
 
 export async function generateStaticParams() {

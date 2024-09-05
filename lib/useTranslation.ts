@@ -1,8 +1,7 @@
 'use client';
 import { useParams, usePathname, useRouter } from 'next/navigation';
 import { useCallback, useContext } from 'react';
-import { isCorrectLocale } from './checkLocale';
-import { setCookie } from './cookie';
+import { isCorrectLocale, setCookie } from './utils';
 import { TranslationContext } from '@/components/TranslationProvider';
 import type { LocaleType } from '@/types';
 

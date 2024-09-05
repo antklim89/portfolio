@@ -1,5 +1,5 @@
 import { redirect } from 'next/navigation';
-import { getServerLocale } from '@/utils/server';
+import { getServerLocale } from '@/lib/server/utils';
 
 
 function HomePage() {
