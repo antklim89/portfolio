@@ -45,7 +45,6 @@ async function RootLayout({ children, params }: { children: ReactNode; params: {
 
   return (
     <TranslationProvider locale={locale} translation={translation}>
-      <title>{translation.defaultTitle}</title>
       {children}
     </TranslationProvider>
   );
