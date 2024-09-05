@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { FaEarthEurope, FaGithub } from 'react-icons/fa6';
 import style from './style.module.scss';
 import Markdown from '@/components/Markdown';
-import type { LocaleType, ProjectType } from '@/types';
+import type { LocaleType, ProjectType } from '@/lib/types';
 import { getTranslation } from '@/lib/server/utils';
 import { cls } from '@/lib/utils';
 

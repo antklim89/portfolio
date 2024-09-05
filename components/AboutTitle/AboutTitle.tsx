@@ -1,7 +1,7 @@
 import type { ComponentProps } from 'react';
 import style from './style.module.scss';
 import Markdown from '@/components/Markdown';
-import type { LocaleType } from '@/types';
+import type { LocaleType } from '@/lib/types';
 import { getAbout } from '@/lib/server/dataLoaders';
 import { cls } from '@/lib/utils';
 

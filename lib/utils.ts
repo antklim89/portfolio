@@ -1,5 +1,5 @@
-import { defaultLocale, locales } from '@/constants';
-import type { LocaleType } from '@/types';
+import { defaultLocale, locales } from '@/lib/constants';
+import type { LocaleType } from '@/lib/types';
 
 
 export function isCorrectLocale(locale: unknown): locale is LocaleType {

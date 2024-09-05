@@ -1,8 +1,8 @@
 import type { ComponentProps } from 'react';
 import ProjectItem from './ProjectItem';
 import style from './style.module.scss';
-import { locales } from '@/constants';
-import type { LocaleType } from '@/types';
+import { locales } from '@/lib/constants';
+import type { LocaleType } from '@/lib/types';
 import { getProjects } from '@/lib/server/dataLoaders';
 import { cls } from '@/lib/utils';
 

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { redirect } from 'next/navigation';
 import type { ReactNode } from 'react';
 import TranslationProvider from '@/components/TranslationProvider';
-import { defaultLocale } from '@/constants';
+import { defaultLocale } from '@/lib/constants';
 import { isCorrectLocale } from '@/lib/utils';
 import { getTranslation } from '@/lib/server/utils';
 import { getAbout } from '@/lib/server/dataLoaders';

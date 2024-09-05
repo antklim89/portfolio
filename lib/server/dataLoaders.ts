@@ -2,8 +2,8 @@ import path from 'node:path';
 import process from 'node:process';
 import fs from 'fs-extra';
 import { type ZodType, z } from 'zod';
-import { aboutSchema, projectSchema, technologySchema } from '@/schemas';
-import type { AboutType, ProjectType, TechnologyType } from '@/types';
+import { aboutSchema, projectSchema, technologySchema } from '@/lib/schemas';
+import type { AboutType, ProjectType, TechnologyType } from '@/lib/types';
 
 
 export function mergeLocales<T extends ZodType<unknown>>(data: unknown, locale: string): z.infer<T> {

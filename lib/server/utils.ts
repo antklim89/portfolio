@@ -3,8 +3,8 @@ import path from 'node:path';
 import fs from 'fs-extra';
 import acceptLanguage from 'accept-language';
 import { cookies, headers } from 'next/headers';
-import type { LocaleType, Translation } from '@/types';
-import { defaultLocale } from '@/constants';
+import type { LocaleType, Translation } from '@/lib/types';
+import { defaultLocale } from '@/lib/constants';
 import { isCorrectLocale } from '@/lib/utils';
 
 

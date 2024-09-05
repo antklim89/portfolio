@@ -1,4 +1,4 @@
-import type { ProjectType } from '@/types';
+import type { ProjectType } from '@/lib/types';
 
 
 export interface ProjectsProps {

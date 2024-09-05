@@ -1,4 +1,4 @@
-import type { TechnologyType } from '@/types';
+import type { TechnologyType } from '@/lib/types';
 
 
 export interface TechnologiesProps {
