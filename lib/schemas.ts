@@ -9,11 +9,6 @@ export const aboutSchema = z.object({
   keywords: z.string().array(),
 });
 
-export const introSchema = z.object({
-  title: z.string(),
-  text: z.string(),
-});
-
 export const projectSchema = z.object({
   technologies: z.array(z.string()).min(1),
   body: z.string(),
