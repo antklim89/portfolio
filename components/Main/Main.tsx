@@ -12,7 +12,7 @@ import type { LocaleType } from '@/lib/types';
 function Main({ locale }: { locale: LocaleType }) {
   return (
     <div className={style.Main}>
-      <div id="home" />
+      <div id="home" style={{ height: 0 }} />
       <aside className="hide-lg">
         <div>
           <AboutTitle locale={locale} />
