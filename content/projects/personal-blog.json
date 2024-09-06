@@ -11,7 +11,7 @@
       "framer-motion"
     ],
     "title": "Personal blog",
-    "image": "/content/projects/images/personal_blog.png",
+    "image": "/images/projects/personal_blog.png",
     "link": "https://personal-blog-dev.netlify.app/",
     "description": "Simple clothing shop"
   },

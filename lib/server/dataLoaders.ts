@@ -7,7 +7,7 @@ import { aboutSchema, projectSchema, technologySchema } from '@/lib/schemas';
 import type { AboutType, LocaleType, ProjectType, TechnologyType } from '@/lib/types';
 
 
-const BASE_CONTENT_PATH = path.resolve(process.cwd(), 'public/content');
+const BASE_CONTENT_PATH = path.resolve(process.cwd(), 'content');
 
 const contentLocaleSchema = z.record(z.enum(locales as [typeof locales[number]]), z.record(z.unknown()));
 
@@ -17,7 +17,7 @@ export function mergeLocales<T extends ZodType<unknown>>(data: unknown, locale: 
 }
 
 export async function getAbout(locale: LocaleType): Promise<AboutType> {
-  const data = await loadOneFile('about/index');
+  const data = await loadOneFile('about');
   const dataLocale = mergeLocales(data, locale);
   const result = await aboutSchema.parseAsync(dataLocale);
 

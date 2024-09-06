@@ -4,9 +4,9 @@ import type { CmsCollectionFile } from 'decap-cms-core';
 export const about: CmsCollectionFile = {
   label: 'About',
   name: 'about',
-  file: 'public/content/about/index.json',
-  media_folder: 'images',
-  public_folder: '/content/about/images',
+  file: '/content/about.json',
+  media_folder: '{{media_folder}}/about',
+  public_folder: '{{public_folder}}/about',
   i18n: true,
   fields: [
     {

@@ -10,7 +10,7 @@
       "sass",
       "typescript"
     ],
-    "image": "/content/projects/images/quiz-app-home.webp",
+    "image": "/images/projects/quiz-app-home.webp",
     "body": "A small quiz developed with **[Vue](https://vuejs.org/)**.\n\nWritten using [Typescript](https://www.typescriptlang.org/) and [Sass](https://sass-scss.ru/).\n\nQuestions are taken from the API [quizapi.io](https://quizapi.io)."
   },
   "ru": {

@@ -4,10 +4,10 @@ import type { CmsCollection } from 'decap-cms-core';
 export const projects: CmsCollection = {
   label: 'Projects',
   name: 'projects',
-  folder: 'public/content/projects',
+  folder: '/content/projects',
   extension: 'json',
-  media_folder: 'images',
-  public_folder: '/content/projects/images',
+  media_folder: '{{media_folder}}/projects',
+  public_folder: '{{public_folder}}/projects',
   create: true,
   slug: '{{fields.title}}',
   editor: { preview: false },

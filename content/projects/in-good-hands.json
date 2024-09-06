@@ -12,7 +12,7 @@
     ],
     "link": "https://in-good-hand-dev.netlify.app/",
     "github": "https://github.com/antklim89/in_good_hands",
-    "image": "/content/projects/images/in_good_hands_home.webp",
+    "image": "/images/projects/in_good_hands_home.webp",
     "body": "A website with ads for the sale of pets, made with the **[NextJS](https://nextjs.org/)** framework on the client and **[Fastify](https://www.fastify.io/)** and **[Prisma ORM](https://www.prisma.io/)** on the server.\n\nThe visual style is created using the **[Chakra-UI](https://chakra-ui.com/)** library."
   },
   "ru": {

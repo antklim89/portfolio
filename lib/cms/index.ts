@@ -43,7 +43,9 @@ export const cmsConfig: InitOptions = {
     },
 
     publish_mode: 'editorial_workflow',
-    media_folder: 'public/uploaded/',
+    media_folder: '/public/images',
+    public_folder: '/images',
+
     collections: [
       projects,
       technologies,

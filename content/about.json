@@ -1,7 +1,7 @@
 {
   "en": {
     "description": "I create interactive and visually appealing projects in HTML, CSS, JavaScript, React, Node with full accessibility and SEO optimization.\n\nMy skills include:\n- Development of websites using HTML, CSS and JavaScript\n- Using frameworks such as React JS, Gatsby and NextJS to create user interfaces\n- Integrating web services such as Strapi and Supabase into web applications\n- Creating your own server based on Express, Fastify or NestJS\n- Working with TypeScript to improve performance and code readability\n- Using libraries such as Chakra UI, Material-UI and Tailwind for code styling and optimization",
-    "photo": "/content/about/images/photo.jpg",
+    "photo": "/images/about/images/photo.jpg",
     "title": "## Anton Klimenkov\n### Web developer\n# Web innovation with a passion to details",
     "keywords": [
       "portfolio",

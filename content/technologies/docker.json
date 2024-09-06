@@ -3,7 +3,7 @@
     "body": "Docker helps developers build, share, run, and verify applications anywhere — without tedious environment configuration or management.",
     "title": "Docker",
     "link": "https://www.docker.com/",
-    "image": "/content/technologies/images/docker-logo.svg"
+    "image": "/images/technologies/docker-logo.svg"
   },
   "ru": {
     "body": "Docker помогает разработчикам создавать, предоставлять общий доступ, запускать и проверять приложения в любом месте — без утомительной настройки среды или управления ею.",

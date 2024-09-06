@@ -4,10 +4,10 @@ import type { CmsCollection } from 'decap-cms-core';
 export const technologies: CmsCollection = {
   label: 'Technologies',
   name: 'technologies',
-  folder: 'public/content/technologies',
+  folder: '/content/technologies',
   extension: 'json',
-  media_folder: 'images',
-  public_folder: '/content/technologies/images',
+  media_folder: '{{media_folder}}/technologies',
+  public_folder: '{{public_folder}}/technologies',
   create: true,
   slug: '{{fields.title}}',
   editor: { preview: true },

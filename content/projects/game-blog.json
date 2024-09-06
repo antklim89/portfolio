@@ -10,7 +10,7 @@
       "netlifycms",
       "next"
     ],
-    "image": "/content/projects/images/game-blog-home.webp",
+    "image": "/images/projects/game-blog-home.webp",
     "body": "A simple gaming blog powered by **[NextJS](https://nextjs.org/)**.\n\nThe content management system [Netlifycms](https://www.netlifycms.org/) is used to create and store messages. The site is completely static.\n\nThe visual style is created using the [Chakra-UI](https://chakra-ui.com/) library."
   },
   "ru": {
