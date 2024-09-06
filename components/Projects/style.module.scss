@@ -1,3 +1,5 @@
+// @use '@/styles/properties' as *;
+
 .Projects {
   margin: var(--sp-6) 0;
 
@@ -9,7 +11,6 @@
 }
 
 .ProjectItem {
-  --image-width: 150px;
   display: flex;
   padding: var(--sp-1);
   transition: 100ms;
@@ -29,7 +30,9 @@
     img {
       box-shadow: 0px 0px 5px 2px var(--primary-clr);
       align-self: flex-start;
-      width: var(--image-width);
+      aspect-ratio: 16/9;
+      width: 100%;
+      height: auto;
     }
   }
 

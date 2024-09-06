@@ -21,7 +21,7 @@ const TechnologyItem: FC<TechnologyProps> = ({ technology }) => {
             alt={technology.title}
             height={75}
             src={technology.image}
-            width={150}
+            width={75}
           />
         </div>
         <div className={style.content}>

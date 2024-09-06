@@ -23,12 +23,14 @@ async function ProjectItem({ locale, project }: { project: ProjectType; locale: 
   return (
     <section className={style.ProjectItem}>
       <div className={style.left}>
-        <div className={cls(style.image)}>
+        <div
+          className={cls(style.image)}
+        >
           <Image
             alt={title}
-            height={75}
+            height={810 / 5}
             src={image}
-            width={150}
+            width={1440 / 5}
           />
         </div>
         <div className={style.links}>
