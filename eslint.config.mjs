@@ -35,7 +35,7 @@ export default antfu(
     },
 
     ignores: [
-      'public',
+      'content',
       '**/node_modules/**',
       '**/build/**',
       '**/out/**',
