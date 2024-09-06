@@ -19,7 +19,7 @@ export function useTranslation() {
       if (isCorrectLocale(oldLocale) && isCorrectLocale(newLocale)) {
         const newPath = pathname.replace(localeRegex, `/${newLocale}$2`);
         setCookie('locale', newLocale);
-        router.replace(newPath);
+        router.replace(newPath, { scroll: false });
       }
     },
     [pathname, router, oldLocale],
