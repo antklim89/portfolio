@@ -8,6 +8,7 @@ import { defaultLocale, locales } from '@/lib/constants';
 
 const SITE_URL = process.env.URL;
 const REPOSITORY_URL = process.env.REPOSITORY_URL;
+const URL_HOSTNAME = new URL(process.env.URL ?? 'http://localhost:3000').hostname;
 
 const backend: CmsBackend
   = process.env.NETLIFY === 'true'
@@ -36,7 +37,10 @@ export const cmsConfig: InitOptions = {
       default_locale: defaultLocale,
     },
 
-    local_backend: true,
+    local_backend: {
+      url: `http://${URL_HOSTNAME}:8081/api/v1`,
+      allowed_hosts: [URL_HOSTNAME],
+    },
 
     publish_mode: 'editorial_workflow',
     media_folder: 'public/uploaded/',
