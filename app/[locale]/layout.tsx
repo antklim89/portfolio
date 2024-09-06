@@ -5,7 +5,7 @@ import TranslationProvider from '@/components/TranslationProvider';
 import { defaultLocale } from '@/lib/constants';
 import { isCorrectLocale } from '@/lib/utils';
 import { getTranslation } from '@/lib/server/utils';
-import { getAbout } from '@/lib/server/dataLoaders';
+import { getAbout, getTechnologies } from '@/lib/server/dataLoaders';
 
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
@@ -13,12 +13,14 @@ export async function generateMetadata({ params: { locale } }: { params: { local
 
   const { defaultTitle } = await getTranslation(locale);
   const { name, description, keywords } = await getAbout(locale);
+  const technologies = await getTechnologies(locale);
+  const technologiesKeywords = technologies.map(i => i.title);
 
   return {
     manifest: '/manifest.json',
     title: defaultTitle,
     description,
-    keywords,
+    keywords: [...keywords, ...technologiesKeywords],
     authors: [{ name }],
     creator: name,
     twitter: {
