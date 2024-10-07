@@ -1,6 +1,6 @@
 {
   "en": {
-    "body": "A basic clothes store with a shopping cart and product search functionality. Products are categorized into various categories.\n\nThe platform was developed using [React](https://react.dev/) and [NextJs](https://nextjs.org/), with content management handled by [DecapCMS](https://decapcms.org/). The visual design was created using [Tailwind](https://tailwindcss.com/) and [Shadcn/ui](https://ui.shadcn.com/) libraries.",
+    "body": "This clothing store offers visitors a truly innovative space where everyone can find something to their liking. The range of products is conveniently divided into categories, which greatly facilitates the search and selection.\n\nThe platform is based on modern [React](https://react.dev/) фтв [NextJs](https://nextjs.org/) technologies. The site is completely static, which ensures high download speed.\n\nContent management is carried out using [DecapCMS](https://decapcms.org/), a system that allows you to create content without using a server and database.\n\nThe visual design of the store is designed using modern [Tailwind](https://tailwindcss.com/) and [Shadcn/ui](https://ui.shadcn.com/) libraries, which gives it a modern and attractive look.",
     "github": "https://github.com/antklim89/cozy_clothes",
     "technologies": [
       "react",
@@ -17,7 +17,7 @@
     "description": "Simple clothing shop"
   },
   "ru": {
-    "body": "Обычный магазин одежды с корзиной покупок и функцией поиска товаров. Товары разделены на различные категории.\n\nПлатформа была разработана с использованием [React](https://react.dev/) и [NextJs](https://nextjs.org/), а управление контентом осуществлялось [DecapCMS](https://decapcms.org/). Визуальный дизайн был создан с использованием библиотек [Tailwind](https://tailwindcss.com/) и [Shadcn/ui](https://ui.shadcn.com/).\n",
+    "body": "Этот магазин одежды предлагает посетителям поистине инновационное пространство, где каждый сможет найти что-то по душе. Ассортимент товаров удобно разделён на категории, что значительно облегчает поиск и выбор.\n\nВ основе платформы лежат современные технологии [React](https://react.dev/) и [NextJs](https://nextjs.org/). Сайт полностью статичен, что обеспечивает высокую скорость загрузки.\n\nУправление контентом осуществляется с помощью [DecapCMS](https://decapcms.org/) — системы, которая позволяет создавать контент без использования сервера и базы данных.\n\nВизуальный дизайн магазина разработан с использованием современных библиотек [Tailwind](https://tailwindcss.com/) и [Shadcn/ui](https://ui.shadcn.com/), что придаёт ему современный и привлекательный вид.",
     "title": "Магазин одежды",
     "description": "Простой магазин одежды"
   }

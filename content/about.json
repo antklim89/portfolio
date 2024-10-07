@@ -1,6 +1,6 @@
 {
   "en": {
-    "description": "I create interactive and visually appealing projects in HTML, CSS, JavaScript, React, Node with full accessibility and SEO optimization.\n\nMy skills include:\n- Development of websites using HTML, CSS and JavaScript\n- Using frameworks such as React JS, Gatsby and NextJS to create user interfaces\n- Integrating web services such as Strapi and Supabase into web applications\n- Creating your own server based on Express, Fastify or NestJS\n- Working with TypeScript to improve performance and code readability\n- Using libraries such as Chakra UI, Material-UI and Tailwind for code styling and optimization",
+    "description": "I create attractive and interactive web projects using advanced web development technologies. In my work, I use HTML, CSS, JavaScript, React and Node.js, providing high accessibility, adaptability and SEO optimization.\nMy skills include:\n* website development using HTML, CSS and JavaScript;\n* using modern frameworks such as React, Gatsby and Next to create user interfaces;\n* integration of web services such as Strap and Supabase into web applications;\n* create your own server based on Express, Fastify or NestsJS;\n* using TypeScript to improve code performance and readability;\n* using libraries such as Chakra UI, MUI, Shadcn/ui and Tailwind for styling.",
     "photo": "/images/about/images/photo.jpg",
     "title": "## Anton Klimenkov\n### Web developer\n# Web innovation with a passion to details",
     "keywords": [
@@ -21,7 +21,7 @@
     "name": "Anton Klimenkov"
   },
   "ru": {
-    "description": "Создаю интерактивные и визуально привлекательные проекты на HTML, CSS, JavaScript, React, Node с полной доступностью и СЕО оптимизацией. \n\nМои навыки включают в себя:\n- Разработка веб-сайтов с использованием HTML, CSS и JavaScript\n- Использование фреймворков, таких как React JS, Gatsby и NextJS для создания пользовательских интерфейсов\n- Интеграция веб сервисов, таких как Strapi и Supabase в веб-приложения\n- Создание собственного сервера на основе Express, Fastify или NestJS\n- Работа с TypeScript для повышения производительности и читаемости кода\n- Использование библиотек, таких как Chakra UI, Material-UI и Tailwind для стилизации и оптимизации кода",
+    "description": "Я создаю привлекательные и интерактивные веб-проекты, используя передовые технологии веб-разработки. В своей работе я применяю HTML, CSS, JavaScript, React и Node.js, обеспечивая высокую доступность, адаптивность и SEO-оптимизацию.\nМои навыки включают:\n* разработка веб-сайтов с использованием HTML, CSS и JavaScript;\n* применение современных фреймворков, таких как React, Gatsby и Next, для создания пользовательских интерфейсов;\n* интеграция веб-сервисов, таких как Strapi и Supabase, в веб-приложения;\n* создание собственного сервера на основе Express, Fastify или NestsJS;\n* использование TypeScript для повышения производительности и читаемости кода;\n* использование таких библиотек, как ChakraUI, MUI, Shadcn/ui и Tailwind, для стилизации.\n",
     "title": "## Антон Клименков\n### Веб-разработчик.\n# Веб инновации с любовью к деталям\n\n",
     "keywords": [
       "web dev",
