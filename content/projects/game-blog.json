@@ -6,15 +6,15 @@
     "technologies": [
       "react",
       "typescript",
-      "material-ui",
-      "netlifycms",
-      "next"
+      "mui",
+      "decap-cms",
+      "nextjs"
     ],
-    "image": "/images/projects/game-blog-home.webp",
-    "body": "A simple gaming blog powered by **[NextJS](https://nextjs.org/)**.\n\nThe content management system [Netlifycms](https://www.netlifycms.org/) is used to create and store messages. The site is completely static.\n\nThe visual style is created using the [Chakra-UI](https://chakra-ui.com/) library."
+    "image": "/images/projects/game-blog-home.png",
+    "body": "This is a blog about games, where they write news and reviews. It was made with the help of new technologies and tools.\n\nThe platform is based on the use of [React](https://react.dev/) and [NextJS](https://nextjs.org/). The site is completely static, which allows for high download speeds.\n\nContent management is carried out using [DecapCMS](https://decapcms.org/), which allows you to create content without using a server and database.\n\nThe visual design of the blog is developed using the [MUI](https://mui.com/) library, which allows you to create an attractive and modern interface."
   },
   "ru": {
     "title": "Игровой Блог",
-    "body": "Простой игровой блог, разработанный на **[NextJS](https://nextjs.org/)**.\n\nИспользуется система управления контентом [Netlifycms](https://www.netlifycms.org/) для создания и хранения сообщений. Сайт полностью статический.\n\nВизуальный стиль создается с использованием библиотеки [Chakra-UI](https://chakra-ui.com/)."
+    "body": "Это блог про игры, где пишут новости и отзывы. Его сделали с помощью новых технологий и инструментов. \n\nВ основе платформы лежит использование [React](https://react.dev/) и [NextJS](https://nextjs.org/). Сайт полностью статический, что позволяет обеспечить высокую скорость загрузки. \n\nУправление контентом осуществляется с помощью [DecapCMS](https://decapcms.org/), что позволяет создавать контент без использования сервера и базы данных.\n\nВизуальный дизайн блога разработан с использованием библиотеки [MUI](https://mui.com/), что позволяет создать привлекательный и современный интерфейс.\n"
   }
 }
