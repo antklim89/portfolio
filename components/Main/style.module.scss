@@ -1,13 +1,11 @@
 .Main {
   --aside-width: 320px;
-
   position: relative;
   display: flex;
-  gap: var(--sp-2);
   width: 100%;
   margin: 0 auto;
   max-width: var(--container-width);
-  padding: 0 var(--sp-4);
+  padding: 0 var(--sp-3);
 
   > main,
   > aside {
@@ -16,6 +14,7 @@
 
   > aside {
     flex: 1 0 var(--aside-width);
+    margin-right: var(--sp-2);
 
     > div {
       width: var(--aside-width);
