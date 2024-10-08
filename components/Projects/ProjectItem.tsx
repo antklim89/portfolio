@@ -23,8 +23,11 @@ async function ProjectItem({ locale, project }: { project: ProjectType; locale: 
   return (
     <section className={style.ProjectItem}>
       <div className={style.left}>
-        <div
+        <Link
           className={cls(style.image)}
+          href={link}
+          rel="noopener noreferrer"
+          target="_blank"
         >
           <Image
             alt={title}
@@ -32,7 +35,7 @@ async function ProjectItem({ locale, project }: { project: ProjectType; locale: 
             src={image}
             width={1440 / 5}
           />
-        </div>
+        </Link>
         <div className={style.links}>
           <Link href={github} rel="noopener noreferrer" target="_blank">
             <FaGithub size="32px" />
