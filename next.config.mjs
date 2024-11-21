@@ -15,5 +15,8 @@ export default {
   generateBuildId: () => {
     return 'my-build-id';
   },
+  sassOptions: {
+    silenceDeprecations: ['legacy-js-api'],
+  },
   output: 'standalone',
 };
