@@ -1,7 +1,12 @@
 import Image from 'next/image';
-import { type AnchorHTMLAttributes, type FC, type ImgHTMLAttributes, useCallback } from 'react';
-import ReactMarkdown from 'react-markdown';
+import {
+  type AnchorHTMLAttributes,
+  type FC,
+  type ImgHTMLAttributes,
+  useCallback,
+} from 'react';
 import style from './style.module.scss';
+import ReactMarkdown from 'react-markdown';
 import type { MarkdownProps } from './types';
 
 

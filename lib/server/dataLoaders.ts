@@ -1,10 +1,15 @@
 import path from 'node:path';
 import process from 'node:process';
 import fs from 'fs-extra';
-import { type ZodType, z } from 'zod';
+import { z, type ZodType } from 'zod';
 import { locales } from '@/lib/constants';
 import { aboutSchema, projectSchema, technologySchema } from '@/lib/schemas';
-import type { AboutType, LocaleType, ProjectType, TechnologyType } from '@/lib/types';
+import type {
+  AboutType,
+  LocaleType,
+  ProjectType,
+  TechnologyType,
+} from '@/lib/types';
 
 
 const BASE_CONTENT_PATH = path.resolve(process.cwd(), 'content');

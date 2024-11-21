@@ -1,9 +1,9 @@
 'use client';
 import { useParams, usePathname, useRouter } from 'next/navigation';
 import { useCallback, useContext } from 'react';
-import { isCorrectLocale, setCookie } from './utils';
 import { TranslationContext } from '@/components/TranslationProvider';
 import type { LocaleType } from '@/lib/types';
+import { isCorrectLocale, setCookie } from './utils';
 
 
 const localeRegex = /^\/(\w\w)(.*)/;

@@ -1,7 +1,7 @@
 import type { z } from 'zod';
-import type { aboutSchema, projectSchema, technologySchema } from './schemas';
 import type { Locale } from '@/lib/constants';
 import type EnLocale from '@/lib/locales/en.json';
+import type { aboutSchema, projectSchema, technologySchema } from './schemas';
 
 
 export type TechnologyType = z.infer<typeof technologySchema>;

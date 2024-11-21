@@ -2,8 +2,8 @@ import { redirect } from 'next/navigation';
 import { getServerLocale } from '@/lib/server/utils';
 
 
-function HomePage() {
-  const locale = getServerLocale();
+async function HomePage() {
+  const locale = await getServerLocale();
 
   return redirect(`/${locale}`);
 }

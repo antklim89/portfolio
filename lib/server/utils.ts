@@ -1,18 +1,20 @@
-import process from 'node:process';
+import { cookies as getCookies, headers as getHeaders } from 'next/headers';
 import path from 'node:path';
-import fs from 'fs-extra';
+import process from 'node:process';
 import acceptLanguage from 'accept-language';
-import { cookies, headers } from 'next/headers';
-import type { LocaleType, Translation } from '@/lib/types';
+import fs from 'fs-extra';
 import { defaultLocale } from '@/lib/constants';
+import type { LocaleType, Translation } from '@/lib/types';
 import { isCorrectLocale } from '@/lib/utils';
 
 
-export function getServerLocale(): LocaleType {
-  const cookiesLocale = cookies().get('locale')?.value;
+export async function getServerLocale(): Promise<LocaleType> {
+  const cookies = await getCookies();
+  const headers = await getHeaders();
+  const cookiesLocale = cookies.get('locale')?.value;
   if (isCorrectLocale(cookiesLocale)) return cookiesLocale;
 
-  const headerLocale = acceptLanguage.get(headers().get('accept-language'));
+  const headerLocale = acceptLanguage.get(headers.get('accept-language'));
   if (isCorrectLocale(headerLocale)) return headerLocale;
 
   return defaultLocale;

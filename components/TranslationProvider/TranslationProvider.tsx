@@ -1,9 +1,9 @@
-import { type FC, createContext, useMemo } from 'react';
-
-import type { TranslationProviderProps } from './type';
+import { createContext, type FC, useMemo } from 'react';
 import type { LocaleType, Translation } from '@/lib/types';
+import type { TranslationProviderProps } from './type';
 
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const TranslationContext = createContext({} as { translation: Translation; locale: LocaleType });
 
 const TranslationProvider: FC<TranslationProviderProps> = ({ translation, locale, children }) => {

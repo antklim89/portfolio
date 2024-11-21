@@ -1,7 +1,7 @@
 'use client';
 import { type ComponentProps, useEffect, useState } from 'react';
-import { FaHome } from 'react-icons/fa';
 import style from './style.module.scss';
+import { FaHome } from 'react-icons/fa';
 import { useTranslation } from '@/lib/useTranslation';
 import { cls } from '@/lib/utils';
 
@@ -10,7 +10,12 @@ function Navigation({ className, ...props }: ComponentProps<'section'>) {
   const { t } = useTranslation();
 
   const [links, setLinks] = useState({
-    home: { id: 'home', body: t.home, icon: <FaHome />, observed: false },
+    home: {
+      id: 'home',
+      body: t.home,
+      icon: <FaHome />,
+      observed: false,
+    },
     projects: { id: 'projects', body: t.projects, observed: false },
     technologies: { id: 'technologies', body: t.technologies, observed: false },
     contacts: { id: 'contacts', body: t.contacts, observed: false },

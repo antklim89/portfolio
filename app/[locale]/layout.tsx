@@ -3,9 +3,9 @@ import { redirect } from 'next/navigation';
 import type { ReactNode } from 'react';
 import TranslationProvider from '@/components/TranslationProvider';
 import { defaultLocale } from '@/lib/constants';
-import { isCorrectLocale } from '@/lib/utils';
-import { getTranslation } from '@/lib/server/utils';
 import { getAbout, getTechnologies } from '@/lib/server/dataLoaders';
+import { getTranslation } from '@/lib/server/utils';
+import { isCorrectLocale } from '@/lib/utils';
 
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {

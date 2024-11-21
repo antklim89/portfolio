@@ -1,9 +1,9 @@
 import process from 'node:process';
 import type { CmsBackend, InitOptions } from 'decap-cms-core';
+import { defaultLocale, locales } from '@/lib/constants';
 import { about } from './about';
 import { projects } from './projects';
 import { technologies } from './technologies';
-import { defaultLocale, locales } from '@/lib/constants';
 
 
 const SITE_URL = process.env.URL;
