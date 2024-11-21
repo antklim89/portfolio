@@ -8,7 +8,8 @@ import { getTranslation } from '@/lib/server/utils';
 import { isCorrectLocale } from '@/lib/utils';
 
 
-export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
   if (!isCorrectLocale(locale)) return {};
 
   const { defaultTitle } = await getTranslation(locale);
@@ -39,8 +40,8 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   };
 }
 
-async function RootLayout({ children, params }: { children: ReactNode; params: { locale: string } }) {
-  const { locale } = params;
+async function RootLayout({ children, params }: { children: ReactNode; params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
   if (!isCorrectLocale(locale)) return redirect(`/${defaultLocale}`);
 
   const translation = await getTranslation(locale);

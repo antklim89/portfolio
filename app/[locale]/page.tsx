@@ -7,8 +7,8 @@ export async function generateStaticParams() {
   return locales.map(locale => ({ locale }));
 }
 
-function HomePage({ params }: { params: { locale: LocaleType } }) {
-  const { locale } = params;
+async function HomePage({ params }: { params: Promise<{ locale: LocaleType }> }) {
+  const { locale } = await params;
 
   return <Main locale={locale} />;
 }
