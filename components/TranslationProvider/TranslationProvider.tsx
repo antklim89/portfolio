@@ -8,7 +8,7 @@ export const TranslationContext = createContext({} as { translation: Translation
 
 const TranslationProvider: FC<TranslationProviderProps> = ({ translation, locale, children }) => {
   const value = useMemo(() => ({ translation, locale }), [translation, locale]);
-  return <TranslationContext.Provider value={value}>{children}</TranslationContext.Provider>;
+  return <TranslationContext value={value}>{children}</TranslationContext>;
 };
 
 export default TranslationProvider;

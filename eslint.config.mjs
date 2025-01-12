@@ -52,7 +52,7 @@ export default antfu(
         {
           type: 'alphabetical',
           order: 'asc',
-          internalPattern: ['@/**', '~/**'],
+          internalPattern: ['^(~|@)/.*'],
           newlinesBetween: 'never',
           groups: [
             'custom',

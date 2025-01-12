@@ -5,8 +5,8 @@ import {
   type ImgHTMLAttributes,
   useCallback,
 } from 'react';
-import style from './style.module.scss';
 import ReactMarkdown from 'react-markdown';
+import style from './style.module.scss';
 import type { MarkdownProps } from './types';
 
 

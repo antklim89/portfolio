@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import style from './style.module.scss';
 import { FaEarthEurope, FaGithub } from 'react-icons/fa6';
+import style from './style.module.scss';
 import Markdown from '@/components/Markdown';
 import { getTranslation } from '@/lib/server/utils';
 import type { LocaleType, ProjectType } from '@/lib/types';

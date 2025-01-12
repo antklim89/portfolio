@@ -1,7 +1,7 @@
 'use client';
 import { type ComponentProps, useEffect, useState } from 'react';
-import style from './style.module.scss';
 import { FaHome } from 'react-icons/fa';
+import style from './style.module.scss';
 import { useTranslation } from '@/lib/useTranslation';
 import { cls } from '@/lib/utils';
 
