@@ -1,0 +1,14 @@
+
+services:
+  app:
+    image: development.cr.cloud.ru/portfolio:v1
+    build:
+      args:
+        - URL=${URL}
+      dockerfile: Dockerfile
+    container_name: portfolio
+    env_file:
+      - .env
+    restart: unless-stopped
+    ports:
+      - 3000:3000

@@ -1,0 +1,19 @@
+
+services:
+  app:
+    image: development.cr.cloud.ru/portfolio:dev
+    build:
+      dockerfile: Dockerfile.dev
+    container_name: portfolio-dev
+
+    develop:
+      watch:
+        - path: .
+          action: sync
+          ignore:
+            - package-lock.json
+            - yarn.lock
+          target: /app
+        - path: ./package.json
+          action: rebuild
+          target: /app/package.json

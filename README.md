@@ -1,10 +1,17 @@
 # Web Developer's Portfolio Site
 
 
-### Run
+## Run
+
+### Development
 ```bash
-yarn build
-yarn start
+yarn install
+yarn dev
+```
+
+### Production
+```bash
+yarn docker:up
 ```
 
 ### Env

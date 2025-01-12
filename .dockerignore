@@ -1,7 +1,11 @@
-Dockerfile
-.dockerignore
 node_modules
-npm-debug.log
-README.md
 .next
 .git
+.env*
+.vscode
+.idea
+coverage
+*.log
+.DS_Store
+dist
+build
