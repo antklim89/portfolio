@@ -40,7 +40,7 @@ export default antfu(
       '**/build/**',
       '**/out/**',
       '**/dist/**',
-      '.netlify',
+      '**/app/(payload)/**',
     ],
 
     rules: {
