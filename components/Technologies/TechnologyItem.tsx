@@ -1,3 +1,4 @@
+import { RichText } from '@payloadcms/richtext-lexical/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import type { FC } from 'react';
@@ -19,14 +20,16 @@ const TechnologyItem: FC<TechnologyProps> = ({ technology }) => {
         <div className={style.image}>
           <Image
             alt={technology.title}
+            blurDataURL={technology.blurDataURL}
             height={75}
-            src={technology.image}
+            placeholder="blur"
+            src={technology.imageUrl}
             width={75}
           />
         </div>
         <div className={style.content}>
           <h3 className="title-md">{technology.title}</h3>
-          <p>{technology.body}</p>
+          <RichText data={technology.body} />
         </div>
       </section>
     </Link>

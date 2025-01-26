@@ -1,18 +1,19 @@
+import { RichText } from '@payloadcms/richtext-lexical/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaEarthEurope, FaGithub } from 'react-icons/fa6';
 import style from './style.module.scss';
-import Markdown from '@/components/Markdown';
-import { getTranslation } from '@/lib/server/utils';
 import type { LocaleType, ProjectType } from '@/lib/types';
 import { cls } from '@/lib/utils';
+import { getTranslation } from '@/lib/utils.server';
 
 
 async function ProjectItem({ locale, project }: { project: ProjectType; locale: LocaleType }) {
   const {
     technologies,
     title,
-    image,
+    imageUrl,
+    blurDataURL,
     link,
     github,
     body,
@@ -31,8 +32,10 @@ async function ProjectItem({ locale, project }: { project: ProjectType; locale: 
         >
           <Image
             alt={title}
+            blurDataURL={blurDataURL}
             height={810 / 5}
-            src={image}
+            placeholder="blur"
+            src={imageUrl}
             width={1440 / 5}
           />
         </Link>
@@ -50,7 +53,7 @@ async function ProjectItem({ locale, project }: { project: ProjectType; locale: 
       <div className={style.right}>
         <h3 className="title-md">{title}</h3>
         <div className={style.body}>
-          <Markdown>{body}</Markdown>
+          <RichText data={body} />
         </div>
         <div className={style.tags}>
           {technologies.map(technology => (

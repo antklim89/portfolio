@@ -1,10 +1,10 @@
 import type { ComponentProps } from 'react';
 import style from './style.module.scss';
+import { getProjects } from '@/lib/actions';
 import { locales } from '@/lib/constants';
-import { getProjects } from '@/lib/server/dataLoaders';
-import { getTranslation } from '@/lib/server/utils';
 import type { LocaleType } from '@/lib/types';
 import { cls } from '@/lib/utils';
+import { getTranslation } from '@/lib/utils.server';
 import ProjectItem from './ProjectItem';
 
 

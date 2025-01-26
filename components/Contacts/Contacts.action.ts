@@ -2,8 +2,8 @@
 import process from 'node:process';
 import { Resend } from 'resend';
 import { z } from 'zod';
-import { getTranslation } from '@/lib/server/utils';
 import { getCorrectLocale } from '@/lib/utils';
+import { getTranslation } from '@/lib/utils.server';
 
 
 const RESEND_KEY = z.string({ message: 'RESEND_KEY env variable is required' }).parse(process.env.RESEND_KEY);

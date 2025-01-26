@@ -5,7 +5,6 @@ import '@fontsource/montserrat/700-italic.css';
 import '@fontsource/montserrat/700.css';
 import '@/styles/main.scss';
 import '@/styles/properties.scss';
-import NetlifyIdentityWidget from '@/components/NetlifyIdentityWidget';
 
 
 function RootLayout({ children }: { children: ReactNode }) {
@@ -14,7 +13,6 @@ function RootLayout({ children }: { children: ReactNode }) {
       <head />
       <body>
         {children}
-        <NetlifyIdentityWidget />
       </body>
     </html>
   );

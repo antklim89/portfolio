@@ -1,7 +1,7 @@
+import { RichText } from '@payloadcms/richtext-lexical/react';
 import type { ComponentProps } from 'react';
 import style from './style.module.scss';
-import Markdown from '@/components/Markdown';
-import { getAbout } from '@/lib/server/dataLoaders';
+import { getAbout } from '@/lib/actions';
 import type { LocaleType } from '@/lib/types';
 import { cls } from '@/lib/utils';
 
@@ -15,7 +15,7 @@ async function AboutDescription({
 
   return (
     <section className={cls(style.AboutDescription, className)} {...props}>
-      <Markdown>{description}</Markdown>
+      <RichText data={description} />
     </section>
   );
 }

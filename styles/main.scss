@@ -60,3 +60,20 @@ a {
   margin-bottom: var(--sp-3);
   text-transform: uppercase;
 }
+
+.payload-richtext {
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  li {
+    padding-bottom: 0.5rem;
+  }
+
+  ul {
+    padding-left: 1.75rem;
+  }
+}

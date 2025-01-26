@@ -1,9 +1,9 @@
 import type { ComponentProps } from 'react';
 import style from './style.module.scss';
-import { getTechnologies } from '@/lib/server/dataLoaders';
-import { getTranslation } from '@/lib/server/utils';
+import { getTechnologies } from '@/lib/actions';
 import type { LocaleType } from '@/lib/types';
 import { cls } from '@/lib/utils';
+import { getTranslation } from '@/lib/utils.server';
 import Technology from './TechnologyItem';
 
 

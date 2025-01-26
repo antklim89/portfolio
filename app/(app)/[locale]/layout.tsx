@@ -2,10 +2,10 @@ import type { Metadata } from 'next';
 import { redirect } from 'next/navigation';
 import type { ReactNode } from 'react';
 import TranslationProvider from '@/components/TranslationProvider';
+import { getProjects, getSeo, getTechnologies } from '@/lib/actions';
 import { defaultLocale } from '@/lib/constants';
-import { getAbout, getTechnologies } from '@/lib/server/dataLoaders';
-import { getTranslation } from '@/lib/server/utils';
 import { isCorrectLocale } from '@/lib/utils';
+import { getTranslation } from '@/lib/utils.server';
 
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
@@ -13,29 +13,40 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   if (!isCorrectLocale(locale)) return {};
 
   const { defaultTitle } = await getTranslation(locale);
-  const { name, description, keywords } = await getAbout(locale);
+  const {
+    author,
+    title: cmsTitle,
+    description,
+    keywords,
+  } = await getSeo(locale);
+
   const technologies = await getTechnologies(locale);
   const technologiesKeywords = technologies.map(i => i.title);
 
+  const projects = await getProjects(locale);
+  const projectsKeywords = projects.map(i => i.title);
+
+  const title = cmsTitle ?? defaultTitle;
+
   return {
     manifest: '/manifest.json',
-    title: defaultTitle,
+    title,
     description,
-    keywords: [...keywords, ...technologiesKeywords],
-    authors: [{ name }],
-    creator: name,
+    keywords: [...keywords, ...projectsKeywords, ...technologiesKeywords],
+    authors: [{ name: author }],
+    creator: author,
     twitter: {
       card: 'summary',
       description,
-      title: defaultTitle,
+      title,
     },
     openGraph: {
       type: 'website',
       description,
       locale,
-      title: defaultTitle,
+      title,
       url: '/',
-      siteName: defaultTitle,
+      siteName: title,
     },
   };
 }
