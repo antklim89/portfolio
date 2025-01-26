@@ -1,15 +1,43 @@
-import type { z } from 'zod';
+import type { SerializedEditorState, SerializedLexicalNode } from '@payloadcms/richtext-lexical/lexical';
 import type { Locale } from '@/lib/constants';
 import type EnLocale from '@/lib/locales/en.json';
-import type { aboutSchema, projectSchema, technologySchema } from './schemas';
 
 
-export type TechnologyType = z.infer<typeof technologySchema>;
+export interface TechnologyType {
+  id: number;
+  title: string;
+  link: string;
+  body: SerializedEditorState<SerializedLexicalNode>;
+  imageUrl: string;
+  blurDataURL: string;
+}
 
-export type ProjectType = z.infer<typeof projectSchema>;
+export interface ProjectType {
+  id: number;
+  body: SerializedEditorState<SerializedLexicalNode>;
+  title: string;
+  link: string;
+  github: string;
+  technologies: string[];
+  imageUrl: string;
+  blurDataURL: string;
+}
 
-export type AboutType = z.infer<typeof aboutSchema>;
+export interface AboutType {
+  id: number;
+  name: string;
+  profession: string;
+  slogan: string;
+  description: SerializedEditorState<SerializedLexicalNode>;
+}
+
+export interface SeoType {
+  id: number;
+  author: string;
+  keywords: string[];
+  description: string;
+  title: string;
+}
 
 export type LocaleType = keyof typeof Locale;
-
 export type Translation = typeof EnLocale;
