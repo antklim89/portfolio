@@ -8,9 +8,10 @@ import { buildConfig } from 'payload';
 import { en } from 'payload/i18n/en';
 import { ru } from 'payload/i18n/ru';
 import sharp from 'sharp';
-import { Media } from './collections/Media';
-import { Products } from './collections/Products';
-import { Users } from './collections/Users';
+import { About } from './collections/About';
+import { Projects, ProjectsMedia } from './collections/Projects';
+import { Seo } from './collections/Seo';
+import { Technologies, TechnologiesMedia } from './collections/Technologies';
 
 
 const filename = fileURLToPath(import.meta.url);
@@ -23,7 +24,16 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
-  collections: [Users, Media, Products],
+  globals: [
+    About,
+    Seo,
+  ],
+  collections: [
+    Projects,
+    ProjectsMedia,
+    Technologies,
+    TechnologiesMedia,
+  ],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET ?? '',
   typescript: {
