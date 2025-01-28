@@ -23,6 +23,8 @@ export default antfu(
         }],
         'ts/no-misused-promises': ['error', { checksVoidReturn: false }],
         'ts/consistent-type-imports': ['error', { fixStyle: 'inline-type-imports' }],
+        'ts/strict-boolean-expressions': ['error', { allowNullableString: true }],
+        'ts/no-non-null-assertion': 'error',
       },
     },
 
@@ -41,10 +43,11 @@ export default antfu(
       '**/out/**',
       '**/dist/**',
       '**/app/(payload)/**',
+      '**/migrations/**',
+      '**/payload-types.ts',
     ],
 
     rules: {
-      'ts/no-non-null-assertion': 'error',
       'unused-imports/no-unused-imports': 'error',
       'import/newline-after-import': ['error', { count: 2 }],
       'perfectionist/sort-imports': [

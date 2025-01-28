@@ -20,7 +20,6 @@ export async function getServerLocale(): Promise<LocaleType> {
   return defaultLocale;
 }
 
-
 export async function getTranslation(locale: LocaleType): Promise<Translation> {
   const translationPath = path.resolve(process.cwd(), `lib/locales/${locale}.json`);
   const translationContent = await fs.readFile(translationPath, 'utf-8');
