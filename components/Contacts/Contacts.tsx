@@ -1,5 +1,6 @@
 'use client';
-import { type ComponentProps, type FormEventHandler, useState } from 'react';
+import { useState } from 'react';
+import type { ComponentProps, FormEventHandler } from 'react';
 import style from './style.module.scss';
 import { useTranslation } from '@/lib/useTranslation';
 import { cls } from '@/lib/utils';

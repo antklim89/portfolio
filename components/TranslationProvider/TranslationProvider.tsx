@@ -1,4 +1,5 @@
-import { createContext, type FC, useMemo } from 'react';
+import { createContext, useMemo } from 'react';
+import type { FC } from 'react';
 import type { LocaleType, Translation } from '@/lib/types';
 import type { TranslationProviderProps } from './type';
 
