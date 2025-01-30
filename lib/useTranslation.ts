@@ -3,7 +3,7 @@ import { useParams, usePathname, useRouter } from 'next/navigation';
 import { useCallback, useContext } from 'react';
 import { TranslationContext } from '@/components/TranslationProvider';
 import type { LocaleType } from '@/lib/types';
-import { isCorrectLocale, setCookie } from './utils';
+import { isCorrectLocale } from './utils';
 
 
 const localeRegex = /^\/(\w\w)(.*)/;
@@ -18,7 +18,7 @@ export function useTranslation() {
     (newLocale: LocaleType) => {
       if (isCorrectLocale(oldLocale) && isCorrectLocale(newLocale)) {
         const newPath = pathname.replace(localeRegex, `/${newLocale}$2`);
-        setCookie('locale', newLocale);
+        document.cookie = `locale=${newLocale};path=/`;
         router.replace(newPath, { scroll: false });
       }
     },
