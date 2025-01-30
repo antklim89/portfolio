@@ -2,7 +2,7 @@
 import type { ComponentProps } from 'react';
 import style from './style.module.scss';
 import { locales } from '@/lib/constants';
-import { useTranslation } from '@/lib/useTranslation';
+import { useTranslation } from '@/hooks/useTranslation';
 import { cls } from '@/lib/utils';
 
 

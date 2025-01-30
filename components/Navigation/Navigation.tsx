@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import type { ComponentProps } from 'react';
 import { FaHome } from 'react-icons/fa';
 import style from './style.module.scss';
-import { useTranslation } from '@/lib/useTranslation';
+import { useTranslation } from '@/hooks/useTranslation';
 import { cls } from '@/lib/utils';
 
 
