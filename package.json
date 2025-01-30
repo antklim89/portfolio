@@ -21,7 +21,6 @@
   "scripts": {
     "dev": "run-p dev:**",
     "dev:next": "next dev --turbo",
-    "dev:cms-proxy": "decap-server",
     "dev:typecheck": "tsc --noEmit -w --preserveWatchOutput",
     "build": "next build",
     "start": "next start",
