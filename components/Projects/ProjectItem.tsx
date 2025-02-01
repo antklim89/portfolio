@@ -1,7 +1,7 @@
 import { RichText } from '@payloadcms/richtext-lexical/react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaEarthEurope, FaGit } from 'react-icons/fa6';
+import { FaEarthEurope, FaGitAlt } from 'react-icons/fa6';
 import style from './style.module.scss';
 import type { LocaleType, ProjectType } from '@/lib/types';
 import { cls } from '@/lib/utils';
@@ -40,7 +40,7 @@ async function ProjectItem({ locale, project }: { project: ProjectType; locale: 
         </Link>
         <div className={style.links}>
           <Link href={repository} rel="noopener noreferrer" target="_blank">
-            <FaGit size="32px" />
+            <FaGitAlt size="32px" />
             {t.Repository}
           </Link>
           <Link href={link} rel="noopener noreferrer" target="_blank">
