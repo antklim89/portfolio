@@ -33,6 +33,12 @@ export const Media = {
       name: 'blurDataURL',
       required: true,
       defaultValue: DEFAULT_BLUR_DATA,
+      admin: {
+        readOnly: true,
+        hidden: true,
+        disableListColumn: true,
+        disableListFilter: true,
+      },
     },
     {
       type: 'text',
