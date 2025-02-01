@@ -7,11 +7,18 @@ import type { TechnologyProps } from './types';
 
 
 const TechnologyItem: FC<TechnologyProps> = ({ technology }) => {
+  const {
+    body,
+    image,
+    link,
+    title,
+  } = technology;
+
   return (
     <Link
-      aria-label={`${technology.title} technology`}
+      aria-label={`${title} technology`}
       className={style.linkWrapper}
-      href={technology.link}
+      href={link}
       rel="noopener noreferrer"
       target="_blank"
     >
@@ -19,17 +26,17 @@ const TechnologyItem: FC<TechnologyProps> = ({ technology }) => {
       <section className={style.Technology}>
         <div className={style.image}>
           <Image
-            alt={technology.title}
-            blurDataURL={technology.blurDataURL}
-            height={300}
+            alt={title}
+            blurDataURL={image.blurDataURL}
+            height={image.height ?? 300}
             placeholder="blur"
-            src={technology.imageUrl}
-            width={300}
+            src={image.url}
+            width={image.width ?? 300}
           />
         </div>
         <div className={style.content}>
-          <h3 className="title-md">{technology.title}</h3>
-          <RichText data={technology.body} />
+          <h3 className="title-md">{title}</h3>
+          <RichText data={body} />
         </div>
       </section>
     </Link>

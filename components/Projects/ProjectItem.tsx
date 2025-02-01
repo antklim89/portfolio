@@ -12,8 +12,7 @@ async function ProjectItem({ locale, project }: { project: ProjectType; locale: 
   const {
     technologies,
     title,
-    imageUrl,
-    blurDataURL,
+    image,
     link,
     github,
     body,
@@ -32,11 +31,11 @@ async function ProjectItem({ locale, project }: { project: ProjectType; locale: 
         >
           <Image
             alt={title}
-            blurDataURL={blurDataURL}
-            height={810 / 5}
+            blurDataURL={image.blurDataURL}
+            height={image.height ?? 300}
             placeholder="blur"
-            src={imageUrl}
-            width={1440 / 5}
+            src={image.url}
+            width={image.width ?? 300}
           />
         </Link>
         <div className={style.links}>

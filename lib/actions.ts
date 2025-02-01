@@ -53,7 +53,7 @@ export const getProjects = cache(async (locale: LocaleType): Promise<ProjectType
   });
 
   return result.docs.map((i) => {
-    const { blurDataURL, url } = i.image as ProjectsMedia;
+    const image = i.image as ProjectsMedia;
 
     return ({
       id: i.id,
@@ -62,8 +62,12 @@ export const getProjects = cache(async (locale: LocaleType): Promise<ProjectType
       link: i.link,
       github: i.github,
       technologies: i.technologies,
-      imageUrl: url,
-      blurDataURL,
+      image: {
+        url: image.url,
+        blurDataURL: image.blurDataURL,
+        height: image.height,
+        width: image.width,
+      },
     });
   });
 });
@@ -79,15 +83,19 @@ export const getTechnologies = cache(async (locale: LocaleType): Promise<Technol
 
 
   return result.docs.map((i) => {
-    const { blurDataURL, url } = i.image as TechnologiesMedia;
+    const image = i.image as TechnologiesMedia;
 
     return ({
       id: i.id,
       body: i.body,
       link: i.link,
       title: i.title,
-      imageUrl: url,
-      blurDataURL,
+      image: {
+        url: image.url,
+        blurDataURL: image.blurDataURL,
+        height: image.height,
+        width: image.width,
+      },
     });
   });
 });

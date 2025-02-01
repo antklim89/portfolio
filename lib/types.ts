@@ -3,13 +3,19 @@ import type { Locale } from '@/lib/constants';
 import type EnLocale from '@/lib/locales/en.json';
 
 
+interface ImageType {
+  url: string;
+  blurDataURL: string;
+  width?: number | null;
+  height?: number | null;
+}
+
 export interface TechnologyType {
   id: number;
   title: string;
   link: string;
   body: SerializedEditorState<SerializedLexicalNode>;
-  imageUrl: string;
-  blurDataURL: string;
+  image: ImageType;
 }
 
 export interface ProjectType {
@@ -19,8 +25,7 @@ export interface ProjectType {
   link: string;
   github: string;
   technologies: string[];
-  imageUrl: string;
-  blurDataURL: string;
+  image: ImageType;
 }
 
 export interface AboutType {
