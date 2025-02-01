@@ -58,6 +58,10 @@ export const Projects: CollectionConfig = {
 export const ProjectsMedia: CollectionConfig = {
   ...Media,
   slug: 'projects-media',
+  labels: {
+    singular: 'Project Image',
+    plural: 'Project Images',
+  },
   upload: {
     ...Media.upload,
     staticDir: 'media/projects',

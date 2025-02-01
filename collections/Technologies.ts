@@ -44,6 +44,10 @@ export const Technologies: CollectionConfig = {
 export const TechnologiesMedia: CollectionConfig = {
   ...Media,
   slug: 'technologies-media',
+  labels: {
+    singular: 'Technology Image',
+    plural: 'Technology Images',
+  },
   upload: {
     ...Media.upload,
     staticDir: 'media/technologies',
