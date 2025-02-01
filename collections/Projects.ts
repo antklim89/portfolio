@@ -33,7 +33,7 @@ export const Projects: CollectionConfig = {
       required: true,
     },
     {
-      name: 'github',
+      name: 'repository',
       type: 'text',
       minLength: 5,
       maxLength: 500,

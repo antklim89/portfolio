@@ -23,7 +23,7 @@ export interface ProjectType {
   body: SerializedEditorState<SerializedLexicalNode>;
   title: string;
   link: string;
-  github: string;
+  repository: string;
   technologies: string[];
   image: ImageType;
 }

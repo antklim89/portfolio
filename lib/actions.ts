@@ -60,7 +60,7 @@ export const getProjects = cache(async (locale: LocaleType): Promise<ProjectType
       title: i.title,
       body: i.body,
       link: i.link,
-      github: i.github,
+      repository: i.repository,
       technologies: i.technologies,
       image: {
         url: image.url,
