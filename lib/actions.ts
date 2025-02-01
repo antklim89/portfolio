@@ -1,7 +1,6 @@
 import { cache } from 'react';
 import config from '@payload-config';
 import { getPayload } from 'payload';
-import { DEFAULT_BLUR_DATA } from '@/lib/constants';
 import type {
   AboutType,
   LocaleType,
@@ -63,8 +62,8 @@ export const getProjects = cache(async (locale: LocaleType): Promise<ProjectType
       link: i.link,
       github: i.github,
       technologies: i.technologies,
-      imageUrl: url || DEFAULT_BLUR_DATA,
-      blurDataURL: blurDataURL || DEFAULT_BLUR_DATA,
+      imageUrl: url,
+      blurDataURL,
     });
   });
 });
@@ -78,6 +77,7 @@ export const getTechnologies = cache(async (locale: LocaleType): Promise<Technol
     pagination: false,
   });
 
+
   return result.docs.map((i) => {
     const { blurDataURL, url } = i.image as TechnologiesMedia;
 
@@ -86,8 +86,8 @@ export const getTechnologies = cache(async (locale: LocaleType): Promise<Technol
       body: i.body,
       link: i.link,
       title: i.title,
-      imageUrl: url || DEFAULT_BLUR_DATA,
-      blurDataURL: blurDataURL || DEFAULT_BLUR_DATA,
+      imageUrl: url,
+      blurDataURL,
     });
   });
 });
