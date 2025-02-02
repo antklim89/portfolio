@@ -1,9 +1,9 @@
 import type { ReactNode } from 'react';
-import type { LocaleType, Translation } from '@/lib/types';
+import type { DefaultTranslation, LocaleType } from '@/lib/types';
 
 
 export interface TranslationProviderProps {
-  translation: Translation;
+  translation: DefaultTranslation;
   locale: LocaleType;
   children: ReactNode;
 }

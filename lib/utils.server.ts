@@ -2,7 +2,7 @@ import { cookies as getCookies, headers as getHeaders } from 'next/headers';
 import { cache } from 'react';
 import acceptLanguage from 'accept-language';
 import { defaultLocale } from '@/lib/constants';
-import type { LocaleType, Translation } from '@/lib/types';
+import type { DefaultTranslation, LocaleType } from '@/lib/types';
 import { isCorrectLocale } from '@/lib/utils';
 
 
@@ -18,7 +18,7 @@ export const getServerLocale = cache(async (): Promise<LocaleType> => {
   return defaultLocale;
 });
 
-export const getTranslation = cache(async (locale: LocaleType): Promise<Translation> => {
-  const translation = await import(`@/lib/locales/${locale}.json`) as Translation;
+export const getTranslation = cache(async (locale: LocaleType): Promise<DefaultTranslation> => {
+  const translation = await import(`@/lib/locales/${locale}.json`) as DefaultTranslation;
   return { ...translation };
 });
