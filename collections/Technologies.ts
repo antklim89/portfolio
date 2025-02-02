@@ -21,7 +21,7 @@ export const Technologies: CollectionConfig = {
       name: 'title',
       type: 'text',
       required: true,
-      minLength: 5,
+      minLength: 3,
       maxLength: 500,
       localized: true,
     },
