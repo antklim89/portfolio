@@ -1,9 +1,6 @@
 :root {
   --container-width: 100%;
 
-  --projects-cols: 1fr;
-  --technologies-cols: 1fr;
-
   --primary-clr: #00476b;
   --primary-dark-clr: #00334d;
   --bg-clr: #0f172a;
@@ -11,53 +8,20 @@
   --link-clr: #04c2c9;
 
   --light-clr: #f7f7f7;
-  --light-hover-clr: #c0c0c0;
   --dark-clr: #474748;
-  --dark-hover-clr: #c0c0c0;
-
-  --border-radius: 2rem;
-  --box-shadow: 0 0 5px 0px;
 }
 
 .hide-lg {
   display: none;
 }
+
 .show-lg {
   display: block;
-}
-
-.hide-sm {
-  display: none;
-}
-.show-sm {
-  display: block;
-}
-
-@media screen and (min-width: 480px) {
-  :root {
-    --technologies-cols: repeat(2, 1fr);
-  }
-
-  .hide-sm {
-    display: block;
-  }
-  .show-sm {
-    display: none;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  :root {
-    --sp-2: 1rem;
-    --font-size: 1rem;
-    --projects-cols: repeat(2, 1fr);
-  }
 }
 
 @media screen and (min-width: 1024px) {
   :root {
     --container-width: 1024px;
-    --technologies-cols: repeat(3, 1fr);
   }
 
   .hide-lg {
@@ -65,12 +29,5 @@
   }
   .show-lg {
     display: none;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  :root {
-    --projects-cols: repeat(3, 1fr);
-    --technologies-cols: repeat(4, 1fr);
   }
 }
