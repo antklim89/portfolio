@@ -45,12 +45,13 @@
     display: flex;
     gap: var(--sp-2);
     margin-bottom: var(--sp-1);
-    flex-direction: column;
+    flex-direction: row;
+    padding: 0 var(--sp-2) 0 0;
 
     a {
       display: flex;
       align-items: center;
-      gap: var(--sp-1);
+      gap: 0.25rem;
       transition: transform 250ms;
     }
 

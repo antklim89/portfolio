@@ -39,18 +39,34 @@ async function ProjectItem({ locale, project }: { project: ProjectType; locale: 
           />
         </Link>
         <div className={style.links}>
-          <Link href={repository} rel="noopener noreferrer" target="_blank">
-            <FaGitAlt size="32px" />
-            {t.Repository}
+          <Link
+            aria-label={t.Site}
+            href={link}
+            rel="noopener noreferrer"
+            target="_blank"
+            title={`${t.Site} ${link}`}
+          >
+            <FaEarthEurope size={32} />
           </Link>
-          <Link href={link} rel="noopener noreferrer" target="_blank">
-            <FaEarthEurope size="32px" />
-            {t.Site}
+          <Link
+            aria-label={t.Repository}
+            href={repository}
+            rel="noopener noreferrer"
+            target="_blank"
+            title={`${t.Repository} ${repository}`}
+          >
+            <FaGitAlt size={32} />
           </Link>
         </div>
       </div>
       <div className={style.right}>
-        <h3 className="title-md">{title}</h3>
+        <Link
+          href={link}
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <h3 className="title-md">{title}</h3>
+        </Link>
         <div className={style.body}>
           <RichText data={body} />
         </div>
