@@ -92,7 +92,7 @@ export interface Project {
   };
   title: string;
   link: string;
-  github: string;
+  repository: string;
   technologies: string[];
   image: number | ProjectsMedia;
   updatedAt: string;
@@ -104,10 +104,10 @@ export interface Project {
  */
 export interface ProjectsMedia {
   id: number;
-  blurDataURL?: string | null;
+  blurDataURL: string;
   updatedAt: string;
   createdAt: string;
-  url?: string | null;
+  url: string;
   thumbnailURL?: string | null;
   filename?: string | null;
   mimeType?: string | null;
@@ -150,10 +150,10 @@ export interface Technology {
  */
 export interface TechnologiesMedia {
   id: number;
-  blurDataURL?: string | null;
+  blurDataURL: string;
   updatedAt: string;
   createdAt: string;
-  url?: string | null;
+  url: string;
   thumbnailURL?: string | null;
   filename?: string | null;
   mimeType?: string | null;
@@ -257,7 +257,7 @@ export interface ProjectsSelect<T extends boolean = true> {
   body?: T;
   title?: T;
   link?: T;
-  github?: T;
+  repository?: T;
   technologies?: T;
   image?: T;
   updatedAt?: T;
