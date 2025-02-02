@@ -1,6 +1,7 @@
 import type { SerializedEditorState, SerializedLexicalNode } from '@payloadcms/richtext-lexical/lexical';
 import type { Locale } from '@/lib/constants';
 import type EnLocale from '@/lib/locales/en.json';
+import type RuLocale from '@/lib/locales/ru.json';
 
 
 interface ImageType {
@@ -45,4 +46,9 @@ export interface SeoType {
 }
 
 export type LocaleType = keyof typeof Locale;
-export type Translation = typeof EnLocale;
+export type DefaultTranslation = typeof EnLocale;
+export type RuTranslation = typeof RuLocale;
+
+function assert<_ extends never>() {}
+type TypeEqualityGuard<A, B> = Exclude<A, B> | Exclude<B, A>;
+assert<TypeEqualityGuard<DefaultTranslation, RuTranslation>>();
