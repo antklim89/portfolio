@@ -1,21 +1,21 @@
 // @use '@/styles/properties' as *;
 
 .Technologies {
-  margin-bottom: var(--sp-6);
+  margin-bottom: 4.5rem;
 
   .list {
     display: flex;
     flex-direction: column;
-    gap: var(--sp-3);
+    gap: 1.25rem;
   }
 }
 
 .Technology {
   display: flex;
   align-items: center;
-  gap: var(--sp-2);
+  gap: 0.75rem;
   width: 100%;
-  padding: var(--sp-2);
+  padding: 0.75rem;
   border: 1px solid transparent;
 
   &:hover {

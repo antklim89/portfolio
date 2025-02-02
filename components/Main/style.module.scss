@@ -5,25 +5,25 @@
   width: 100%;
   margin: 0 auto;
   max-width: var(--container-width);
-  padding: 0 var(--sp-3);
+  padding: 0 1.25rem;
 
   > main,
   > aside {
-    padding: var(--sp-6) 0;
+    padding: 4.5rem 0;
   }
 
   > aside {
     flex: 1 0 var(--aside-width);
-    margin-right: var(--sp-2);
+    margin-right: 0.75rem;
 
     > div {
       width: var(--aside-width);
       position: fixed;
       display: flex;
       flex-direction: column;
-      gap: var(--sp-2);
+      gap: 0.75rem;
       justify-content: space-between;
-      height: calc(100vh - var(--sp-6) * 2);
+      height: calc(100vh - 9rem);
     }
   }
 }

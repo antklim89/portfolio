@@ -2,7 +2,7 @@
   ul {
     display: flex;
     flex-direction: column;
-    gap: var(--sp-2);
+    gap: 0.75rem;
   }
 
   li {
@@ -11,7 +11,7 @@
 
   a {
     display: flex;
-    margin: 0 var(--sp-2);
+    margin: 0 0.75rem;
     text-transform: uppercase;
 
     > div {
@@ -27,7 +27,7 @@
   }
 
   .arrows {
-    margin: 0 var(--sp-1);
+    margin: 0 0.5rem;
   }
 
   .topLinks {
@@ -37,9 +37,9 @@
     transform: translateX(-50%);
     border: 1px solid var(--primary-dark-clr);
     border-radius: 9999px;
-    padding: var(--sp-1);
+    padding: 0.5rem;
     background: var(--bg-clr);
-    font-size: var(--font-size-sm);
+    font-size: 0.5rem;
 
     ul {
       flex-direction: row;

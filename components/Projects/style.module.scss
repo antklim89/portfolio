@@ -1,18 +1,18 @@
 // @use '@/styles/properties' as *;
 
 .Projects {
-  margin: var(--sp-6) 0;
+  margin: 4.5rem 0;
 
   .list {
     display: flex;
     flex-direction: column;
-    gap: var(--sp-3);
+    gap: 1.25rem;
   }
 }
 
 .ProjectItem {
   display: flex;
-  padding: var(--sp-1);
+  padding: 0.5rem;
   transition: 100ms;
 
   .left {
@@ -25,8 +25,8 @@
 
   .image {
     display: block;
-    margin-bottom: var(--sp-2);
-    margin-right: var(--sp-2);
+    margin-bottom: 0.75rem;
+    margin-right: 0.75rem;
 
     img {
       box-shadow: 0px 0px 5px 2px var(--primary-clr);
@@ -38,15 +38,15 @@
   }
 
   .body {
-    margin-bottom: var(--sp-2);
+    margin-bottom: 0.75rem;
   }
 
   .links {
     display: flex;
-    gap: var(--sp-2);
-    margin-bottom: var(--sp-1);
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
     flex-direction: row;
-    padding: 0 var(--sp-2) 0 0;
+    padding: 0 0.75rem 0 0;
 
     a {
       display: flex;
@@ -63,12 +63,12 @@
   .tags {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--sp-1);
+    gap: 0.5rem;
 
     span {
-      font-size: var(--font-size-sm);
+      font-size: 0.5rem;
       outline: 2px solid var(--primary-clr);
-      padding: var(--sp-1);
+      padding: 0.5rem;
       border-radius: 9999px;
     }
   }

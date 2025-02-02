@@ -1,7 +1,7 @@
 .AboutTitle {
   white-space: pre-wrap;
   line-height: 1.1;
-  margin: var(--sp-3) 0;
+  margin: 1.25rem 0;
 
   p,
   h1,
@@ -10,14 +10,14 @@
   }
 
   h1 {
-    font-size: var(--font-size-xl);
+    font-size: 2rem;
   }
 
   h3 {
-    font-size: var(--font-size-md);
+    font-size: 1.2rem;
   }
 
   p {
-    font-size: var(--font-size-lg);
+    font-size: 1.4rem;
   }
 }

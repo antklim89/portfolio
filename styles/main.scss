@@ -19,7 +19,7 @@ body {
     Ubuntu,
     Helvetica,
     sans-serif;
-  font-size: var(--font-size);
+  font-size: 1rem;
   background-color: var(--bg-clr);
   color: var(--text-clr);
 }
@@ -43,21 +43,21 @@ a {
 }
 
 .title-md {
-  font-size: var(--font-size-md);
+  font-size: 1.2rem;
   line-height: 0.8;
-  margin-bottom: var(--sp-2);
+  margin-bottom: 0.75rem;
 }
 
 .title-lg {
-  font-size: var(--font-size-lg);
+  font-size: 1.4rem;
   line-height: 0.8;
-  margin-bottom: var(--sp-3);
+  margin-bottom: 1.25rem;
   text-transform: uppercase;
 }
 
 .title-lg {
-  font-size: var(--font-size-xl);
-  margin-bottom: var(--sp-3);
+  font-size: 2rem;
+  margin-bottom: 1.25rem;
   text-transform: uppercase;
 }
 

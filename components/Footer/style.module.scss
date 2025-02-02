@@ -2,11 +2,11 @@
   .localeButtons {
     display: flex;
     justify-content: center;
-    margin: var(--sp-2) 0;
-    gap: var(--sp-2);
+    margin: 0.75rem 0;
+    gap: 0.75rem;
 
     button {
-      padding: var(--sp-1);
+      padding: 0.5rem;
       background: none;
       border: 1px solid var(--primary-clr);
       color: var(--text-clr);
