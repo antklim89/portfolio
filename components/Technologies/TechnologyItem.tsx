@@ -26,12 +26,13 @@ const TechnologyItem: FC<TechnologyProps> = ({ technology }) => {
       <section className={style.Technology}>
         <div className={style.image}>
           <Image
+            unoptimized
             alt={title}
             blurDataURL={image.blurDataURL}
-            height={image.height ?? 300}
+            height={300}
             placeholder="blur"
             src={image.url}
-            width={image.width ?? 300}
+            width={300}
           />
         </div>
         <div className={style.content}>
