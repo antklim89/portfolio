@@ -11,11 +11,11 @@
   --dark-clr: #474748;
 }
 
-.hide-lg {
+.desktop {
   display: none;
 }
 
-.show-lg {
+.mobile {
   display: block;
 }
 
@@ -24,10 +24,11 @@
     --container-width: 1024px;
   }
 
-  .hide-lg {
+  .desktop {
     display: block;
   }
-  .show-lg {
+
+  .mobile {
     display: none;
   }
 }

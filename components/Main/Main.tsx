@@ -13,21 +13,27 @@ function Main({ locale }: { locale: LocaleType }) {
   return (
     <div className={style.Main}>
       <div id="home" style={{ height: 0 }} />
-      <aside className="hide-lg">
+      <aside className="desktop">
         <div>
           <AboutTitle locale={locale} />
           <Navigation />
           <Footer />
         </div>
       </aside>
-      <main>
-        <AboutTitle className="show-lg" locale={locale} />
-        <Navigation className="show-lg" />
+      <main className="desktop">
         <AboutDescription locale={locale} />
         <Projects id="projects" locale={locale} />
         <Technologies id="technologies" locale={locale} />
         <Contacts id="contacts" />
-        <Footer className="show-lg" />
+      </main>
+      <main className="mobile">
+        <AboutTitle locale={locale} />
+        <Navigation />
+        <AboutDescription locale={locale} />
+        <Projects id="projects" locale={locale} />
+        <Technologies id="technologies" locale={locale} />
+        <Contacts id="contacts" />
+        <Footer />
       </main>
     </div>
   );

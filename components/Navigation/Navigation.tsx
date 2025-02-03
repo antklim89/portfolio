@@ -48,7 +48,7 @@ function Navigation({ className, ...props }: ComponentProps<'section'>) {
 
   return (
     <section className={cls(style.Navigation, className)} {...props}>
-      <div className="hide-lg">
+      <div className="desktop">
         <ul>
           {linksArray.map(link => (
             <li key={link.body}>
@@ -61,8 +61,8 @@ function Navigation({ className, ...props }: ComponentProps<'section'>) {
           ))}
         </ul>
       </div>
-      <div className={cls('show-lg', style.topLinks)}>
-        <ul className="">
+      <div className={cls('mobile', style.mobile)}>
+        <ul>
           {linksArray.map(link => (
             <li key={link.body}>
               <a href={`#${link.id}`}>
