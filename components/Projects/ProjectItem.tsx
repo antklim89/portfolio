@@ -30,6 +30,7 @@ async function ProjectItem({ locale, project }: { project: ProjectType; locale: 
           target="_blank"
         >
           <Image
+            unoptimized
             alt={title}
             blurDataURL={image.blurDataURL}
             height={image.height ?? 300}
