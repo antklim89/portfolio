@@ -10,30 +10,38 @@ import type { LocaleType } from '@/lib/types';
 
 
 function Main({ locale }: { locale: LocaleType }) {
+  const AboutTitleConst = <AboutTitle locale={locale} />;
+  const NavigationConst = <Navigation />;
+  const FooterConst = <Footer />;
+  const AboutDescriptionConst = <AboutDescription locale={locale} />;
+  const ProjectsConst = <Projects id="projects" locale={locale} />;
+  const TechnologiesConst = <Technologies id="technologies" locale={locale} />;
+  const ContactsConst = <Contacts id="contacts" />;
+
   return (
     <div className={style.Main}>
       <div id="home" style={{ height: 0 }} />
       <aside className="desktop">
         <div>
-          <AboutTitle locale={locale} />
-          <Navigation />
-          <Footer />
+          {AboutTitleConst}
+          {NavigationConst}
+          {FooterConst}
         </div>
       </aside>
       <main className="desktop">
-        <AboutDescription locale={locale} />
-        <Projects id="projects" locale={locale} />
-        <Technologies id="technologies" locale={locale} />
-        <Contacts id="contacts" />
+        {AboutDescriptionConst}
+        {ProjectsConst}
+        {TechnologiesConst}
+        {ContactsConst}
       </main>
       <main className="mobile">
-        <AboutTitle locale={locale} />
-        <Navigation />
-        <AboutDescription locale={locale} />
-        <Projects id="projects" locale={locale} />
-        <Technologies id="technologies" locale={locale} />
-        <Contacts id="contacts" />
-        <Footer />
+        {AboutTitleConst}
+        {NavigationConst}
+        {AboutDescriptionConst}
+        {ProjectsConst}
+        {TechnologiesConst}
+        {ContactsConst}
+        {FooterConst}
       </main>
     </div>
   );
