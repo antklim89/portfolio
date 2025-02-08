@@ -33,10 +33,10 @@ async function ProjectItem({ locale, project }: { project: ProjectType; locale: 
             unoptimized
             alt={title}
             blurDataURL={image.blurDataURL}
-            height={image.height ?? 300}
+            height={image.height}
             placeholder="blur"
-            src={image.url}
-            width={image.width ?? 300}
+            src={`/media/projects/${image.filename}`}
+            width={image.width}
           />
         </Link>
         <div className={style.links}>

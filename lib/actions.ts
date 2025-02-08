@@ -67,6 +67,7 @@ export const getProjects = cache(async (locale: LocaleType): Promise<ProjectType
         blurDataURL: image.blurDataURL,
         height: image.height,
         width: image.width,
+        filename: image.filename,
       },
     });
   });
@@ -95,6 +96,7 @@ export const getTechnologies = cache(async (locale: LocaleType): Promise<Technol
         blurDataURL: image.blurDataURL,
         height: image.height,
         width: image.width,
+        filename: image.filename,
       },
     });
   });

@@ -5,10 +5,10 @@ import type RuLocale from '@/lib/locales/ru.json';
 
 
 interface ImageType {
-  url: string;
   blurDataURL: string;
-  width?: number | null;
-  height?: number | null;
+  width: number;
+  height: number;
+  filename: string;
 }
 
 export interface TechnologyType {

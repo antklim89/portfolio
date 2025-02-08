@@ -50,7 +50,7 @@ export const TechnologiesMedia: CollectionConfig = {
   },
   upload: {
     ...Media.upload,
-    staticDir: 'media/technologies',
+    staticDir: 'public/media/technologies',
     resizeOptions: {
       position: 'center',
       fit: 'cover',

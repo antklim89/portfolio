@@ -5,7 +5,7 @@ import { DEFAULT_BLUR_DATA } from '@/lib/constants';
 
 
 export const Media = {
-  slug: 'media',
+  slug: 'public/media',
   hooks: {
     beforeValidate: [
       async ({ req, operation, data }) => {
@@ -27,6 +27,12 @@ export const Media = {
   access: {
     read: () => true,
   },
+  defaultPopulate: {
+    filename: true,
+    width: true,
+    height: true,
+    blurDataURL: true,
+  },
   fields: [
     {
       type: 'text',
@@ -44,7 +50,25 @@ export const Media = {
       type: 'text',
       name: 'url',
       required: true,
-      defaultValue: '/logo512.png',
+      defaultValue: '/placeholder.png',
+    },
+    {
+      type: 'text',
+      name: 'filename',
+      required: true,
+      defaultValue: 'placeholder.png',
+    },
+    {
+      type: 'number',
+      name: 'width',
+      required: true,
+      defaultValue: 100,
+    },
+    {
+      type: 'number',
+      name: 'height',
+      required: true,
+      defaultValue: 100,
     },
   ],
   upload: {

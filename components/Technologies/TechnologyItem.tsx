@@ -31,7 +31,7 @@ const TechnologyItem: FC<TechnologyProps> = ({ technology }) => {
             blurDataURL={image.blurDataURL}
             height={300}
             placeholder="blur"
-            src={image.url}
+            src={`/media/technologies/${image.filename}`}
             width={300}
           />
         </div>

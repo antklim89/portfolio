@@ -64,7 +64,7 @@ export const ProjectsMedia: CollectionConfig = {
   },
   upload: {
     ...Media.upload,
-    staticDir: 'media/projects',
+    staticDir: 'public/media/projects',
     resizeOptions: {
       position: 'left top',
       fit: 'cover',

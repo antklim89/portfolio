@@ -109,11 +109,11 @@ export interface ProjectsMedia {
   createdAt: string;
   url: string;
   thumbnailURL?: string | null;
-  filename?: string | null;
+  filename: string;
   mimeType?: string | null;
   filesize?: number | null;
-  width?: number | null;
-  height?: number | null;
+  width: number;
+  height: number;
   focalX?: number | null;
   focalY?: number | null;
 }
@@ -155,11 +155,11 @@ export interface TechnologiesMedia {
   createdAt: string;
   url: string;
   thumbnailURL?: string | null;
-  filename?: string | null;
+  filename: string;
   mimeType?: string | null;
   filesize?: number | null;
-  width?: number | null;
-  height?: number | null;
+  width: number;
+  height: number;
   focalX?: number | null;
   focalY?: number | null;
 }
