@@ -5,6 +5,7 @@ services:
     build:
       args:
         - URL=${URL}
+        - PAYLOAD_SECRET=${PAYLOAD_SECRET}
       dockerfile: Dockerfile
     container_name: portfolio
     env_file:
