@@ -20,7 +20,12 @@ body {
     Helvetica,
     sans-serif;
   font-size: 1rem;
+  color: var(--text-clr);
   background-color: var(--bg-clr);
+  background-image: url(./bg.svg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   color: var(--text-clr);
 }
 
