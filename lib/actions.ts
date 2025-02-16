@@ -4,11 +4,11 @@ import { getPayload } from 'payload';
 import type {
   AboutType,
   LocaleType,
+  PopulatedPaginatedDocs,
   ProjectType,
   SeoType,
   TechnologyType,
 } from '@/lib/types';
-import type { ProjectsMedia, TechnologiesMedia } from '@/payload-types';
 
 
 export const getSeo = cache(async (locale: LocaleType): Promise<SeoType> => {
@@ -18,13 +18,7 @@ export const getSeo = cache(async (locale: LocaleType): Promise<SeoType> => {
     locale,
   });
 
-  return {
-    id: result.id,
-    description: result.description,
-    author: result.author,
-    keywords: result.keywords,
-    title: result.title,
-  };
+  return result;
 });
 
 export const getAbout = cache(async (locale: LocaleType): Promise<AboutType> => {
@@ -34,13 +28,7 @@ export const getAbout = cache(async (locale: LocaleType): Promise<AboutType> => 
     locale,
   });
 
-  return {
-    id: result.id,
-    description: result.description,
-    name: result.name,
-    profession: result.profession,
-    slogan: result.slogan,
-  };
+  return result;
 });
 
 export const getProjects = cache(async (locale: LocaleType): Promise<ProjectType[]> => {
@@ -52,25 +40,7 @@ export const getProjects = cache(async (locale: LocaleType): Promise<ProjectType
     pagination: false,
   });
 
-  return result.docs.map((i) => {
-    const image = i.image as ProjectsMedia;
-
-    return ({
-      id: i.id,
-      title: i.title,
-      body: i.body,
-      link: i.link,
-      repository: i.repository,
-      technologies: i.technologies,
-      image: {
-        url: image.url,
-        blurDataURL: image.blurDataURL,
-        height: image.height,
-        width: image.width,
-        filename: image.filename,
-      },
-    });
-  });
+  return (result as PopulatedPaginatedDocs<typeof result, 'image'>).docs;
 });
 
 export const getTechnologies = cache(async (locale: LocaleType): Promise<TechnologyType[]> => {
@@ -82,22 +52,5 @@ export const getTechnologies = cache(async (locale: LocaleType): Promise<Technol
     pagination: false,
   });
 
-
-  return result.docs.map((i) => {
-    const image = i.image as TechnologiesMedia;
-
-    return ({
-      id: i.id,
-      body: i.body,
-      link: i.link,
-      title: i.title,
-      image: {
-        url: image.url,
-        blurDataURL: image.blurDataURL,
-        height: image.height,
-        width: image.width,
-        filename: image.filename,
-      },
-    });
-  });
+  return (result as PopulatedPaginatedDocs<typeof result, 'image'>).docs;
 });

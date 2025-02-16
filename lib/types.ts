@@ -1,4 +1,5 @@
 import type { SerializedEditorState, SerializedLexicalNode } from '@payloadcms/richtext-lexical/lexical';
+import type { PaginatedDocs } from 'payload';
 import type { Locale } from '@/lib/constants';
 import type EnLocale from '@/lib/locales/en.json';
 import type RuLocale from '@/lib/locales/ru.json';
@@ -52,3 +53,8 @@ export type RuTranslation = typeof RuLocale;
 function assert<_ extends never>() {}
 type TypeEqualityGuard<A, B> = Exclude<A, B> | Exclude<B, A>;
 assert<TypeEqualityGuard<DefaultTranslation, RuTranslation>>();
+
+export type Populated<T, K extends keyof T> = {
+  [P in keyof T]: P extends K ? Extract<T[P], object> : T[P];
+};
+export type PopulatedPaginatedDocs<T extends PaginatedDocs, K extends keyof T['docs'][number]> = PaginatedDocs<Populated<T['docs'][number], K>>;
