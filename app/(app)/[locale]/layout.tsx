@@ -4,8 +4,8 @@ import type { ReactNode } from 'react';
 import TranslationProvider from '@/components/TranslationProvider';
 import { getProjects, getSeo, getTechnologies } from '@/lib/actions';
 import { defaultLocale } from '@/lib/constants';
+import { getTranslation } from '@/lib/services';
 import { isCorrectLocale } from '@/lib/utils';
-import { getTranslation } from '@/lib/utils.server';
 
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {

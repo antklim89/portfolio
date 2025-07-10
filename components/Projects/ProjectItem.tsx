@@ -3,9 +3,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FaEarthEurope, FaGitAlt } from 'react-icons/fa6';
 import style from './style.module.scss';
+import { getTranslation } from '@/lib/services';
 import type { LocaleType, ProjectType } from '@/lib/types';
 import { cls } from '@/lib/utils';
-import { getTranslation } from '@/lib/utils.server';
 
 
 async function ProjectItem({ locale, project }: { project: ProjectType; locale: LocaleType }) {
