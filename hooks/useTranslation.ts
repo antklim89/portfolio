@@ -1,6 +1,6 @@
 'use client';
 import { usePathname, useRouter } from 'next/navigation';
-import { useCallback, useContext } from 'react';
+import { use, useCallback } from 'react';
 import { TranslationContext } from '@/components/TranslationProvider';
 import type { LocaleType } from '@/lib/types';
 import { isCorrectLocale } from '@/lib/utils';
@@ -9,7 +9,7 @@ import { isCorrectLocale } from '@/lib/utils';
 const localeRegex = /^\/(\w\w)(.*)/;
 
 export function useTranslation() {
-  const { translation, locale } = useContext(TranslationContext);
+  const { translation, locale } = use(TranslationContext);
   const router = useRouter();
   const pathname = usePathname();
 
