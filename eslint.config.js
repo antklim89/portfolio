@@ -25,6 +25,7 @@ export default antfu(
         'ts/consistent-type-imports': ['error', { fixStyle: 'inline-type-imports' }],
         'ts/strict-boolean-expressions': ['error', { allowNullableString: true }],
         'ts/no-non-null-assertion': 'error',
+        'ts/no-redeclare': ['error', { ignoreDeclarationMerges: true }],
       },
     },
 
