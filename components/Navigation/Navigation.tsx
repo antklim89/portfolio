@@ -1,42 +1,38 @@
 'use client';
-import { useEffect, useState } from 'react';
-import type { ComponentProps } from 'react';
+import { useEffect, useMemo, useState } from 'react';
+import type { ComponentProps, JSX } from 'react';
 import { FaHome } from 'react-icons/fa';
 import style from './style.module.scss';
 import { useTranslation } from '@/hooks/useTranslation';
+import type { Links } from '@/lib/constants';
 import { cls } from '@/lib/utils';
 
+
+const icons: Partial<Record<Links, JSX.Element>> = {
+  home: <FaHome />,
+} as const;
 
 function Navigation({ className, ...props }: ComponentProps<'section'>) {
   const { t } = useTranslation();
 
-  const [links, setLinks] = useState({
-    home: {
-      id: 'home',
-      body: t.home,
-      icon: <FaHome />,
-      observed: false,
-    },
-    projects: { id: 'projects', body: t.projects, observed: false },
-    technologies: { id: 'technologies', body: t.technologies, observed: false },
-    contacts: { id: 'contacts', body: t.contacts, observed: false },
-  });
-  const linksArray = Object.values(links);
+  const links = useMemo(() => [
+    { id: 'home', body: t.home },
+    { id: 'projects', body: t.projects },
+    { id: 'technologies', body: t.technologies },
+    { id: 'contacts', body: t.contacts },
+  ] satisfies { id: Links; body: string }[], [t]);
+
+  const [observedLinks, setObservedLinks] = useState<typeof links[number]['id'][]>([]);
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       for (const entry of entries) {
-        setLinks(p => ({
-          ...p,
-          [entry.target.id]: {
-            ...p[entry.target.id as keyof typeof links],
-            observed: entry.isIntersecting,
-          },
-        }));
+        if (entry.isIntersecting) setObservedLinks(prev => [entry.target.id as Links, ...prev]);
+        else setObservedLinks(prev => prev.filter(id => id !== entry.target.id));
       }
     });
 
-    for (const { id } of linksArray) {
+    for (const { id } of links) {
       const el = document.getElementById(id);
       if (el) observer.observe(el);
     }
@@ -44,16 +40,16 @@ function Navigation({ className, ...props }: ComponentProps<'section'>) {
     return () => {
       observer.disconnect();
     };
-  }, [linksArray]);
+  }, [links]);
 
   return (
     <section className={cls(style.Navigation, className)} {...props}>
       <div className="desktop">
         <ul>
-          {linksArray.map(link => (
+          {links.map(link => (
             <li key={link.body}>
               <a href={`#${link.id}`}>
-                <div style={{ paddingRight: link.observed ? 25 : '' }} />
+                <div style={{ paddingRight: observedLinks.includes(link.id) ? 25 : '' }} />
                 <span>{link.body}</span>
                 {' '}
               </a>
@@ -63,11 +59,11 @@ function Navigation({ className, ...props }: ComponentProps<'section'>) {
       </div>
       <div className={cls('mobile', style.mobile)}>
         <ul>
-          {linksArray.map(link => (
+          {links.map(link => (
             <li key={link.body}>
               <a href={`#${link.id}`}>
-                <div style={{ paddingRight: link.observed ? 5 : '' }} />
-                <span>{'icon' in link ? link.icon : link.body}</span>
+                <div style={{ paddingRight: observedLinks.includes(link.id) ? 5 : '' }} />
+                <span>{icons[link.id] ?? link.body}</span>
               </a>
             </li>
           ))}
