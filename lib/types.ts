@@ -10,6 +10,7 @@ interface ImageType {
   width: number;
   height: number;
   filename: string;
+  url: string;
 }
 
 export interface TechnologyType {

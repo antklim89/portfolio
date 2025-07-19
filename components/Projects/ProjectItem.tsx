@@ -17,7 +17,6 @@ async function ProjectItem({ locale, project }: { project: ProjectType; locale: 
     repository,
     body,
   } = project;
-
   const t = await getTranslation(locale);
 
   return (
@@ -35,7 +34,7 @@ async function ProjectItem({ locale, project }: { project: ProjectType; locale: 
             blurDataURL={image.blurDataURL}
             height={image.height}
             placeholder="blur"
-            src={`/media/projects/${image.filename}`}
+            src={image.url}
             width={image.width}
           />
         </Link>

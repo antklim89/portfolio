@@ -28,6 +28,7 @@ export const Media = {
     read: () => true,
   },
   defaultPopulate: {
+    url: true,
     filename: true,
     width: true,
     height: true,
