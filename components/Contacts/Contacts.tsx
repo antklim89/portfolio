@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useTransition } from 'react';
 import type { ComponentProps, FormEventHandler } from 'react';
 import style from './style.module.scss';
 import { useTranslation } from '@/hooks/useTranslation';
@@ -8,22 +8,30 @@ import { submitContactsForm } from './Contacts.action';
 
 
 function Contacts({ className, ...props }: ComponentProps<'section'>) {
-  const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState<'success' | 'error' | null>(null);
+  const [pending, startTransition] = useTransition();
 
   const { t } = useTranslation();
 
-  const handleSubmit: FormEventHandler<HTMLFormElement> = async (e) => {
+  const handleSubmit: FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
-    setLoading(true);
+    startTransition(async () => {
+      const form = e.currentTarget;
+      const formData = new FormData(form);
+      const response = await submitContactsForm({
+        name: formData.get('name') as string,
+        subject: formData.get('subject') as string,
+        text: formData.get('text') as string,
+      });
 
-    const body = new FormData(e.currentTarget);
-    const response = await submitContactsForm(body);
-
-    if (response.error) setStatus('error');
-    else setStatus('success');
-
-    setLoading(false);
+      if (response.success) {
+        form.reset();
+        setStatus('success');
+      } else {
+        console.error(response.message);
+        setStatus('error');
+      }
+    });
   };
 
   return (
@@ -43,7 +51,7 @@ function Contacts({ className, ...props }: ComponentProps<'section'>) {
             <br />
             <input
               required
-              disabled={loading}
+              disabled={pending}
               maxLength={100}
               minLength={3}
               name="name"
@@ -57,7 +65,7 @@ function Contacts({ className, ...props }: ComponentProps<'section'>) {
             <br />
             <input
               required
-              disabled={loading}
+              disabled={pending}
               maxLength={100}
               minLength={3}
               name="subject"
@@ -71,7 +79,7 @@ function Contacts({ className, ...props }: ComponentProps<'section'>) {
             <br />
             <textarea
               required
-              disabled={loading}
+              disabled={pending}
               maxLength={1000}
               minLength={3}
               name="text"
@@ -79,7 +87,7 @@ function Contacts({ className, ...props }: ComponentProps<'section'>) {
             />
           </label>
 
-          <button disabled={loading} type="submit">
+          <button disabled={pending} type="submit">
             {t.Submit}
           </button>
         </form>

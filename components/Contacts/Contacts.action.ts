@@ -1,30 +1,46 @@
 'use server';
-import process from 'node:process';
-import { Resend } from 'resend';
-import { z } from 'zod';
+import config from '@payload-config';
+import { getPayload } from 'payload';
+import { z } from 'zod/mini';
+import { env } from '@/lib/env';
 import { getTranslation } from '@/lib/services';
 import { getCorrectLocale } from '@/lib/utils';
 
 
-const RESEND_KEY = z.string({ message: 'RESEND_KEY env variable is required' }).parse(process.env.RESEND_KEY);
-const RESEND_TO = z.string({ message: 'RESEND_TO env variable is required' }).parse(process.env.RESEND_TO);
-const MAIL_LOCALE = z.string().optional().parse(process.env.MAIL_LOCALE);
+const emailSchema = z.object({
+  subject: z.string(),
+  text: z.string(),
+  name: z.string(),
+});
 
-const resend = new Resend(RESEND_KEY);
+export async function submitContactsForm(input: z.infer<typeof emailSchema>) {
+  try {
+    const locale = getCorrectLocale(env.MAIL_LOCALE);
 
-export async function submitContactsForm(formData: FormData) {
-  const locale = getCorrectLocale(MAIL_LOCALE);
-  const subject = formData.get('subject')?.toString() ?? '';
-  const text = formData.get('text')?.toString() ?? '';
-  const name = formData.get('name')?.toString() ?? '';
-  const t = await getTranslation(locale);
+    const { success, data, error } = await emailSchema.safeParseAsync(input);
+    if (!success) {
+      return {
+        success: false,
+        message: z.prettifyError(error),
+      };
+    }
+    const { subject, text, name } = data;
+    const t = await getTranslation(locale);
 
-  const result = await resend.emails.send({
-    from: 'Portfolio <onboarding@resend.dev>',
-    to: RESEND_TO,
-    subject: `${t['A message from']} ${name} ${t['on the subject of']} "${subject}"`,
-    text,
-  });
+    const payload = await getPayload({ config });
+    await payload.sendEmail({
+      to: env.SMTP_USER,
+      subject: `${t['A message from']} ${name} ${t['on the subject of']} "${subject}"`,
+      text,
+    });
 
-  return result;
+    return {
+      success: true,
+    };
+  } catch (error) {
+    return {
+      success: false,
+      message: error instanceof Error ? error.message : 'Unexpected error.',
+    };
+  }
 }

@@ -33,6 +33,7 @@
   "dependencies": {
     "@fontsource/montserrat": "^5.2.6",
     "@payloadcms/db-sqlite": "^3.46.0",
+    "@payloadcms/email-nodemailer": "^3.46.0",
     "@payloadcms/next": "^3.46.0",
     "@payloadcms/payload-cloud": "^3.46.0",
     "@payloadcms/richtext-lexical": "^3.46.0",
@@ -43,7 +44,6 @@
     "react": "19.1.0",
     "react-dom": "^19.1.0",
     "react-icons": "^5.5.0",
-    "resend": "^4.6.0",
     "typescript": "5.8.3",
     "zod": "^4.0.2"
   },

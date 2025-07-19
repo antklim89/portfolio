@@ -9,8 +9,10 @@ services:
       secrets:
         - PAYLOAD_SECRET
     environment:
-      - RESEND_KEY==${RESEND_KEY}
-      - RESEND_TO==${RESEND_TO}
+      - SMTP_PASS=${SMTP_PASS}
+      - SMTP_USER=${SMTP_USER}
+      - SMTP_HOST=${SMTP_HOST}
+      - SMTP_PORT=${SMTP_PORT}
       - MAIL_LOCALE==${MAIL_LOCALE}
       - PAYLOAD_SECRET==${PAYLOAD_SECRET}
     restart: unless-stopped
