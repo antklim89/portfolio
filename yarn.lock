@@ -2140,6 +2140,11 @@
   resolved "https://registry.yarnpkg.com/@libsql/linux-x64-musl/-/linux-x64-musl-0.4.7.tgz#9340d4c46e77ae072968e7dc70710dedfd6ee4f4"
   integrity sha512-nI6tpS1t6WzGAt1Kx1n1HsvtBbZ+jHn0m7ogNNT6pQHZQj7AFFTIMeDQw/i/Nt5H38np1GVRNsFe99eSIMs9XA==
 
+"@libsql/linux-x64-musl@^0.5.14-pre.1":
+  version "0.5.14-pre.1"
+  resolved "https://registry.yarnpkg.com/@libsql/linux-x64-musl/-/linux-x64-musl-0.5.14-pre.1.tgz#43b68cadc2a45692c9722f301914ab2268b4164d"
+  integrity sha512-nv5MTPzdfP6hy/wBLDOF3FwQuLHKKCeDea3yrC0d28peKwy3eajmyGSZmuO3b0qhVXuMhQqgi2vmAM3+noPLBw==
+
 "@libsql/win32-x64-msvc@0.4.7":
   version "0.4.7"
   resolved "https://registry.yarnpkg.com/@libsql/win32-x64-msvc/-/win32-x64-msvc-0.4.7.tgz#b39cc6de4af797af736e9f2179002e8ebf4d2d4a"
