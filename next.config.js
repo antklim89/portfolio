@@ -12,17 +12,7 @@ export default withPayload({
     URL: process.env.URL,
   },
   output: 'standalone',
-  redirects: async () => {
-    if (process.env.NODE_ENV === 'production') {
-      return [
-        {
-          source: '/admin/:path*',
-          destination: '/',
-          permanent: true,
-          statusCode: 301,
-        },
-      ];
-    }
-    return [];
+  outputFileTracingIncludes: {
+    '**': ['./node_modules/@libsql/linux-x64-musl/**'],
   },
 });

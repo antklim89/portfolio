@@ -5,11 +5,21 @@ services:
     build:
       args:
         - URL=${URL}
-        - PAYLOAD_SECRET=${PAYLOAD_SECRET}
       dockerfile: Dockerfile
-    container_name: portfolio
-    env_file:
-      - .env
+      secrets:
+        - PAYLOAD_SECRET
+    environment:
+      - RESEND_KEY==${RESEND_KEY}
+      - RESEND_TO==${RESEND_TO}
+      - MAIL_LOCALE==${MAIL_LOCALE}
+      - PAYLOAD_SECRET==${PAYLOAD_SECRET}
     restart: unless-stopped
+    volumes:
+      - ./db:/app/db
+      - ./public/media:/app/public/media
     ports:
       - 3000:3000
+
+secrets:
+  PAYLOAD_SECRET:
+    environment: PAYLOAD_SECRET

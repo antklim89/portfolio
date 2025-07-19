@@ -40,7 +40,7 @@ export default buildConfig({
     push: false,
     migrationDir: path.resolve(dirname, 'migrations'),
     client: {
-      url: 'file:./database.db',
+      url: 'file:./db/database.db',
     },
   }),
   i18n: {
