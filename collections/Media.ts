@@ -1,3 +1,4 @@
+import { revalidatePath } from 'next/cache';
 import { randomUUID } from 'node:crypto';
 import type { CollectionConfig } from 'payload';
 import sharp from 'sharp';
@@ -23,6 +24,11 @@ export const Media = {
         }
       },
     ],
+    afterOperation: [({ operation }) => {
+      if (operation === 'delete' || operation === 'update' || operation === 'create' || operation === 'updateByID' || operation === 'deleteByID') {
+        revalidatePath('/', 'layout');
+      }
+    }],
   },
   access: {
     read: () => true,

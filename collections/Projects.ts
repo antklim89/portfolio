@@ -1,3 +1,4 @@
+import { revalidatePath } from 'next/cache';
 import type { CollectionConfig } from 'payload';
 import { Media } from './Media';
 
@@ -9,6 +10,13 @@ export const Projects: CollectionConfig = {
   },
   access: {
     read: () => true,
+  },
+  hooks: {
+    afterOperation: [({ operation }) => {
+      if (operation === 'delete' || operation === 'update' || operation === 'create' || operation === 'updateByID' || operation === 'deleteByID') {
+        revalidatePath('/', 'layout');
+      }
+    }],
   },
   fields: [
     {
