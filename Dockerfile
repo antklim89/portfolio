@@ -5,17 +5,21 @@ WORKDIR /app
 FROM base AS builder
 RUN apk add --no-cache libc6-compat
 COPY package.json yarn.lock ./
-RUN yarn install --frozen-lockfile
+RUN --mount=type=cache,target=/root/.yarn YARN_CACHE_FOLDER=/root/.yarn \
+    yarn install --frozen-lockfile
 COPY . .
+
 ARG URL
 ARG SMTP_USER
 ARG SMTP_HOST
 ARG SMTP_PORT
 ARG MAIL_LOCALE
 
+RUN echo hello hello
 RUN --mount=type=secret,id=PAYLOAD_SECRET,env=PAYLOAD_SECRET \
     --mount=type=secret,id=SMTP_PASS,env=SMTP_PASS \
     --mount=type=bind,target=/app/db,source=./db \
+    --mount=type=cache,target=/app/.next/cache \
     yarn run build
 
 
