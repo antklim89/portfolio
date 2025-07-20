@@ -8,8 +8,15 @@ COPY package.json yarn.lock ./
 RUN yarn install --frozen-lockfile
 COPY . .
 ARG URL
+ARG SMTP_USER
+ARG SMTP_HOST
+ARG SMTP_PORT
+ARG MAIL_LOCALE
 
-RUN --mount=type=secret,id=PAYLOAD_SECRET,env=PAYLOAD_SECRET --mount=type=bind,target=/app/db,source=./db yarn run build
+RUN --mount=type=secret,id=PAYLOAD_SECRET,env=PAYLOAD_SECRET \
+    --mount=type=secret,id=SMTP_PASS,env=SMTP_PASS \
+    --mount=type=bind,target=/app/db,source=./db \
+    yarn run build
 
 
 FROM base AS runner

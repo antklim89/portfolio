@@ -1,13 +1,20 @@
 
 services:
   app:
-    image: development.cr.cloud.ru/portfolio:v1
+    image: development.cr.cloud.ru/portfolio:v2
     build:
       args:
         - URL=${URL}
+        - SMTP_PASS=${SMTP_PASS}
+        - SMTP_USER=${SMTP_USER}
+        - SMTP_HOST=${SMTP_HOST}
+        - SMTP_PORT=${SMTP_PORT}
+        - MAIL_LOCALE==${MAIL_LOCALE}
+        - PAYLOAD_SECRET==${PAYLOAD_SECRET}
       dockerfile: Dockerfile
       secrets:
         - PAYLOAD_SECRET
+        - SMTP_PASS
     environment:
       - SMTP_PASS=${SMTP_PASS}
       - SMTP_USER=${SMTP_USER}
@@ -25,3 +32,5 @@ services:
 secrets:
   PAYLOAD_SECRET:
     environment: PAYLOAD_SECRET
+  SMTP_PASS:
+    environment: SMTP_PASS
