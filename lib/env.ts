@@ -2,8 +2,6 @@ import { z } from 'zod/mini';
 
 
 export const env = z.object({
-  URL: z.optional(z.string()),
-
   PAYLOAD_SECRET: z.string(),
 
   MAIL_LOCALE: z.string(),
@@ -12,8 +10,6 @@ export const env = z.object({
   SMTP_HOST: z.string(),
   SMTP_PORT: z.string(),
 }).parse({
-  URL: process.env.URL,
-
   PAYLOAD_SECRET: process.env.PAYLOAD_SECRET,
 
   MAIL_LOCALE: process.env.MAIL_LOCALE,

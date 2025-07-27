@@ -16,8 +16,6 @@ yarn docker:up
 
 ### Env
 
-URL=http://localhost:3000
-
 MAIL_LOCALE=ru
 SMTP_PASS=secret
 SMTP_USER=example@mail.ru

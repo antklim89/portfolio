@@ -9,7 +9,6 @@ RUN --mount=type=cache,target=/root/.yarn YARN_CACHE_FOLDER=/root/.yarn \
     yarn install --frozen-lockfile
 COPY . .
 
-ARG URL
 ARG SMTP_USER
 ARG SMTP_HOST
 ARG SMTP_PORT
