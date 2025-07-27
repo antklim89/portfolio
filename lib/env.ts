@@ -2,6 +2,8 @@ import { z } from 'zod/mini';
 
 
 export const env = z.object({
+  PROD: z.boolean(),
+
   PAYLOAD_SECRET: z.string(),
 
   MAIL_LOCALE: z.string(),
@@ -10,6 +12,8 @@ export const env = z.object({
   SMTP_HOST: z.string(),
   SMTP_PORT: z.string(),
 }).parse({
+  PROD: process.env.NODE_ENV === 'production',
+
   PAYLOAD_SECRET: process.env.PAYLOAD_SECRET,
 
   MAIL_LOCALE: process.env.MAIL_LOCALE,
