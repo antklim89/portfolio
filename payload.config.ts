@@ -53,10 +53,10 @@ export default buildConfig({
     outputFile: path.resolve(dirname, 'payload-types.ts'),
   },
   db: sqliteAdapter({
-    push: false,
+    push: !env.PROD,
     migrationDir: path.resolve(dirname, 'migrations'),
     client: {
-      url: 'file:./db/database.db',
+      url: env.PROD ? 'file:./db/database.db' : 'file:./db/dev.db',
     },
   }),
   i18n: {
