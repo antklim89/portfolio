@@ -11,6 +11,7 @@ import { About } from './collections/About';
 import { Projects, ProjectsMedia } from './collections/Projects';
 import { Seo } from './collections/Seo';
 import { Technologies, TechnologiesMedia } from './collections/Technologies';
+import { defaultLocale, locales } from './lib/constants';
 import { env } from './lib/env';
 
 
@@ -61,11 +62,11 @@ export default buildConfig({
   }),
   i18n: {
     supportedLanguages: { en, ru },
-    fallbackLanguage: 'en',
+    fallbackLanguage: defaultLocale,
   },
   localization: {
-    locales: ['en', 'ru'],
-    defaultLocale: 'en',
+    locales,
+    defaultLocale,
     fallback: true,
   },
   graphQL: {
