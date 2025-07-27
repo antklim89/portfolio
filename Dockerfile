@@ -1,4 +1,5 @@
 FROM node:24-alpine3.22 AS base
+ENV NODE_ENV=production
 WORKDIR /app
 
 
@@ -25,7 +26,6 @@ RUN --mount=type=secret,id=PAYLOAD_SECRET,env=PAYLOAD_SECRET \
 FROM base AS runner
 WORKDIR /app
 ENV NEXT_TELEMETRY_DISABLED=1
-ENV NODE_ENV=production
 
 COPY --from=builder --chown=node:node /app/public ./public
 COPY --from=builder --chown=node:node /app/.next/standalone ./
