@@ -28,7 +28,9 @@
     "docker:dev": "docker compose -f compose.yml -f compose.dev.yml up --build --watch",
     "docker:up": "docker compose up",
     "docker:build": "docker compose build",
-    "docker:start": "docker compose start"
+    "docker:start": "docker compose start",
+    "migrate": "NODE_ENV=production payload migrate",
+    "migrate:create": "NODE_ENV=production payload migrate:create"
   },
   "dependencies": {
     "@fontsource/montserrat": "^5.2.6",
