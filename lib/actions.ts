@@ -38,6 +38,9 @@ export const getProjects = cache(async (locale: LocaleType): Promise<ProjectType
     locale,
     depth: 1,
     pagination: false,
+    where: {
+      isPublished: { equals: true },
+    },
   });
 
   return (result as PopulatedPaginatedDocs<typeof result, 'image'>).docs;
@@ -50,6 +53,9 @@ export const getTechnologies = cache(async (locale: LocaleType): Promise<Technol
     locale,
     depth: 1,
     pagination: false,
+    where: {
+      isPublished: { equals: true },
+    },
   });
 
   return (result as PopulatedPaginatedDocs<typeof result, 'image'>).docs;

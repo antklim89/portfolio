@@ -131,6 +131,7 @@ export interface UserAuthOperations {
  */
 export interface Project {
   id: number;
+  isPublished?: boolean | null;
   body: {
     root: {
       type: string;
@@ -179,6 +180,7 @@ export interface ProjectsMedia {
  */
 export interface Technology {
   id: number;
+  isPublished?: boolean | null;
   body: {
     root: {
       type: string;
@@ -317,6 +319,7 @@ export interface PayloadMigration {
  * via the `definition` "projects_select".
  */
 export interface ProjectsSelect<T extends boolean = true> {
+  isPublished?: T;
   body?: T;
   title?: T;
   link?: T;
@@ -349,6 +352,7 @@ export interface ProjectsMediaSelect<T extends boolean = true> {
  * via the `definition` "technologies_select".
  */
 export interface TechnologiesSelect<T extends boolean = true> {
+  isPublished?: T;
   body?: T;
   title?: T;
   link?: T;

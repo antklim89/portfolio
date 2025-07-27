@@ -20,6 +20,12 @@ export const Projects: CollectionConfig = {
   },
   fields: [
     {
+      name: 'isPublished',
+      type: 'checkbox',
+      defaultValue: false,
+      required: false,
+    },
+    {
       name: 'body',
       type: 'richText',
       localized: true,
