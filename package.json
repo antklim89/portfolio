@@ -29,6 +29,7 @@
     "docker:up": "docker compose up",
     "docker:build": "docker compose build",
     "docker:start": "docker compose start",
+    "docker:push": "docker push development.cr.cloud.ru/portfolio:v2",
     "migrate": "NODE_ENV=production payload migrate",
     "migrate:create": "NODE_ENV=production payload migrate:create"
   },
