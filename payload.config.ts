@@ -34,6 +34,9 @@ export default buildConfig({
     },
   }),
   admin: {
+    meta: {
+      title: `Portfolio ${env.PROD ? 'production mode' : 'development mode.'}`,
+    },
     importMap: {
       baseDir: path.resolve(dirname),
     },
