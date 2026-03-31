@@ -45,7 +45,7 @@
   },
   "files": {
     "ignoreUnknown": true,
-    "includes": ["src/**/*", "!**/*.generated.*", "!src/app/(payload)/**/*"]
+    "includes": ["next.config.ts", "src/**/*", "!**/*.generated.*", "!src/app/(payload)/**/*"]
   },
   "formatter": {
     "attributePosition": "auto",

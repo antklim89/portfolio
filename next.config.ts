@@ -1,15 +1,12 @@
 import { withPayload } from '@payloadcms/next/withPayload';
 import './lib/env';
 
-
-/** @type {import('next').NextConfig} */
 export default withPayload({
   reactStrictMode: true,
-  images: {
-    minimumCacheTTL: 60 * 60 * 60 * 24,
-  },
+  compress: true,
   output: 'standalone',
-  outputFileTracingIncludes: {
-    '**': ['./node_modules/@libsql/linux-x64-musl/**'],
-  },
+  allowedDevOrigins: ['127.0.0.1'],
+  // cacheComponents: true,
+  // typedRoutes: true,
+  turbopack: {},
 });
