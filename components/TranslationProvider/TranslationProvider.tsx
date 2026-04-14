@@ -1,13 +1,19 @@
+import type { ReactNode } from 'react';
 import { createContext, useMemo } from 'react';
-import type { FC } from 'react';
+
 import type { DefaultTranslation, LocaleType } from '@/lib/types';
-import type { TranslationProviderProps } from './type';
 
+export const TranslationContext = createContext<{ translation: DefaultTranslation; locale: LocaleType } | null>(null);
 
-// eslint-disable-next-line react-refresh/only-export-components
-export const TranslationContext = createContext({} as { translation: DefaultTranslation; locale: LocaleType });
-
-const TranslationProvider: FC<TranslationProviderProps> = ({ translation, locale, children }) => {
+const TranslationProvider = ({
+  translation,
+  locale,
+  children,
+}: {
+  translation: DefaultTranslation;
+  locale: LocaleType;
+  children: ReactNode;
+}) => {
   const value = useMemo(() => ({ translation, locale }), [translation, locale]);
   return <TranslationContext value={value}>{children}</TranslationContext>;
 };

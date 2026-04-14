@@ -1,4 +1,3 @@
-'use client';
 import { use, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 
@@ -7,7 +6,9 @@ import type { LocaleType } from '@/lib/types';
 import { isCorrectLocale } from '@/lib/utils';
 
 export function useTranslation() {
-  const { translation, locale } = use(TranslationContext);
+  const context = use(TranslationContext);
+  if (!context) throw new Error('No TranslationContext');
+  const { translation, locale } = context;
   const router = useRouter();
 
   const changeLocale = useCallback(
