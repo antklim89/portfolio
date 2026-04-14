@@ -1,11 +1,10 @@
-import type { FC } from 'react';
 import { RichText } from '@payloadcms/richtext-lexical/react';
 import Image from 'next/image';
 
+import type { TechnologyType } from '@/lib/types';
 import style from './style.module.scss';
-import type { TechnologyProps } from './types';
 
-const TechnologyItem: FC<TechnologyProps> = ({ technology }) => {
+function TechnologyItem({ technology }: { technology: TechnologyType }) {
   const { body, image, link, title } = technology;
 
   return (
@@ -35,6 +34,6 @@ const TechnologyItem: FC<TechnologyProps> = ({ technology }) => {
       </section>
     </a>
   );
-};
+}
 
 export default TechnologyItem;
