@@ -1,33 +1,20 @@
 import { RichText } from '@payloadcms/richtext-lexical/react';
 import Image from 'next/image';
-import Link from 'next/link';
 import { FaEarthEurope, FaGitAlt } from 'react-icons/fa6';
-import style from './style.module.scss';
+
 import { getTranslation } from '@/lib/services';
 import type { LocaleType, ProjectType } from '@/lib/types';
 import { cls } from '@/lib/utils';
-
+import style from './style.module.scss';
 
 async function ProjectItem({ locale, project }: { project: ProjectType; locale: LocaleType }) {
-  const {
-    technologies,
-    title,
-    image,
-    link,
-    repository,
-    body,
-  } = project;
+  const { technologies, title, image, link, repository, body } = project;
   const t = await getTranslation(locale);
 
   return (
     <section className={style.ProjectItem}>
       <div className={style.left}>
-        <Link
-          className={cls(style.image)}
-          href={link}
-          rel="noopener noreferrer"
-          target="_blank"
-        >
+        <a className={cls(style.image)} href={link} rel="noopener noreferrer" target="_blank">
           <Image
             unoptimized
             alt={title}
@@ -37,18 +24,12 @@ async function ProjectItem({ locale, project }: { project: ProjectType; locale: 
             src={image.url}
             width={image.width}
           />
-        </Link>
+        </a>
         <div className={style.links}>
-          <Link
-            aria-label={t.Site}
-            href={link}
-            rel="noopener noreferrer"
-            target="_blank"
-            title={`${t.Site} ${link}`}
-          >
+          <a aria-label={t.Site} href={link} rel="noopener noreferrer" target="_blank" title={`${t.Site} ${link}`}>
             <FaEarthEurope size={32} />
-          </Link>
-          <Link
+          </a>
+          <a
             aria-label={t.Repository}
             href={repository}
             rel="noopener noreferrer"
@@ -56,25 +37,19 @@ async function ProjectItem({ locale, project }: { project: ProjectType; locale: 
             title={`${t.Repository} ${repository}`}
           >
             <FaGitAlt size={32} />
-          </Link>
+          </a>
         </div>
       </div>
       <div className={style.right}>
-        <Link
-          href={link}
-          rel="noopener noreferrer"
-          target="_blank"
-        >
+        <a href={link} rel="noopener noreferrer" target="_blank">
           <h3 className="title-md">{title}</h3>
-        </Link>
+        </a>
         <div className={style.body}>
           <RichText data={body} />
         </div>
         <div className={style.tags}>
           {technologies.map(technology => (
-            <span key={technology}>
-              {technology}
-            </span>
+            <span key={technology}>{technology}</span>
           ))}
         </div>
       </div>

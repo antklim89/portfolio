@@ -1,28 +1,21 @@
+import type { FC } from 'react';
 import { RichText } from '@payloadcms/richtext-lexical/react';
 import Image from 'next/image';
-import Link from 'next/link';
-import type { FC } from 'react';
+
 import style from './style.module.scss';
 import type { TechnologyProps } from './types';
 
-
 const TechnologyItem: FC<TechnologyProps> = ({ technology }) => {
-  const {
-    body,
-    image,
-    link,
-    title,
-  } = technology;
+  const { body, image, link, title } = technology;
 
   return (
-    <Link
+    <a
       aria-label={`${title} technology`}
       className={style.linkWrapper}
       href={link}
       rel="noopener noreferrer"
       target="_blank"
     >
-
       <section className={style.Technology}>
         <div className={style.image}>
           <Image
@@ -40,7 +33,7 @@ const TechnologyItem: FC<TechnologyProps> = ({ technology }) => {
           <RichText data={body} />
         </div>
       </section>
-    </Link>
+    </a>
   );
 };
 
