@@ -6,7 +6,8 @@ export const Locale = {
 export const defaultLocale = Locale.en;
 export const locales = Object.values(Locale);
 
-export const DEFAULT_BLUR_DATA = `data:image/webp;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mPk4vpvDAACgQFIuAF96wAAAABJRU5ErkJggg==`;
+export const DEFAULT_BLUR_DATA =
+  'data:image/webp;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mPk4vpvDAACgQFIuAF96wAAAABJRU5ErkJggg==';
 
 export const Links = {
   HOME: 'home',
@@ -14,4 +15,4 @@ export const Links = {
   CONTACTS: 'contacts',
   TECHNOLOGIES: 'technologies',
 } as const;
-export type Links = typeof Links[keyof typeof Links];
+export type Links = (typeof Links)[keyof typeof Links];
