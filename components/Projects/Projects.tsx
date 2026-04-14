@@ -1,14 +1,14 @@
 import type { ComponentProps } from 'react';
-import style from './style.module.scss';
+
 import { getProjects } from '@/lib/actions';
 import { locales } from '@/lib/constants';
 import { getTranslation } from '@/lib/services';
 import type { LocaleType } from '@/lib/types';
 import { cls } from '@/lib/utils';
 import ProjectItem from './ProjectItem';
+import style from './style.module.scss';
 
-
-export async function generateStaticParams() {
+export function generateStaticParams() {
   return locales.map(locale => ({ locale }));
 }
 

@@ -1,9 +1,9 @@
-import { revalidatePath } from 'next/cache';
 import { randomUUID } from 'node:crypto';
+import { revalidatePath } from 'next/cache';
 import type { CollectionConfig } from 'payload';
 import sharp from 'sharp';
-import { DEFAULT_BLUR_DATA } from '@/lib/constants';
 
+import { DEFAULT_BLUR_DATA } from '@/lib/constants';
 
 export const Media = {
   slug: 'public/media',
@@ -18,17 +18,25 @@ export const Media = {
       },
     ],
     beforeOperation: [
-      async ({ req, operation }) => {
+      ({ req, operation }) => {
         if ((operation === 'create' || operation === 'update') && req.file) {
           req.file.name = `${randomUUID()}-${req.file.name}`;
         }
       },
     ],
-    afterOperation: [({ operation }) => {
-      if (operation === 'delete' || operation === 'update' || operation === 'create' || operation === 'updateByID' || operation === 'deleteByID') {
-        revalidatePath('/', 'layout');
-      }
-    }],
+    afterOperation: [
+      ({ operation }) => {
+        if (
+          operation === 'delete' ||
+          operation === 'update' ||
+          operation === 'create' ||
+          operation === 'updateByID' ||
+          operation === 'deleteByID'
+        ) {
+          revalidatePath('/', 'layout');
+        }
+      },
+    ],
   },
   access: {
     read: () => true,

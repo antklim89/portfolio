@@ -45,7 +45,14 @@
   },
   "files": {
     "ignoreUnknown": true,
-    "includes": ["next.config.ts", "src/**/*", "!**/*.generated.*", "!src/app/(payload)/**/*"]
+    "includes": [
+      "**/*",
+      "!**/node_modules/**/*",
+      "!**/.next/**/*",
+      "!payload-types.ts",
+      "!migrations",
+      "!app/(payload)/**/*"
+    ]
   },
   "formatter": {
     "attributePosition": "auto",
@@ -137,22 +144,11 @@
         "recommended": true
       },
       "style": {
-        "noRestrictedImports": {
-          "level": "error",
-          "options": {
-            "patterns": [
-              {
-                "group": ["**/entities/*/*/**", "**/pages/*/*/**", "**/features/*/*/**", "**/widgets/*/*/**"]
-              }
-            ]
-          }
-        },
         "useConsistentTypeDefinitions": {
           "fix": "safe",
           "level": "error",
           "options": { "style": "interface" }
         },
-        "noJsxLiterals": "error",
         "useReactFunctionComponents": "error",
         "noCommonJs": "error",
         "noDefaultExport": "off",
@@ -172,9 +168,9 @@
         "useConsistentObjectDefinitions": "error",
         "useExportType": "error",
         "useFilenamingConvention": {
-          "level": "off",
+          "level": "error",
           "options": {
-            "filenameCases": ["kebab-case"],
+            "filenameCases": ["kebab-case", "camelCase", "PascalCase"],
             "requireAscii": true,
             "strictCase": true
           }

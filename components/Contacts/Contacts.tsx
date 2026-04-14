@@ -1,11 +1,11 @@
 'use client';
-import { useState, useTransition } from 'react';
 import type { ComponentProps, FormEventHandler } from 'react';
-import style from './style.module.scss';
+import { useState, useTransition } from 'react';
+
 import { useTranslation } from '@/hooks/useTranslation';
 import { cls } from '@/lib/utils';
 import { submitContactsForm } from './Contacts.action';
-
+import style from './style.module.scss';
 
 function Contacts({ className, ...props }: ComponentProps<'section'>) {
   const [status, setStatus] = useState<'success' | 'error' | null>(null);
@@ -13,7 +13,7 @@ function Contacts({ className, ...props }: ComponentProps<'section'>) {
 
   const { t } = useTranslation();
 
-  const handleSubmit: FormEventHandler<HTMLFormElement> = (e) => {
+  const handleSubmit: FormEventHandler<HTMLFormElement> = e => {
     e.preventDefault();
     startTransition(async () => {
       const form = e.currentTarget;
@@ -46,45 +46,21 @@ function Contacts({ className, ...props }: ComponentProps<'section'>) {
           <input name="form-name" type="hidden" value="contact" />
 
           <label className={style.input}>
-            {t.Name}
-            :
+            {t.Name}:
             <br />
-            <input
-              required
-              disabled={pending}
-              maxLength={100}
-              minLength={3}
-              name="name"
-              type="text"
-            />
+            <input required disabled={pending} maxLength={100} minLength={3} name="name" type="text" />
           </label>
 
           <label className={style.input}>
-            {t.Subject}
-            :
+            {t.Subject}:
             <br />
-            <input
-              required
-              disabled={pending}
-              maxLength={100}
-              minLength={3}
-              name="subject"
-              type="text"
-            />
+            <input required disabled={pending} maxLength={100} minLength={3} name="subject" type="text" />
           </label>
 
           <label className={style.input}>
-            {t.Message}
-            :
+            {t.Message}:
             <br />
-            <textarea
-              required
-              disabled={pending}
-              maxLength={1000}
-              minLength={3}
-              name="text"
-              rows={6}
-            />
+            <textarea required disabled={pending} maxLength={1000} minLength={3} name="text" rows={6} />
           </label>
 
           <button disabled={pending} type="submit">
