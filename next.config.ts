@@ -6,7 +6,6 @@ export default withPayload({
   compress: true,
   output: 'standalone',
   allowedDevOrigins: ['127.0.0.1'],
-  // cacheComponents: true,
-  // typedRoutes: true,
+  cacheComponents: true,
   turbopack: {},
 });

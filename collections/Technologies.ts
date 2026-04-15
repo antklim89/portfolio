@@ -1,6 +1,6 @@
-import { revalidatePath } from 'next/cache';
 import type { CollectionConfig } from 'payload';
 
+import { revalidateMainCache } from '@/lib/cache';
 import { Media } from './Media';
 
 export const Technologies: CollectionConfig = {
@@ -12,19 +12,8 @@ export const Technologies: CollectionConfig = {
     read: () => true,
   },
   hooks: {
-    afterOperation: [
-      ({ operation }) => {
-        if (
-          operation === 'delete' ||
-          operation === 'update' ||
-          operation === 'create' ||
-          operation === 'updateByID' ||
-          operation === 'deleteByID'
-        ) {
-          revalidatePath('/', 'layout');
-        }
-      },
-    ],
+    afterChange: [revalidateMainCache],
+    afterDelete: [revalidateMainCache],
   },
   fields: [
     {

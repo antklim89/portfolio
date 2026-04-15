@@ -1,5 +1,6 @@
-import { revalidatePath } from 'next/cache';
 import type { GlobalConfig } from 'payload';
+
+import { revalidateMainCache } from '@/lib/cache';
 
 export const About: GlobalConfig = {
   slug: 'about',
@@ -7,11 +8,7 @@ export const About: GlobalConfig = {
     read: () => true,
   },
   hooks: {
-    afterChange: [
-      () => {
-        revalidatePath('/', 'layout');
-      },
-    ],
+    afterChange: [revalidateMainCache],
   },
   fields: [
     {

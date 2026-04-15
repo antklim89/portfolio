@@ -1,8 +1,8 @@
 import { randomUUID } from 'node:crypto';
-import { revalidatePath } from 'next/cache';
 import type { CollectionConfig } from 'payload';
 import sharp from 'sharp';
 
+import { revalidateMainCache } from '@/lib/cache';
 import { DEFAULT_BLUR_DATA } from '@/lib/constants';
 
 export const Media = {
@@ -24,19 +24,8 @@ export const Media = {
         }
       },
     ],
-    afterOperation: [
-      ({ operation }) => {
-        if (
-          operation === 'delete' ||
-          operation === 'update' ||
-          operation === 'create' ||
-          operation === 'updateByID' ||
-          operation === 'deleteByID'
-        ) {
-          revalidatePath('/', 'layout');
-        }
-      },
-    ],
+    afterChange: [revalidateMainCache],
+    afterDelete: [revalidateMainCache],
   },
   access: {
     read: () => true,

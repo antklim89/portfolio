@@ -1,16 +1,17 @@
-import type { ReactNode } from 'react';
+import '@/styles/main.scss';
+import '@/styles/properties.scss';
 import '@fontsource/montserrat/400-italic.css';
 import '@fontsource/montserrat/400.css';
 import '@fontsource/montserrat/700-italic.css';
 import '@fontsource/montserrat/700.css';
-import '@/styles/main.scss';
-import '@/styles/properties.scss';
-
+import { type ReactNode, Suspense } from 'react';
 import type { Metadata } from 'next';
 
 import TranslationProvider from '@/components/TranslationProvider';
 import { getProjects, getSeo, getTechnologies } from '@/lib/actions';
+import { createMainCache } from '@/lib/cache';
 import { getServerLocale, getTranslation } from '@/lib/services';
+import type { LocaleType } from '@/lib/types';
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getServerLocale();
@@ -49,20 +50,31 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-async function RootLayout({ children }: { children: ReactNode }) {
-  const locale = await getServerLocale();
-  const translation = await getTranslation(locale);
+export default function RootLayout({ children }: { children: ReactNode }) {
+  const localePromise = getServerLocale();
 
   return (
-    <html lang="en">
-      <head />
-      <body>
-        <TranslationProvider locale={locale} translation={translation}>
-          {children}
-        </TranslationProvider>
-      </body>
-    </html>
+    <Suspense>
+      {localePromise.then(locale => (
+        <html lang={locale}>
+          <head />
+          <body>
+            <RootSection locale={locale}>{children}</RootSection>
+          </body>
+        </html>
+      ))}
+    </Suspense>
   );
 }
 
-export default RootLayout;
+async function RootSection({ children, locale }: { children: ReactNode; locale: LocaleType }) {
+  'use cache';
+  createMainCache();
+  const translation = await getTranslation(locale);
+
+  return (
+    <TranslationProvider locale={locale} translation={translation}>
+      {children}
+    </TranslationProvider>
+  );
+}
