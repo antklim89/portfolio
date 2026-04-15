@@ -1,16 +1,12 @@
-import { RichText } from '@payloadcms/richtext-lexical/react';
 import type { ComponentProps } from 'react';
-import style from './style.module.scss';
+import { RichText } from '@payloadcms/richtext-lexical/react';
+
 import { getAbout } from '@/lib/actions';
 import type { LocaleType } from '@/lib/types';
 import { cls } from '@/lib/utils';
+import style from './style.module.scss';
 
-
-async function AboutDescription({
-  locale,
-  className,
-  ...props
-}: { locale: LocaleType } & ComponentProps<'section'>) {
+async function AboutDescription({ locale, className, ...props }: { locale: LocaleType } & ComponentProps<'section'>) {
   const { description } = await getAbout(locale);
 
   return (

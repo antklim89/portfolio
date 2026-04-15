@@ -1,7 +1,7 @@
 import { revalidatePath } from 'next/cache';
 import type { CollectionConfig } from 'payload';
-import { Media } from './Media';
 
+import { Media } from './Media';
 
 export const Technologies: CollectionConfig = {
   slug: 'technologies',
@@ -12,11 +12,19 @@ export const Technologies: CollectionConfig = {
     read: () => true,
   },
   hooks: {
-    afterOperation: [({ operation }) => {
-      if (operation === 'delete' || operation === 'update' || operation === 'create' || operation === 'updateByID' || operation === 'deleteByID') {
-        revalidatePath('/', 'layout');
-      }
-    }],
+    afterOperation: [
+      ({ operation }) => {
+        if (
+          operation === 'delete' ||
+          operation === 'update' ||
+          operation === 'create' ||
+          operation === 'updateByID' ||
+          operation === 'deleteByID'
+        ) {
+          revalidatePath('/', 'layout');
+        }
+      },
+    ],
   },
   fields: [
     {

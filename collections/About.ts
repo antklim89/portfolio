@@ -1,16 +1,17 @@
 import { revalidatePath } from 'next/cache';
 import type { GlobalConfig } from 'payload';
 
-
 export const About: GlobalConfig = {
   slug: 'about',
   access: {
     read: () => true,
   },
   hooks: {
-    afterChange: [() => {
-      revalidatePath('/', 'layout');
-    }],
+    afterChange: [
+      () => {
+        revalidatePath('/', 'layout');
+      },
+    ],
   },
   fields: [
     {

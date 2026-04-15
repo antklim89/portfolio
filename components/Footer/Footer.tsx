@@ -1,10 +1,10 @@
 'use client';
 import type { ComponentProps } from 'react';
-import style from './style.module.scss';
+
 import { useTranslation } from '@/hooks/useTranslation';
 import { locales } from '@/lib/constants';
 import { cls } from '@/lib/utils';
-
+import style from './style.module.scss';
 
 function Footer({ className, ...props }: ComponentProps<'section'>) {
   const { locale: currentLocale, changeLocale } = useTranslation();

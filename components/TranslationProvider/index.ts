@@ -1,3 +1,3 @@
 'use client';
-export { default } from './TranslationProvider';
-export { TranslationContext } from './TranslationProvider';
+
+export { default, TranslationContext } from './TranslationProvider';

@@ -1,15 +1,8 @@
 import { cache } from 'react';
 import config from '@payload-config';
 import { getPayload } from 'payload';
-import type {
-  AboutType,
-  LocaleType,
-  PopulatedPaginatedDocs,
-  ProjectType,
-  SeoType,
-  TechnologyType,
-} from '@/lib/types';
 
+import type { AboutType, LocaleType, PopulatedPaginatedDocs, ProjectType, SeoType, TechnologyType } from '@/lib/types';
 
 export const getSeo = cache(async (locale: LocaleType): Promise<SeoType> => {
   const payload = await getPayload({ config });

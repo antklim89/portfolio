@@ -1,9 +1,9 @@
 import type { ComponentProps } from 'react';
-import style from './style.module.scss';
+
 import { getAbout } from '@/lib/actions';
 import type { LocaleType } from '@/lib/types';
 import { cls } from '@/lib/utils';
-
+import style from './style.module.scss';
 
 async function AboutTitle({ locale, className, ...props }: { locale: LocaleType } & ComponentProps<'section'>) {
   const { name, profession, slogan } = await getAbout(locale);

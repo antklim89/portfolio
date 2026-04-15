@@ -2,10 +2,10 @@
 import config from '@payload-config';
 import { getPayload } from 'payload';
 import { z } from 'zod/mini';
+
 import { env } from '@/lib/env';
 import { getTranslation } from '@/lib/services';
 import { getCorrectLocale } from '@/lib/utils';
-
 
 const emailSchema = z.object({
   subject: z.string(),
