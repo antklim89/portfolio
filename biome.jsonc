@@ -203,6 +203,7 @@
         "useSelfClosingElements": "error"
       },
       "suspicious": {
+        "noDocumentCookie": "off",
         "recommended": true,
         "noImportCycles": "error",
         "noNonNullAssertedOptionalChain": "error",

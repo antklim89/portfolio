@@ -12,13 +12,10 @@ export function useTranslation() {
   const router = useRouter();
 
   const changeLocale = useCallback(
-    async (newLocale: LocaleType) => {
+    (newLocale: LocaleType) => {
       if (!isCorrectLocale(newLocale)) return;
 
-      await cookieStore.set({
-        name: 'locale',
-        value: newLocale,
-      });
+      document.cookie = `locale=${newLocale};path=/`;
       router.refresh();
     },
     [router],
