@@ -8,8 +8,15 @@ export const Projects: CollectionConfig = {
   admin: {
     useAsTitle: 'title',
   },
-  access: {
-    read: () => true,
+  labels: {
+    plural: {
+      en: 'Projects',
+      ru: 'Проекты',
+    },
+    singular: {
+      en: 'Project',
+      ru: 'Проект',
+    },
   },
   hooks: {
     afterChange: [revalidateMainCache],
@@ -17,18 +24,30 @@ export const Projects: CollectionConfig = {
   },
   fields: [
     {
+      label: {
+        en: 'Is published',
+        ru: 'Опубликован',
+      },
       name: 'isPublished',
       type: 'checkbox',
       defaultValue: false,
       required: false,
     },
     {
+      label: {
+        en: 'Text',
+        ru: 'Текст',
+      },
       name: 'body',
       type: 'richText',
       localized: true,
       required: true,
     },
     {
+      label: {
+        en: 'Title',
+        ru: 'Заголовок',
+      },
       name: 'title',
       type: 'text',
       required: true,
@@ -37,6 +56,10 @@ export const Projects: CollectionConfig = {
       localized: true,
     },
     {
+      label: {
+        en: 'Link',
+        ru: 'Ссылка',
+      },
       name: 'link',
       type: 'text',
       minLength: 5,
@@ -44,6 +67,10 @@ export const Projects: CollectionConfig = {
       required: true,
     },
     {
+      label: {
+        en: 'Repository',
+        ru: 'Репозиторий',
+      },
       name: 'repository',
       type: 'text',
       minLength: 5,
@@ -51,12 +78,20 @@ export const Projects: CollectionConfig = {
       required: true,
     },
     {
+      label: {
+        en: 'Technologies',
+        ru: 'Технологии',
+      },
       name: 'technologies',
       hasMany: true,
       type: 'text',
       required: true,
     },
     {
+      label: {
+        en: 'Image',
+        ru: 'Изображение',
+      },
       name: 'image',
       type: 'upload',
       relationTo: 'projects-media',
@@ -67,11 +102,18 @@ export const Projects: CollectionConfig = {
 
 export const ProjectsMedia: CollectionConfig = {
   ...Media,
-  slug: 'projects-media',
+
   labels: {
-    singular: 'Project Image',
-    plural: 'Project Images',
+    plural: {
+      en: 'Images: Project',
+      ru: 'Изображения: Проекты',
+    },
+    singular: {
+      en: 'Image: Project',
+      ru: 'Изображение: Проект',
+    },
   },
+  slug: 'projects-media',
   upload: {
     ...Media.upload,
     staticDir: 'public/media/projects',

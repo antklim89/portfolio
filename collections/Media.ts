@@ -51,12 +51,20 @@ export const Media = {
       },
     },
     {
+      label: {
+        en: 'URL',
+        ru: 'Cсылка',
+      },
       type: 'text',
       name: 'url',
       required: true,
       defaultValue: '/placeholder.png',
     },
     {
+      label: {
+        en: 'filename',
+        ru: 'Имя файла',
+      },
       type: 'text',
       name: 'filename',
       required: true,

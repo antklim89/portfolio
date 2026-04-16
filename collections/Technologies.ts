@@ -8,6 +8,16 @@ export const Technologies: CollectionConfig = {
   admin: {
     useAsTitle: 'title',
   },
+  labels: {
+    plural: {
+      en: 'Technology',
+      ru: 'Технологии',
+    },
+    singular: {
+      en: 'Technology',
+      ru: 'Технология',
+    },
+  },
   access: {
     read: () => true,
   },
@@ -17,18 +27,30 @@ export const Technologies: CollectionConfig = {
   },
   fields: [
     {
+      label: {
+        en: 'Is published',
+        ru: 'Опубликован',
+      },
       name: 'isPublished',
       type: 'checkbox',
       defaultValue: false,
       required: false,
     },
     {
+      label: {
+        en: 'Text',
+        ru: 'Текст',
+      },
       name: 'body',
       type: 'richText',
       localized: true,
       required: true,
     },
     {
+      label: {
+        en: 'Title',
+        ru: 'Заголовок',
+      },
       name: 'title',
       type: 'text',
       required: true,
@@ -37,6 +59,10 @@ export const Technologies: CollectionConfig = {
       localized: true,
     },
     {
+      label: {
+        en: 'Link',
+        ru: 'Ссылка',
+      },
       name: 'link',
       type: 'text',
       minLength: 5,
@@ -44,6 +70,10 @@ export const Technologies: CollectionConfig = {
       required: true,
     },
     {
+      label: {
+        en: 'Image',
+        ru: 'Изображение',
+      },
       name: 'image',
       type: 'upload',
       relationTo: 'technologies-media',
@@ -56,8 +86,14 @@ export const TechnologiesMedia: CollectionConfig = {
   ...Media,
   slug: 'technologies-media',
   labels: {
-    singular: 'Technology Image',
-    plural: 'Technology Images',
+    plural: {
+      en: 'Images: Technology',
+      ru: 'Изображения: Технологии',
+    },
+    singular: {
+      en: 'Image: Technology',
+      ru: 'Изображение: Технология',
+    },
   },
   upload: {
     ...Media.upload,

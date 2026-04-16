@@ -12,6 +12,7 @@ import { About } from './collections/About';
 import { Projects, ProjectsMedia } from './collections/Projects';
 import { Seo } from './collections/Seo';
 import { Technologies, TechnologiesMedia } from './collections/Technologies';
+import { Users } from './collections/Users';
 import { defaultLocale, locales } from './lib/constants';
 import { env } from './lib/env';
 
@@ -34,15 +35,14 @@ export default buildConfig({
     },
   }),
   admin: {
-    meta: {
-      title: `Portfolio ${env.PROD ? 'production mode' : 'development mode.'}`,
-    },
+    autoRefresh: true,
+    user: Users.slug,
     importMap: {
       baseDir: path.resolve(dirname),
     },
   },
   globals: [About, Seo],
-  collections: [Projects, ProjectsMedia, Technologies, TechnologiesMedia],
+  collections: [Users, Projects, ProjectsMedia, Technologies, TechnologiesMedia],
   editor: lexicalEditor(),
   secret: env.PAYLOAD_SECRET,
   typescript: {
