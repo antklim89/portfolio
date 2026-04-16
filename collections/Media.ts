@@ -1,29 +1,40 @@
 import { randomUUID } from 'node:crypto';
-import type { CollectionConfig } from 'payload';
+import type { CollectionBeforeOperationHook, CollectionBeforeValidateHook, CollectionConfig } from 'payload';
 import sharp from 'sharp';
 
 import { revalidateMainCache } from '@/lib/cache';
 import { DEFAULT_BLUR_DATA } from '@/lib/constants';
 
+const createBlurData: CollectionBeforeValidateHook = async ({ req, data }) => {
+  try {
+    if (!(req.file && data?.width && data.height)) return;
+    const { width, height } = data;
+    const ratio = Math.min(24 / width, 24 / height);
+    const newHeight = Math.round(height * ratio);
+    const newWidth = Math.round(width * ratio);
+    const buffer = await sharp(req.file.data)
+      .resize({ width: newWidth, height: newHeight })
+      .webp({ quality: 20 })
+      .toBuffer();
+    const blurDataUrl = `data:image/webp;base64,${buffer.toString('base64')}`;
+
+    return { ...data, blurDataUrl };
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+const renameUploadedFileToUuid: CollectionBeforeOperationHook = ({ req, operation }) => {
+  if ((operation === 'create' || operation === 'update') && req.file) {
+    req.file.name = randomUUID();
+  }
+};
+
 export const Media = {
   slug: 'public/media',
   hooks: {
-    beforeValidate: [
-      async ({ req, operation, data }) => {
-        if ((operation === 'create' || operation === 'update') && req.file) {
-          const buffer = await sharp(req.file.data).resize({ width: 24 }).webp({ quality: 20 }).toBuffer();
-          const blurDataURL = `data:image/webp;base64,${buffer.toString('base64')}`;
-          return { ...data, blurDataURL };
-        }
-      },
-    ],
-    beforeOperation: [
-      ({ req, operation }) => {
-        if ((operation === 'create' || operation === 'update') && req.file) {
-          req.file.name = `${randomUUID()}-${req.file.name}`;
-        }
-      },
-    ],
+    beforeValidate: [createBlurData],
+    beforeOperation: [renameUploadedFileToUuid],
     afterChange: [revalidateMainCache],
     afterDelete: [revalidateMainCache],
   },
