@@ -106,4 +106,14 @@ export const TechnologiesMedia: CollectionConfig = {
       width: IMAGE_TECHNOLOGY_WIDTH,
     },
   },
+  fields: [
+    ...Media.fields,
+    {
+      name: 'products',
+      type: 'join',
+      collection: 'technologies',
+      on: 'image',
+      hasMany: false,
+    },
+  ],
 };

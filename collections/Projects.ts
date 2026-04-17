@@ -124,4 +124,15 @@ export const ProjectsMedia: CollectionConfig = {
       width: IMAGE_PROJECT_WIDTH,
     },
   },
+
+  fields: [
+    ...Media.fields,
+    {
+      name: 'products',
+      type: 'join',
+      collection: 'projects',
+      on: 'image',
+      hasMany: false,
+    },
+  ],
 };

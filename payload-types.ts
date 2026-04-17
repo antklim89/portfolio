@@ -78,7 +78,14 @@ export interface Config {
     'payload-preferences': PayloadPreference;
     'payload-migrations': PayloadMigration;
   };
-  collectionsJoins: {};
+  collectionsJoins: {
+    'projects-media': {
+      products: 'projects';
+    };
+    'technologies-media': {
+      products: 'technologies';
+    };
+  };
   collectionsSelect: {
     users: UsersSelect<false> | UsersSelect<true>;
     projects: ProjectsSelect<false> | ProjectsSelect<true>;
@@ -193,6 +200,11 @@ export interface Project {
 export interface ProjectsMedia {
   id: number;
   blurDataURL: string;
+  products?: {
+    docs?: (number | Project)[];
+    hasNextPage?: boolean;
+    totalDocs?: number;
+  };
   updatedAt: string;
   createdAt: string;
   url: string;
@@ -240,6 +252,11 @@ export interface Technology {
 export interface TechnologiesMedia {
   id: number;
   blurDataURL: string;
+  products?: {
+    docs?: (number | Technology)[];
+    hasNextPage?: boolean;
+    totalDocs?: number;
+  };
   updatedAt: string;
   createdAt: string;
   url: string;
@@ -404,6 +421,7 @@ export interface ProjectsSelect<T extends boolean = true> {
  */
 export interface ProjectsMediaSelect<T extends boolean = true> {
   blurDataURL?: T;
+  products?: T;
   updatedAt?: T;
   createdAt?: T;
   url?: T;
@@ -435,6 +453,7 @@ export interface TechnologiesSelect<T extends boolean = true> {
  */
 export interface TechnologiesMediaSelect<T extends boolean = true> {
   blurDataURL?: T;
+  products?: T;
   updatedAt?: T;
   createdAt?: T;
   url?: T;
