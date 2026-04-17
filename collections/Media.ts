@@ -1,27 +1,13 @@
 import { randomUUID } from 'node:crypto';
-import type { CollectionBeforeOperationHook, CollectionBeforeValidateHook, CollectionConfig } from 'payload';
+import type { CollectionBeforeOperationHook, CollectionConfig, FieldHook } from 'payload';
 import sharp from 'sharp';
 
 import { revalidateMainCache } from '@/lib/cache';
-import { DEFAULT_BLUR_DATA } from '@/lib/constants';
 
-const createBlurData: CollectionBeforeValidateHook = async ({ req, data }) => {
-  try {
-    if (!(req.file && data?.width && data.height)) return;
-    const { width, height } = data;
-    const ratio = Math.min(24 / width, 24 / height);
-    const newHeight = Math.round(height * ratio);
-    const newWidth = Math.round(width * ratio);
-    const buffer = await sharp(req.file.data)
-      .resize({ width: newWidth, height: newHeight })
-      .webp({ quality: 20 })
-      .toBuffer();
-    const blurDataUrl = `data:image/webp;base64,${buffer.toString('base64')}`;
-
-    return { ...data, blurDataUrl };
-  } catch (error) {
-    console.error(error);
-  }
+const createBlurData: FieldHook = async ({ req, data }) => {
+  if (!(req.file && data?.width && data.height)) return;
+  const buffer = await sharp(req.file.data).webp({ quality: 10 }).resize(36).toBuffer();
+  return `data:image/webp;base64,${buffer.toString('base64')}`;
 };
 
 const renameUploadedFileToUuid: CollectionBeforeOperationHook = ({ req, operation }) => {
@@ -31,9 +17,8 @@ const renameUploadedFileToUuid: CollectionBeforeOperationHook = ({ req, operatio
 };
 
 export const Media = {
-  slug: 'public/media',
+  slug: 'media',
   hooks: {
-    beforeValidate: [createBlurData],
     beforeOperation: [renameUploadedFileToUuid],
     afterChange: [revalidateMainCache],
     afterDelete: [revalidateMainCache],
@@ -42,18 +27,18 @@ export const Media = {
     read: () => true,
   },
   defaultPopulate: {
+    blurDataURL: true,
     url: true,
     filename: true,
-    width: true,
-    height: true,
-    blurDataURL: true,
   },
   fields: [
     {
       type: 'text',
       name: 'blurDataURL',
       required: true,
-      defaultValue: DEFAULT_BLUR_DATA,
+      hooks: {
+        beforeChange: [createBlurData],
+      },
       admin: {
         readOnly: true,
         hidden: true,
@@ -62,36 +47,10 @@ export const Media = {
       },
     },
     {
-      label: {
-        en: 'URL',
-        ru: 'Cсылка',
-      },
+      label: { en: 'URL', ru: 'Cсылка' },
       type: 'text',
       name: 'url',
       required: true,
-      defaultValue: '/placeholder.png',
-    },
-    {
-      label: {
-        en: 'filename',
-        ru: 'Имя файла',
-      },
-      type: 'text',
-      name: 'filename',
-      required: true,
-      defaultValue: 'placeholder.png',
-    },
-    {
-      type: 'number',
-      name: 'width',
-      required: true,
-      defaultValue: 100,
-    },
-    {
-      type: 'number',
-      name: 'height',
-      required: true,
-      defaultValue: 100,
     },
   ],
   upload: {

@@ -195,11 +195,11 @@ export interface ProjectsMedia {
   createdAt: string;
   url: string;
   thumbnailURL?: string | null;
-  filename: string;
+  filename?: string | null;
   mimeType?: string | null;
   filesize?: number | null;
-  width: number;
-  height: number;
+  width?: number | null;
+  height?: number | null;
   focalX?: number | null;
   focalY?: number | null;
 }
@@ -242,11 +242,11 @@ export interface TechnologiesMedia {
   createdAt: string;
   url: string;
   thumbnailURL?: string | null;
-  filename: string;
+  filename?: string | null;
   mimeType?: string | null;
   filesize?: number | null;
-  width: number;
-  height: number;
+  width?: number | null;
+  height?: number | null;
   focalX?: number | null;
   focalY?: number | null;
 }
