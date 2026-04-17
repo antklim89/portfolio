@@ -1,6 +1,7 @@
 import type { CollectionConfig } from 'payload';
 
 import { revalidateMainCache } from '@/lib/cache';
+import { IMAGE_PROJECT_HEIGHT, IMAGE_PROJECT_WIDTH } from '@/lib/constants';
 import { Media } from './Media';
 
 export const Projects: CollectionConfig = {
@@ -118,10 +119,9 @@ export const ProjectsMedia: CollectionConfig = {
     ...Media.upload,
     staticDir: 'public/media/projects',
     resizeOptions: {
-      position: 'left top',
       fit: 'cover',
-      height: 162,
-      width: 288,
+      height: IMAGE_PROJECT_HEIGHT,
+      width: IMAGE_PROJECT_WIDTH,
     },
   },
 };

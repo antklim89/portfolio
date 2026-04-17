@@ -2,6 +2,7 @@ import { RichText } from '@payloadcms/richtext-lexical/react';
 import Image from 'next/image';
 import { FaEarthEurope, FaGitAlt } from 'react-icons/fa6';
 
+import { IMAGE_PROJECT_HEIGHT, IMAGE_PROJECT_WIDTH } from '@/lib/constants';
 import { getTranslation } from '@/lib/services';
 import type { LocaleType, ProjectType } from '@/lib/types';
 import { cls } from '@/lib/utils';
@@ -19,10 +20,10 @@ async function ProjectItem({ locale, project }: { project: ProjectType; locale: 
             unoptimized
             alt={title}
             blurDataURL={image.blurDataURL}
-            height={image.height}
+            height={IMAGE_PROJECT_HEIGHT}
             placeholder="blur"
             src={image.url}
-            width={image.width}
+            width={IMAGE_PROJECT_WIDTH}
           />
         </a>
         <div className={style.links}>

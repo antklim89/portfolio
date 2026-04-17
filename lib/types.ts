@@ -7,9 +7,6 @@ import type RuLocale from '@/lib/locales/ru.json';
 
 interface ImageType {
   blurDataURL: string;
-  width: number;
-  height: number;
-  filename: string;
   url: string;
 }
 

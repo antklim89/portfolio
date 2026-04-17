@@ -1,6 +1,7 @@
 import type { CollectionConfig } from 'payload';
 
 import { revalidateMainCache } from '@/lib/cache';
+import { IMAGE_TECHNOLOGY_HEIGHT, IMAGE_TECHNOLOGY_WIDTH } from '@/lib/constants';
 import { Media } from './Media';
 
 export const Technologies: CollectionConfig = {
@@ -101,8 +102,8 @@ export const TechnologiesMedia: CollectionConfig = {
     resizeOptions: {
       position: 'center',
       fit: 'cover',
-      height: 300,
-      width: 300,
+      height: IMAGE_TECHNOLOGY_HEIGHT,
+      width: IMAGE_TECHNOLOGY_WIDTH,
     },
   },
 };
