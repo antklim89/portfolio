@@ -169,7 +169,6 @@ export interface User {
  */
 export interface Project {
   id: number;
-  isPublished?: boolean | null;
   body: {
     root: {
       type: string;
@@ -192,6 +191,7 @@ export interface Project {
   image: number | ProjectsMedia;
   updatedAt: string;
   createdAt: string;
+  _status?: ('draft' | 'published') | null;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -223,7 +223,6 @@ export interface ProjectsMedia {
  */
 export interface Technology {
   id: number;
-  isPublished?: boolean | null;
   body: {
     root: {
       type: string;
@@ -244,6 +243,7 @@ export interface Technology {
   image: number | TechnologiesMedia;
   updatedAt: string;
   createdAt: string;
+  _status?: ('draft' | 'published') | null;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -405,7 +405,6 @@ export interface UsersSelect<T extends boolean = true> {
  * via the `definition` "projects_select".
  */
 export interface ProjectsSelect<T extends boolean = true> {
-  isPublished?: T;
   body?: T;
   title?: T;
   link?: T;
@@ -414,6 +413,7 @@ export interface ProjectsSelect<T extends boolean = true> {
   image?: T;
   updatedAt?: T;
   createdAt?: T;
+  _status?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -439,13 +439,13 @@ export interface ProjectsMediaSelect<T extends boolean = true> {
  * via the `definition` "technologies_select".
  */
 export interface TechnologiesSelect<T extends boolean = true> {
-  isPublished?: T;
   body?: T;
   title?: T;
   link?: T;
   image?: T;
   updatedAt?: T;
   createdAt?: T;
+  _status?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

@@ -9,6 +9,10 @@ export const Projects: CollectionConfig = {
   admin: {
     useAsTitle: 'title',
   },
+  versions: {
+    drafts: true,
+    maxPerDoc: 20,
+  },
   labels: {
     plural: {
       en: 'Projects',
@@ -24,16 +28,6 @@ export const Projects: CollectionConfig = {
     afterDelete: [revalidateMainCache],
   },
   fields: [
-    {
-      label: {
-        en: 'Is published',
-        ru: 'Опубликован',
-      },
-      name: 'isPublished',
-      type: 'checkbox',
-      defaultValue: false,
-      required: false,
-    },
     {
       label: {
         en: 'Text',

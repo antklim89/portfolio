@@ -40,7 +40,7 @@ export const getProjects = cache(async (locale: LocaleType): Promise<ProjectType
     depth: 1,
     pagination: false,
     where: {
-      isPublished: { equals: true },
+      _status: { equals: 'published' },
     },
   });
 
@@ -55,7 +55,7 @@ export const getTechnologies = cache(async (locale: LocaleType): Promise<Technol
     depth: 1,
     pagination: false,
     where: {
-      isPublished: { equals: true },
+      _status: { equals: 'published' },
     },
   });
 
