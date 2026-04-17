@@ -2,7 +2,15 @@ import { cache } from 'react';
 import config from '@payload-config';
 import { getPayload } from 'payload';
 
-import type { AboutType, LocaleType, PopulatedPaginatedDocs, ProjectType, SeoType, TechnologyType } from '@/lib/types';
+import type {
+  AboutType,
+  LocaleType,
+  Populated,
+  PopulatedPaginatedDocs,
+  ProjectType,
+  SeoType,
+  TechnologyType,
+} from '@/lib/types';
 
 export const getSeo = cache(async (locale: LocaleType): Promise<SeoType> => {
   const payload = await getPayload({ config });
@@ -11,7 +19,7 @@ export const getSeo = cache(async (locale: LocaleType): Promise<SeoType> => {
     locale,
   });
 
-  return result;
+  return result as Populated<typeof result, 'image'>;
 });
 
 export const getAbout = cache(async (locale: LocaleType): Promise<AboutType> => {

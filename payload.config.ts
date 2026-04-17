@@ -10,7 +10,7 @@ import sharp from 'sharp';
 
 import { About } from './collections/About';
 import { Projects, ProjectsMedia } from './collections/Projects';
-import { Seo } from './collections/Seo';
+import { Seo, SeoMedia } from './collections/Seo';
 import { Technologies, TechnologiesMedia } from './collections/Technologies';
 import { Users } from './collections/Users';
 import { defaultLocale, locales } from './lib/constants';
@@ -42,7 +42,7 @@ export default buildConfig({
     },
   },
   globals: [About, Seo],
-  collections: [Users, Projects, ProjectsMedia, Technologies, TechnologiesMedia],
+  collections: [Users, Projects, ProjectsMedia, Technologies, TechnologiesMedia, SeoMedia],
   editor: lexicalEditor(),
   secret: env.PAYLOAD_SECRET,
   typescript: {

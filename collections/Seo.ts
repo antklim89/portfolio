@@ -1,6 +1,8 @@
-import type { GlobalConfig } from 'payload';
+import type { CollectionConfig, GlobalConfig } from 'payload';
 
 import { revalidateMainCache } from '@/lib/cache';
+import { IMAGE_SEO_HEIGHT, IMAGE_SEO_WIDTH } from '@/lib/constants';
+import { Media } from './Media';
 
 export const Seo: GlobalConfig = {
   slug: 'seo',
@@ -54,5 +56,39 @@ export const Seo: GlobalConfig = {
       localized: true,
       required: true,
     },
+    {
+      label: {
+        en: 'Image',
+        ru: 'Изображение',
+      },
+      name: 'image',
+      type: 'upload',
+      relationTo: 'seo-media',
+      required: true,
+    },
   ],
+};
+
+export const SeoMedia: CollectionConfig = {
+  ...Media,
+  slug: 'seo-media',
+  labels: {
+    plural: {
+      en: 'Images: Seo',
+      ru: 'Изображения: Сео',
+    },
+    singular: {
+      en: 'Image: Seo',
+      ru: 'Изображение: Сео',
+    },
+  },
+  upload: {
+    ...Media.upload,
+    staticDir: 'public/media/seo',
+    resizeOptions: {
+      fit: 'cover',
+      height: IMAGE_SEO_HEIGHT,
+      width: IMAGE_SEO_WIDTH,
+    },
+  },
 };

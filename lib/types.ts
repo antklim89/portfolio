@@ -42,6 +42,7 @@ export interface SeoType {
   keywords: string[];
   description: string;
   title: string;
+  image: ImageType;
 }
 
 export type LocaleType = keyof typeof Locale;

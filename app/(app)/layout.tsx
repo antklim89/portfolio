@@ -17,7 +17,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const locale = await getServerLocale();
   const { defaultTitle } = await getTranslation(locale);
 
-  const { author, title: cmsTitle, description, keywords } = await getSeo(locale);
+  const { author, title: cmsTitle, description, keywords, image } = await getSeo(locale);
 
   const technologies = await getTechnologies(locale);
   const technologiesKeywords = technologies.map(i => i.title);
@@ -38,6 +38,7 @@ export async function generateMetadata(): Promise<Metadata> {
       card: 'summary',
       description,
       title,
+      images: image,
     },
     openGraph: {
       type: 'website',
@@ -46,6 +47,7 @@ export async function generateMetadata(): Promise<Metadata> {
       title,
       url: '/',
       siteName: title,
+      images: image,
     },
   };
 }

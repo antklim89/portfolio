@@ -72,6 +72,7 @@ export interface Config {
     'projects-media': ProjectsMedia;
     technologies: Technology;
     'technologies-media': TechnologiesMedia;
+    'seo-media': SeoMedia;
     'payload-kv': PayloadKv;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
@@ -84,6 +85,7 @@ export interface Config {
     'projects-media': ProjectsMediaSelect<false> | ProjectsMediaSelect<true>;
     technologies: TechnologiesSelect<false> | TechnologiesSelect<true>;
     'technologies-media': TechnologiesMediaSelect<false> | TechnologiesMediaSelect<true>;
+    'seo-media': SeoMediaSelect<false> | SeoMediaSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
@@ -252,6 +254,25 @@ export interface TechnologiesMedia {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "seo-media".
+ */
+export interface SeoMedia {
+  id: number;
+  blurDataURL: string;
+  updatedAt: string;
+  createdAt: string;
+  url: string;
+  thumbnailURL?: string | null;
+  filename?: string | null;
+  mimeType?: string | null;
+  filesize?: number | null;
+  width?: number | null;
+  height?: number | null;
+  focalX?: number | null;
+  focalY?: number | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-kv".
  */
 export interface PayloadKv {
@@ -293,6 +314,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'technologies-media';
         value: number | TechnologiesMedia;
+      } | null)
+    | ({
+        relationTo: 'seo-media';
+        value: number | SeoMedia;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -424,6 +449,24 @@ export interface TechnologiesMediaSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "seo-media_select".
+ */
+export interface SeoMediaSelect<T extends boolean = true> {
+  blurDataURL?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  url?: T;
+  thumbnailURL?: T;
+  filename?: T;
+  mimeType?: T;
+  filesize?: T;
+  width?: T;
+  height?: T;
+  focalX?: T;
+  focalY?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-kv_select".
  */
 export interface PayloadKvSelect<T extends boolean = true> {
@@ -499,6 +542,7 @@ export interface Seo {
   keywords: string[];
   description: string;
   title: string;
+  image: number | SeoMedia;
   updatedAt?: string | null;
   createdAt?: string | null;
 }
@@ -524,6 +568,7 @@ export interface SeoSelect<T extends boolean = true> {
   keywords?: T;
   description?: T;
   title?: T;
+  image?: T;
   updatedAt?: T;
   createdAt?: T;
   globalType?: T;
