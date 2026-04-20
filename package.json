@@ -14,10 +14,10 @@
   "keywords": ["nextjs", "typescript", "sass", "zod"],
   "scripts": {
     "dev": "run-p dev:**",
-    "dev:next": "next dev --turbo",
+    "dev:next": "bun next dev --turbo",
     "dev:typecheck": "tsc --noEmit -w --preserveWatchOutput",
-    "build": "next build",
-    "start": "next start",
+    "build": "bun next build",
+    "start": "bun next start",
     "lint": "eslint . --fix",
     "typegen": "payload generate:types",
     "docker:dev": "docker compose -f compose.yml -f compose.dev.yml up --build --watch",
