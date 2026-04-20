@@ -12,24 +12,3 @@
   --dark-clr: #474748;
 }
 
-.desktop {
-  display: none;
-}
-
-.mobile {
-  display: block;
-}
-
-@media screen and (min-width: 1440px) {
-  :root {
-    --container-width: 1440px;
-  }
-
-  .desktop {
-    display: block;
-  }
-
-  .mobile {
-    display: none;
-  }
-}
