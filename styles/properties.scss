@@ -1,5 +1,6 @@
 :root {
   --container-width: 100%;
+  --aside-width: 380px;
 
   --primary-clr: #00476b;
   --primary-dark-clr: #00334d;
@@ -19,9 +20,9 @@
   display: block;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   :root {
-    --container-width: 1024px;
+    --container-width: 1440px;
   }
 
   .desktop {
