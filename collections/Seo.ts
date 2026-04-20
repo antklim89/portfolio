@@ -64,6 +64,7 @@ export const Seo: GlobalConfig = {
       name: 'image',
       type: 'upload',
       relationTo: 'seo-media',
+      hasMany: false,
       required: true,
     },
   ],
