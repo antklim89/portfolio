@@ -9,15 +9,9 @@ function TechnologyItem({ technology }: { technology: TechnologyType }) {
   const { body, image, link, title } = technology;
 
   return (
-    <a
-      aria-label={`${title} technology`}
-      className={style.linkWrapper}
-      href={link}
-      rel="noopener noreferrer"
-      target="_blank"
-    >
-      <section className={style.Technology}>
-        <div className={style.image}>
+    <a aria-label={`${title} technology`} href={link} rel="noopener noreferrer" target="_blank">
+      <section className={style.TechnologyItem}>
+        <div className={style.header}>
           <Image
             unoptimized
             alt={title}
@@ -27,9 +21,10 @@ function TechnologyItem({ technology }: { technology: TechnologyType }) {
             src={image.url}
             width={IMAGE_TECHNOLOGY_WIDTH}
           />
+
+          <h3 className="title-xl">{title}</h3>
         </div>
         <div className={style.content}>
-          <h3 className="title-md">{title}</h3>
           <RichText data={body} />
         </div>
       </section>

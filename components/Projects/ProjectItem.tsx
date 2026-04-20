@@ -5,7 +5,6 @@ import { FaEarthEurope, FaGitAlt } from 'react-icons/fa6';
 import { IMAGE_PROJECT_HEIGHT, IMAGE_PROJECT_WIDTH } from '@/lib/constants';
 import { getTranslation } from '@/lib/services';
 import type { LocaleType, ProjectType } from '@/lib/types';
-import { cls } from '@/lib/utils';
 import style from './style.module.scss';
 
 async function ProjectItem({ locale, project }: { project: ProjectType; locale: LocaleType }) {
@@ -14,8 +13,15 @@ async function ProjectItem({ locale, project }: { project: ProjectType; locale: 
 
   return (
     <section className={style.ProjectItem}>
-      <div className={style.left}>
-        <a className={cls(style.image)} href={link} rel="noopener noreferrer" target="_blank">
+      <div className={style.header}>
+        <a
+          tabIndex={-1}
+          aria-label={t.Site}
+          href={link}
+          rel="noopener noreferrer"
+          target="_blank"
+          title={`${t.Site} ${link}`}
+        >
           <Image
             unoptimized
             alt={title}
@@ -26,33 +32,43 @@ async function ProjectItem({ locale, project }: { project: ProjectType; locale: 
             width={IMAGE_PROJECT_WIDTH}
           />
         </a>
-        <div className={style.links}>
-          <a aria-label={t.Site} href={link} rel="noopener noreferrer" target="_blank" title={`${t.Site} ${link}`}>
-            <FaEarthEurope size={32} />
-          </a>
+
+        <div className={style.headerLeft}>
           <a
-            aria-label={t.Repository}
-            href={repository}
+            tabIndex={-1}
+            aria-label={t.Site}
+            href={link}
             rel="noopener noreferrer"
             target="_blank"
-            title={`${t.Repository} ${repository}`}
+            title={`${t.Site} ${link}`}
           >
-            <FaGitAlt size={32} />
+            <h3 className="title-md">{title}</h3>
           </a>
+
+          <div className={style.links}>
+            <a aria-label={t.Site} href={link} rel="noopener noreferrer" target="_blank" title={`${t.Site} ${link}`}>
+              <FaEarthEurope size={32} />
+            </a>
+            <a
+              aria-label={t.Repository}
+              href={repository}
+              rel="noopener noreferrer"
+              target="_blank"
+              title={`${t.Repository} ${repository}`}
+            >
+              <FaGitAlt size={32} />
+            </a>
+          </div>
+
+          <div className={style.tags}>
+            {technologies.map(technology => (
+              <span key={technology}>{technology}</span>
+            ))}
+          </div>
         </div>
       </div>
-      <div className={style.right}>
-        <a href={link} rel="noopener noreferrer" target="_blank">
-          <h3 className="title-md">{title}</h3>
-        </a>
-        <div className={style.body}>
-          <RichText data={body} />
-        </div>
-        <div className={style.tags}>
-          {technologies.map(technology => (
-            <span key={technology}>{technology}</span>
-          ))}
-        </div>
+      <div className={style.content}>
+        <RichText data={body} />
       </div>
     </section>
   );
