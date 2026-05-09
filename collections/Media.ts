@@ -1,4 +1,5 @@
 import { randomUUID } from 'node:crypto';
+import { extname } from 'node:path';
 import type { CollectionBeforeOperationHook, CollectionConfig, FieldHook } from 'payload';
 import sharp from 'sharp';
 
@@ -12,7 +13,7 @@ const createBlurData: FieldHook = async ({ req, data }) => {
 
 const renameUploadedFileToUuid: CollectionBeforeOperationHook = ({ req, operation }) => {
   if ((operation === 'create' || operation === 'update') && req.file) {
-    req.file.name = randomUUID();
+    req.file.name = randomUUID() + extname(req.file.name);
   }
 };
 
