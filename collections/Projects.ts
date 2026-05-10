@@ -111,7 +111,7 @@ export const ProjectsMedia: CollectionConfig = {
   slug: 'projects-media',
   upload: {
     ...Media.upload,
-    staticDir: 'public/media/projects',
+    staticDir: 'media/projects',
     resizeOptions: {
       fit: 'cover',
       height: IMAGE_PROJECT_HEIGHT,

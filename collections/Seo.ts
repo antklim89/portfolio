@@ -85,7 +85,7 @@ export const SeoMedia: CollectionConfig = {
   },
   upload: {
     ...Media.upload,
-    staticDir: 'public/media/seo',
+    staticDir: 'media/seo',
     resizeOptions: {
       fit: 'cover',
       height: IMAGE_SEO_HEIGHT,
