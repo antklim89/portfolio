@@ -1,7 +1,7 @@
 
 services:
   app:
-    image: development.cr.cloud.ru/portfolio:v2
+    image: development.cr.cloud.ru/portfolio:v3
     build:
       args:
         - SMTP_PASS=${SMTP_PASS}
