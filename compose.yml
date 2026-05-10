@@ -15,6 +15,7 @@ services:
         - PAYLOAD_SECRET
         - SMTP_PASS
     environment:
+      - URL=${URL}
       - SMTP_PASS=${SMTP_PASS}
       - SMTP_USER=${SMTP_USER}
       - SMTP_HOST=${SMTP_HOST}

@@ -26,8 +26,8 @@ export async function generateMetadata(): Promise<Metadata> {
   const projectsKeywords = projects.map(i => i.title);
 
   const title = cmsTitle ?? defaultTitle;
-
   return {
+    metadataBase: process.env.URL,
     manifest: '/manifest.json',
     title,
     description,
