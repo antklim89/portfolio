@@ -80,10 +80,10 @@ export interface Config {
   };
   collectionsJoins: {
     'projects-media': {
-      products: 'projects';
+      projects: 'projects';
     };
     'technologies-media': {
-      products: 'technologies';
+      technologies: 'technologies';
     };
   };
   collectionsSelect: {
@@ -200,7 +200,7 @@ export interface Project {
 export interface ProjectsMedia {
   id: number;
   blurDataURL: string;
-  products?: {
+  projects?: {
     docs?: (number | Project)[];
     hasNextPage?: boolean;
     totalDocs?: number;
@@ -252,7 +252,7 @@ export interface Technology {
 export interface TechnologiesMedia {
   id: number;
   blurDataURL: string;
-  products?: {
+  technologies?: {
     docs?: (number | Technology)[];
     hasNextPage?: boolean;
     totalDocs?: number;
@@ -421,7 +421,7 @@ export interface ProjectsSelect<T extends boolean = true> {
  */
 export interface ProjectsMediaSelect<T extends boolean = true> {
   blurDataURL?: T;
-  products?: T;
+  projects?: T;
   updatedAt?: T;
   createdAt?: T;
   url?: T;
@@ -453,7 +453,7 @@ export interface TechnologiesSelect<T extends boolean = true> {
  */
 export interface TechnologiesMediaSelect<T extends boolean = true> {
   blurDataURL?: T;
-  products?: T;
+  technologies?: T;
   updatedAt?: T;
   createdAt?: T;
   url?: T;

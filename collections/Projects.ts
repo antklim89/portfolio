@@ -122,7 +122,7 @@ export const ProjectsMedia: CollectionConfig = {
   fields: [
     ...Media.fields,
     {
-      name: 'products',
+      name: 'projects',
       type: 'join',
       collection: 'projects',
       on: 'image',

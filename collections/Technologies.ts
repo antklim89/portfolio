@@ -100,7 +100,7 @@ export const TechnologiesMedia: CollectionConfig = {
   fields: [
     ...Media.fields,
     {
-      name: 'products',
+      name: 'technologies',
       type: 'join',
       collection: 'technologies',
       on: 'image',
