@@ -1,15 +1,19 @@
 
 services:
   app:
-    image: development.cr.cloud.ru/portfolio:v3
+    image: development.cr.cloud.ru/portfolio:v4
     build:
+      provenance: false
+      sbom: false
+      platforms:
+        - linux/amd64
       args:
         - SMTP_PASS=${SMTP_PASS}
         - SMTP_USER=${SMTP_USER}
         - SMTP_HOST=${SMTP_HOST}
         - SMTP_PORT=${SMTP_PORT}
-        - MAIL_LOCALE==${MAIL_LOCALE}
-        - PAYLOAD_SECRET==${PAYLOAD_SECRET}
+        - MAIL_LOCALE=${MAIL_LOCALE}
+        - PAYLOAD_SECRET=${PAYLOAD_SECRET}
       dockerfile: Dockerfile
       secrets:
         - PAYLOAD_SECRET
@@ -20,12 +24,12 @@ services:
       - SMTP_USER=${SMTP_USER}
       - SMTP_HOST=${SMTP_HOST}
       - SMTP_PORT=${SMTP_PORT}
-      - MAIL_LOCALE==${MAIL_LOCALE}
-      - PAYLOAD_SECRET==${PAYLOAD_SECRET}
+      - MAIL_LOCALE=${MAIL_LOCALE}
+      - PAYLOAD_SECRET=${PAYLOAD_SECRET}
     restart: unless-stopped
     volumes:
       - ./db:/app/db
-      - ./public/media:/app/public/media
+      - ./media:/app/media
     ports:
       - 3000:3000
 

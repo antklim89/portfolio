@@ -15,20 +15,18 @@ ARG MAIL_LOCALE
 
 RUN --mount=type=secret,id=PAYLOAD_SECRET,env=PAYLOAD_SECRET \
     --mount=type=secret,id=SMTP_PASS,env=SMTP_PASS \
-    --mount=type=bind,target=/app/db,source=./db \
     --mount=type=cache,target=/app/.next/cache \
     bun next build
 
 
 FROM base AS runner
 COPY --from=builder --chown=bun:bun /app/public ./public
-COPY --from=builder --chown=bun:bun /app/media ./media
 RUN mkdir .next
 RUN chown bun:bun .next
 COPY --from=builder --chown=bun:bun /app/.next/standalone ./
 COPY --from=builder --chown=bun:bun /app/.next/static ./.next/static
 USER bun
-VOLUME [ "/app/db", "/app/public/media" ]
+VOLUME [ "/app/db", "/app/media" ]
 EXPOSE 3000
 ENV PORT=3000
 ENV HOSTNAME="0.0.0.0"
