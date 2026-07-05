@@ -30,25 +30,25 @@
   },
   "dependencies": {
     "@fontsource/montserrat": "^5.2.6",
-    "@payloadcms/db-sqlite": "^3.84.1",
-    "@payloadcms/email-nodemailer": "^3.84.1",
-    "@payloadcms/next": "^3.84.1",
-    "@payloadcms/payload-cloud": "^3.84.1",
-    "@payloadcms/richtext-lexical": "^3.84.1",
+    "@payloadcms/db-sqlite": "^3.85.2",
+    "@payloadcms/email-nodemailer": "^3.85.2",
+    "@payloadcms/next": "^3.85.2",
+    "@payloadcms/payload-cloud": "^3.85.2",
+    "@payloadcms/richtext-lexical": "^3.85.2",
     "accept-language": "^3.0.20",
-    "graphql": "^16.14.0",
-    "next": "^16.2.6",
-    "payload": "^3.84.1",
-    "react": "19.2.4",
-    "react-dom": "^19.2.6",
-    "react-icons": "^5.5.0",
-    "typescript": "6.0.2",
+    "graphql": "^17.0.2",
+    "next": "^16.2.10",
+    "payload": "^3.85.2",
+    "react": "19.2.7",
+    "react-dom": "^19.2.7",
+    "react-icons": "^5.7.0",
+    "typescript": "6.0.3",
     "zod": "^4.4.3"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.4.10",
-    "@types/react": "19.2.14",
+    "@biomejs/biome": "2.5.2",
+    "@types/react": "19.2.17",
     "npm-run-all": "^4.1.5",
-    "sass": "^1.99.0"
+    "sass": "^1.101.0"
   }
 }
