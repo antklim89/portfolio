@@ -1,19 +1,26 @@
 {
   "compilerOptions": {
-    "incremental": true,
-    "target": "ES2022",
-    "jsx": "react-jsx",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "module": "esnext",
+    "target": "ESNext",
+    "module": "ESNext",
     "moduleResolution": "bundler",
+    "lib": [      "ESNext", "DOM"   ],
+    "verbatimModuleSyntax": true,
+    "jsx": "react-jsx",
     "paths": {
-      "@/*": ["./*"],
-      "@payload-config": ["./payload.config.ts"]
+      "@/*": [
+        "./*"
+      ],
+      "@payload-config": [
+        "./payload.config.ts"
+      ]
     },
     "resolveJsonModule": true,
     "allowJs": true,
     "strict": true,
     "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
     "forceConsistentCasingInFileNames": true,
     "noErrorTruncation": true,
     "noEmit": true,
@@ -24,8 +31,21 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "incremental": true
   },
-  "include": ["next-env.d.ts", ".next/types/**/*.ts", "**/*.ts", "**/*.tsx", ".next/dev/types/**/*.ts"],
-  "exclude": ["node_modules", "build", "out", "hidden"]
+  "include": [
+    "next-env.d.ts",
+    ".next/types/**/*.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/dev/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "build",
+    "out",
+    "hidden",
+    "migrations"
+  ]
 }
