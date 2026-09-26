@@ -61,7 +61,7 @@ async function ProjectItem({ locale, project }: { project: ProjectType; locale: 
           </div>
 
           <div className={style.tags}>
-            {technologies.map(technology => (
+            {technologies.map((technology) => (
               <span key={technology}>{technology}</span>
             ))}
           </div>

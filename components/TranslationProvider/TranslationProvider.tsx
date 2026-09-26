@@ -5,7 +5,7 @@ import type { DefaultTranslation, LocaleType } from '@/lib/types';
 
 export const TranslationContext = createContext<{ translation: DefaultTranslation; locale: LocaleType } | null>(null);
 
-const TranslationProvider = ({
+function TranslationProvider({
   translation,
   locale,
   children,
@@ -13,9 +13,9 @@ const TranslationProvider = ({
   translation: DefaultTranslation;
   locale: LocaleType;
   children: ReactNode;
-}) => {
+}) {
   const value = useMemo(() => ({ translation, locale }), [translation, locale]);
   return <TranslationContext value={value}>{children}</TranslationContext>;
-};
+}
 
 export default TranslationProvider;

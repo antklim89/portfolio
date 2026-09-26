@@ -49,6 +49,7 @@ export type LocaleType = keyof typeof Locale;
 export type DefaultTranslation = typeof EnLocale;
 export type RuTranslation = typeof RuLocale;
 
+// biome-ignore lint/suspicious/noEmptyBlockStatements: this is a guard type to check if the locales types are equal
 function assert<_ extends never>() {}
 type TypeEqualityGuard<A, B> = Exclude<A, B> | Exclude<B, A>;
 assert<TypeEqualityGuard<DefaultTranslation, RuTranslation>>();

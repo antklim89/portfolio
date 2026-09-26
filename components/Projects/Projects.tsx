@@ -15,7 +15,7 @@ async function Projects({ locale, className, ...props }: { locale: LocaleType } 
     <section className={cls(style.Projects, className)} {...props}>
       <h2 className="title-lg">{t.projects}</h2>
       <div className={style.list}>
-        {projects.map(project => (
+        {projects.map((project) => (
           <ProjectItem key={project.title} locale={locale} project={project} />
         ))}
       </div>

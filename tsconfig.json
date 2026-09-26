@@ -3,16 +3,12 @@
     "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "bundler",
-    "lib": [      "ESNext", "DOM"   ],
+    "lib": ["ESNext", "DOM"],
     "verbatimModuleSyntax": true,
     "jsx": "react-jsx",
     "paths": {
-      "@/*": [
-        "./*"
-      ],
-      "@payload-config": [
-        "./payload.config.ts"
-      ]
+      "@/*": ["./*"],
+      "@payload-config": ["./payload.config.ts"]
     },
     "resolveJsonModule": true,
     "allowJs": true,
@@ -34,18 +30,6 @@
     ],
     "incremental": true
   },
-  "include": [
-    "next-env.d.ts",
-    ".next/types/**/*.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/dev/types/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    "build",
-    "out",
-    "hidden",
-    "migrations"
-  ]
+  "include": ["next-env.d.ts", ".next/types/**/*.ts", "**/*.ts", "**/*.tsx", ".next/dev/types/**/*.ts"],
+  "exclude": ["node_modules", "build", "out", "hidden", "migrations"]
 }

@@ -29,10 +29,10 @@ function Navigation({ className, ...props }: ComponentProps<'section'>) {
   const [observedLinks, setObservedLinks] = useState<(typeof links)[number]['id'][]>([]);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(entries => {
+    const observer = new IntersectionObserver((entries) => {
       for (const entry of entries) {
-        if (entry.isIntersecting) setObservedLinks(prev => [entry.target.id as Links, ...prev]);
-        else setObservedLinks(prev => prev.filter(id => id !== entry.target.id));
+        if (entry.isIntersecting) setObservedLinks((prev) => [entry.target.id as Links, ...prev]);
+        else setObservedLinks((prev) => prev.filter((id) => id !== entry.target.id));
       }
     });
 
@@ -50,7 +50,7 @@ function Navigation({ className, ...props }: ComponentProps<'section'>) {
     <section className={cls(style.Navigation, className)} {...props}>
       <div className="desktop">
         <ul>
-          {links.map(link => (
+          {links.map((link) => (
             <li key={link.body}>
               <a href={`#${link.id}`}>
                 <div style={{ paddingRight: observedLinks.includes(link.id) ? 25 : '' }} />
@@ -62,7 +62,7 @@ function Navigation({ className, ...props }: ComponentProps<'section'>) {
       </div>
       <div className={cls('mobile', style.mobile)}>
         <ul>
-          {links.map(link => (
+          {links.map((link) => (
             <li key={link.body}>
               <a href={`#${link.id}`}>
                 <div style={{ paddingRight: observedLinks.includes(link.id) ? 5 : '' }} />
