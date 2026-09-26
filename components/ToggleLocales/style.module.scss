@@ -1,0 +1,18 @@
+.ToggleLocales {
+  display: flex;
+  justify-content: center;
+  margin: 0.75rem 0;
+  gap: 0.75rem;
+
+  a {
+    padding: 0.5rem;
+    background: none;
+    border: 1px solid var(--primary-clr);
+    color: var(--text-clr);
+    cursor: pointer;
+  }
+  
+   a.active {
+    box-shadow: 0 0 5px 5px var(--primary-clr);
+  }
+}
