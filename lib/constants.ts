@@ -9,8 +9,8 @@ export const locales = Object.values(Locale);
 export const Links = {
   HOME: 'home',
   PROJECTS: 'projects',
-  CONTACTS: 'contacts',
   TECHNOLOGIES: 'technologies',
+  CONTACTS: 'contacts',
 } as const;
 export type Links = (typeof Links)[keyof typeof Links];
 
