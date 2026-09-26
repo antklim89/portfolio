@@ -8,12 +8,15 @@ import type { Metadata } from 'next';
 
 import TranslationProvider from '@/components/TranslationProvider';
 import { getProjects, getSeo, getTechnologies } from '@/lib/actions';
+import { createMainCache } from '@/lib/cache';
 import { locales } from '@/lib/constants';
 import { getTranslation } from '@/lib/services';
 import { getCorrectLocale } from '@/lib/utils';
 
 export async function generateMetadata({ params }: LayoutProps<'/[locale]'>): Promise<Metadata> {
   'use cache';
+  createMainCache();
+
   const { locale: paramLocale } = await params;
   const locale = getCorrectLocale(paramLocale);
 
@@ -56,6 +59,8 @@ export async function generateMetadata({ params }: LayoutProps<'/[locale]'>): Pr
 
 export default async function RootLayout({ children, params }: LayoutProps<'/[locale]'>) {
   'use cache';
+  createMainCache();
+
   const { locale: paramLocale } = await params;
   const locale = getCorrectLocale(paramLocale);
 

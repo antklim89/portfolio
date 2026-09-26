@@ -6,11 +6,14 @@ import Navigation from '@/components/Navigation';
 import Projects from '@/components/Projects';
 import Technologies from '@/components/Technologies';
 import ToggleLocales from '@/components/ToggleLocales';
+import { createMainCache } from '@/lib/cache';
 import { Links } from '@/lib/constants';
 import { getCorrectLocale } from '@/lib/utils';
 
 async function LocalePage({ params }: PageProps<'/[locale]'>) {
   'use cache';
+  createMainCache();
+
   const { locale: paramLocale } = await params;
   const locale = getCorrectLocale(paramLocale);
 
