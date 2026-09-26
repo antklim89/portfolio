@@ -1,16 +1,18 @@
 import AboutDescription from '@/components/AboutDescription';
 import AboutTitle from '@/components/AboutTitle';
 import Contacts from '@/components/Contacts';
-import Footer from '@/components/Footer';
 import MainLayout from '@/components/MainLayout';
 import Navigation from '@/components/Navigation';
 import Projects from '@/components/Projects';
 import Technologies from '@/components/Technologies';
+import ToggleLocales from '@/components/ToggleLocales';
 import { Links } from '@/lib/constants';
-import { getServerLocale } from '@/lib/services';
+import { getCorrectLocale } from '@/lib/utils';
 
-async function HomePage() {
-  const locale = await getServerLocale();
+async function LocalePage({ params }: PageProps<'/[locale]'>) {
+  'use cache';
+  const { locale: paramLocale } = await params;
+  const locale = getCorrectLocale(paramLocale);
 
   return (
     <MainLayout
@@ -20,9 +22,9 @@ async function HomePage() {
       projectsSlot={<Projects id={Links.PROJECTS} locale={locale} />}
       technologiesSlot={<Technologies id={Links.TECHNOLOGIES} locale={locale} />}
       contactsSlot={<Contacts id={Links.CONTACTS} />}
-      footerSlot={<Footer />}
+      footerSlot={<ToggleLocales />}
     />
   );
 }
 
-export default HomePage;
+export default LocalePage;
