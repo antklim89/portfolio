@@ -11,8 +11,12 @@
   "Name": "Name",
   "Subject": "Subject",
   "Message": "Message",
-  "contactError": "Unexpected error. Try again later.",
-  "contactSuccess": "The message has been sent successfully",
+
+  "Fail": "Fail",
+  "An unexpected error occurred. The message wasn't t sent. Try again later.": "An unexpected error occurred. The message wasn't t sent. Try again later.",
+  "Success": "Success",
+  "Message was successfully sent": "Message was successfully sent",
+
   "A message from": "A message from",
   "on the subject of": "on the subject of"
 }

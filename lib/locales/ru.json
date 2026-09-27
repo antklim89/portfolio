@@ -11,8 +11,12 @@
   "Name": "Имя",
   "Subject": "Тема",
   "Message": "Сообщение",
-  "contactError": "Непредвиденная ошибка. Попробуйте ещё раз позже.",
-  "contactSuccess": "Сообщение успешно отправленно.",
+
+  "Fail": "Провал",
+  "An unexpected error occurred. The message wasn't t sent. Try again later.": "Случилась непредвиденная ошибка. Сообщение не было отправлено. Попробуйте в следующий раз.",
+  "Success": "Успех",
+  "Message was successfully sent": "Сообщение было успешно отправленно.",
+
   "A message from": "Сообщение от",
   "on the subject of": "на тему"
 }
