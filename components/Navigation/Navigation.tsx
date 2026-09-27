@@ -2,6 +2,7 @@
 
 import type { ComponentProps, JSX } from 'react';
 import { FaHome } from 'react-icons/fa';
+import { FaEnvelope } from 'react-icons/fa6';
 
 import { useObservableLinks } from '@/hooks/useObservableLinks';
 import { useTranslation } from '@/hooks/useTranslation';
@@ -11,6 +12,7 @@ import style from './style.module.scss';
 
 const icons: Partial<Record<Links, JSX.Element>> = {
   home: <FaHome />,
+  contacts: <FaEnvelope />,
 } as const;
 
 function Navigation({ className, ...props }: ComponentProps<'section'>) {
@@ -24,8 +26,7 @@ function Navigation({ className, ...props }: ComponentProps<'section'>) {
         <ul>
           {Object.values(Links).map((link) => (
             <li key={link}>
-              <a href={`#${link}`}>
-                <div style={{ paddingRight: observedLinks.has(link) ? 25 : '' }} />
+              <a href={`#${link}`} className={cls(style.btn, observedLinks.has(link) ? style.active : null)}>
                 <span>{t[link]}</span>
               </a>
             </li>
@@ -36,9 +37,8 @@ function Navigation({ className, ...props }: ComponentProps<'section'>) {
         <ul>
           {Object.values(Links).map((link) => (
             <li key={link}>
-              <a href={`#${link}`}>
-                <div style={{ paddingRight: observedLinks.has(link) ? 5 : '' }} />
-                <span>{icons[link] ?? t[link]}</span>
+              <a href={`#${link}`} className={cls(style.btn, observedLinks.has(link) ? style.active : null)}>
+                <span>{icons[link] || t[link]}</span>
               </a>
             </li>
           ))}
