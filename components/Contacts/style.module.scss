@@ -11,57 +11,89 @@
     width: 100%;
   }
 
-  .form {
+
+  form {
     display: flex;
     flex-direction: column;
-  }
+    gap: 1.25rem;
 
-  input,
-  textarea {
-    width: 100%;
-    margin-bottom: 0.75rem;
-    resize: none;
-    padding: 0.5rem;
-    border: 1px solid var(--dark-clr);
-    border-radius: 0.2rem;
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: .25rem;
+      width: 100%;
 
-    &:disabled {
-      background: grey;
-      cursor: not-allowed;
+      label {
+        color: hsl(var(--color-primary-foreground));
+        font-weight: 600;
+        text-indent: 0.25rem;
+      }
+
+      input,
+      textarea {
+        background: hsl(var(--color-bg), 0.4);
+        border: 1px solid hsl(var(--color-primary));
+        border-radius: var(--border-radius);
+        color: hsl(var(--color-primary-foreground));
+        padding: 0.45rem 0.75rem;
+      }
+
+      textarea {
+        resize: none;
+        block-size: 6lh;
+        field-sizing: content;
+      }
+
+      input:disabled,
+      textarea:disabled {
+        color: hsl(var(--color-primary-foreground), 0.5);
+      }
     }
-  }
 
-  button {
-    padding: 0.5rem;
-    border: none;
-    cursor: pointer;
-    background: var(--primary-clr);
-    color: var(--light-clr);
-    transition: 200ms;
+    button {
+      background: transparent;
+      color: hsl(var(--color-primary-foreground));
+      border: 1px solid hsl(var(--color-primary));
+      border-radius: var(--border-radius-lg);
+      padding: 0.675rem 0.75rem;
 
-    &:hover {
-      background: var(--primary-dark-clr);
+      &:hover {
+        cursor: pointer;
+        border: 1px solid hsl(var(--color-primary), 0.6);
+        transition: border 300ms;
+      }
     }
 
-    &:disabled {
-      background: grey;
-      color: var(--light-clr);
-      cursor: not-allowed;
+    button:disabled {
+      cursor: default;
     }
   }
 
   .status {
-    font-size: 1.4rem;
-    padding-bottom: 0.75rem;
-    font-weight: 600;
+    margin: 0.75rem 0;
+    padding: 0.75rem 1.25rem;
+
+    border: 1px solid;
+    border-radius: var(--border-radius);
+      
+
     text-align: center;
 
+    .title {
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+
+    .text {
+      font-size: 1rem;
+    }
+
     &.success {
-      color: forestgreen;
+      border-color: hsl(120, 61%, 34%, 0.8);
     }
 
     &.error {
-      color: crimson;
+      border-color: hsl(348, 83%, 47%, 0.8);
     }
   }
 }

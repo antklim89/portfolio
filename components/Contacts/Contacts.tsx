@@ -1,4 +1,5 @@
 'use client';
+
 import type { ComponentProps, SubmitEvent } from 'react';
 import { useId, useState, useTransition } from 'react';
 
@@ -39,18 +40,26 @@ function Contacts({ className, ...props }: ComponentProps<'section'>) {
     <section className={cls(style.Contacts, className)} {...props}>
       <h3 className="title-lg">{t.contacts}</h3>
 
-      {status === 'success' && <p className={cls(style.status, style.success)}>{t.contactSuccess}</p>}
-      {status === 'error' && <p className={cls(style.status, style.error)}>{t.contactError}</p>}
+      {status === 'error' && (
+        <div className={cls(style.status, style.error)}>
+          <p className={style.title}>{t.Fail}</p>
+          <p className={style.text}>{t["An unexpected error occurred. The message wasn't t sent. Try again later."]}</p>
+        </div>
+      )}
+      {status === 'success' && (
+        <div className={cls(style.status, style.success)}>
+          <p className={style.title}>{t.Success}</p>
+          <p className={style.text}>{t['Message was successfully sent']}</p>
+        </div>
+      )}
 
       <form className={style.form} name="contact" onSubmit={handleSubmit}>
-        <input name="form-name" type="hidden" value="contact" />
-
-        <div>
+        <div className={style.field}>
           <label htmlFor={`${id}-name`}>{t.Name}:</label>
           <input id={`${id}-name`} required disabled={pending} maxLength={100} minLength={3} name="name" type="text" />
         </div>
 
-        <div>
+        <div className={style.field}>
           <label htmlFor={`${id}-subject`}>{t.Subject}:</label>
           <input
             id={`${id}-subject`}
@@ -63,13 +72,13 @@ function Contacts({ className, ...props }: ComponentProps<'section'>) {
           />
         </div>
 
-        <div>
+        <div className={style.field}>
           <label htmlFor={`${id}-text`}>{t.Message}:</label>
           <textarea id={`${id}-text`} required disabled={pending} maxLength={1000} minLength={3} name="text" rows={6} />
         </div>
 
         <button disabled={pending} type="submit">
-          {t.Submit}
+          {pending ? <span className="loader">Submitting</span> : t.Submit}
         </button>
       </form>
     </section>
