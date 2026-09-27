@@ -19,7 +19,7 @@
 
   &:hover {
     background: rgba(255, 255, 255, 0.08);
-    border-radius: 16px;
+    border-radius: var(--border-radius);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.24);
   }
@@ -43,6 +43,6 @@
   }
 
   .content {
-    color: var(--text-clr);
+    color: hsl(var(--color-primary-foreground));
   }
 }

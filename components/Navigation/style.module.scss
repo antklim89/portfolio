@@ -19,9 +19,9 @@
     text-transform: uppercase;
     text-decoration: none;
     transition: all 0.35s;
-    border: 1px solid var(--primary-clr);
-    border-radius: 9999px;
-    color: var(--text-clr);
+    border: 1px solid hsl(var(--color-primary));
+    border-radius: var(--border-radius-lg);
+    color: hsl(var(--color-primary-foreground));
     overflow: hidden;
     align-items: center;
 
@@ -35,14 +35,18 @@
       height: 100%;
       left: 0;
       top: 0;
-      color: var(--text-clr);
+      color: hsl(var(--color-primary-foreground));
       text-indent: 0.7rem;
-      border-radius: 0 9999px 9999px 0;
-      background-color: var(--primary-clr);
+      border-radius: 0 var(--border-radius-lg) var(--border-radius-lg) 0;
+      background-color: hsl(var(--color-primary));
       transform: translate(-20%, 0) scale(0, 1);
       transform-origin: left center;
       transition: all 0.25s;
       z-index: 1;
+    }
+
+    &:hover {
+      border: 1px solid hsl(var(--color-primary), 0.6);
     }
 
     &.active {
@@ -65,10 +69,10 @@
     top: 5px;
     left: 50%;
     transform: translateX(-50%);
-    border: 1px solid var(--primary-dark-clr);
-    border-radius: 0.5rem;
+    border: 1px solid hsl(var(--color-primary));
+    border-radius: var(--border-radius);
     padding: 0.25rem;
-    background: var(--bg-clr);
+    background: hsl(var(--color-bg));
     font-size: 0.9rem;
 
     ul {

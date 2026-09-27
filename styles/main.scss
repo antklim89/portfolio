@@ -20,23 +20,22 @@ body {
     Helvetica,
     sans-serif;
   font-size: 1rem;
-  color: var(--text-clr);
-  background-color: var(--bg-clr);
+  color: hsl(var(--color-primary-foreground));
+  background-color: hsl(var(--color-bg));
   background-image: url(./bg.svg);
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  color: var(--text-clr);
 }
 
 :focus {
-  outline: 2px solid var(--primary-clr);
+  outline: 2px solid hsl(var(--color-accent));
 }
 
 a {
   cursor: pointer;
   text-decoration: none;
-  color: var(--link-clr);
+  color: hsl(var(--color-link))
 }
 
 .title-md {
@@ -84,15 +83,50 @@ a {
 }
 
 @media screen and (min-width: 1440px) {
-  :root {
-    --container-width: 1440px;
-  }
-
   .desktop {
     display: block;
   }
 
   .mobile {
     display: none;
+  }
+}
+
+
+.loader {
+  --size: 0.165rem;
+
+  display: inline-block;
+  position: relative;
+}
+
+
+.loader::after {
+  content: '';
+  width: var(--size);
+  height: var(--size);
+  background: currentColor;
+  position: absolute;
+  bottom: 0.25rem;
+  right: -0.25rem;
+  box-sizing: border-box;
+  animation: animloader 1s linear infinite;
+}
+
+@keyframes animloader {
+  0% {
+    box-shadow:
+      calc(2 * var(--size)) 0 hsl(0, 0%, 0%, 0.2),
+      calc(4 * var(--size)) 0 hsl(0, 0%, 0%, 0.2);
+  }
+  50% {
+    box-shadow:
+      calc(2 * var(--size)) 0 hsl(0, 0%, 100%),
+      calc(4 * var(--size)) 0 hsl(0, 0%, 0%, 0.2);
+  }
+  100% {
+    box-shadow:
+      calc(2 * var(--size)) 0 hsl(0, 0%, 100%),
+      calc(4 * var(--size)) 0 hsl(0, 0%, 100%);
   }
 }
