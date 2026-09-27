@@ -13,8 +13,8 @@
   --border-radius-lg: 9999px;
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 90rem) {
   :root {
-    --container-width: 1440px;
+    --container-width: 90rem;
   }
 }
