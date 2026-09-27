@@ -1,4 +1,4 @@
-import { z } from 'zod/mini';
+import { z } from 'zod/v4-mini';
 
 export const env = z
   .object({
@@ -11,6 +11,8 @@ export const env = z
     SMTP_USER: z.string(),
     SMTP_HOST: z.string(),
     SMTP_PORT: z.string(),
+
+    URL: z.string(),
   })
   .parse({
     PROD: process.env.NODE_ENV === 'production',
@@ -22,4 +24,6 @@ export const env = z
     SMTP_USER: process.env.SMTP_USER,
     SMTP_HOST: process.env.SMTP_HOST,
     SMTP_PORT: process.env.SMTP_PORT,
+
+    URL: process.env.URL,
   });

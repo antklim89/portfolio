@@ -10,6 +10,7 @@ import TranslationProvider from '@/components/TranslationProvider';
 import { getProjects, getSeo, getTechnologies } from '@/lib/actions';
 import { createMainCache } from '@/lib/cache';
 import { locales } from '@/lib/constants';
+import { env } from '@/lib/env';
 import { getTranslation } from '@/lib/services';
 import { getCorrectLocale } from '@/lib/utils';
 
@@ -32,7 +33,7 @@ export async function generateMetadata({ params }: LayoutProps<'/[locale]'>): Pr
 
   const title = cmsTitle || defaultTitle;
   return {
-    metadataBase: process.env.URL,
+    metadataBase: env.URL,
     manifest: '/manifest.json',
     title,
     description,
