@@ -14,23 +14,22 @@ import { Seo, SeoMedia } from './collections/Seo';
 import { Technologies, TechnologiesMedia } from './collections/Technologies';
 import { Users } from './collections/Users';
 import { defaultLocale, locales } from './lib/constants';
-import { env } from './lib/env';
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
 
 export default buildConfig({
   email: nodemailerAdapter({
-    skipVerify: !env.PROD,
-    defaultFromAddress: env.SMTP_USER,
+    skipVerify: process.env.NODE_ENV !== 'production',
+    defaultFromAddress: process.env.SMTP_USER,
     defaultFromName: 'Portfolio',
 
     transportOptions: {
-      host: env.SMTP_HOST,
-      port: env.SMTP_PORT,
+      host: process.env.SMTP_HOST,
+      port: process.env.SMTP_PORT,
       auth: {
-        user: env.SMTP_USER,
-        pass: env.SMTP_PASS,
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
       },
     },
   }),
@@ -44,15 +43,15 @@ export default buildConfig({
   globals: [About, Seo],
   collections: [Users, Projects, ProjectsMedia, Technologies, TechnologiesMedia, SeoMedia],
   editor: lexicalEditor(),
-  secret: env.PAYLOAD_SECRET,
+  secret: process.env.PAYLOAD_SECRET,
   typescript: {
     outputFile: path.resolve(dirname, 'payload-types.ts'),
   },
   db: sqliteAdapter({
-    push: !env.PROD,
+    push: process.env.NODE_ENV === 'development',
     migrationDir: path.resolve(dirname, 'migrations'),
     client: {
-      url: env.PROD ? 'file:./db/database.db' : 'file:./db/dev.db',
+      url: process.env.NODE_ENV === 'development' ? 'file:./db/database.db' : 'file:./db/dev.db',
     },
   }),
   i18n: {

@@ -8,14 +8,8 @@ FROM base AS builder
 COPY package.json bun.lock ./
 RUN bun install --frozen-lockfile
 COPY . .
-ARG SMTP_USER
-ARG SMTP_HOST
-ARG SMTP_PORT
-ARG MAIL_LOCALE
 
 RUN --mount=type=secret,id=PAYLOAD_SECRET,env=PAYLOAD_SECRET \
-    --mount=type=secret,id=SMTP_PASS,env=SMTP_PASS \
-    --mount=type=cache,target=/app/.next/cache \
     bun next build
 
 

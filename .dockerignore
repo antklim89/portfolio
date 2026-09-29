@@ -9,6 +9,3 @@ coverage
 .DS_Store
 dist
 build
-
-db
-media

@@ -3,7 +3,6 @@ import config from '@payload-config';
 import { getPayload } from 'payload';
 import { z } from 'zod/mini';
 
-import { env } from '@/lib/env';
 import { getTranslation } from '@/lib/services';
 import { getCorrectLocale } from '@/lib/utils';
 
@@ -15,7 +14,7 @@ const emailSchema = z.object({
 
 export async function submitContactsForm(input: z.infer<typeof emailSchema>) {
   try {
-    const locale = getCorrectLocale(env.MAIL_LOCALE);
+    const locale = getCorrectLocale(process.env.MAIL_LOCALE);
 
     const { success, data, error } = await emailSchema.safeParseAsync(input);
     if (!success) {
@@ -29,7 +28,7 @@ export async function submitContactsForm(input: z.infer<typeof emailSchema>) {
 
     const payload = await getPayload({ config });
     await payload.sendEmail({
-      to: env.SMTP_USER,
+      to: process.env.SMTP_USER,
       subject: `${t['A message from']} ${name} ${t['on the subject of']} "${subject}"`,
       text,
     });
