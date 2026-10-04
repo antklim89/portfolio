@@ -9,6 +9,7 @@ COPY package.json bun.lock ./
 RUN bun install --frozen-lockfile
 COPY . .
 
+ARG BUILD=true
 RUN --mount=type=secret,id=PAYLOAD_SECRET,env=PAYLOAD_SECRET \
     bun next build
 
