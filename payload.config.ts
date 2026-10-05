@@ -20,7 +20,7 @@ const dirname = path.dirname(filename);
 
 export default buildConfig({
   email: nodemailerAdapter({
-    skipVerify: process.env.NODE_ENV !== 'production',
+    skipVerify: process.env.SMTP_USER == null,
     defaultFromAddress: process.env.SMTP_USER,
     defaultFromName: 'Portfolio',
 
@@ -48,10 +48,10 @@ export default buildConfig({
     outputFile: path.resolve(dirname, 'payload-types.ts'),
   },
   db: sqliteAdapter({
-    push: process.env.NODE_ENV === 'development',
+    push: false,
     migrationDir: path.resolve(dirname, 'migrations'),
     client: {
-      url: process.env.NODE_ENV === 'development' ? 'file:./db/database.db' : 'file:./db/dev.db',
+      url: 'file:./db/database.db',
     },
   }),
   i18n: {
