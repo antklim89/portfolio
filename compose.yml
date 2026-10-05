@@ -1,7 +1,7 @@
 
 services:
   app:
-    image: development.cr.cloud.ru/portfolio:v4
+    image: development.cr.cloud.ru/portfolio:v5
     build:
       provenance: false
       sbom: false
